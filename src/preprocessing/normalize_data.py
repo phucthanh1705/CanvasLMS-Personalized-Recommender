@@ -1,0 +1,1 @@
+# Chuẩn hóa trường dữ liệu (id, tên, loại)

@@ -1,0 +1,1 @@
+# Cập nhật graph khi có dữ liệu mới

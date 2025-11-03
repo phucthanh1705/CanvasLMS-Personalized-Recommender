@@ -1,0 +1,1 @@
+# Tạo triple (entity, relation, entity)

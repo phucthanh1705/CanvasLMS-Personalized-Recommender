@@ -1,0 +1,1 @@
+# Cron job tự động fetch dữ liệu mới

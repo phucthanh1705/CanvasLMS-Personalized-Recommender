@@ -1,0 +1,49 @@
+[
+  {
+    "id": 4,
+    "name": "ĐÀO TẠO KỸ SƯ NGÀNH CÔNG NGHỆ THÔNG TIN",
+    "account_id": 3,
+    "uuid": "9tsgKE1IbRZqOwqgrctqXINwW3BVVvK0pwvh8G5M",
+    "start_at": null,
+    "grading_standard_id": null,
+    "is_public": false,
+    "created_at": "2025-10-11T07:00:29Z",
+    "course_code": "daotao_cntt",
+    "default_view": "modules",
+    "root_account_id": 1,
+    "enrollment_term_id": 1,
+    "license": "private",
+    "grade_passback_setting": null,
+    "end_at": null,
+    "public_syllabus": false,
+    "public_syllabus_to_auth": false,
+    "storage_quota_mb": 500,
+    "is_public_to_auth_users": false,
+    "homeroom_course": false,
+    "course_color": null,
+    "friendly_name": null,
+    "apply_assignment_group_weights": false,
+    "calendar": {
+      "ics": "http://localhost:3000/feeds/calendars/course_9tsgKE1IbRZqOwqgrctqXINwW3BVVvK0pwvh8G5M.ics"
+    },
+    "time_zone": "America/Denver",
+    "blueprint": false,
+    "template": false,
+    "sis_course_id": "daotao_cntt",
+    "sis_import_id": null,
+    "integration_id": null,
+    "enrollments": [
+      {
+        "type": "teacher",
+        "role": "TeacherEnrollment",
+        "role_id": 4,
+        "user_id": 1,
+        "enrollment_state": "active",
+        "limit_privileges_to_course_section": false
+      }
+    ],
+    "hide_final_grades": false,
+    "workflow_state": "available",
+    "restrict_enrollments_to_course_dates": false
+  }
+]

@@ -1,0 +1,1 @@
+# Tiện ích chung cho KG (merge, query)

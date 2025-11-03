@@ -1,0 +1,345 @@
+[
+  {
+    "id": 56,
+    "name": "CƠ SỞ LẬP TRÌNH",
+    "position": 1,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 16,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/56/items"
+  },
+  {
+    "id": 57,
+    "name": "KỸ THUẬT LẬP TRÌNH",
+    "position": 2,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      56
+    ],
+    "published": true,
+    "items_count": 12,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/57/items"
+  },
+  {
+    "id": 58,
+    "name": "CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT",
+    "position": 3,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      57
+    ],
+    "published": true,
+    "items_count": 22,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/58/items"
+  },
+  {
+    "id": 59,
+    "name": "LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG",
+    "position": 4,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 20,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/59/items"
+  },
+  {
+    "id": 44,
+    "name": "LẬP TRÌNH ỨNG DỤNG VỚI JAVA",
+    "position": 5,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 12,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/44/items"
+  },
+  {
+    "id": 46,
+    "name": "LẬP TRÌNH WEB",
+    "position": 6,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 24,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/46/items"
+  },
+  {
+    "id": 48,
+    "name": "LẬP TRÌNH TRÊN MÔI TRƯỜNG WINDOWS",
+    "position": 7,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      59
+    ],
+    "published": true,
+    "items_count": 18,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/48/items"
+  },
+  {
+    "id": 49,
+    "name": "LẬP TRÌNH ỨNG DỤNG DI ĐỘNG VỚI FLUTTER",
+    "position": 8,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      59
+    ],
+    "published": true,
+    "items_count": 16,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/49/items"
+  },
+  {
+    "id": 66,
+    "name": "BẢO MẬT THÔNG TIN",
+    "position": 9,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      59
+    ],
+    "published": true,
+    "items_count": 18,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/66/items"
+  },
+  {
+    "id": 47,
+    "name": "CÔNG NGHỆ PHẦN MỀM",
+    "position": 10,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 18,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/47/items"
+  },
+  {
+    "id": 51,
+    "name": "QUẢN LÝ DỰ ÁN CÔNG NGHỆ THÔNG TIN",
+    "position": 11,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      47
+    ],
+    "published": true,
+    "items_count": 20,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/51/items"
+  },
+  {
+    "id": 50,
+    "name": "PHÁT TRIỂN PHẦN MỀM MÃ NGUỒN MỞ",
+    "position": 12,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 10,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/50/items"
+  },
+  {
+    "id": 52,
+    "name": "NGÔN NGỮ PHÁT TRIỂN ỨNG DỤNG MỚI",
+    "position": 13,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 8,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/52/items"
+  },
+  {
+    "id": 53,
+    "name": "CÔNG CỤ VÀ MÔI TRƯỜNG PHÁT TRIỂN PHẦN MỀM",
+    "position": 14,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 10,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/53/items"
+  },
+  {
+    "id": 54,
+    "name": "KIỂM THỬ PHẦN MỀM",
+    "position": 15,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 20,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/54/items"
+  },
+  {
+    "id": 55,
+    "name": "PHÁT TRIỂN ỨNG DỤNG VỚI J2EE",
+    "position": 16,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 12,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/55/items"
+  },
+  {
+    "id": 60,
+    "name": "NHẬP MÔN CƠ SỞ DỮ LIỆU",
+    "position": 17,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 24,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/60/items"
+  },
+  {
+    "id": 61,
+    "name": "CƠ SỞ DỮ LIỆU NÂNG CAO",
+    "position": 18,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      60
+    ],
+    "published": true,
+    "items_count": 30,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/61/items"
+  },
+  {
+    "id": 62,
+    "name": "NHẬP MÔN KIẾN TRÚC MÁY TÍNH",
+    "position": 19,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 18,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/62/items"
+  },
+  {
+    "id": 63,
+    "name": "NHẬP MÔN HỆ ĐIỀU HÀNH",
+    "position": 20,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 16,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/63/items"
+  },
+  {
+    "id": 64,
+    "name": "MẠNG MÁY TÍNH",
+    "position": 21,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      63
+    ],
+    "published": true,
+    "items_count": 30,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/64/items"
+  },
+  {
+    "id": 65,
+    "name": "LẬP TRÌNH MẠNG MÁY TÍNH",
+    "position": 22,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [
+      64
+    ],
+    "published": true,
+    "items_count": 18,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/65/items"
+  },
+  {
+    "id": 67,
+    "name": "TRÍ TUỆ NHÂN TẠO",
+    "position": 23,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 10,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/67/items"
+  },
+  {
+    "id": 68,
+    "name": "PHÂN TÍCH THIẾT KẾ HỆ THỐNG",
+    "position": 24,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 12,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/68/items"
+  },
+  {
+    "id": 69,
+    "name": "PHÂN TÍCH VÀ QUẢN TRỊ CƠ SỞ DỮ LIỆU",
+    "position": 25,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "requirement_type": "all",
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "published": true,
+    "items_count": 20,
+    "items_url": "http://localhost:3000/api/v1/courses/4/modules/69/items"
+  }
+]

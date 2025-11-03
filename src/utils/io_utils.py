@@ -1,0 +1,1 @@
+# Hàm đọc/ghi file, log, json
