@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 4390,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4390,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Cursor dùng để làm gì trong SQL?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5435,
+        "text": "Duyệt từng dòng dữ liệu để xử lý riêng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 854,
+        "text": "Mã hóa dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3762,
+        "text": "Tạo bảng tạm",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4642,
+        "text": "Tạo chỉ mục",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4391,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4391,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Cursor gồm các bước chính nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 972,
+        "text": "DECLARE, OPEN, FETCH, CLOSE, DEALLOCATE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3299,
+        "text": "SELECT, UPDATE, DELETE, INSERT",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1482,
+        "text": "CREATE, DROP, ALTER, BACKUP",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 996,
+        "text": "LOAD, EXEC, STOP, RESET",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4392,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4392,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Lệnh đóng Cursor là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4249,
+        "text": "CLOSE TenCursor;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7039,
+        "text": "STOP CURSOR;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8629,
+        "text": "DROP CURSOR;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2770,
+        "text": "END CURSOR;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4393,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4393,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Nhược điểm lớn nhất của Cursor là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1970,
+        "text": "Hiệu năng thấp với dữ liệu lớn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7180,
+        "text": "Không thể dùng trong SQL Server",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4593,
+        "text": "Không có cấu trúc vòng lặp",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3974,
+        "text": "Không có biến",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4394,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4394,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Lệnh nào mã hóa chuỗi 'Hello World' bằng mật khẩu 'KeyDemo'?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8850,
+        "text": "SELECT EncryptByPassPhrase('KeyDemo','Hello World');",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7471,
+        "text": "ENCRYPT STRING;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9914,
+        "text": "HASH('Hello');",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3521,
+        "text": "SECURE 'Hello';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4395,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4395,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Transparent Data Encryption (TDE) dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9149,
+        "text": "Mã hóa toàn bộ cơ sở dữ liệu ở cấp file vật lý",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1034,
+        "text": "Mã hóa từng cột dữ liệu riêng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4417,
+        "text": "Mã hóa ở phía client",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3218,
+        "text": "Ẩn tên bảng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4396,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4396,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh cấp quyền cho người dùng là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9393,
+        "text": "GRANT",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8295,
+        "text": "REVOKE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2396,
+        "text": "DENY",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6465,
+        "text": "ALTER",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4397,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4397,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh thu hồi quyền là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 890,
+        "text": "REVOKE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2068,
+        "text": "DENY",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3045,
+        "text": "DELETE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6120,
+        "text": "CANCEL",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4398,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4398,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Always Encrypted bảo vệ dữ liệu bằng cách nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 604,
+        "text": "Mã hóa từ phía client, tránh lộ dữ liệu gốc",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6089,
+        "text": "Mã hóa ở cấp hệ điều hành",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6851,
+        "text": "Giấu cột dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6079,
+        "text": "Ẩn truy vấn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4399,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4399,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh tạo Role quản lý sinh viên là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 529,
+        "text": "CREATE ROLE Role_QLSV;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4975,
+        "text": "ADD ROLE QLSV;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6625,
+        "text": "NEW ROLE QLSV;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9347,
+        "text": "GRANT ROLE QLSV;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4400,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4400,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Tại sao cần dùng phân quyền trong CSDL?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9790,
+        "text": "Để hạn chế truy cập và bảo vệ dữ liệu khỏi người dùng trái phép",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 824,
+        "text": "Để tăng tốc truy vấn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2733,
+        "text": "Để giảm kích thước bảng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8804,
+        "text": "Để tự động sao lưu dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4401,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4401,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Lệnh nào thêm người dùng vào vai trò?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4787,
+        "text": "EXEC sp_addrolemember 'Role_QLSV', 'UserA';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6470,
+        "text": "GRANT ROLE 'UserA';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4807,
+        "text": "ALTER ROLE ADD USER;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1249,
+        "text": "SET USER ROLE;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4402,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4402,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Mã hóa dữ liệu giúp đạt mục tiêu nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6360,
+        "text": "Bảo vệ dữ liệu nhạy cảm khỏi truy cập trái phép",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6648,
+        "text": "Giảm dung lượng dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6078,
+        "text": "Tăng tốc truy vấn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2070,
+        "text": "Loại bỏ chỉ mục",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4403,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4403,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Công cụ nào dùng để theo dõi truy vấn chậm?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5180,
+        "text": "SQL Profiler",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1761,
+        "text": "Task Manager",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1067,
+        "text": "DB Viewer",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5482,
+        "text": "Query Logger",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4404,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4404,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh mã hóa toàn bộ cơ sở dữ liệu thuộc loại:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6812,
+        "text": "Transparent Data Encryption",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9202,
+        "text": "Column Encryption",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4400,
+        "text": "Always Encrypted",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8185,
+        "text": "Hash Indexing",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4405,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4405,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh DENY có tác dụng gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1348,
+        "text": "Từ chối quyền truy cập, kể cả khi được kế thừa",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1719,
+        "text": "Cấp quyền mới",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5848,
+        "text": "Xóa tài khoản",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4790,
+        "text": "Khôi phục dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4406,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4406,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Làm thế nào để tối ưu hiệu năng CSDL?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9693,
+        "text": "Phân tích Execution Plan và tối ưu Index",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 722,
+        "text": "Tăng kích thước log file",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5493,
+        "text": "Tắt cache truy vấn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9552,
+        "text": "Xóa toàn bộ Trigger",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4407,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4407,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi nào nên dùng Cursor?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4644,
+        "text": "Khi cần xử lý từng dòng dữ liệu riêng biệt",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4206,
+        "text": "Khi cần xử lý toàn bộ bảng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7667,
+        "text": "Khi muốn tăng tốc SELECT",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6372,
+        "text": "Khi cập nhật chỉ mục",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4408,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4408,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Role trong SQL có tác dụng gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1113,
+        "text": "Gom nhóm quyền để dễ quản lý",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7634,
+        "text": "Tạo bảng tạm",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1518,
+        "text": "Tối ưu index",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7127,
+        "text": "Tự động backup",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 4409,
+    "quiz_id": 289,
+    "quiz_group_id": null,
+    "assessment_question_id": 4409,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Điểm quan trọng nhất của quản trị CSDL nâng cao là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 433,
+        "text": "Bảo mật, mã hóa và tối ưu hiệu năng toàn hệ thống",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5895,
+        "text": "Giảm số bảng dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4352,
+        "text": "Loại bỏ toàn bộ Trigger",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4433,
+        "text": "Tăng dung lượng lưu trữ",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  }
+]

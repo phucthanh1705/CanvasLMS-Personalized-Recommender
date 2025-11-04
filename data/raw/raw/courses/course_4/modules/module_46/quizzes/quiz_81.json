@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 382,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 382,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>ASP.NET Identity là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8138,
+        "text": "Framework quản lý tài khoản người dùng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3838,
+        "text": "Hệ thống routing",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6549,
+        "text": "Module quản lý session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2593,
+        "text": "Thư viện xử lý view",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 383,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 383,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>ASP.NET Identity thường kết hợp với công nghệ nào để lưu dữ liệu?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5158,
+        "text": "Entity Framework Core",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2232,
+        "text": "ADO.NET",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2506,
+        "text": "MySQL Connector",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 807,
+        "text": "Dapper",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 384,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 384,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Tên bảng chứa thông tin người dùng trong Identity là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5076,
+        "text": "AspNetUsers",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6024,
+        "text": "UserTable",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1415,
+        "text": "Accounts",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6560,
+        "text": "UserInfo",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 385,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 385,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Lớp mặc định đại diện cho người dùng trong Identity là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3833,
+        "text": "IdentityUser",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5130,
+        "text": "UserEntity",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6997,
+        "text": "ApplicationUser",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5442,
+        "text": "UserBase",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 386,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 386,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để đăng ký người dùng mới, phương thức nào được gọi?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1163,
+        "text": "_userManager.CreateAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5145,
+        "text": "_userManager.AddAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5084,
+        "text": "_signInManager.CreateUser()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6784,
+        "text": "_context.Users.Add()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 387,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 387,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Đăng nhập người dùng được thực hiện bởi:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8053,
+        "text": "_signInManager.PasswordSignInAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9317,
+        "text": "_userManager.Login()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7352,
+        "text": "Auth.Login()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4688,
+        "text": "User.SignIn()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 388,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 388,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Đăng xuất người dùng được thực hiện bằng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1760,
+        "text": "_signInManager.SignOutAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8918,
+        "text": "_userManager.Logout()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9212,
+        "text": "Session.Clear()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1921,
+        "text": "HttpContext.SignOut()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 389,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 389,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Role trong Identity dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 57,
+        "text": "Phân quyền người dùng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 863,
+        "text": "Xác thực người dùng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4271,
+        "text": "Mã hóa mật khẩu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 58,
+        "text": "Tạo cookie",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 390,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 390,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Bảng lưu mối quan hệ giữa người dùng và vai trò là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7489,
+        "text": "AspNetUserRoles",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9106,
+        "text": "AspNetRoles",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3936,
+        "text": "AspNetClaims",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1511,
+        "text": "AspNetAccounts",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 391,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 391,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để tạo vai trò mới, dùng phương thức nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5211,
+        "text": "_roleManager.CreateAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6059,
+        "text": "_userManager.AddRole()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6919,
+        "text": "Role.Add()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8158,
+        "text": "Auth.CreateRole()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 392,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 392,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để gán người dùng vào role, dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2219,
+        "text": "_userManager.AddToRoleAsync()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8066,
+        "text": "_roleManager.Assign()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1370,
+        "text": "Auth.AddRole()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4692,
+        "text": "_userManager.LinkRole()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 393,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 393,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Cấu hình Identity được thêm bằng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9609,
+        "text": "builder.Services.AddIdentity()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5131,
+        "text": "app.UseIdentity()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2607,
+        "text": "AddAuthCore()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2270,
+        "text": "EnableIdentity()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 394,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 394,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để lưu thông tin tài khoản, Identity sử dụng cơ chế nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7930,
+        "text": "EF Core Migration",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4917,
+        "text": "File JSON",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 677,
+        "text": "Static Memory",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2878,
+        "text": "XML",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 395,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 395,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Thuộc tính LoginPath trong CookieOptions dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2287,
+        "text": "Định nghĩa đường dẫn trang đăng nhập",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 157,
+        "text": "Lưu tên cookie",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4398,
+        "text": "Đặt thời gian hết hạn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5384,
+        "text": "Chỉ định Role",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 396,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 396,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Identity lưu mật khẩu người dùng dưới dạng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2346,
+        "text": "Băm (Hash)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6942,
+        "text": "Văn bản gốc",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2842,
+        "text": "Base64",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8430,
+        "text": "AES",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 397,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 397,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi đăng nhập sai nhiều lần, Identity có thể:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8653,
+        "text": "Khóa tài khoản tạm thời (Lockout)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2107,
+        "text": "Xóa tài khoản",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 234,
+        "text": "Reset mật khẩu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2992,
+        "text": "Vô hiệu hóa toàn hệ thống",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 398,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 398,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức tạo database cho Identity:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8004,
+        "text": "dotnet ef database update",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 857,
+        "text": "dotnet identity create",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4998,
+        "text": "db.init()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2586,
+        "text": "ef start",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 399,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 399,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi người dùng đã đăng nhập, tên hiển thị trong View lấy từ:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 917,
+        "text": "User.Identity.Name",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5543,
+        "text": "Session['User']",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7234,
+        "text": "HttpContext.CurrentUser",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7569,
+        "text": "TempData['User']",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 400,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 400,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để bảo vệ Action chỉ cho phép Role Admin, dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7739,
+        "text": "[Authorize(Roles='Admin')]",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1963,
+        "text": "[Authorize('Admin')]",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2280,
+        "text": "[AdminOnly]",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7313,
+        "text": "[Role=Admin]",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 401,
+    "quiz_id": 81,
+    "quiz_group_id": null,
+    "assessment_question_id": 401,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Ưu điểm của ASP.NET Identity là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7738,
+        "text": "Tích hợp EF Core, bảo mật cao, dễ mở rộng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6054,
+        "text": "Dễ cài đặt nhưng không bảo mật",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9746,
+        "text": "Chạy độc lập không cần database",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1745,
+        "text": "Chỉ hỗ trợ cookie auth",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  }
+]

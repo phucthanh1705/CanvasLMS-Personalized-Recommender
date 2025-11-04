@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 302,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 302,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>ViewData trong ASP.NET Core MVC là kiểu dữ liệu gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 77,
+        "text": "Dictionary (key–value)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9617,
+        "text": "Dynamic object",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5040,
+        "text": "Static class",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3802,
+        "text": "JSON object",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 303,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 303,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phạm vi tồn tại của ViewBag là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9299,
+        "text": "Trong request hiện tại",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4483,
+        "text": "Giữa nhiều request",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 439,
+        "text": "Trong toàn ứng dụng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6624,
+        "text": "Trong Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 304,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 304,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu lệnh nào đúng để truyền dữ liệu bằng ViewBag?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5664,
+        "text": "ViewBag.Name = 'An';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1657,
+        "text": "ViewBag['Name'] = 'An';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9714,
+        "text": "ViewBag.Add('Name','An');",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1023,
+        "text": "ViewBag('Name') = 'An';",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 305,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 305,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để truyền dữ liệu qua nhiều request (Redirect), ta dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3292,
+        "text": "TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3543,
+        "text": "ViewBag",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 528,
+        "text": "ViewData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7620,
+        "text": "SessionData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 306,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 306,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Sau khi đọc, dữ liệu trong TempData sẽ:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1471,
+        "text": "Tự động bị xóa",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3320,
+        "text": "Lưu mãi",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8494,
+        "text": "Chuyển thành Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7051,
+        "text": "Chuyển thành Cookie",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 307,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 307,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Cú pháp lấy dữ liệu từ ViewData là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6994,
+        "text": "ViewData['key']",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4581,
+        "text": "ViewBag.key",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7841,
+        "text": "TempData.key",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5398,
+        "text": "Model.key",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 308,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 308,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Model Binding trong MVC dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7381,
+        "text": "Tự động ánh xạ dữ liệu form sang đối tượng Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1756,
+        "text": "Hiển thị CSS trong View",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1835,
+        "text": "Kết nối database",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2045,
+        "text": "Định nghĩa route",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 309,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 309,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi sử dụng Model Binding, tên thuộc tính input trong form phải:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6251,
+        "text": "Trùng với tên thuộc tính trong Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6473,
+        "text": "Viết hoa toàn bộ",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6430,
+        "text": "Bắt đầu bằng @",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7578,
+        "text": "Giống tên Controller",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 310,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 310,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong Controller, để trả về View cùng dữ liệu Model, ta dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2431,
+        "text": "return View(model);",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7166,
+        "text": "return Html(model);",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4835,
+        "text": "return Data(model);",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9526,
+        "text": "return Render(model);",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 311,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 311,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>ViewBag và ViewData khác nhau ở điểm nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 211,
+        "text": "ViewBag là dynamic, ViewData là dictionary",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 836,
+        "text": "ViewBag tồn tại lâu hơn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5241,
+        "text": "ViewData lưu trong TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7708,
+        "text": "Không có sự khác biệt",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 312,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 312,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Đoạn code nào đúng để hiển thị dữ liệu từ ViewBag trong View?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8358,
+        "text": "@ViewBag.Name",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6206,
+        "text": "ViewBag['Name']",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7484,
+        "text": "@Model.Name",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9439,
+        "text": "this.ViewBag.Name",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 313,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 313,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi người dùng gửi form POST, ASP.NET Core sẽ:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5291,
+        "text": "Tự động bind dữ liệu vào tham số hoặc Model của Action",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2942,
+        "text": "Gửi trực tiếp dữ liệu đến SQL",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9336,
+        "text": "Ghi dữ liệu vào TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1824,
+        "text": "Tạo View mới",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 314,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 314,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong form Razor, thuộc tính asp-action dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1525,
+        "text": "Chỉ định action trong Controller mà form sẽ gửi đến",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7369,
+        "text": "Xác định kiểu dữ liệu của form",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9259,
+        "text": "Liên kết CSS",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1,
+        "text": "Đặt tiêu đề trang",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 315,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 315,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để hiển thị thông báo sau khi Redirect, ta nên dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9623,
+        "text": "TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6103,
+        "text": "ViewBag",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9462,
+        "text": "Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5574,
+        "text": "Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 316,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 316,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Đoạn code sau sẽ hiển thị gì? &lt;pre&gt;&lt;code&gt;ViewData['Msg'] = 'Hello';&amp;lt;p&amp;gt;@ViewData['Msg']&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8245,
+        "text": "Hello",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6222,
+        "text": "Không hiển thị gì",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1440,
+        "text": "Lỗi biên dịch",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7271,
+        "text": "ViewData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 317,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 317,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>TempData lưu dữ liệu bằng cơ chế nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2218,
+        "text": "Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8500,
+        "text": "Cookie",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4515,
+        "text": "Cache",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8844,
+        "text": "File",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 318,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 318,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Để kiểm tra ModelState hợp lệ trong POST Action, ta dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3569,
+        "text": "if (ModelState.IsValid)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2027,
+        "text": "if (Form.IsValid)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9164,
+        "text": "if (Validate())",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5981,
+        "text": "if (Model.OK)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 319,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 319,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi sử dụng AJAX, dữ liệu JSON gửi lên Controller sẽ được nhận bằng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3295,
+        "text": "Tham số dạng object hoặc Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9982,
+        "text": "ViewData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9490,
+        "text": "TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4379,
+        "text": "Request.Form",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 320,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 320,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Câu nào đúng về vòng đời dữ liệu trong MVC?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9567,
+        "text": "ViewBag và ViewData tồn tại 1 request, TempData tồn tại 2 request",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9066,
+        "text": "ViewBag lưu được vĩnh viễn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 511,
+        "text": "TempData tồn tại toàn ứng dụng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2753,
+        "text": "ViewData tồn tại sau khi Redirect",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 321,
+    "quiz_id": 77,
+    "quiz_group_id": null,
+    "assessment_question_id": 321,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi dữ liệu cần dùng nhiều lần trong cùng Controller, ta nên dùng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2472,
+        "text": "Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5430,
+        "text": "TempData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6352,
+        "text": "ViewBag",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7694,
+        "text": "ViewData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  }
+]

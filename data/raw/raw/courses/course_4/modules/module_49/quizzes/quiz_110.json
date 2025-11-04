@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 882,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 882,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khái niệm state trong Flutter là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6379,
+        "text": "Dữ liệu có thể thay đổi trong vòng đời ứng dụng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8189,
+        "text": "Giao diện cố định",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6954,
+        "text": "Một loại widget",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8319,
+        "text": "Thư viện quản lý UI",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 883,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 883,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào dùng để cập nhật UI trong StatefulWidget?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8863,
+        "text": "setState()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5906,
+        "text": "notifyListeners()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9430,
+        "text": "update()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5404,
+        "text": "refresh()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 884,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 884,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Provider dựa trên cơ chế nào để cập nhật UI?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3524,
+        "text": "ChangeNotifier và notifyListeners()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3072,
+        "text": "StreamController",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3092,
+        "text": "GetX Observer",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4111,
+        "text": "MVC Pattern",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 885,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 885,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong mô hình Bloc, dữ liệu truyền qua đâu?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3361,
+        "text": "Stream",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5193,
+        "text": "Future",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7835,
+        "text": "Callback",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4166,
+        "text": "Route",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 886,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 886,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào trong GetX được dùng để quan sát dữ liệu?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7364,
+        "text": "Obx()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 173,
+        "text": "Listen()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3789,
+        "text": "Observe()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7523,
+        "text": "Watch()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 887,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 887,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Ưu điểm chính của Bloc so với setState là gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 7631,
+        "text": "Tách biệt logic và giao diện",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 967,
+        "text": "Chạy nhanh hơn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7808,
+        "text": "Dễ viết hơn",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5309,
+        "text": "Không cần widget",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 888,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 888,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Provider sử dụng kiểu thiết kế nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9544,
+        "text": "Observer pattern",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 306,
+        "text": "Singleton",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 521,
+        "text": "Decorator",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5532,
+        "text": "Factory",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 889,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 889,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong Provider, hàm nào báo cho UI biết dữ liệu đã thay đổi?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3536,
+        "text": "notifyListeners()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4704,
+        "text": "setState()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9147,
+        "text": "updateUI()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2410,
+        "text": "refresh()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 890,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 890,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào trong Bloc thêm dữ liệu mới vào Stream?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3881,
+        "text": "sink.add()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2860,
+        "text": "stream.push()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3338,
+        "text": "emit()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6934,
+        "text": "controller.update()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 891,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 891,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong GetX, biến phản ứng (reactive variable) được khai báo như thế nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2221,
+        "text": "var count = 0.obs;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3325,
+        "text": "var count = Observable(0);",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1517,
+        "text": "Rx count = 0;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6040,
+        "text": "Get.count = 0;",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 892,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 892,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào giải phóng StreamController trong Bloc?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4716,
+        "text": "dispose()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8687,
+        "text": "close()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3197,
+        "text": "endStream()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9340,
+        "text": "finalize()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 893,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 893,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Mô hình nào giúp tách biệt UI và logic trong Flutter?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3420,
+        "text": "MVVM hoặc MVC",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8060,
+        "text": "Singleton",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3251,
+        "text": "Observer",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7606,
+        "text": "ReactiveX",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 894,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 894,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong Provider, để truy cập state ta dùng gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2762,
+        "text": "Provider.of<>()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9945,
+        "text": "Bloc.of()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4285,
+        "text": "Get.find()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 19,
+        "text": "context.get()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 895,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 895,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Bloc phù hợp với ứng dụng có đặc điểm nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4670,
+        "text": "Dữ liệu luân chuyển nhiều luồng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3770,
+        "text": "Chỉ có 1 màn hình",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3697,
+        "text": "Không cần cập nhật UI",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7643,
+        "text": "Ứng dụng nhỏ, ít state",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 896,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 896,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>GetX có thể thay thế những gì trong Flutter?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5009,
+        "text": "State management, routing, dependency injection",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8379,
+        "text": "Chỉ routing",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2907,
+        "text": "Chỉ UI widget",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6757,
+        "text": "Chỉ animation",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 897,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 897,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi nào nên dùng setState thay vì Provider?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8531,
+        "text": "Ứng dụng nhỏ, ít màn hình",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4359,
+        "text": "Ứng dụng phức tạp, nhiều dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8815,
+        "text": "Ứng dụng cần realtime",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3896,
+        "text": "Ứng dụng đa luồng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 898,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 898,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Get.put() trong GetX dùng để làm gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 819,
+        "text": "Khởi tạo và lưu Controller",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 2294,
+        "text": "Tạo widget mới",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6960,
+        "text": "Khởi tạo theme",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9985,
+        "text": "Lưu dữ liệu JSON",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 899,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 899,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong mô hình MVVM, ViewModel có nhiệm vụ gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2011,
+        "text": "Xử lý logic và cung cấp dữ liệu cho View",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4396,
+        "text": "Hiển thị giao diện",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6626,
+        "text": "Lưu trữ hình ảnh",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8249,
+        "text": "Tạo route mới",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 900,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 900,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Bloc sử dụng kiểu dữ liệu nào để truyền luồng sự kiện?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8329,
+        "text": "Stream và Sink",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9025,
+        "text": "Future",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7383,
+        "text": "Callback",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9488,
+        "text": "Thread",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 901,
+    "quiz_id": 110,
+    "quiz_group_id": null,
+    "assessment_question_id": 901,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương pháp nào giúp tái sử dụng logic trong nhiều màn hình Flutter?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2841,
+        "text": "Provider và Bloc",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6075,
+        "text": "Scaffold",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 971,
+        "text": "Navigator.push()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6973,
+        "text": "Theme.of(context)",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  }
+]

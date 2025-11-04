@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 1642,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1642,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Annotation nào được dùng để ánh xạ request tới Controller trong Spring MVC?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 8447,
+        "text": "@Controller",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8467,
+        "text": "@RestController",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4664,
+        "text": "@Service",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7546,
+        "text": "@ModelAttribute",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1643,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1643,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào dùng để xử lý request GET trong Spring Boot?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 42,
+        "text": "@GetMapping",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9183,
+        "text": "@RequestPost",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6891,
+        "text": "@FormSubmit",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2776,
+        "text": "@PathMapping",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1644,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1644,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong CRUD, chức năng 'Update' tương ứng với HTTP method nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2961,
+        "text": "PUT",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7622,
+        "text": "GET",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6656,
+        "text": "DELETE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5769,
+        "text": "PATCH",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1645,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1645,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Annotation nào giúp Spring tự động inject dependency vào Controller?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 413,
+        "text": "@Autowired",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9826,
+        "text": "@Inject",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2241,
+        "text": "@Bind",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1250,
+        "text": "@Context",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1646,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1646,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Thymeleaf nhận dữ liệu từ Controller thông qua đối tượng nào?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 5824,
+        "text": "Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9347,
+        "text": "EntityManager",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 399,
+        "text": "Session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1163,
+        "text": "ApplicationContext",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1647,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1647,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Thẻ th:text trong Thymeleaf có công dụng gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 4709,
+        "text": "Hiển thị giá trị thuộc tính từ Model",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6602,
+        "text": "Tạo liên kết HTML",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4458,
+        "text": "Định nghĩa layout CSS",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2910,
+        "text": "Gắn event JS",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1648,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1648,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi người dùng gửi form POST /products/save, phương thức nào trong Controller sẽ xử lý?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9217,
+        "text": "save()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6394,
+        "text": "list()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 5404,
+        "text": "edit()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 274,
+        "text": "delete()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1649,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1649,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong phương thức edit(@PathVariable Long id), annotation @PathVariable dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9447,
+        "text": "Lấy giá trị ID từ URL",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7678,
+        "text": "Gắn ID vào session",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 558,
+        "text": "Đọc giá trị từ form",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 2005,
+        "text": "Truy cập DB trực tiếp",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1650,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1650,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào trong JpaRepository dùng để xóa bản ghi?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6258,
+        "text": "deleteById()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 4319,
+        "text": "remove()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4260,
+        "text": "drop()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8336,
+        "text": "truncate()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1651,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1651,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong Thymeleaf, thuộc tính th:object được dùng để:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9499,
+        "text": "Liên kết form với model object",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6938,
+        "text": "Gọi REST API",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8348,
+        "text": "Tạo biến JavaScript",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7926,
+        "text": "Định dạng text",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1652,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1652,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi form có trường &lt;input type='hidden' th:field='*{id}'&gt; nghĩa là:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1517,
+        "text": "Lưu ID sản phẩm để cập nhật",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1556,
+        "text": "Ẩn dữ liệu khỏi DB",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4671,
+        "text": "Không gửi dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3977,
+        "text": "Khóa field",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1653,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1653,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức nào trong Service được gọi để lưu sản phẩm mới?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 2337,
+        "text": "save()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 7940,
+        "text": "insert()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 552,
+        "text": "commit()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7491,
+        "text": "addProduct()",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1654,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1654,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Annotation nào định nghĩa route gốc cho toàn bộ Controller?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6208,
+        "text": "@RequestMapping",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 6279,
+        "text": "@RoutePrefix",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6000,
+        "text": "@Path",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 286,
+        "text": "@URLMapping",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1655,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1655,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi người dùng truy cập /products/edit/1, view nào được render?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6840,
+        "text": "product-form.html",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 9123,
+        "text": "product-list.html",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6992,
+        "text": "error.html",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8114,
+        "text": "index.html",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1656,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1656,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Trong MVC, Controller nên xử lý gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 37,
+        "text": "Logic nghiệp vụ cơ bản và chuyển dữ liệu tới View",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 302,
+        "text": "Truy cập DB trực tiếp",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8131,
+        "text": "Hiển thị giao diện",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6684,
+        "text": "Lưu log hệ thống",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1657,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1657,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Tại sao nên tách Service layer trong ứng dụng Spring Boot?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 3348,
+        "text": "Để tách biệt logic nghiệp vụ khỏi Controller và dễ bảo trì",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3541,
+        "text": "Để giảm hiệu năng",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4630,
+        "text": "Để làm màu cho project",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4453,
+        "text": "Không cần thiết",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1658,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1658,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Nếu người dùng nhập sai dữ liệu, xử lý hợp lệ thường được thực hiện bằng:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 9203,
+        "text": "@Valid và BindingResult",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 1049,
+        "text": "@ExceptionHandler",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 9416,
+        "text": "@SafeField",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 4950,
+        "text": "@CheckData",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1659,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1659,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Phương thức 'redirect:/products' trong Controller có ý nghĩa gì?</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 558,
+        "text": "Chuyển hướng sang route /products",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 5871,
+        "text": "Trả về JSON",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3692,
+        "text": "Tạo file log",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 8195,
+        "text": "Lưu session mới",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1660,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1660,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Khi ProductService.save() gọi repo.save(), Hibernate thực hiện:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 6736,
+        "text": "INSERT hoặc UPDATE tùy theo trạng thái entity",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 3783,
+        "text": "SELECT * FROM table",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 7105,
+        "text": "DROP TABLE",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 6107,
+        "text": "COMMIT ngay lập tức",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  },
+  {
+    "id": 1661,
+    "quiz_id": 149,
+    "quiz_group_id": null,
+    "assessment_question_id": 1661,
+    "position": null,
+    "question_name": "Câu hỏi",
+    "question_type": "multiple_choice_question",
+    "question_text": "<p>Kết luận đúng nhất về CRUD trong Spring Boot:</p>",
+    "points_possible": 1.0,
+    "correct_comments": "",
+    "incorrect_comments": "",
+    "neutral_comments": "",
+    "correct_comments_html": "",
+    "incorrect_comments_html": "",
+    "neutral_comments_html": "",
+    "answers": [
+      {
+        "id": 1766,
+        "text": "Là quy trình cốt lõi giúp quản lý dữ liệu qua Controller–Service–Repository với hỗ trợ tự động từ Spring Data JPA.",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 100.0
+      },
+      {
+        "id": 8284,
+        "text": "Chỉ áp dụng cho REST API",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 1664,
+        "text": "Không hỗ trợ Thymeleaf",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      },
+      {
+        "id": 3816,
+        "text": "Không thể xóa dữ liệu",
+        "html": "",
+        "comments": "",
+        "comments_html": "",
+        "weight": 0.0
+      }
+    ],
+    "variables": null,
+    "formulas": null,
+    "answer_tolerance": null,
+    "formula_decimal_places": null,
+    "matches": null,
+    "matching_answer_incorrect_matches": null
+  }
+]

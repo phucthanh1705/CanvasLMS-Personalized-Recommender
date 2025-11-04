@@ -1,0 +1,106 @@
+<h1>🧩 BÀI 08 – KIỂM THỬ TRONG AGILE VÀ DEVOPS</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu vai trò và quy trình kiểm thử trong mô hình Agile và DevOps.</li>
+ <li>Phân biệt cách tiếp cận kiểm thử giữa Waterfall và Agile.</li>
+ <li>Hiểu quy trình kiểm thử liên tục (Continuous Testing) trong CI/CD pipeline.</li>
+ <li>Nhận biết vai trò của QA, Dev, Product Owner trong nhóm Agile Scrum.</li>
+ <li>Thực hành quy trình kiểm thử sprint và tích hợp automation test trong pipeline.</li>
+</ul>
+<hr>
+
+<h2>1. Tổng quan kiểm thử trong Agile</h2>
+<p><b>Agile Testing</b> là quá trình kiểm thử lặp lại, liên tục và thích ứng, được thực hiện song song với quá trình phát triển phần mềm trong mỗi sprint.</p>
+<p>Khác với Waterfall – nơi kiểm thử diễn ra sau khi lập trình hoàn tất, trong Agile, kiểm thử được thực hiện liên tục trong suốt vòng đời sprint.</p>
+<hr>
+
+<h2>2. Đặc điểm kiểm thử trong Agile</h2>
+<ul>
+ <li>Kiểm thử bắt đầu ngay từ khi viết user story.</li>
+ <li>Tester tham gia vào mọi hoạt động: planning, development, review, retrospective.</li>
+ <li>Ưu tiên kiểm thử tự động hóa và phản hồi nhanh.</li>
+ <li>QA đóng vai trò cộng tác chặt chẽ với Dev &amp; Product Owner.</li>
+</ul>
+<hr>
+
+<h2>3. Quy trình kiểm thử trong một sprint</h2>
+<p><b>Chu kỳ Sprint (2–4 tuần)</b> thường gồm:</p>
+<ol>
+ <li><b>Sprint Planning:</b> QA phân tích User Story, xác định tiêu chí chấp nhận (Acceptance Criteria).</li>
+ <li><b>Development + Testing:</b> Dev và QA làm song song, QA viết automation test song hành với code.</li>
+ <li><b>Daily Scrum:</b> Cập nhật tiến độ, blockers, lỗi phát hiện.</li>
+ <li><b>Sprint Review:</b> Trình diễn sản phẩm, chạy demo test case chính.</li>
+ <li><b>Sprint Retrospective:</b> Đánh giá hiệu quả test, lesson learned.</li>
+</ol>
+<hr>
+
+<h2>4. Mối quan hệ giữa Dev, QA và Product Owner</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Vai trò</th><th>Trách nhiệm chính</th></tr></thead>
+<tbody>
+<tr><td>Product Owner</td><td>Xác định yêu cầu, viết User Story, xác định Acceptance Criteria</td></tr>
+<tr><td>Developer</td><td>Viết code, Unit Test, fix bug</td></tr>
+<tr><td>QA Engineer</td><td>Phân tích yêu cầu, viết test case, automation test, đảm bảo chất lượng</td></tr>
+</tbody></table>
+<hr>
+
+<h2>5. Mức độ kiểm thử trong Agile</h2>
+<ul>
+ <li><b>Unit Test:</b> Dev viết test cho từng module.</li>
+ <li><b>API Test:</b> QA kiểm tra logic nghiệp vụ qua REST API.</li>
+ <li><b>UI Test:</b> Automation test kiểm thử giao diện người dùng.</li>
+ <li><b>Acceptance Test:</b> Xác nhận User Story đã hoàn tất.</li>
+</ul>
+<hr>
+
+<h2>6. Continuous Testing trong DevOps</h2>
+<p><b>Continuous Testing</b> là quá trình tự động hóa kiểm thử diễn ra xuyên suốt pipeline CI/CD để đảm bảo chất lượng code trong mỗi lần commit.</p>
+<pre><code>Developer commits → Build → Unit Test → Integration Test → UI Test → Deploy → Monitor</code></pre>
+<p>Khi code mới được push, hệ thống (Jenkins, GitHub Actions, GitLab CI) sẽ tự động chạy test và thông báo kết quả qua Slack/Email.</p>
+<hr>
+
+<h2>7. Các công cụ phổ biến trong Agile &amp; DevOps Testing</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Nhóm công cụ</th><th>Tên công cụ</th><th>Chức năng chính</th></tr></thead>
+<tbody>
+<tr><td>Quản lý quy trình</td><td>Jira, Trello</td><td>Quản lý sprint, user story, bug tracking</td></tr>
+<tr><td>Tự động hóa</td><td>Selenium, Cypress, Katalon</td><td>Automation test UI, API</td></tr>
+<tr><td>CI/CD</td><td>Jenkins, GitHub Actions</td><td>Tích hợp và triển khai liên tục</td></tr>
+<tr><td>Quản lý code</td><td>Git, GitLab</td><td>Lưu trữ và version control</td></tr>
+<tr><td>Báo cáo</td><td>Allure, Extent</td><td>Tạo báo cáo test tự động</td></tr>
+</tbody></table>
+<hr>
+
+<h2>8. Tích hợp Automation Testing trong CI/CD</h2>
+<pre><code>pipeline {
+ stages {
+ stage('Build') {
+ steps { sh 'mvn clean package' }
+ }
+ stage('Test') {
+ steps { sh 'mvn test' }
+ }
+ stage('Deploy') {
+ steps { sh 'kubectl apply -f deploy.yaml' }
+ }
+ }
+}</code></pre>
+<p>→ Khi có commit mới, hệ thống build → chạy test → deploy → gửi kết quả cho QA.</p>
+<hr>
+
+<h2>9. Vai trò QA trong DevOps</h2>
+<ul>
+ <li>Viết automation test tích hợp pipeline.</li>
+ <li>Đảm bảo test coverage cao (unit, API, UI).</li>
+ <li>Tham gia theo dõi production logs để phát hiện lỗi sớm.</li>
+ <li>Phản hồi nhanh chóng trong mỗi iteration.</li>
+</ul>
+<hr>
+
+<h2>10. Tổng kết</h2>
+<ul>
+ <li>Kiểm thử trong Agile và DevOps giúp rút ngắn chu kỳ phát triển và phản hồi nhanh.</li>
+ <li>Continuous Testing là nền tảng đảm bảo chất lượng trong CI/CD pipeline.</li>
+ <li>QA hiện đại là thành viên chủ động trong nhóm DevOps, không chỉ kiểm tra mà còn đóng góp vào cải tiến liên tục.</li>
+</ul>

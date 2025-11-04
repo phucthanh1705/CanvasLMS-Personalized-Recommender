@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 15 – TẦNG APPLICATION",
+  "created_at": "2025-10-25T12:28:51Z",
+  "url": "bai-15-tang-application",
+  "editing_roles": "teachers",
+  "page_id": 287,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-15-tang-application",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T12:29:06Z",
+  "locked_for_user": false,
+  "body": "<h1>🌍 BÀI 15 – TẦNG APPLICATION</h1><h2>15.1 TẦNG APPLICATION, PRESENTATION, SESSION</h2><p>Ba tầng cao nhất trong mô hình OSI (Application – Presentation – Session) tương ứng với tầng Application trong mô hình TCP/IP.</p><ul><li><b>Tầng Application:</b> Cung cấp giao diện cho người dùng tương tác trực tiếp với mạng. Ví dụ: trình duyệt web, ứng dụng email, client FTP.</li><li><b>Tầng Presentation:</b> Chịu trách nhiệm chuyển đổi định dạng dữ liệu – ví dụ mã hóa, nén, chuyển đổi ASCII ↔ EBCDIC, hoặc SSL/TLS.</li><li><b>Tầng Session:</b> Quản lý phiên giao tiếp (session) giữa các ứng dụng, đảm bảo duy trì trạng thái (stateful).</li></ul><p>Trong mô hình TCP/IP hiện nay, ba tầng này thường được gộp chung thành <b>Application Layer</b>.</p><hr><h2>15.2 PEER-TO-PEER</h2><p>Peer-to-Peer (P2P) là mô hình trong đó các thiết bị (peer) vừa đóng vai trò client vừa là server.</p><ul><li><b>Ưu điểm:</b> Không cần máy chủ trung tâm, dễ mở rộng, hiệu quả trong chia sẻ file (BitTorrent, eMule...)</li><li><b>Nhược điểm:</b> Bảo mật kém, khó kiểm soát tài nguyên.</li></ul><p><b>Ví dụ:</b> Mạng chia sẻ file qua torrent, hoặc LAN game.</p><hr><h2>15.3 CÁC GIAO THỨC TRÊN WEB VÀ EMAIL</h2><h3>🔹 Giao thức Web</h3><ul><li><b>HTTP (HyperText Transfer Protocol):</b> Giao thức ứng dụng của web, truyền dữ liệu dạng text, hình ảnh, video.</li><li><b>HTTPS:</b> Phiên bản bảo mật của HTTP, sử dụng SSL/TLS để mã hóa dữ liệu.</li></ul><p>Ví dụ yêu cầu HTTP:</p><pre>GET /index.html HTTP/1.1<br>Host: www.example.com<br>User-Agent: Mozilla/5.0</pre><h3>🔹 Giao thức Email</h3><ul><li><b>SMTP (Simple Mail Transfer Protocol):</b> Gửi thư (port 25 hoặc 587).</li><li><b>POP3 (Post Office Protocol v3):</b> Tải mail về client (port 110).</li><li><b>IMAP (Internet Message Access Protocol):</b> Đọc mail trực tiếp trên server (port 143 hoặc 993).</li></ul><p>Chu trình gửi mail:</p><ol><li>Client gửi qua SMTP → Mail server đích.</li><li>Người nhận lấy mail qua POP3 hoặc IMAP.</li></ol><hr><h2>15.4 CÁC DỊCH VỤ LIÊN QUAN ĐẾN ĐỊA CHỈ IP</h2><h3>🔹 DNS (Domain Name System)</h3><p>Chuyển đổi tên miền thành địa chỉ IP.</p><pre>www.google.com → 142.250.185.14</pre><p>Hoạt động qua port 53 (UDP/TCP).</p><p>Quy trình tra cứu DNS:</p><ol><li>Client gửi truy vấn (Query) đến DNS Server.</li><li>Server trả lời (Response) với địa chỉ IP.</li></ol><p>→ Nếu server không biết, nó hỏi Root → TLD → Authoritative server.</p><h3>🔹 DHCP (Dynamic Host Configuration Protocol)</h3><p>Tự động cấp phát IP, subnet mask, gateway, DNS cho client.</p><p>Quy trình DORA:</p><ol><li><b>Discover</b> → Client gửi broadcast yêu cầu IP.</li><li><b>Offer</b> → Server đề xuất IP.</li><li><b>Request</b> → Client chọn IP.</li><li><b>Acknowledge</b> → Server xác nhận.</li></ol><p>Hoạt động trên UDP port 67 (server) và 68 (client).</p><hr><h2>15.5 CÁC DỊCH VỤ CHIA SẺ FILE</h2><ul><li><b>FTP (File Transfer Protocol):</b> Dùng port 20 (data) và 21 (control). Cho phép tải lên/xuống file giữa client và server.</li><li><b>TFTP (Trivial File Transfer Protocol):</b> Dạng đơn giản của FTP, không yêu cầu xác thực, dùng UDP port 69.</li><li><b>SMB (Server Message Block):</b> Dịch vụ chia sẻ file và máy in trong mạng Windows (port 445).</li></ul><h3>🔸 Ví dụ lệnh FTP</h3><pre>ftp 192.168.1.10<br>Username: admin<br>Password: ****<br>ftp&gt; get report.docx</pre><hr><h3>✅ Tổng kết</h3><ul><li>Tầng Application là nơi người dùng tương tác trực tiếp với mạng.</li><li>Các giao thức chính: HTTP/HTTPS, DNS, DHCP, SMTP, FTP.</li><li>Hiểu được cơ chế hoạt động giúp cấu hình và bảo mật hệ thống mạng hiệu quả.</li></ul>"
+}

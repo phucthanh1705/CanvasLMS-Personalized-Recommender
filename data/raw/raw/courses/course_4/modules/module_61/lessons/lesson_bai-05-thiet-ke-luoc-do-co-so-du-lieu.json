@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 05 – THIẾT KẾ LƯỢC ĐỒ CƠ SỞ DỮ LIỆU",
+  "created_at": "2025-10-25T04:38:34Z",
+  "url": "bai-05-thiet-ke-luoc-do-co-so-du-lieu",
+  "editing_roles": "teachers",
+  "page_id": 245,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-05-thiet-ke-luoc-do-co-so-du-lieu",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T04:38:49Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 05 – THIẾT KẾ LƯỢC ĐỒ CƠ SỞ DỮ LIỆU</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu quy trình và nguyên tắc thiết kế lược đồ cơ sở dữ liệu quan hệ.</li><li>Biết cách xác định thực thể, thuộc tính, khóa và mối quan hệ từ yêu cầu nghiệp vụ.</li><li>Thực hành chuyển đổi mô hình ER sang lược đồ quan hệ chi tiết.</li><li>Áp dụng các kỹ thuật tối ưu hóa thiết kế nhằm đảm bảo toàn vẹn, hiệu năng và khả năng mở rộng.</li></ul><hr><h2>1. KHÁI NIỆM LƯỢC ĐỒ CƠ SỞ DỮ LIỆU</h2><p><b>Lược đồ cơ sở dữ liệu (Database Schema)</b> là bản mô tả logic về cách tổ chức dữ liệu trong hệ quản trị cơ sở dữ liệu, bao gồm tập các bảng, cột, ràng buộc và mối quan hệ giữa chúng.</p><h3>1.1 Cấu trúc lược đồ</h3><ul><li><b>Bảng (Table):</b> đại diện cho thực thể hoặc quan hệ.</li><li><b>Thuộc tính (Attribute):</b> mô tả đặc trưng của thực thể.</li><li><b>Khóa (Key):</b> định danh duy nhất bản ghi.</li><li><b>Ràng buộc (Constraint):</b> đảm bảo tính toàn vẹn dữ liệu (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, NOT NULL).</li></ul><h3>1.2 Ví dụ</h3><pre><code>STUDENT(MaSV, HoTen, NgaySinh, MaLop)<br>CLASS(MaLop, TenLop, MaKhoa)<br>DEPARTMENT(MaKhoa, TenKhoa)</code></pre><p>Quan hệ: STUDENT.MaLop → CLASS.MaLop, CLASS.MaKhoa → DEPARTMENT.MaKhoa</p><hr><h2>2. QUY TRÌNH THIẾT KẾ LƯỢC ĐỒ</h2><ul><li><b>Bước 1:</b> Xác định thực thể và thuộc tính.</li><li><b>Bước 2:</b> Xác định mối quan hệ (1–1, 1–N, N–N).</li><li><b>Bước 3:</b> Chuyển đổi mô hình ER sang mô hình quan hệ.</li><li><b>Bước 4:</b> Chuẩn hóa các bảng đạt dạng chuẩn tối thiểu (3NF).</li><li><b>Bước 5:</b> Xác định ràng buộc toàn vẹn (khóa chính, khóa ngoại, domain).</li><li><b>Bước 6:</b> Kiểm thử thiết kế bằng dữ liệu mẫu.</li></ul><hr><h2>3. CHUYỂN MÔ HÌNH ER SANG LƯỢC ĐỒ QUAN HỆ</h2><h3>3.1 Thực thể mạnh</h3><p>Mỗi thực thể mạnh chuyển thành một bảng riêng, với thuộc tính định danh làm khóa chính.</p><h3>3.2 Thực thể yếu</h3><p>Chuyển thành bảng có khóa chính gồm khóa ngoại của thực thể mạnh và thuộc tính riêng.</p><h3>3.3 Quan hệ 1–1</h3><p>Thêm khóa ngoại của một bảng vào bảng còn lại (chọn bảng phụ thuộc hơn).</p><h3>3.4 Quan hệ 1–N</h3><p>Khóa chính của bảng 1 được đưa sang bảng N làm khóa ngoại.</p><h3>3.5 Quan hệ N–N</h3><p>Tạo bảng trung gian chứa khóa ngoại của hai bảng gốc.</p><pre><code>ENROLL(MaSV, MaMH, Diem) -- quan hệ giữa SINHVIEN và MONHOC</code></pre><hr><h2>4. TỐI ƯU HÓA THIẾT KẾ</h2><ul><li>Giảm số bảng trung gian không cần thiết.</li><li>Tạo chỉ mục (INDEX) cho các cột thường dùng trong điều kiện truy vấn.</li><li>Sử dụng phân vùng (Partitioning) cho bảng lớn.</li><li>Đảm bảo khóa ngoại có chỉ mục để JOIN nhanh hơn.</li></ul><hr><h2>5. RÀ SOÁT TOÀN VẸN DỮ LIỆU</h2><ul><li><b>Toàn vẹn thực thể:</b> Mỗi bản ghi phải có định danh duy nhất (PRIMARY KEY).</li><li><b>Toàn vẹn tham chiếu:</b> Mọi khóa ngoại phải trỏ tới bản ghi hợp lệ.</li><li><b>Toàn vẹn miền giá trị:</b> Dữ liệu nhập vào phải thuộc miền hợp lệ.</li><li><b>Toàn vẹn nghiệp vụ:</b> Phù hợp với quy tắc kinh doanh.</li></ul><hr><h2>✅ TỔNG KẾT</h2><ul><li>Thiết kế lược đồ là bước chuyển quan trọng giữa mô hình ER và cơ sở dữ liệu vật lý.</li><li>Một lược đồ tốt cần đảm bảo tính toàn vẹn, hiệu năng và dễ bảo trì.</li><li>Hiểu rõ quy tắc chuyển đổi ER giúp giảm lỗi trong triển khai thực tế.</li></ul>"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 08 – KIỂU DỮ LIỆU CÓ CẤU TRÚC (STRUCT)",
+  "created_at": "2025-10-19T08:16:47Z",
+  "url": "bai-08-kieu-du-lieu-co-cau-truc-struct",
+  "editing_roles": "teachers",
+  "page_id": 200,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-08-kieu-du-lieu-co-cau-truc-struct",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T08:17:03Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 08 – KIỂU DỮ LIỆU CÓ CẤU TRÚC (STRUCT)</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu khái niệm và vai trò của kiểu dữ liệu có cấu trúc trong lập trình C.</li><li>Biết cách khai báo, khởi tạo và truy cập các thành phần của struct.</li><li>Thành thạo việc sử dụng mảng cấu trúc và truyền struct cho hàm.</li><li>Hiểu cơ chế con trỏ trỏ đến struct và khái niệm struct lồng nhau.</li><li>Phân biệt struct với typedef và union.</li></ul><hr><h2>1. KHÁI NIỆM</h2><p>Kiểu dữ liệu có cấu trúc (Structured Data Type) cho phép nhóm nhiều biến có <b>kiểu khác nhau</b> vào cùng một đơn vị – gọi là <b>struct</b>. Đây là nền tảng của lập trình hướng đối tượng và tổ chức dữ liệu phức tạp.</p><hr><h2>2. KHAI BÁO STRUCT</h2><pre><code>struct Student {\n   char name[30];\n   int age;\n   float gpa;\n};</code></pre><p>Ở ví dụ trên, <code>Student</code> là một kiểu dữ liệu mới gồm 3 thành phần khác nhau.</p><h3>2.1. Khai báo biến kiểu struct</h3><pre><code>struct Student s1, s2;</code></pre><p>Có thể khai báo và khởi tạo trực tiếp:</p><pre><code>struct Student s1 = {\"Nguyen Van A\", 20, 3.5};</code></pre><hr><h2>3. TRUY CẬP THÀNH PHẦN STRUCT</h2><p>Dùng toán tử dấu chấm <code>.</code> hoặc toán tử mũi tên <code>-&gt;</code> (khi dùng con trỏ).</p><pre><code>printf(\"Ten: %s\\n\", s1.name);\nprintf(\"Tuoi: %d\\n\", s1.age);\n\nstruct Student *p = &amp;s1;\nprintf(\"GPA: %.2f\\n\", p-&gt;gpa);</code></pre><hr><h2>4. MẢNG CẤU TRÚC</h2><p>Có thể khai báo nhiều đối tượng cùng kiểu struct trong một mảng.</p><pre><code>struct Student list[3] = {\n   {\"An\", 19, 3.4},\n   {\"Binh\", 21, 3.7},\n   {\"Chi\", 20, 3.8}\n};</code></pre><p>Truy cập phần tử:</p><pre><code>for(int i=0;i&lt;3;i++) printf(\"%s - %.2f\\n\", list[i].name, list[i].gpa);</code></pre><hr><h2>5. TRUYỀN STRUCT CHO HÀM</h2><p>Struct có thể được truyền bằng <b>tham trị</b> hoặc <b>tham chiếu</b> (qua con trỏ).</p><h3>5.1. Truyền tham trị</h3><pre><code>void printStudent(struct Student s){\n   printf(\"%s %.2f\\n\", s.name, s.gpa);\n}</code></pre><h3>5.2. Truyền tham chiếu</h3><pre><code>void updateGPA(struct Student *p, float newGPA){\n   p-&gt;gpa = newGPA;\n}</code></pre><p>Gọi hàm:</p><pre><code>updateGPA(&amp;s1, 3.9);</code></pre><hr><h2>6. STRUCT LỒNG NHAU</h2><p>Có thể định nghĩa struct bên trong struct khác.</p><pre><code>struct Date {int d,m,y;};\nstruct Student {\n   char name[30];\n   struct Date birthday;\n   float gpa;\n};\nstruct Student s = {\"Lan\", {12,5,2003}, 3.8};</code></pre><hr><h2>7. SỬ DỤNG typedef</h2><p>Từ khóa <b>typedef</b> giúp rút gọn cú pháp khai báo struct.</p><pre><code>typedef struct {\n   char id[10];\n   char name[30];\n   float gpa;\n} Student;\n\nStudent a = {\"SV01\", \"Huy\", 3.5};</code></pre><hr><h2>8. SO SÁNH struct – union</h2><table border=\"1\"><tbody><tr><th>Đặc điểm</th><th>struct</th><th>union</th></tr><tr><td>Bộ nhớ</td><td>Mỗi thành phần chiếm riêng</td><td>Các thành phần dùng chung vùng nhớ</td></tr><tr><td>Dung lượng</td><td>Tổng kích thước của các thành phần</td><td>Kích thước bằng phần tử lớn nhất</td></tr><tr><td>Ứng dụng</td><td>Lưu nhiều thông tin cùng lúc</td><td>Lưu nhiều dạng thông tin nhưng chỉ dùng một tại thời điểm</td></tr></tbody></table><hr><h2>✅ TỔNG KẾT</h2><ul><li>Struct giúp nhóm các thuộc tính khác loại vào cùng một đối tượng logic.</li><li>Hiểu rõ cơ chế truy cập và truyền struct là nền tảng để quản lý dữ liệu phức tạp.</li><li>typedef giúp rút gọn cú pháp và tăng tính rõ ràng.</li></ul>"
+}

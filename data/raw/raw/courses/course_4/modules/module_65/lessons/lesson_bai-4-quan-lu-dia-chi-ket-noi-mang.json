@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 4 – QUẢN LÝ ĐỊA CHỈ KẾT NỐI MẠNG",
+  "created_at": "2025-10-25T13:37:20Z",
+  "url": "bai-4-quan-lu-dia-chi-ket-noi-mang",
+  "editing_roles": "teachers",
+  "page_id": 291,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-4-quan-lu-dia-chi-ket-noi-mang",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T13:37:35Z",
+  "locked_for_user": false,
+  "body": "<h1>🌍 BÀI 4 – QUẢN LÝ ĐỊA CHỈ KẾT NỐI MẠNG</h1><h2>4.1 LỚP INETADDRESS</h2><p><code>InetAddress</code> là lớp đại diện cho địa chỉ IP trong Java. Nó cung cấp phương thức để tra cứu tên miền, IP, và làm việc với các máy chủ trong mạng.</p><h3>4.1.1 Tạo đối tượng InetAddress</h3><pre><code>import java.net.*;\n\npublic class InetDemo {\n    public static void main(String[] args) throws Exception {\n        InetAddress ip = InetAddress.getByName(\"www.google.com\");\n        System.out.println(\"Tên miền: \" + ip.getHostName());\n        System.out.println(\"Địa chỉ IP: \" + ip.getHostAddress());\n    }\n}</code></pre><p>✅ <b>Các phương thức chính:</b></p><ul><li><code>getLocalHost()</code>: lấy địa chỉ IP của máy cục bộ.</li><li><code>getByName(String host)</code>: lấy IP theo tên miền.</li><li><code>getAllByName(String host)</code>: trả về danh sách IP (cho load balancing).</li><li><code>isReachable(int timeout)</code>: kiểm tra khả năng kết nối (ping).</li></ul><p>Ví dụ kiểm tra kết nối:</p><pre><code>InetAddress inet = InetAddress.getByName(\"www.example.com\");\nSystem.out.println(inet.isReachable(3000) ? \"Có thể ping\" : \"Không kết nối được\");</code></pre><hr><h2>4.2 LỚP URL</h2><p><code>URL</code> (Uniform Resource Locator) đại diện cho một tài nguyên trên Internet (trang web, ảnh, API, file, ...).</p><h3>4.2.1 Tạo URL</h3><pre><code>URL url = new URL(\"https://www.example.com:8080/path/index.html?query=test#section1\");\nSystem.out.println(\"Protocol: \" + url.getProtocol());\nSystem.out.println(\"Host: \" + url.getHost());\nSystem.out.println(\"Port: \" + url.getPort());\nSystem.out.println(\"File: \" + url.getFile());\nSystem.out.println(\"Query: \" + url.getQuery());</code></pre><p>📘 <b>Các thành phần của URL:</b></p><ul><li><b>Protocol</b>: giao thức (http, https, ftp, file,...)</li><li><b>Host</b>: tên máy chủ hoặc IP.</li><li><b>Port</b>: cổng giao tiếp (mặc định 80 với HTTP, 443 với HTTPS).</li><li><b>Path</b>: đường dẫn đến tài nguyên.</li><li><b>Query</b>: tham số truyền trong URL.</li><li><b>Ref</b>: phần đánh dấu (anchor).</li></ul><hr><h2>4.3 LỚP URLCONNECTION</h2><p><code>URLConnection</code> cung cấp khả năng kết nối đến tài nguyên được xác định bởi URL. Nó cho phép đọc/ghi dữ liệu từ server HTTP hoặc FTP.</p><h3>4.3.1 Mở kết nối đến URL</h3><pre><code>URL url = new URL(\"https://jsonplaceholder.typicode.com/posts/1\");\nURLConnection conn = url.openConnection();\nBufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));\nString line;\nwhile ((line = in.readLine()) != null) {\n    System.out.println(line);\n}\nin.close();</code></pre><p>🔹 <b>Phương thức quan trọng:</b></p><ul><li><code>openConnection()</code>: mở kết nối.</li><li><code>getInputStream()</code>: đọc dữ liệu.</li><li><code>getOutputStream()</code>: gửi dữ liệu (POST,...).</li><li><code>setRequestProperty()</code>: thiết lập header HTTP.</li><li><code>getHeaderField()</code>: lấy thông tin header phản hồi.</li></ul><h3>4.3.2 Gửi dữ liệu qua HTTP POST</h3><pre><code>URL url = new URL(\"https://example.com/api/data\");\nHttpURLConnection http = (HttpURLConnection) url.openConnection();\nhttp.setRequestMethod(\"POST\");\nhttp.setDoOutput(true);\nOutputStream os = http.getOutputStream();\nos.write(\"name=Kold&amp;score=10\".getBytes());\nos.flush();\nos.close();\nSystem.out.println(\"Phản hồi: \" + http.getResponseCode());</code></pre><p>💡 Lưu ý: <code>HttpURLConnection</code> là lớp con của <code>URLConnection</code> hỗ trợ HTTP cụ thể.</p><hr><h2>✅ TỔNG KẾT</h2><ul><li><b>InetAddress</b>: xử lý địa chỉ IP và tên miền.</li><li><b>URL</b>: biểu diễn tài nguyên trên mạng.</li><li><b>URLConnection</b>: cho phép kết nối, đọc, gửi dữ liệu qua mạng.</li><li>Ba lớp này là nền tảng cho các ứng dụng HTTP client, crawler, REST API.</li></ul>"
+}

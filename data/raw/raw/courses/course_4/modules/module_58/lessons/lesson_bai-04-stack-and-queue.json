@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 04 – STACK & QUEUE",
+  "created_at": "2025-10-19T10:21:14Z",
+  "url": "bai-04-stack-and-queue",
+  "editing_roles": "teachers",
+  "page_id": 211,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-04-stack-and-queue",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T10:21:29Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 04 – STACK &amp; QUEUE</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu khái niệm, cơ chế hoạt động của ngăn xếp (Stack) và hàng đợi (Queue).</li><li>Nắm được các thao tác cơ bản: khởi tạo, thêm, xóa, kiểm tra rỗng, kiểm tra đầy.</li><li>Cài đặt Stack và Queue bằng mảng và danh sách liên kết đơn.</li><li>Hiểu và vận dụng ứng dụng thực tế của Stack &amp; Queue: Tháp Hà Nội, QuickSort, xử lý biểu thức, mô phỏng hàng chờ.</li></ul><hr><h2>1. Ngăn xếp (Stack)</h2><p><b>Định nghĩa:</b> Stack là cấu trúc dữ liệu hoạt động theo cơ chế <b>LIFO (Last In, First Out)</b> – vào sau ra trước.</p><p><b>Các thao tác cơ bản:</b></p><ul><li>Init: Khởi tạo ngăn xếp rỗng</li><li>IsEmpty: Kiểm tra rỗng</li><li>IsFull: Kiểm tra đầy</li><li>Push: Thêm phần tử vào đỉnh</li><li>Pop: Lấy phần tử khỏi đỉnh</li><li>Top: Xem phần tử đỉnh</li></ul><h3>Ví dụ cấu trúc:</h3><pre><code>typedef struct tagStack { int top; int nodes[MAX]; } Stack;</code></pre><h3>Ứng dụng tiêu biểu:</h3><ul><li>Tháp Hà Nội</li><li>Khử đệ quy (QuickSort không đệ quy)</li><li>Chuyển biểu thức Infix → Postfix</li><li>Tính giá trị biểu thức Postfix</li></ul><hr><h2>2. Hàng đợi (Queue)</h2><p><b>Định nghĩa:</b> Queue là cấu trúc dữ liệu hoạt động theo cơ chế <b>FIFO (First In, First Out)</b> – vào trước ra trước.</p><p><b>Các thao tác cơ bản:</b></p><ul><li>Init: Khởi tạo hàng đợi rỗng</li><li>IsEmpty / IsFull: Kiểm tra rỗng/đầy</li><li>EnQueue: Thêm phần tử vào cuối</li><li>DeQueue: Lấy phần tử ra khỏi đầu</li><li>Front / Rear: Xem phần tử đầu/cuối</li></ul><h3>Ví dụ cấu trúc:</h3><pre><code>typedef struct tagQueue { int nodes[MAX]; int front; int rear; int num; } Queue;</code></pre><p><b>Cơ chế vòng:</b> Khi rear = MAX → quay lại vị trí 0 để tiết kiệm bộ nhớ.</p><hr><h2>3. Cài đặt bằng Danh sách liên kết đơn</h2><p>Stack hoặc Queue có thể được cài bằng DSLK đơn để tránh giới hạn kích thước cố định.</p><ul><li>Mỗi phần tử gồm giá trị info và con trỏ next.</li><li>Stack: thêm/xóa ở đầu danh sách.</li><li>Queue: thêm ở cuối, xóa ở đầu.</li></ul><pre><code>typedef struct tagNode { int info; struct tagNode *next; } Node, *PtrNode;</code></pre><hr><h2>4. Ứng dụng thực tế</h2><ul><li><b>Stack:</b> xử lý biểu thức toán học, Undo/Redo, duyệt cây, Tháp Hà Nội, QuickSort.</li><li><b>Queue:</b> lập lịch tiến trình, mô phỏng hàng đợi, in ấn, xử lý buffer nhập liệu.</li></ul><hr><h2>🧠 Bài tập luyện tập</h2><ol><li>Viết hàm Push, Pop cho Stack dùng mảng.</li><li>Viết hàm EnQueue, DeQueue cho Queue dùng mảng vòng.</li><li>Chuyển biểu thức Infix → Postfix và tính giá trị.</li><li>Hiện thực Stack &amp; Queue bằng danh sách liên kết đơn.</li></ol><hr><h2>✅ Tổng kết</h2><p>Stack và Queue là hai cấu trúc dữ liệu tuyến tính quan trọng, nền tảng cho việc xây dựng các cấu trúc cao hơn như cây (Tree) và đồ thị (Graph). Việc hiểu rõ cơ chế LIFO và FIFO giúp lập trình viên thiết kế giải thuật hiệu quả, giảm thiểu lỗi vùng nhớ và dễ dàng mô phỏng các tiến trình thực tế.</p>"
+}

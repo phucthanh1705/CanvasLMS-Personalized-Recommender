@@ -1,0 +1,104 @@
+<h1>🧩 BÀI 03 – CÁC MỨC KIỂM THỬ PHẦN MỀM</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu khái niệm và vai trò của từng mức kiểm thử phần mềm.</li>
+ <li>Phân biệt rõ Unit Test, Integration Test, System Test và Acceptance Test.</li>
+ <li>Nắm được công cụ và kỹ thuật thường dùng trong từng mức.</li>
+ <li>Thực hành viết Unit Test, mô phỏng Integration Test và thiết kế kịch bản Acceptance Test.</li>
+ <li>Hiểu mối quan hệ giữa các mức kiểm thử trong V-Model.</li>
+</ul>
+<hr>
+
+<h2>1. Tổng quan</h2>
+<p>Kiểm thử phần mềm được tổ chức thành các mức (levels) nhằm đảm bảo phát hiện lỗi ở từng giai đoạn khác nhau trong vòng đời phát triển. Mỗi mức tập trung vào phạm vi, mục tiêu và trách nhiệm riêng.</p>
+<hr>
+
+<h2>2. Các mức kiểm thử phần mềm</h2>
+<ol>
+ <li><b>Unit Testing (Kiểm thử đơn vị):</b>
+ <ul>
+ <li>Kiểm tra từng hàm, module hoặc class riêng lẻ.</li>
+ <li>Do lập trình viên thực hiện, thường sử dụng framework như JUnit, NUnit, Pytest.</li>
+ <li>Mục tiêu: xác minh tính đúng đắn của logic nội bộ.</li>
+ <li><b>Ví dụ:</b>
+ <pre><code>@Test
+public void testAdd(){
+ assertEquals(5, Calculator.add(2,3));
+}</code></pre></li>
+ </ul>
+ </li>
+ <li><b>Integration Testing (Kiểm thử tích hợp):</b>
+ <ul>
+ <li>Kiểm tra sự tương tác giữa các module hoặc API.</li>
+ <li>Có thể thực hiện theo chiến lược Top-down, Bottom-up, Big Bang hoặc Sandwich.</li>
+ <li><b>Ví dụ:</b> Kiểm tra service Login gọi đúng API Authentication.</li>
+ </ul>
+ </li>
+ <li><b>System Testing (Kiểm thử hệ thống):</b>
+ <ul>
+ <li>Kiểm tra toàn bộ hệ thống tích hợp hoạt động theo yêu cầu nghiệp vụ.</li>
+ <li>Thực hiện bởi đội QA/Tester.</li>
+ <li>Loại kiểm thử: Functional, Performance, Security, Usability.</li>
+ </ul>
+ </li>
+ <li><b>Acceptance Testing (Kiểm thử chấp nhận):</b>
+ <ul>
+ <li>Xác nhận hệ thống đáp ứng yêu cầu người dùng cuối.</li>
+ <li>Thường do khách hàng hoặc nhóm UAT (User Acceptance Testing) thực hiện.</li>
+ <li>Ví dụ: xác nhận quy trình mua hàng hoạt động đúng từ đầu đến cuối.</li>
+ </ul>
+ </li>
+</ol>
+<hr>
+
+<h2>3. Mối quan hệ với mô hình V-Model</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Giai đoạn phát triển</th><th>Giai đoạn kiểm thử tương ứng</th></tr></thead>
+<tbody>
+<tr><td>Thiết kế module</td><td>Unit Testing</td></tr>
+<tr><td>Thiết kế giao tiếp</td><td>Integration Testing</td></tr>
+<tr><td>Thiết kế hệ thống</td><td>System Testing</td></tr>
+<tr><td>Yêu cầu người dùng</td><td>Acceptance Testing</td></tr>
+</tbody></table>
+<p><b>V-Model</b> thể hiện mối liên kết giữa phát triển và kiểm thử, giúp đảm bảo mọi yêu cầu đều có giai đoạn kiểm thử tương ứng.</p>
+<hr>
+
+<h2>4. Chi tiết các kỹ thuật kiểm thử theo mức</h2>
+<ul>
+ <li><b>Unit:</b> White-box techniques (Statement, Branch, Condition coverage).</li>
+ <li><b>Integration:</b> API Testing, Contract Testing, Mock/Stub Services.</li>
+ <li><b>System:</b> Black-box techniques (Equivalence Partitioning, BVA).</li>
+ <li><b>Acceptance:</b> Scenario-based Testing, Exploratory Testing.</li>
+</ul>
+<hr>
+
+<h2>5. Thực hành minh họa</h2>
+<p><b>Ví dụ kiểm thử API Login:</b></p>
+<pre><code>POST /api/login
+{
+ "email": "qa@test.com",
+ "password": "12345678"
+}
+</code></pre>
+<p><b>Kết quả kỳ vọng:</b> HTTP 200 và trả về token hợp lệ.</p>
+<p><b>Test Case Integration:</b> Kiểm tra khi microservice Auth không phản hồi trong 3s → hệ thống trả lỗi timeout (HTTP 504).</p>
+<hr>
+
+<h2>6. Ưu và nhược điểm từng mức</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Mức kiểm thử</th><th>Ưu điểm</th><th>Nhược điểm</th></tr></thead>
+<tbody>
+<tr><td>Unit</td><td>Phát hiện lỗi sớm, chạy nhanh</td><td>Không phát hiện lỗi giao tiếp</td></tr>
+<tr><td>Integration</td><td>Kiểm tra tương tác module</td><td>Khó cô lập lỗi</td></tr>
+<tr><td>System</td><td>Đánh giá toàn hệ thống</td><td>Tốn thời gian và tài nguyên</td></tr>
+<tr><td>Acceptance</td><td>Đảm bảo sản phẩm phù hợp người dùng</td><td>Phụ thuộc vào phản hồi khách hàng</td></tr>
+</tbody></table>
+<hr>
+
+<h2>7. Tổng kết</h2>
+<ul>
+ <li>Các mức kiểm thử giúp đảm bảo bao phủ lỗi từ nhỏ nhất đến lớn nhất.</li>
+ <li>Unit và Integration tập trung kỹ thuật, System và Acceptance tập trung nghiệp vụ.</li>
+ <li>Sự kết hợp hợp lý giữa các mức giúp giảm rủi ro, tăng độ tin cậy sản phẩm.</li>
+</ul>

@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 02 – JAVASCRIPT NÂNG CAO",
+  "created_at": "2025-10-14T12:02:56Z",
+  "url": "bai-02-javascript-nang-cao",
+  "editing_roles": "teachers",
+  "page_id": 168,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-02-javascript-nang-cao",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-14T12:03:10Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 02 – JAVASCRIPT NÂNG CAO</h1><h2>🎯 Mục tiêu học tập</h2><ul> <li>Hiểu và thao tác với cây DOM (Document Object Model).</li> <li>Biết cách thêm, xóa, chỉnh sửa phần tử HTML bằng JavaScript.</li> <li>Nắm vững lập trình bất đồng bộ (Callback, Promise, Async/Await).</li> <li>Biết cách nạp và gửi dữ liệu từ xa bằng Fetch API, xử lý JSON và FormData.</li> <li>Lưu trữ dữ liệu trên trình duyệt bằng Cookies, sessionStorage và localStorage.</li></ul><hr><h2>1. Làm việc với DOM (Document Object Model)</h2><p>DOM là mô hình biểu diễn cấu trúc của tài liệu HTML dưới dạng cây. Mỗi thẻ HTML là một <b>node</b> mà JavaScript có thể truy cập và chỉnh sửa.</p><pre><code>// Lấy phần tử theo IDdocument.getElementById('title').innerText = 'Xin chào DOM!';// Thêm phần tử mớilet p = document.createElement('p');p.textContent = 'Đây là đoạn văn mới';document.body.appendChild(p);</code></pre><ul> <li><b>getElementById()</b>: lấy phần tử theo ID.</li> <li><b>querySelector()</b>: chọn phần tử đầu tiên phù hợp selector CSS.</li> <li><b>appendChild()</b>, <b>removeChild()</b>: thêm hoặc xóa phần tử.</li></ul><hr><h2>2. Thêm sự kiện và thao tác HTML</h2><p>Thêm trình xử lý sự kiện (event handler):</p><pre><code>document.getElementById('btn').addEventListener('click', function() { alert('Bạn vừa nhấn nút!');});</code></pre><p>Có thể thao tác CSS bằng JavaScript:</p><pre><code>let box = document.getElementById('box');box.style.backgroundColor = 'lightblue';box.style.border = '2px solid black';</code></pre><hr><h2>3. Lập trình bất đồng bộ trong JavaScript</h2><p>JavaScript hoạt động trên <b>event loop</b> và chỉ có một luồng chính, nên các tác vụ cần đợi (như gọi API) sẽ được xử lý bất đồng bộ.</p><h3>Callback</h3><pre><code>function loadData(callback) { setTimeout(() =&gt; { console.log('Dữ liệu đã tải'); callback(); }, 1000);}loadData(() =&gt; console.log('Hoàn tất!'));</code></pre><h3>Promise</h3><pre><code>let task = new Promise((resolve, reject) =&gt; { let success = true; success ? resolve('Thành công!') : reject('Thất bại');});task.then(msg =&gt; console.log(msg)).catch(err =&gt; console.error(err));</code></pre><h3>Async/Await</h3><pre><code>async function getData() { try { let res = await fetch('https://api.example.com/data'); let json = await res.json(); console.log(json); } catch (err) { console.error('Lỗi:', err); }}getData();</code></pre><hr><h2>4. Làm việc với dữ liệu từ xa</h2><h3>Fetch API</h3><pre><code>fetch('https://jsonplaceholder.typicode.com/posts') .then(res =&gt; res.json()) .then(data =&gt; console.log(data)) .catch(err =&gt; console.error(err));</code></pre><h3>Gửi dữ liệu với FormData</h3><pre><code>let form = document.querySelector('form');form.addEventListener('submit', e =&gt; { e.preventDefault(); let fd = new FormData(form); fetch('/submit', { method: 'POST', body: fd });});</code></pre><hr><h2>5. Lưu trữ dữ liệu client-side</h2><h3>Cookies</h3><pre><code>document.cookie = 'username=Kold; expires=Fri, 31 Dec 2025 12:00:00 UTC';</code></pre><h3>sessionStorage</h3><pre><code>sessionStorage.setItem('token', 'abc123');console.log(sessionStorage.getItem('token'));</code></pre><h3>localStorage</h3><pre><code>localStorage.setItem('theme', 'dark');console.log(localStorage.getItem('theme'));</code></pre><hr><h2>✅ Tổng kết</h2><ul> <li>DOM giúp tương tác và cập nhật giao diện web động.</li> <li>Bất đồng bộ (Promise, Async/Await) là trọng tâm của lập trình web hiện đại.</li> <li>Fetch API giúp trao đổi dữ liệu dễ dàng giữa client và server.</li> <li>Cookies, sessionStorage, localStorage giúp lưu trạng thái người dùng lâu dài.</li></ul>"
+}

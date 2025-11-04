@@ -1,0 +1,162 @@
+<h1>🧩 BÀI 03 – XÂY DỰNG CHỨC NĂNG HIỂN THỊ, THÊM, SỬA, XÓA SẢN PHẨM (CRUD)</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu mô hình MVC (Model–View–Controller) trong Spring Boot.</li>
+ <li>Thực hành xây dựng chức năng CRUD cho đối tượng <b>Product</b>.</li>
+ <li>Biết cách tạo form, xử lý dữ liệu từ giao diện bằng Thymeleaf.</li>
+ <li>Áp dụng Service layer để tách biệt logic và controller.</li>
+</ul>
+<hr>
+
+<h2>1. Ôn tập mô hình MVC</h2>
+<p>Mô hình <b>MVC</b> chia ứng dụng thành 3 phần:</p>
+<ul>
+ <li><b>Model</b>: quản lý dữ liệu (Entity, DTO, Repository).</li>
+ <li><b>View</b>: giao diện người dùng (HTML + Thymeleaf).</li>
+ <li><b>Controller</b>: tiếp nhận request, xử lý logic, và trả về view.</li>
+</ul>
+<p>Spring Boot tự động ánh xạ request thông qua annotation <code>@GetMapping</code> / <code>@PostMapping</code>.</p>
+<hr>
+
+<h2>2. Cấu trúc chức năng CRUD sản phẩm</h2>
+<pre><code>ProductController.java ← điều khiển request
+ProductService.java ← xử lý nghiệp vụ
+ProductRepository.java ← truy xuất dữ liệu DB
+Product.java ← entity ánh xạ bảng
+product-list.html ← giao diện hiển thị danh sách
+product-form.html ← form thêm/sửa sản phẩm</code></pre>
+<hr>
+
+<h2>3. Controller xử lý CRUD</h2>
+<pre><code>@Controller
+@RequestMapping("/products")
+public class ProductController {
+ @Autowired
+ private ProductService service;
+
+ // Hiển thị danh sách sản phẩm
+ @GetMapping
+ public String list(Model model) {
+ model.addAttribute("products", service.getAll());
+ return "product-list";
+ }
+
+ // Hiển thị form thêm sản phẩm
+ @GetMapping("/new")
+ public String showForm(Model model) {
+ model.addAttribute("product", new Product());
+ return "product-form";
+ }
+
+ // Lưu sản phẩm mới hoặc cập nhật
+ @PostMapping("/save")
+ public String save(@ModelAttribute Product product) {
+ service.save(product);
+ return "redirect:/products";
+ }
+
+ // Chỉnh sửa sản phẩm
+ @GetMapping("/edit/{id}")
+ public String edit(@PathVariable Long id, Model model) {
+ model.addAttribute("product", service.getById(id));
+ return "product-form";
+ }
+
+ // Xóa sản phẩm
+ @GetMapping("/delete/{id}")
+ public String delete(@PathVariable Long id) {
+ service.delete(id);
+ return "redirect:/products";
+ }
+}</code></pre>
+<hr>
+
+<h2>4. Service Layer</h2>
+<pre><code>@Service
+public class ProductService {
+ @Autowired
+ private ProductRepository repo;
+
+ public List&lt;Product&gt; getAll() {
+ return repo.findAll();
+ }
+
+ public Product getById(Long id) {
+ return repo.findById(id).orElse(null);
+ }
+
+ public void save(Product p) {
+ repo.save(p);
+ }
+
+ public void delete(Long id) {
+ repo.deleteById(id);
+ }
+}</code></pre>
+<hr>
+
+<h2>5. Giao diện hiển thị (Thymeleaf)</h2>
+<p><b>product-list.html</b>:</p>
+<pre><code>
+
+
+ 
+ Danh sách sản phẩm
+
+
+ <h2>Danh sách sản phẩm</h2>
+ <a href="http://localhost:3000/products/new">➕ Thêm sản phẩm</a>
+ <table border="1">
+ <tbody><tr><th>ID</th><th>Tên</th><th>Giá</th><th>Hành động</th></tr>
+ <tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>
+ <a>Sửa</a> |
+ <a>Xóa</a>
+ </td>
+ </tr>
+ </tbody></table>
+
+</code></pre>
+<hr>
+
+<h2>6. Giao diện form thêm/sửa sản phẩm</h2>
+<p><b>product-form.html</b>:</p>
+<pre><code>
+
+
+ 
+ Thêm/Sửa sản phẩm
+
+
+ <h2>Thông tin sản phẩm</h2>
+ 
+ 
+ Tên sản phẩm:
+ <br>
+ Giá:
+ <br>
+ Lưu
+ 
+
+</code></pre>
+<hr>
+
+<h2>7. Quy trình hoạt động CRUD</h2>
+<ol>
+ <li>Người dùng truy cập /products → Controller gọi Service → Repository truy vấn DB.</li>
+ <li>Chọn “Thêm sản phẩm” → gửi form POST /save → lưu vào DB.</li>
+ <li>Chọn “Sửa” → load dữ liệu cũ vào form.</li>
+ <li>Chọn “Xóa” → Repository gọi phương thức <code>deleteById()</code>.</li>
+</ol>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>CRUD là nền tảng cốt lõi trong phát triển ứng dụng web với Spring Boot.</li>
+ <li>Thymeleaf giúp kết nối trực tiếp dữ liệu giữa Controller và View.</li>
+ <li>Phân tách Controller–Service–Repository giúp dễ bảo trì và mở rộng.</li>
+</ul>

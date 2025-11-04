@@ -1,0 +1,120 @@
+<h1>🧩 BÀI 01 – CHUẨN BỊ MÔI TRƯỜNG PHÁT TRIỂN ỨNG DỤNG VỚI SPRING BOOT</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Cài đặt và cấu hình môi trường phát triển ứng dụng Spring Boot trên Java.</li>
+ <li>Hiểu cấu trúc dự án Spring Boot và vai trò của từng thành phần.</li>
+ <li>Nắm vững quy trình build, chạy, và debug ứng dụng Spring Boot.</li>
+ <li>Thực hành tạo ứng dụng web đầu tiên với controller, view và route.</li>
+</ul>
+<hr>
+
+<h2>1. Giới thiệu Spring Boot</h2>
+<p><b>Spring Boot</b> là một framework mở rộng của Spring, giúp xây dựng ứng dụng Java nhanh chóng với cấu hình tối thiểu. Nó hỗ trợ tự động cấu hình (auto-configuration), server nhúng (Tomcat/Jetty) và dependency management qua Maven/Gradle.</p>
+<ul>
+ <li><b>Ưu điểm:</b> Tự động cấu hình, chạy độc lập, có server tích hợp, dễ deploy.</li>
+ <li><b>Nhược điểm:</b> Ứng dụng nặng hơn Spring truyền thống, ít linh hoạt khi cần tùy chỉnh sâu.</li>
+</ul>
+<p><b>Ứng dụng Spring Boot được biên dịch thành file jar có thể chạy trực tiếp:</b></p>
+<pre><code>java -jar myapp-0.0.1-SNAPSHOT.jar</code></pre>
+<hr>
+
+<h2>2. Cài đặt môi trường phát triển</h2>
+<p><b>Các thành phần cần chuẩn bị:</b></p>
+<ul>
+ <li>JDK 21 hoặc cao hơn (Java Development Kit)</li>
+ <li>IntelliJ IDEA / Eclipse / VS Code</li>
+ <li>Apache Maven (quản lý dependency)</li>
+ <li>Spring Initializr (https://start.spring.io)</li>
+</ul>
+<p><b>Thực hành:</b></p>
+<ol>
+ <li>Truy cập <a href="https://start.spring.io">start.spring.io</a>.</li>
+ <li>Chọn Project: <b>Maven</b>, Language: <b>Java</b>.</li>
+ <li>Group: <code>com.example</code>, Artifact: <code>springdemo</code>.</li>
+ <li>Dependencies: <b>Spring Web</b>, <b>Thymeleaf</b>, <b>Lombok</b>.</li>
+ <li>Nhấn <b>Generate</b> để tải về file zip, giải nén và mở bằng IDE.</li>
+</ol>
+<hr>
+
+<h2>3. Cấu trúc dự án Spring Boot</h2>
+<p>Một dự án Spring Boot điển hình gồm các thành phần:</p>
+<pre><code>springdemo/
+ ├─ src/main/java/com/example/springdemo/
+ │ ├─ SpringdemoApplication.java ← lớp main chạy ứng dụng
+ │ ├─ controller/ ← lớp điều khiển route
+ │ ├─ service/ ← xử lý logic nghiệp vụ
+ │ ├─ model/ ← các class entity (POJO)
+ │ └─ repository/ ← truy xuất dữ liệu (DAO)
+ ├─ src/main/resources/
+ │ ├─ static/ ← chứa file CSS, JS, hình ảnh
+ │ ├─ templates/ ← chứa file Thymeleaf (.html)
+ │ └─ application.properties ← cấu hình hệ thống
+ └─ pom.xml ← khai báo dependency Maven</code></pre>
+<p><b>Lớp main</b> thường có annotation <code>@SpringBootApplication</code> – đây là điểm khởi động của toàn bộ ứng dụng.</p>
+<hr>
+
+<h2>4. Tạo ứng dụng đầu tiên (Hello Spring Boot)</h2>
+<p>Ví dụ tạo controller hiển thị nội dung trên trình duyệt.</p>
+<pre><code>package com.example.springdemo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HelloController {
+ @GetMapping("/")
+ public String index(Model model) {
+ model.addAttribute("message", "Xin chào Spring Boot!");
+ return "index"; // gọi file index.html trong templates
+ }
+}</code></pre>
+<p><b>File HTML (templates/index.html):</b></p>
+<pre><code>
+
+
+ 
+ Hello Spring Boot
+
+
+ <h2></h2>
+
+</code></pre>
+<p>Khi chạy ứng dụng, truy cập <code>http://localhost:8080</code> để xem kết quả.</p>
+<hr>
+
+<h2>5. Quy trình build và chạy ứng dụng</h2>
+<p><b>Bằng IntelliJ/Eclipse:</b> chạy lớp <code>SpringdemoApplication.java</code> hoặc gõ lệnh:</p>
+<pre><code>mvn spring-boot:run</code></pre>
+<p><b>Bằng terminal:</b></p>
+<pre><code>mvn clean package
+java -jar target/springdemo-0.0.1-SNAPSHOT.jar</code></pre>
+<p>Spring Boot sẽ tự động khởi tạo server Tomcat và lắng nghe cổng 8080.</p>
+<hr>
+
+<h2>6. Giải thích annotation quan trọng</h2>
+<ul>
+ <li><code>@SpringBootApplication</code>: kết hợp 3 annotation <code>@Configuration</code>, <code>@EnableAutoConfiguration</code>, <code>@ComponentScan</code>.</li>
+ <li><code>@Controller</code>: định nghĩa lớp xử lý request và trả về view.</li>
+ <li><code>@RestController</code>: trả về JSON thay vì view.</li>
+ <li><code>@GetMapping</code>, <code>@PostMapping</code>: định nghĩa route GET/POST.</li>
+ <li><code>@Autowired</code>: tự động inject dependency.</li>
+</ul>
+<hr>
+
+<h2>7. Thực hành</h2>
+<ul>
+ <li>Tạo project Spring Boot có tên <b>student-management</b>.</li>
+ <li>Thêm Controller hiển thị danh sách sinh viên từ mảng Java.</li>
+ <li>Thiết kế trang index.html hiển thị dữ liệu.</li>
+ <li>Build và chạy ứng dụng.</li>
+</ul>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>Spring Boot giúp khởi tạo và triển khai ứng dụng Java dễ dàng với cấu hình tối thiểu.</li>
+ <li>Cấu trúc project chuẩn gồm 4 tầng: Controller – Service – Repository – View.</li>
+ <li>Phương pháp build &amp; run linh hoạt (IDE hoặc Maven CLI).</li>
+</ul>

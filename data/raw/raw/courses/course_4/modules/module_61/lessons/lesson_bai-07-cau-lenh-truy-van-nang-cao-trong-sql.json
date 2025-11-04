@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 07 – CÂU LỆNH TRUY VẤN NÂNG CAO TRONG SQL",
+  "created_at": "2025-10-25T04:54:27Z",
+  "url": "bai-07-cau-lenh-truy-van-nang-cao-trong-sql",
+  "editing_roles": "teachers",
+  "page_id": 247,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-07-cau-lenh-truy-van-nang-cao-trong-sql",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T04:54:41Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 07 – CÂU LỆNH TRUY VẤN NÂNG CAO TRONG SQL</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu và sử dụng thành thạo các truy vấn nâng cao như JOIN, SUBQUERY, VIEW, và CTE.</li><li>Áp dụng các hàm tổng hợp, điều kiện logic phức tạp và biểu thức con để giải quyết bài toán thực tế.</li><li>Biết cách tối ưu truy vấn, tránh lặp dữ liệu và tăng hiệu năng hệ thống.</li><li>Thực hành kết hợp nhiều bảng và viết truy vấn đa cấp trong các bài toán quản lý dữ liệu thực tế.</li></ul><hr><h2>1. PHÉP KẾT (JOIN) TRONG SQL</h2><p>JOIN dùng để kết hợp dữ liệu từ nhiều bảng dựa trên điều kiện liên kết. Đây là kỹ thuật quan trọng trong truy vấn dữ liệu quan hệ.</p><h3>1.1 INNER JOIN</h3><p>Lấy các bản ghi có giá trị trùng khớp ở cả hai bảng.</p><pre><code>SELECT sv.HoTen, mh.TenMH, dk.Diem<br>FROM SinhVien sv<br>INNER JOIN DangKy dk ON sv.MaSV = dk.MaSV<br>INNER JOIN MonHoc mh ON dk.MaMH = mh.MaMH;</code></pre><h3>1.2 LEFT JOIN và RIGHT JOIN</h3><ul><li><b>LEFT JOIN:</b> Lấy tất cả bản ghi của bảng bên trái và phần khớp bên phải (nếu có).</li><li><b>RIGHT JOIN:</b> Lấy tất cả bản ghi của bảng bên phải và phần khớp bên trái (nếu có).</li></ul><pre><code>SELECT sv.HoTen, dk.Diem<br>FROM SinhVien sv<br>LEFT JOIN DangKy dk ON sv.MaSV = dk.MaSV;</code></pre><h3>1.3 FULL OUTER JOIN</h3><p>Lấy tất cả bản ghi từ cả hai bảng, nếu không khớp thì hiển thị NULL.</p><hr><h2>2. TRUY VẤN LỒNG (SUBQUERY)</h2><p>Truy vấn lồng (Subquery) là câu truy vấn được đặt bên trong câu truy vấn khác để lọc hoặc tính toán dữ liệu.</p><pre><code>SELECT HoTen, Diem<br>FROM SinhVien<br>WHERE Diem &gt; (SELECT AVG(Diem) FROM SinhVien);</code></pre><h3>2.1 Subquery trong FROM</h3><pre><code>SELECT Lop, AVG(DiemTB) FROM (<br>SELECT MaLop AS Lop, AVG(Diem) AS DiemTB<br>FROM DangKy GROUP BY MaLop) AS T<br>GROUP BY Lop;</code></pre><h3>2.2 Subquery trong SELECT</h3><pre><code>SELECT MaSV, (SELECT COUNT(*) FROM DangKy dk WHERE dk.MaSV = sv.MaSV) AS SoMonHoc FROM SinhVien sv;</code></pre><hr><h2>3. VIEW (KHUNG NHÌN)</h2><p>VIEW là bảng ảo được tạo từ kết quả truy vấn, giúp đơn giản hóa truy vấn phức tạp và bảo mật dữ liệu.</p><pre><code>CREATE VIEW v_DiemSinhVien AS<br>SELECT sv.MaSV, sv.HoTen, mh.TenMH, dk.Diem<br>FROM SinhVien sv<br>JOIN DangKy dk ON sv.MaSV = dk.MaSV<br>JOIN MonHoc mh ON dk.MaMH = mh.MaMH;</code></pre><p><b>Lợi ích:</b> Giảm phức tạp, tăng bảo mật, dễ tái sử dụng truy vấn.</p><hr><h2>4. CTE (COMMON TABLE EXPRESSION)</h2><p>CTE là phần truy vấn tạm được định nghĩa bằng WITH, có thể tái sử dụng trong truy vấn chính.</p><pre><code>WITH DiemTB AS (<br>SELECT MaSV, AVG(Diem) AS TB FROM DangKy GROUP BY MaSV)<br>SELECT MaSV, TB FROM DiemTB WHERE TB &gt; 8;</code></pre><p><b>Khác với VIEW:</b> CTE chỉ tồn tại trong phạm vi truy vấn hiện tại.</p><hr><h2>5. TRUY VẤN PHÂN TÍCH (AGGREGATE VÀ WINDOW FUNCTION)</h2><ul><li><b>Aggregate Functions:</b> SUM, AVG, COUNT, MAX, MIN.</li><li><b>Window Functions:</b> Cho phép tính toán trên một phạm vi dòng mà không gom nhóm dữ liệu.</li></ul><pre><code>SELECT MaSV, Diem, RANK() OVER(ORDER BY Diem DESC) AS XepHang FROM DangKy;</code></pre><hr><h2>✅ TỔNG KẾT</h2><ul><li>JOIN giúp kết hợp dữ liệu giữa các bảng dựa trên khóa.</li><li>Subquery và CTE cho phép viết truy vấn đa tầng, tối ưu hơn khi xử lý dữ liệu phức tạp.</li><li>VIEW giúp bảo mật và tái sử dụng truy vấn hiệu quả.</li><li>Hiểu rõ các hàm phân tích giúp tối ưu truy vấn thống kê, xếp hạng và tổng hợp dữ liệu.</li></ul>"
+}

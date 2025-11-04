@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 5 🧩 THIẾT KẾ CƠ SỞ DỮ LIỆU",
+  "created_at": "2025-10-24T10:05:55Z",
+  "url": "bai-5-thiet-ke-co-so-du-lieu",
+  "editing_roles": "teachers",
+  "page_id": 233,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-5-thiet-ke-co-so-du-lieu",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-24T10:06:11Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 5 – THIẾT KẾ CƠ SỞ DỮ LIỆU</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu khái niệm phụ thuộc hàm và vai trò của nó trong thiết kế cơ sở dữ liệu.</li><li>Vận dụng các luật Armstrong để suy diễn các phụ thuộc hàm mới.</li><li>Tính bao đóng của tập thuộc tính và xác định khóa của quan hệ.</li><li>Hiểu mối quan hệ giữa phụ thuộc hàm và chuẩn hóa dữ liệu.</li></ul><hr><h2>1. PHỤ THUỘC HÀM (FUNCTIONAL DEPENDENCY)</h2><h3>1.1 Định nghĩa</h3><p>Cho quan hệ R và hai tập thuộc tính X, Y ⊆ R. Ta nói X <b>quyết định</b> Y (ký hiệu X → Y) nếu với mọi bộ t1, t2 trong R, khi t1[X] = t2[X] thì t1[Y] = t2[Y].</p><p>Ví dụ: trong bảng SINHVIEN(MaSV, TenSV, MaLop), có phụ thuộc hàm MaSV → TenSV, MaLop vì mã sinh viên duy nhất xác định tên và lớp.</p><h3>1.2 Phụ thuộc hàm đặc biệt</h3><ul><li><b>Phụ thuộc tầm thường:</b> Y ⊆ X, ví dụ: MaSV,TenSV → TenSV.</li><li><b>Phụ thuộc phi tầm thường:</b> Y không là tập con của X, ví dụ: MaSV → TenSV.</li><li><b>Phụ thuộc đầy đủ:</b> nếu loại bỏ bất kỳ thuộc tính nào khỏi X thì phụ thuộc không còn đúng.</li></ul><hr><h2>2. HỆ TIÊN ĐỀ ARMSTRONG</h2><p>Armstrong đưa ra 3 luật cơ bản để suy luận các phụ thuộc hàm mới:</p><ul><li><b>Phản xạ (Reflexivity):</b> nếu Y ⊆ X thì X → Y.</li><li><b>Bổ sung (Augmentation):</b> nếu X → Y thì XZ → YZ.</li><li><b>Bắc cầu (Transitivity):</b> nếu X → Y và Y → Z thì X → Z.</li></ul><p>Các luật suy diễn bổ sung: <b>Hợp (Union)</b>, <b>Phân rã (Decomposition)</b>, <b>Giả bắc cầu (Pseudo Transitivity)</b>.</p><hr><h2>3. BAO ĐÓNG CỦA TẬP THUỘC TÍNH</h2><p>Cho tập thuộc tính X và tập phụ thuộc hàm F. Bao đóng của X ký hiệu là X<sup>+</sup>, là tập tất cả thuộc tính có thể suy ra từ X dựa trên F. Dùng thuật toán lặp để xác định X<sup>+</sup>.</p><pre><code>Bước 1: X⁺ := X<br>Bước 2: Với mỗi phụ thuộc hàm Y → Z trong F, nếu Y ⊆ X⁺ thì X⁺ := X⁺ ∪ Z<br>Bước 3: Lặp lại cho đến khi X⁺ không thay đổi</code></pre><p>Ví dụ: Với F = {A→B, B→C}, ta có A⁺ = {A,B,C}.</p><hr><h2>4. XÁC ĐỊNH KHÓA ỨNG VIÊN</h2><p>Khóa của quan hệ R là tập thuộc tính K sao cho K⁺ = R và không có tập con nào của K có bao đóng bằng R. Gọi đó là <b>khóa tối thiểu</b>.</p><pre><code>Ví dụ: R(A,B,C,D), F = {A→B, B→C, C→D} ⇒ A⁺ = {A,B,C,D} ⇒ A là khóa.</code></pre><hr><h2>5. ỨNG DỤNG TRONG CHUẨN HÓA</h2><p>Phụ thuộc hàm là cơ sở để chuyển các bảng sang dạng chuẩn cao hơn (2NF, 3NF, BCNF) nhằm loại bỏ dư thừa dữ liệu và bất thường khi cập nhật.</p><hr><h2>✅ TỔNG KẾT</h2><ul><li>Phụ thuộc hàm mô tả mối quan hệ logic giữa các thuộc tính.</li><li>Luật Armstrong giúp suy diễn các phụ thuộc mới một cách hình thức.</li><li>Khóa là tập thuộc tính tối thiểu có thể xác định mọi thuộc tính khác trong quan hệ.</li><li>Phân tích phụ thuộc hàm giúp chuẩn hóa CSDL hiệu quả.</li></ul>"
+}

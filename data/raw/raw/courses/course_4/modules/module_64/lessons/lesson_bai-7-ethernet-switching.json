@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 7 – ETHERNET SWITCHING",
+  "created_at": "2025-10-25T11:20:22Z",
+  "url": "bai-7-ethernet-switching",
+  "editing_roles": "teachers",
+  "page_id": 279,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-7-ethernet-switching",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T11:20:37Z",
+  "locked_for_user": false,
+  "body": "<h1>🔀 BÀI 7 – ETHERNET SWITCHING</h1><h2>7.1 ETHERNET FRAME</h2><p>Ethernet là công nghệ mạng tầng liên kết dữ liệu (Data Link Layer) phổ biến nhất hiện nay. Nó sử dụng phương pháp chuyển mạch (switching) để truyền dữ liệu qua mạng LAN.</p><p><b>Ethernet Frame</b> là đơn vị dữ liệu cơ bản được truyền trong mạng Ethernet. Mỗi Frame gồm các phần chính sau:</p><ul><li><b>Preamble (7 byte):</b> Chuỗi đồng bộ hóa để đồng bộ tín hiệu giữa thiết bị gửi và nhận.</li><li><b>Start Frame Delimiter (1 byte):</b> Báo hiệu bắt đầu khung dữ liệu.</li><li><b>Destination MAC (6 byte):</b> Địa chỉ MAC của thiết bị đích.</li><li><b>Source MAC (6 byte):</b> Địa chỉ MAC của thiết bị nguồn.</li><li><b>Type/Length (2 byte):</b> Xác định loại giao thức (IPv4, IPv6, ARP, v.v.).</li><li><b>Data (46–1500 byte):</b> Phần dữ liệu chứa nội dung từ tầng trên.</li><li><b>Frame Check Sequence – FCS (4 byte):</b> Mã kiểm tra lỗi CRC.</li></ul><pre>| Preamble | SFD | MAC Đích | MAC Nguồn | Type/Length | Data | FCS |</pre><p>Khung Ethernet có kích thước tối thiểu 64 byte và tối đa 1518 byte. Nếu nhỏ hơn 64 byte, nó được gọi là <b>runt frame</b> và bị loại bỏ.</p><hr><h2>7.2 ETHERNET MAC</h2><p><b>Ethernet MAC (Media Access Control)</b> là cơ chế điều khiển quyền truy cập vào đường truyền vật lý. MAC định nghĩa cách các thiết bị truy cập và truyền dữ liệu trong cùng một mạng.</p><ul><li><b>Địa chỉ MAC:</b> Mỗi NIC (Network Interface Card) có một địa chỉ MAC 48 bit duy nhất, được ghi sẵn từ nhà sản xuất (OUI + Device ID).</li><li><b>Chức năng:</b> Xác định nguồn và đích trong khung Ethernet.</li><li><b>Định dạng:</b> 00:1A:2B:3C:4D:5E (6 byte, viết ở hệ Hex).</li></ul><p>Ethernet MAC còn quản lý cơ chế tránh xung đột và đồng bộ truyền tin trong mạng LAN.</p><hr><h2>7.3 MAC ADDRESS TABLE</h2><p>Khi Switch hoạt động, nó xây dựng bảng <b>MAC Address Table</b> (còn gọi là <b>CAM Table</b>) để ghi nhớ cổng tương ứng với từng địa chỉ MAC.</p><p><b>Quá trình học địa chỉ MAC:</b></p><ol><li>Switch nhận khung dữ liệu → đọc MAC nguồn.</li><li>Lưu MAC nguồn và cổng nhận vào bảng CAM.</li><li>Khi nhận khung mới có MAC đích trùng trong bảng, switch gửi trực tiếp đến cổng đó (unicast).</li><li>Nếu không tìm thấy MAC đích, switch phát khung đến tất cả các cổng (broadcast).</li></ol><p><b>Ví dụ:</b></p><pre>MAC Table (Switch 1)<br>----------------------<br>MAC Address | Port<br>00:1A:2B:3C:4D:5E | Fa0/1<br>00:2B:3C:4D:5E:6F | Fa0/3</pre><p>Switch tự động cập nhật bảng MAC sau một khoảng thời gian (aging time).</p><hr><h2>7.4 TỐC ĐỘ SWITCH VÀ PHƯƠNG THỨC FORWARDING</h2><p>Switch hiện đại có nhiều tốc độ xử lý khác nhau:</p><ul><li><b>Fast Ethernet:</b> 100 Mbps</li><li><b>Gigabit Ethernet:</b> 1 Gbps</li><li><b>10 Gigabit Ethernet:</b> 10 Gbps</li></ul><p><b>Phương thức forwarding:</b></p><ul><li><b>Store-and-Forward:</b> Nhận toàn bộ Frame, kiểm tra FCS → gửi đi (độ chính xác cao, trễ hơn).</li><li><b>Cut-Through:</b> Gửi ngay khi đọc xong MAC đích → nhanh hơn nhưng dễ lỗi.</li><li><b>Fragment-Free:</b> Gửi sau khi đọc 64 byte đầu → cân bằng giữa tốc độ và độ tin cậy.</li></ul><p><b>Ví dụ thực tế:</b> Trong mạng doanh nghiệp, core switch thường dùng phương thức <b>Store-and-Forward</b> để đảm bảo tính toàn vẹn dữ liệu, còn access switch có thể dùng <b>Cut-Through</b> để giảm độ trễ.</p><h3>✅ Tổng kết</h3><ul><li>Ethernet Switching là cơ sở của LAN hiện đại.</li><li>Switch học địa chỉ MAC để chuyển tiếp thông minh.</li><li>Phương thức forwarding ảnh hưởng trực tiếp đến hiệu năng hệ thống.</li></ul>"
+}

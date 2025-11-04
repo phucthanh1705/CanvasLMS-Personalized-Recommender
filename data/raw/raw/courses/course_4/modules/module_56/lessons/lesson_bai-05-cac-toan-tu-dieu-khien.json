@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 05 – CÁC TOÁN TỬ ĐIỀU KHIỂN",
+  "created_at": "2025-10-19T07:54:43Z",
+  "url": "bai-05-cac-toan-tu-dieu-khien",
+  "editing_roles": "teachers",
+  "page_id": 197,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-05-cac-toan-tu-dieu-khien",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T07:54:57Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 05 – CÁC TOÁN TỬ ĐIỀU KHIỂN</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu được vai trò của cấu trúc điều khiển trong chương trình C.</li><li>Phân biệt và sử dụng thành thạo các câu lệnh rẽ nhánh (if, switch).</li><li>Thành thạo các cấu trúc lặp (for, while, do...while) và lệnh điều khiển vòng lặp (break, continue).</li><li>Hiểu luồng thực thi chương trình và lỗi logic thường gặp trong cấu trúc điều khiển.</li></ul><hr><h2>1. KHÁI NIỆM CHUNG</h2><p>Trong ngôn ngữ C, chương trình không chỉ thực hiện các câu lệnh theo thứ tự mà còn cần <b>điều khiển luồng thực thi</b> dựa trên điều kiện hoặc lặp lại thao tác. Các cấu trúc điều khiển giúp chương trình linh hoạt, có khả năng ra quyết định và xử lý dữ liệu phức tạp.</p><p>Các nhóm điều khiển chính:</p><ul><li><b>Rẽ nhánh (Selection):</b> if, if...else, switch...case.</li><li><b>Lặp (Iteration):</b> for, while, do...while.</li><li><b>Điều khiển luồng (Jump):</b> break, continue, return.</li></ul><hr><h2>2. CẤU TRÚC RẼ NHÁNH</h2><h3>2.1. Câu lệnh if</h3><pre><code>if (điều_kiện)\n    lệnh_1;\nelse\n    lệnh_2;</code></pre><p>Ví dụ:</p><pre><code>int age = 18;\nif (age &gt;= 18)\n    printf(\"Đủ tuổi bầu cử\\n\");\nelse\n    printf(\"Chưa đủ tuổi\\n\");</code></pre><p><b>Ghi chú:</b> Khối lệnh nhiều dòng phải đặt trong dấu ngoặc nhọn { }.</p><h3>2.2. Câu lệnh if lồng nhau</h3><pre><code>if (score &gt;= 8)\n    grade = 'A';\nelse if (score &gt;= 6.5)\n    grade = 'B';\nelse if (score &gt;= 5)\n    grade = 'C';\nelse\n    grade = 'F';</code></pre><h3>2.3. Toán tử điều kiện (?:)</h3><pre><code>int max = (a &gt; b) ? a : b;</code></pre><p>Toán tử này thay thế nhanh cho cấu trúc if...else đơn giản.</p><h3>2.4. Câu lệnh switch...case</h3><pre><code>switch (choice) {\n    case 1: printf(\"Tính tổng\\n\"); break;\n    case 2: printf(\"Tính hiệu\\n\"); break;\n    default: printf(\"Lựa chọn không hợp lệ\\n\");\n}</code></pre><p><b>Ghi chú:</b> Mỗi <b>case</b> cần kết thúc bằng <b>break</b> để tránh rơi qua (fall-through).</p><hr><h2>3. CẤU TRÚC LẶP</h2><h3>3.1. Vòng lặp for</h3><p>Dùng khi biết trước số lần lặp.</p><pre><code>for (i = 0; i &lt; 5; i++) {\n    printf(\"%d\\n\", i);\n}</code></pre><h3>3.2. Vòng lặp while</h3><p>Kiểm tra điều kiện trước khi thực hiện.</p><pre><code>int i = 0;\nwhile (i &lt; 5) {\n    printf(\"%d\\n\", i);\n    i++;\n}</code></pre><h3>3.3. Vòng lặp do...while</h3><p>Luôn thực hiện ít nhất một lần trước khi kiểm tra điều kiện.</p><pre><code>int i = 0;\ndo {\n    printf(\"%d\\n\", i);\n    i++;\n} while (i &lt; 5);</code></pre><hr><h2>4. CÁC LỆNH ĐIỀU KHIỂN VÒNG LẶP</h2><ul><li><b>break:</b> thoát khỏi vòng lặp hoặc switch ngay lập tức.</li><li><b>continue:</b> bỏ qua phần còn lại của vòng lặp và tiếp tục vòng kế tiếp.</li><li><b>return:</b> thoát khỏi hàm, trả về giá trị (nếu có).</li></ul><pre><code>for (i = 1; i &lt;= 10; i++) {\n    if (i == 5) continue; // bỏ qua 5\n    if (i == 9) break; // dừng vòng khi i=9\n    printf(\"%d \", i);\n}</code></pre><hr><h2>5. LỖI THƯỜNG GẶP</h2><ul><li>Quên dấu ngoặc nhọn { } khiến chỉ một lệnh được điều khiển.</li><li>Dùng dấu '=' thay vì '==' trong điều kiện if.</li><li>Không đặt break trong switch dẫn đến chạy tiếp case sau.</li><li>Vòng lặp không dừng do điều kiện sai logic.</li></ul><hr><h2>✅ TỔNG KẾT</h2><ul><li>Cấu trúc điều khiển là nền tảng để chương trình ra quyết định và lặp hiệu quả.</li><li>Nắm chắc cú pháp và hiểu rõ luồng điều khiển giúp tránh lỗi logic nghiêm trọng.</li><li>Kết hợp đúng if – for – while giúp giải quyết hầu hết các bài toán lập trình cơ bản.</li></ul>"
+}

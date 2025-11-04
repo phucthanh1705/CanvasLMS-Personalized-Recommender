@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 4 – LỚP VÀ ĐỐI TƯỢNG",
+  "created_at": "2025-10-19T12:44:43Z",
+  "url": "bai-4-lop-va-doi-tuong",
+  "editing_roles": "teachers",
+  "page_id": 222,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-4-lop-va-doi-tuong",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T12:44:58Z",
+  "locked_for_user": false,
+  "body": "<h1>BÀI 4 – LỚP VÀ ĐỐI TƯỢNG</h1><h2>Mục tiêu học tập</h2><ul><li>Hiểu rõ khái niệm lớp (class) và đối tượng (object) trong Java.</li><li>Nắm cấu trúc, phạm vi truy cập và cách khai báo lớp, phương thức, thuộc tính.</li><li>Thành thạo cách sử dụng constructor, destructor, từ khóa this, static, và overloading.</li><li>Phân tích các vấn đề thiết kế hướng đối tượng: encapsulation, trách nhiệm lớp, reuse code.</li></ul><hr><h2>1. Khái niệm lớp và đối tượng</h2><p>Một <b>lớp (class)</b> là khuôn mẫu (template) để tạo ra các đối tượng. Một <b>đối tượng (object)</b> là thể hiện cụ thể của lớp đó.</p><pre><code>class Student { String name; int age; void show(){ System.out.println(name + \" - \" + age); } }</code></pre><pre><code>Student s1 = new Student(); s1.name = \"Minh\"; s1.age = 20; s1.show();</code></pre><hr><h2>2. Thành phần của lớp</h2><ul><li><b>Thuộc tính (Fields):</b> dữ liệu mô tả trạng thái của đối tượng.</li><li><b>Phương thức (Methods):</b> hành vi của đối tượng.</li><li><b>Constructor:</b> khởi tạo đối tượng.</li><li><b>Static members:</b> thành phần chia sẻ cho tất cả đối tượng.</li></ul><pre><code>class Circle { static double PI = 3.14; double r; Circle(double r){ this.r = r; } double area(){ return PI * r * r; } }</code></pre><hr><h2>3. Access Modifiers (Phạm vi truy cập)</h2><ul><li><b>private:</b> chỉ truy cập được trong cùng lớp.</li><li><b>protected:</b> trong cùng package hoặc lớp con.</li><li><b>default:</b> trong cùng package.</li><li><b>public:</b> mọi nơi trong chương trình.</li></ul><p>Quy tắc tốt: <b>Thuộc tính nên là private</b>, hành vi cần thiết mới để public.</p><hr><h2>4. Constructor và Destructor</h2><p><b>Constructor</b> là phương thức đặc biệt có cùng tên với lớp, dùng để khởi tạo đối tượng. Có thể overload nhiều constructor khác nhau.</p><pre><code>class Point { int x, y; Point(){x=0;y=0;} Point(int x, int y){this.x=x;this.y=y;} }</code></pre><p>Java không có destructor như C++; việc thu hồi bộ nhớ do Garbage Collector xử lý.</p><hr><h2>5. Từ khóa this</h2><p>Từ khóa <code>this</code> tham chiếu đến chính đối tượng hiện tại – dùng khi tên biến trùng tham số hoặc khi gọi constructor khác.</p><pre><code>class Account { String owner; Account(String owner){ this.owner = owner; } }</code></pre><hr><h2>6. Overloading và Overriding</h2><p><b>Overloading:</b> cùng tên nhưng khác tham số trong cùng lớp.</p><p><b>Overriding:</b> lớp con ghi đè phương thức lớp cha.</p><pre><code>class MathUtils { int add(int a,int b){return a+b;} double add(double a,double b){return a+b;} }</code></pre><hr><h2>7. Static members</h2><p>Static thuộc về lớp, không thuộc về đối tượng.</p><pre><code>class Counter { static int count=0; Counter(){count++;} static void showCount(){ System.out.println(\"Objects: \"+count); } }</code></pre><hr><h2>8. Ví dụ tổng hợp</h2><pre><code>class Employee { private static int nextId = 1; private int id; private String name; private double salary; Employee(String name, double salary){ this.id = nextId++; this.name = name; this.salary = salary; } void raise(double percent){ salary += salary*percent/100; } void show(){ System.out.println(id+\" - \"+name+\": \"+salary); } public static void main(String[] args){ Employee e1 = new Employee(\"An\", 5000); Employee e2 = new Employee(\"Bình\", 7000); e1.raise(10); e2.raise(5); e1.show(); e2.show(); System.out.println(\"Tổng nhân viên: \"+nextId); } }</code></pre><hr><h2>Kết luận</h2><p>Kiến thức về lớp và đối tượng là trung tâm của Java. Việc thiết kế lớp đúng cách giúp mã dễ bảo trì, tái sử dụng và mở rộng.</p>"
+}

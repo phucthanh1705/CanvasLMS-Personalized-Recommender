@@ -1,0 +1,150 @@
+<h1>🧩 BÀI 02 – TẠO CƠ SỞ DỮ LIỆU CHO WEBSITE BÁN HÀNG (SPRING DATA JPA + MYSQL)</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu khái niệm ORM (Object Relational Mapping) và cơ chế hoạt động của Spring Data JPA.</li>
+ <li>Cài đặt và cấu hình kết nối MySQL cho ứng dụng Spring Boot.</li>
+ <li>Thiết kế mô hình dữ liệu và ánh xạ entity – table (mapping annotation).</li>
+ <li>Thực hành thao tác CRUD dữ liệu bằng JPA Repository.</li>
+</ul>
+<hr>
+
+<h2>1. Giới thiệu Spring Data JPA</h2>
+<p><b>Spring Data JPA</b> là module hỗ trợ thao tác cơ sở dữ liệu theo mô hình ORM (Object-Relational Mapping), giúp lập trình viên làm việc với entity Java thay vì câu lệnh SQL thuần.</p>
+<p><b>Ưu điểm:</b></p>
+<ul>
+ <li>Giảm thiểu code JDBC thủ công (Connection, Statement).</li>
+ <li>Hỗ trợ transaction tự động và lazy loading.</li>
+ <li>Dễ mở rộng và tích hợp với Hibernate.</li>
+</ul>
+<p><b>Spring Boot</b> tự động cấu hình Hibernate làm JPA provider mặc định.</p>
+<hr>
+
+<h2>2. Cấu hình kết nối cơ sở dữ liệu MySQL</h2>
+<p>Thêm dependency vào tệp <code>pom.xml</code>:</p>
+<pre><code>&lt;dependency&gt;
+ &lt;groupId&gt;mysql&lt;/groupId&gt;
+ &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+ &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+<p>Cấu hình trong <code>application.properties</code>:</p>
+<pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/shopdb
+spring.datasource.username=root
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect</code></pre>
+<p>Lệnh tạo database trong MySQL:</p>
+<pre><code>CREATE DATABASE shopdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</code></pre>
+<hr>
+
+<h2>3. Thiết kế mô hình dữ liệu</h2>
+<p>Thiết kế hệ thống bán hàng gồm các bảng chính:</p>
+<ul>
+ <li><b>Product</b> – lưu thông tin sản phẩm.</li>
+ <li><b>Category</b> – nhóm sản phẩm.</li>
+ <li><b>Order</b> – đơn hàng của khách.</li>
+ <li><b>OrderDetail</b> – chi tiết sản phẩm trong đơn hàng.</li>
+</ul>
+<p><b>Ví dụ class Product.java</b>:</p>
+<pre><code>package com.example.shop.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "products")
+public class Product {
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Long id;
+
+ @Column(nullable = false, length = 100)
+ private String name;
+
+ private Double price;
+
+ @Column(length = 255)
+ private String description;
+
+ @ManyToOne
+ @JoinColumn(name = "category_id")
+ private Category category;
+
+ // getters &amp; setters
+}</code></pre>
+<p><b>Ví dụ class Category.java</b>:</p>
+<pre><code>@Entity
+@Table(name = "categories")
+public class Category {
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Long id;
+
+ private String name;
+
+ @OneToMany(mappedBy = "category")
+ private List&lt;Product&gt; products;
+}</code></pre>
+<hr>
+
+<h2>4. Repository – CRUD bằng JPA</h2>
+<p>Tạo repository interface kế thừa <code>JpaRepository</code>:</p>
+<pre><code>package com.example.shop.repository;
+
+import com.example.shop.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends JpaRepository&lt;Product, Long&gt; {
+ List&lt;Product&gt; findByCategoryName(String categoryName);
+}</code></pre>
+<p>Spring Boot tự động sinh ra các phương thức CRUD (save, findAll, findById, deleteById, …).</p>
+<hr>
+
+<h2>5. Service và Controller</h2>
+<p>Tạo lớp Service xử lý logic nghiệp vụ:</p>
+<pre><code>@Service
+public class ProductService {
+ @Autowired
+ private ProductRepository productRepo;
+
+ public List&lt;Product&gt; getAll() {
+ return productRepo.findAll();
+ }
+
+ public void save(Product p) {
+ productRepo.save(p);
+ }
+}</code></pre>
+<p>Controller gọi service để hiển thị danh sách sản phẩm:</p>
+<pre><code>@Controller
+public class ProductController {
+ @Autowired
+ private ProductService service;
+
+ @GetMapping("/products")
+ public String list(Model model) {
+ model.addAttribute("list", service.getAll());
+ return "product-list";
+ }
+}</code></pre>
+<hr>
+
+<h2>6. Thực hành</h2>
+<ul>
+ <li>Tạo database <code>shopdb</code> và 4 entity: Product, Category, Order, OrderDetail.</li>
+ <li>Tạo repository tương ứng và test phương thức CRUD.</li>
+ <li>Thêm trang <code>product-list.html</code> hiển thị danh sách sản phẩm từ DB.</li>
+</ul>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>Spring Data JPA giúp thao tác với cơ sở dữ liệu đơn giản thông qua ORM mapping.</li>
+ <li>Repository cung cấp sẵn CRUD API, hạn chế SQL thủ công.</li>
+ <li>MySQL được tích hợp thông qua dependency và cấu hình tự động.</li>
+</ul>

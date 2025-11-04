@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 6 – MÃ CHỨNG THỰC THÔNG ĐIỆP VÀ HÀM BĂM",
+  "created_at": "2025-10-25T15:43:25Z",
+  "url": "bai-6-ma-chung-thuc-thong-diep-va-ham-bam",
+  "editing_roles": "teachers",
+  "page_id": 302,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-6-ma-chung-thuc-thong-diep-va-ham-bam",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-25T15:43:41Z",
+  "locked_for_user": false,
+  "body": "<h1>🔏 BÀI 6 – MÃ CHỨNG THỰC THÔNG ĐIỆP VÀ HÀM BĂM</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu rõ vai trò của hàm băm (hash function) trong an toàn thông tin.</li><li>Nắm khái niệm mã chứng thực thông điệp (Message Authentication Code – MAC) và cách triển khai HMAC.</li><li>Phân biệt giữa tính toàn vẹn (integrity), xác thực (authentication), và chống chối bỏ (non-repudiation).</li><li>Phân tích độ an toàn của các thuật toán băm phổ biến: MD5, SHA-1, SHA-256, SHA-3.</li></ul><hr><h2>1. KHÁI NIỆM VÀ VAI TRÒ CỦA HÀM BĂM</h2><p><b>Hàm băm (Hash function)</b> là hàm ánh xạ dữ liệu có độ dài tùy ý thành chuỗi bit cố định (thường 128–512 bit). Ký hiệu H(M) là giá trị băm của thông điệp M.</p><p>Hàm băm dùng trong: kiểm tra toàn vẹn dữ liệu, xác thực mật khẩu, tạo khóa trong HMAC, và ký số.</p><p><b>Tính chất cần có:</b></p><ul><li><b>Pre-image resistance:</b> Khó tìm M khi biết H(M).</li><li><b>Second pre-image resistance:</b> Khó tìm M2 sao cho H(M2)=H(M1).</li><li><b>Collision resistance:</b> Khó tìm hai M1, M2 khác nhau nhưng H(M1)=H(M2).</li></ul><hr><h2>2. CÁC THUẬT TOÁN BĂM PHỔ BIẾN</h2><ul><li><b>MD5:</b> 128 bit, nhanh nhưng bị phá vỡ (tìm va chạm chỉ mất vài giây).</li><li><b>SHA-1:</b> 160 bit, từng là chuẩn của NIST, nhưng năm 2017 bị chứng minh có va chạm (dự án SHAttered).</li><li><b>SHA-2:</b> Gồm SHA-224, SHA-256, SHA-384, SHA-512; hiện vẫn an toàn.</li><li><b>SHA-3 (Keccak):</b> Chuẩn mới nhất, cấu trúc sponge (xốp) thay cho Merkle–Damgård, chống nhiều loại tấn công hiện đại.</li></ul><hr><h2>3. MÃ CHỨNG THỰC THÔNG ĐIỆP (MAC)</h2><p><b>MAC</b> là chuỗi bit dùng để xác thực nguồn gốc và toàn vẹn của thông điệp, được tạo bằng khóa bí mật chung giữa hai bên.</p><p>Giả sử hai bên chia sẻ khóa K: MAC = F(K, M). Khi nhận được M và MAC, người nhận tính lại F(K, M) và so sánh.</p><h3>3.1 Ưu điểm:</h3><ul><li>Đảm bảo thông điệp không bị thay đổi.</li><li>Xác thực được người gửi.</li></ul><h3>3.2 Hạn chế:</h3><ul><li>Không chống chối bỏ (vì cả hai cùng biết K).</li><li>Không bảo vệ được tính bí mật (chỉ xác thực).</li></ul><hr><h2>4. HMAC (HASH-BASED MAC)</h2><p><b>HMAC</b> là dạng MAC dựa trên hàm băm. Công thức: HMAC(K, M) = H((K⊕opad) || H((K⊕ipad) || M)).</p><ul><li>ipad và opad là các hằng số đệm 0x36 và 0x5C.</li><li>Dùng trong nhiều giao thức như TLS, IPsec, OAuth, JWT, AWS Signature.</li></ul><h3>4.1 Ưu điểm của HMAC:</h3><ul><li>An toàn hơn MAC thông thường vì dựa trên hàm băm an toàn.</li><li>Dễ triển khai trên phần mềm.</li><li>Không cần thuật toán mã khối.</li></ul><hr><h2>5. TẤN CÔNG VÀ PHÒNG CHỐNG</h2><ul><li><b>Tấn công sinh va chạm (collision attack):</b> Cố gắng tìm hai thông điệp khác nhau có cùng hash.</li><li><b>Tấn công mở rộng độ dài (length extension):</b> Ảnh hưởng đến các hàm băm kiểu Merkle–Damgård (MD5, SHA-1, SHA-256).</li><li><b>Phòng chống:</b> Dùng HMAC thay vì hash trực tiếp, dùng SHA-3 hoặc thêm salt khi lưu mật khẩu.</li></ul><hr><h2>6. ỨNG DỤNG THỰC TẾ</h2><ul><li><b>Lưu mật khẩu:</b> hash + salt (bcrypt, PBKDF2, Argon2).</li><li><b>Chữ ký số:</b> Ký H(M) thay vì M để giảm khối lượng tính toán.</li><li><b>Xác thực API:</b> HMAC token với thời gian sống ngắn.</li><li><b>Kiểm tra file tải xuống:</b> so sánh SHA-256 hash do nhà phát hành cung cấp.</li></ul><hr><h2>✅ TỔNG KẾT</h2><ul><li>Hàm băm là trụ cột của bảo mật dữ liệu và xác thực thông tin.</li><li>MAC và HMAC giúp đảm bảo toàn vẹn và xác thực mà không cần mã hóa toàn bộ nội dung.</li><li>Luôn chọn SHA-2 hoặc SHA-3, tránh MD5 và SHA-1 trong các hệ thống hiện đại.</li></ul>"
+}

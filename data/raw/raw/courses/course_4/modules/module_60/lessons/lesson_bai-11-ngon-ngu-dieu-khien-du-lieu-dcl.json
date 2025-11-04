@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 11 🧩 NGÔN NGỮ ĐIỀU KHIỂN DỮ LIỆU (DCL)",
+  "created_at": "2025-10-24T10:58:08Z",
+  "url": "bai-11-ngon-ngu-dieu-khien-du-lieu-dcl",
+  "editing_roles": "teachers",
+  "page_id": 239,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-11-ngon-ngu-dieu-khien-du-lieu-dcl",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-24T10:58:24Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 11 – NGÔN NGỮ ĐIỀU KHIỂN DỮ LIỆU (DCL)</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu rõ khái niệm và vai trò của ngôn ngữ điều khiển dữ liệu (DCL) trong hệ quản trị cơ sở dữ liệu.</li><li>Nắm được cú pháp và cách sử dụng các lệnh DCL: GRANT, REVOKE, DENY.</li><li>Phân biệt quyền truy cập đối tượng (object privileges) và quyền hệ thống (system privileges).</li><li>Vận dụng DCL để quản lý quyền người dùng và nhóm (ROLE) trong SQL Server, MySQL, Oracle.</li></ul><hr><h2>1. KHÁI NIỆM NGÔN NGỮ ĐIỀU KHIỂN DỮ LIỆU (DCL)</h2><p><b>DCL (Data Control Language)</b> là tập hợp các câu lệnh SQL dùng để kiểm soát quyền truy cập và bảo mật dữ liệu trong hệ thống CSDL. DCL thường được sử dụng bởi quản trị viên (DBA).</p><hr><h2>2. CÁC LỆNH DCL CƠ BẢN</h2><h3>2.1 GRANT – Cấp quyền truy cập</h3><p>Dùng để cấp quyền cho người dùng hoặc nhóm người dùng.</p><pre><code>GRANT SELECT, INSERT ON SINHVIEN TO userA;<br>GRANT ALL PRIVILEGES ON QLSV.* TO 'admin'@'localhost';</code></pre><h3>2.2 REVOKE – Thu hồi quyền</h3><p>Dùng để thu hồi quyền đã cấp trước đó.</p><pre><code>REVOKE INSERT ON SINHVIEN FROM userA;<br>REVOKE ALL PRIVILEGES ON QLSV.* FROM 'admin'@'localhost';</code></pre><h3>2.3 DENY – Từ chối quyền (SQL Server)</h3><p>Deny được dùng để cấm quyền truy cập, có độ ưu tiên cao hơn GRANT.</p><pre><code>DENY DELETE ON SINHVIEN TO userB;</code></pre><hr><h2>3. PHÂN LOẠI QUYỀN TRONG CSDL</h2><ul><li><b>System Privileges:</b> quyền thao tác trên toàn hệ thống (CREATE USER, DROP DATABASE,...).</li><li><b>Object Privileges:</b> quyền thao tác trên đối tượng cụ thể (SELECT, INSERT, UPDATE,...).</li></ul><p>Ví dụ:</p><pre><code>GRANT CREATE TABLE TO userC;<br>GRANT UPDATE ON SINHVIEN TO userC;</code></pre><hr><h2>4. ROLE – NHÓM QUYỀN NGƯỜI DÙNG</h2><p>Role là tập hợp các quyền được gán cho một nhóm người dùng. Khi cấp quyền cho Role, tất cả thành viên trong Role đều được quyền đó.</p><pre><code>CREATE ROLE GIAOVIEN;<br>GRANT SELECT, UPDATE ON DIEM TO GIAOVIEN;<br>GRANT GIAOVIEN TO userA;</code></pre><hr><h2>5. KIỂM SOÁT BẢO MẬT CSDL</h2><ul><li>Phân quyền hợp lý cho từng nhóm người dùng (Giảng viên, Sinh viên, Quản trị).</li><li>Không cấp quyền trực tiếp cho tất cả, nên thông qua Role.</li><li>Sử dụng View hoặc Stored Procedure để ẩn dữ liệu nhạy cảm.</li><li>Theo dõi log truy cập và lịch sử thay đổi quyền.</li></ul><hr><h2>6. VÍ DỤ ỨNG DỤNG</h2><pre><code>-- Tạo user<br>CREATE USER 'sv01'@'localhost' IDENTIFIED BY '123456';<br>-- Cấp quyền xem bảng SINHVIEN<br>GRANT SELECT ON QLSV.SINHVIEN TO 'sv01'@'localhost';<br>-- Thu hồi quyền<br>REVOKE SELECT ON QLSV.SINHVIEN FROM 'sv01'@'localhost';</code></pre><hr><h2>✅ TỔNG KẾT</h2><ul><li>DCL giúp quản lý quyền truy cập và bảo mật trong hệ thống.</li><li>GRANT – cấp quyền, REVOKE – thu hồi, DENY – từ chối.</li><li>Role giúp gom nhóm quyền, dễ dàng quản lý tập thể người dùng.</li><li>Thiết kế quyền hợp lý là nền tảng của hệ thống CSDL an toàn.</li></ul>"
+}

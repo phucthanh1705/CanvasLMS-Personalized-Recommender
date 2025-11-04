@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 01 – TỔNG QUAN VỀ JAVASCRIPT",
+  "created_at": "2025-10-14T11:56:17Z",
+  "url": "bai-01-tong-quan-ve-javascript",
+  "editing_roles": "teachers",
+  "page_id": 167,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-01-tong-quan-ve-javascript",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-14T11:56:35Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 01 – TỔNG QUAN VỀ JAVASCRIPT</h1><h2>🎯 Mục tiêu học tập</h2><ul> <li>Hiểu khái niệm, vai trò và ứng dụng của ngôn ngữ JavaScript.</li> <li>Biết cách chèn mã JavaScript vào HTML và hiển thị kết quả trên trình duyệt.</li> <li>Nắm vững cú pháp cơ bản: biến, kiểu dữ liệu, toán tử, cấu trúc điều khiển, vòng lặp.</li> <li>Biết cách xử lý chuỗi, mảng và viết hàm trong JavaScript.</li></ul><hr><h2>1. Giới thiệu về JavaScript</h2><p><b>JavaScript</b> là ngôn ngữ lập trình thông dịch, được sử dụng chủ yếu để tạo các hiệu ứng động trên trang web, thao tác với DOM, xử lý sự kiện và tương tác với máy chủ thông qua AJAX hoặc Fetch API.</p><p>JavaScript chạy trên môi trường trình duyệt (client-side) và có thể chạy trên server thông qua Node.js.</p><pre><code>&lt;script&gt; console.log('Xin chào JavaScript!');&lt;/script&gt;</code></pre><hr><h2>2. Chèn JavaScript vào HTML</h2><p>Có ba cách chèn JavaScript vào trang web:</p><ol> <li>Chèn trực tiếp trong cặp thẻ <code>&lt;script&gt;</code>.</li> <li>Đặt trong file riêng <code>app.js</code> và liên kết bằng <code>&lt;script src='app.js'&gt;&lt;/script&gt;</code>.</li> <li>Chèn sự kiện vào phần tử HTML (ví dụ: <code>onclick</code>).</li></ol><hr><h2>3. Biến và kiểu dữ liệu</h2><ul> <li><b>var:</b> khai báo biến toàn cục hoặc có phạm vi function.</li> <li><b>let:</b> khai báo biến có phạm vi block (ES6).</li> <li><b>const:</b> khai báo hằng số, không thể gán lại.</li></ul><pre><code>let name = 'Kold';const year = 2025;var score = 95;</code></pre><p>Các kiểu dữ liệu cơ bản:</p><ul> <li>String (chuỗi)</li> <li>Number (số)</li> <li>Boolean</li> <li>Array</li> <li>Object</li> <li>Undefined / Null</li></ul><hr><h2>4. Toán tử và biểu thức</h2><p>JavaScript hỗ trợ các nhóm toán tử:</p><ul> <li><b>Số học:</b> +, -, *, /, %, ++, --</li> <li><b>So sánh:</b> ==, ===, !=, !==, &lt;, &gt;, &lt;=, &gt;=</li> <li><b>Logic:</b> &amp;&amp;, ||, !</li> <li><b>Gán:</b> =, +=, -=, *=, /=</li></ul><pre><code>let a = 10, b = 3;console.log(a + b); // 13console.log(a % b); // 1</code></pre><hr><h2>5. Cấu trúc điều khiển</h2><p>Điều kiện:</p><pre><code>let x = 10;if (x &gt; 5) { console.log('Lớn hơn 5');} else { console.log('Nhỏ hơn hoặc bằng 5');}</code></pre><p>Switch:</p><pre><code>let color = 'blue';switch (color) { case 'red': console.log('Đỏ'); break; case 'blue': console.log('Xanh dương'); break; default: console.log('Màu khác');}</code></pre><hr><h2>6. Vòng lặp</h2><ul> <li><b>for:</b> duyệt theo chỉ số.</li> <li><b>for...in:</b> duyệt thuộc tính của đối tượng.</li> <li><b>for...of:</b> duyệt giá trị của mảng.</li> <li><b>while / do...while:</b> lặp khi điều kiện đúng.</li></ul><pre><code>for (let i = 0; i &lt; 5; i++) { console.log('Lần lặp', i);}</code></pre><hr><h2>7. Mảng và phương thức mảng</h2><pre><code>let fruits = ['apple', 'banana', 'orange'];console.log(fruits.length); // 3// Thêm phần tửfruits.push('grape');// Lặp qua mảngfruits.forEach(f =&gt; console.log(f));// Lọc phần tửlet result = fruits.filter(f =&gt; f.startsWith('a'));console.log(result); // ['apple']</code></pre><hr><h2>8. Hàm (Functions)</h2><p>Hai cách khai báo hàm:</p><pre><code>// Hàm truyền thốngfunction greet(name) { return `Xin chào ${name}`;}// Arrow function (ES6)const sum = (a, b) =&gt; a + b;</code></pre><hr><h2>9. Làm việc với chuỗi</h2><pre><code>let str = 'JavaScript';console.log(str.toUpperCase()); // JAVASCRIPTconsole.log(str.substring(0, 4)); // Java</code></pre><hr><h2>10. Tóm tắt</h2><ul> <li>JavaScript là nền tảng cho các công nghệ web hiện đại (React, Angular, Node.js).</li> <li>Nắm vững cú pháp cơ bản giúp bạn phát triển ứng dụng linh hoạt hơn.</li> <li>Cần luyện tập kết hợp DOM, sự kiện, và async trong các bài sau.</li></ul>"
+}

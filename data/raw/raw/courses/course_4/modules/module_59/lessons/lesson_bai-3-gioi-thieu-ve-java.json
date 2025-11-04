@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 3 – GIỚI THIỆU VỀ JAVA",
+  "created_at": "2025-10-19T12:35:59Z",
+  "url": "bai-3-gioi-thieu-ve-java",
+  "editing_roles": "teachers",
+  "page_id": 221,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-3-gioi-thieu-ve-java",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T12:36:14Z",
+  "locked_for_user": false,
+  "body": "<h1>BÀI 3 – GIỚI THIỆU VỀ JAVA</h1><h2>Mục tiêu học tập</h2><ul><li>Hiểu tổng quan về ngôn ngữ lập trình Java và triết lý thiết kế “Write Once, Run Anywhere”.</li><li>Nắm được cấu trúc cơ bản của chương trình Java, vai trò của JVM, JDK và JRE.</li><li>Phân biệt các loại ứng dụng Java: console, web, mobile, và enterprise.</li><li>Hiểu và thực hành với cấu trúc điều khiển, mảng, lớp wrapper trong Java.</li></ul><hr><h2>1. Giới thiệu về Java</h2><p>Java là ngôn ngữ lập trình hướng đối tượng, do Sun Microsystems phát triển (nay thuộc Oracle). Mục tiêu: tạo ra chương trình có thể chạy trên nhiều nền tảng nhờ cơ chế <b>biên dịch bytecode</b> và máy ảo JVM (Java Virtual Machine).</p><ul><li>Portable – chạy trên mọi hệ điều hành có JVM.</li><li>Secure – có sandbox và bộ quản lý bộ nhớ tự động.</li><li>Robust – cơ chế xử lý lỗi mạnh mẽ, garbage collection tự động.</li><li>Multithreaded – hỗ trợ xử lý đa luồng.</li></ul><p>Châm ngôn của Java: <b>“Write Once, Run Anywhere”</b>.</p><hr><h2>2. Môi trường phát triển Java</h2><ul><li><b>JDK (Java Development Kit)</b>: bộ công cụ dành cho lập trình viên, bao gồm compiler (<code>javac</code>), JVM, thư viện chuẩn, và công cụ build (jar, javadoc,…).</li><li><b>JRE (Java Runtime Environment)</b>: môi trường thực thi Java (JVM + thư viện chuẩn) dùng để chạy ứng dụng.</li><li><b>JVM (Java Virtual Machine)</b>: biên dịch bytecode sang mã máy tương ứng của hệ điều hành.</li></ul><p>Sơ đồ:</p><pre><code>Source Code (.java) → Compiler → Bytecode (.class) → JVM → Machine Code</code></pre><hr><h2>3. Cấu trúc chương trình Java cơ bản</h2><pre><code>public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, Java!\"); } }</code></pre><ul><li><code>public class HelloWorld</code>: định nghĩa lớp công khai tên HelloWorld.</li><li><code>public static void main(String[] args)</code>: điểm bắt đầu của chương trình.</li><li><code>System.out.println()</code>: phương thức in ra màn hình.</li></ul><hr><h2>4. Cấu trúc điều khiển trong Java</h2><ul><li><b>Câu lệnh rẽ nhánh:</b> <code>if...else</code>, <code>switch...case</code>.</li><li><b>Câu lệnh lặp:</b> <code>for</code>, <code>while</code>, <code>do...while</code>.</li><li><b>Câu lệnh nhảy:</b> <code>break</code>, <code>continue</code>, <code>return</code>.</li></ul><pre><code>for (int i = 1; i &lt;= 5; i++) { System.out.println(\"Count: \" + i); }</code></pre><hr><h2>5. Làm việc với mảng</h2><p>Mảng (Array) trong Java là tập hợp các phần tử cùng kiểu dữ liệu, có chỉ số bắt đầu từ 0.</p><pre><code>int[] numbers = {1, 2, 3, 4, 5}; System.out.println(numbers[2]); // in ra 3</code></pre><ul><li><b>Mảng 1 chiều:</b> lưu trữ dãy dữ liệu tuyến tính.</li><li><b>Mảng 2 chiều:</b> giống ma trận.</li></ul><pre><code>int[][] matrix = new int[2][3]; matrix[0][1] = 5;</code></pre><hr><h2>6. Lớp Wrapper trong Java</h2><p>Java hỗ trợ lớp bao (wrapper) cho các kiểu nguyên thủy để làm việc với đối tượng: <code>Integer</code>, <code>Double</code>, <code>Boolean</code>, <code>Character</code>.</p><pre><code>int a = 10; Integer obj = Integer.valueOf(a); int b = obj.intValue();</code></pre><ul><li>Tự động boxing/unboxing: <code>Integer x = 5;</code> tự chuyển sang đối tượng Integer.</li></ul><hr><h2>7. Các loại ứng dụng Java</h2><ul><li><b>Java SE</b>: ứng dụng console hoặc desktop.</li><li><b>Java EE / Jakarta EE</b>: ứng dụng web và doanh nghiệp.</li><li><b>Java ME</b>: ứng dụng di động (Android dựa trên JVM riêng).</li></ul><hr><h2>8. Ví dụ tổng hợp</h2><pre><code>class Student { String name; int age; void display(){ System.out.println(name + \" - \" + age); } public static void main(String[] args){ Student s = new Student(); s.name = \"An\"; s.age = 20; s.display(); } }</code></pre><hr><h2>Kết luận</h2><p>Bài học này giúp sinh viên hiểu cấu trúc, cú pháp cơ bản và hệ sinh thái của Java. Đây là nền tảng để tiếp tục học các khái niệm nâng cao như lớp, kế thừa, đa hình, interface và xử lý ngoại lệ.</p>"
+}

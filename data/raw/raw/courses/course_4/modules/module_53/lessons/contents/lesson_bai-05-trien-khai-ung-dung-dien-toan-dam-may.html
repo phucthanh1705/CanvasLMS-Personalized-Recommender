@@ -1,0 +1,106 @@
+<h1>🧩 BÀI 05 – TRIỂN KHAI ỨNG DỤNG ĐIỆN TOÁN ĐÁM MÂY</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu khái niệm điện toán đám mây (Cloud Computing) và các mô hình dịch vụ (IaaS, PaaS, SaaS).</li>
+ <li>Nắm được kiến trúc và ưu điểm của nền tảng Microsoft Azure.</li>
+ <li>Biết cách tạo và triển khai ứng dụng web trên Azure App Service.</li>
+ <li>Quản lý cơ sở dữ liệu, lưu trữ (Storage), và cấu hình tài nguyên trên Azure Portal.</li>
+ <li>Hiểu các khái niệm bảo mật, nhận diện người dùng (Azure AD), và thanh toán theo nhu cầu.</li>
+</ul>
+<hr>
+
+<h2>1. Khái niệm về điện toán đám mây</h2>
+<p><b>Điện toán đám mây (Cloud Computing)</b> là mô hình cung cấp tài nguyên tính toán (máy chủ, lưu trữ, dịch vụ, phần mềm) qua Internet, giúp người dùng truy cập ở mọi nơi mà không cần hạ tầng phần cứng riêng.</p>
+<p><b>Đặc điểm chính:</b></p>
+<ul>
+ <li>Truy cập theo nhu cầu (On-Demand Self-Service).</li>
+ <li>Khả năng mở rộng linh hoạt (Scalability).</li>
+ <li>Tài nguyên được chia sẻ (Resource Pooling).</li>
+ <li>Thanh toán theo mức sử dụng (Pay-as-you-go).</li>
+</ul>
+<hr>
+
+<h2>2. Mô hình dịch vụ trong điện toán đám mây</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Mô hình</th><th>Miêu tả</th><th>Ví dụ</th></tr></thead>
+<tbody>
+<tr><td><b>IaaS</b> (Infrastructure as a Service)</td><td>Cung cấp máy chủ ảo, lưu trữ, mạng.</td><td>Azure Virtual Machines, AWS EC2</td></tr>
+<tr><td><b>PaaS</b> (Platform as a Service)</td><td>Nền tảng cho phép triển khai ứng dụng mà không cần quản lý hạ tầng.</td><td>Azure App Service, Google App Engine</td></tr>
+<tr><td><b>SaaS</b> (Software as a Service)</td><td>Phần mềm hoàn chỉnh chạy trên nền web.</td><td>Office 365, Gmail, Salesforce</td></tr>
+</tbody>
+</table>
+<hr>
+
+<h2>3. Tổng quan về Microsoft Azure</h2>
+<p><b>Microsoft Azure</b> là nền tảng điện toán đám mây của Microsoft, cung cấp hơn 200 dịch vụ: máy ảo, lưu trữ, cơ sở dữ liệu, AI, IoT, mạng, container, v.v.</p>
+<p><b>Các dịch vụ chính:</b></p>
+<ul>
+ <li><b>Compute:</b> Azure Virtual Machines, Azure Functions, App Service.</li>
+ <li><b>Storage:</b> Blob Storage, File Storage, Disk Storage.</li>
+ <li><b>Database:</b> Azure SQL Database, Cosmos DB.</li>
+ <li><b>Networking:</b> Virtual Network, Load Balancer, CDN.</li>
+ <li><b>Identity:</b> Azure Active Directory (Azure AD).</li>
+</ul>
+<hr>
+
+<h2>4. Cấu trúc quản lý tài nguyên Azure</h2>
+<p>Các thành phần cơ bản trong Azure:</p>
+<ul>
+ <li><b>Subscription:</b> Tài khoản thanh toán và quản lý tài nguyên.</li>
+ <li><b>Resource Group:</b> Nhóm chứa các tài nguyên (VM, DB, App,...).</li>
+ <li><b>Resource:</b> Từng dịch vụ cụ thể (App Service, Storage,...).</li>
+</ul>
+<p>Mỗi tài nguyên được định danh bằng <b>Resource ID</b> và có thể quản lý qua Azure Portal hoặc Azure CLI.</p>
+<hr>
+
+<h2>5. Triển khai ứng dụng Web trên Azure App Service</h2>
+<p><b>Azure App Service</b> là nền tảng PaaS cho phép chạy ứng dụng Web mà không cần quản lý server.</p>
+<p><b>Các bước triển khai:</b></p>
+<ol>
+ <li>Đăng nhập vào <a href="https://portal.azure.com">Azure Portal</a>.</li>
+ <li>Tạo <b>Resource Group</b> mới.</li>
+ <li>Chọn <b>App Services → Create Web App</b>.</li>
+ <li>Nhập tên app, runtime (Node.js, Java, .NET, PHP,...), khu vực (Region).</li>
+ <li>Chọn <b>App Service Plan</b> → Create → Deploy.</li>
+</ol>
+<p>Sau khi hoàn tất, truy cập ứng dụng qua đường dẫn: <code>https://tên-app.azurewebsites.net</code>.</p>
+<hr>
+
+<h2>6. Quản lý cơ sở dữ liệu và lưu trữ</h2>
+<ul>
+ <li><b>Azure SQL Database:</b> cung cấp cơ sở dữ liệu dạng dịch vụ (Database-as-a-Service).</li>
+ <li><b>Azure Blob Storage:</b> dùng lưu trữ tệp lớn, ảnh, video.</li>
+ <li><b>Azure Storage Explorer:</b> ứng dụng desktop giúp quản lý dữ liệu trực quan.</li>
+</ul>
+<hr>
+
+<h2>7. Azure Active Directory (Azure AD)</h2>
+<p><b>Azure AD</b> là dịch vụ quản lý định danh tập trung của Microsoft, hỗ trợ đăng nhập một lần (Single Sign-On – SSO) và xác thực đa yếu tố (MFA).</p>
+<p>Ví dụ: người dùng có thể đăng nhập Office 365, Teams và Azure Portal bằng cùng tài khoản AD.</p>
+<hr>
+
+<h2>8. Mô hình bảo mật và thanh toán</h2>
+<ul>
+ <li><b>Role-Based Access Control (RBAC):</b> kiểm soát truy cập theo vai trò người dùng (Owner, Contributor, Reader).</li>
+ <li><b>Pricing Model:</b> tính phí dựa trên tài nguyên sử dụng – Pay-as-you-go hoặc Reserved Instance.</li>
+</ul>
+<hr>
+
+<h2>9. Thực hành triển khai WebApp WordPress</h2>
+<p><b>Mục tiêu:</b> Tạo website WordPress trên Azure trong 10 phút.</p>
+<ol>
+ <li>Tạo tài khoản Azure (Free Tier).</li>
+ <li>Tạo <b>Web App + Database MySQL</b>.</li>
+ <li>Cấu hình tên miền tạm thời.</li>
+ <li>Cài đặt WordPress qua Marketplace.</li>
+ <li>Đăng nhập admin và cập nhật giao diện.</li>
+</ol>
+<hr>
+
+<h2>10. Tổng kết</h2>
+<ul>
+ <li>Azure cung cấp đầy đủ dịch vụ điện toán, lưu trữ, cơ sở dữ liệu và bảo mật hiện đại.</li>
+ <li>Hiểu các mô hình IaaS, PaaS, SaaS giúp lựa chọn giải pháp phù hợp.</li>
+ <li>App Service và Azure AD là hai dịch vụ nền tảng quan trọng trong triển khai ứng dụng doanh nghiệp.</li>
+</ul>

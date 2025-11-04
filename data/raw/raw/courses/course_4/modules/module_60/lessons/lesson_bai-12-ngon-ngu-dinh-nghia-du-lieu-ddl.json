@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 12 🧩 NGÔN NGỮ ĐỊNH NGHĨA DỮ LIỆU (DDL)",
+  "created_at": "2025-10-24T11:07:06Z",
+  "url": "bai-12-ngon-ngu-dinh-nghia-du-lieu-ddl",
+  "editing_roles": "teachers",
+  "page_id": 240,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-12-ngon-ngu-dinh-nghia-du-lieu-ddl",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-24T11:07:22Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 12 – NGÔN NGỮ ĐỊNH NGHĨA DỮ LIỆU (DDL)</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu khái niệm và vai trò của ngôn ngữ định nghĩa dữ liệu (DDL) trong SQL.</li><li>Nắm vững cú pháp và cách sử dụng các lệnh CREATE, ALTER, DROP, TRUNCATE.</li><li>Biết cách định nghĩa khóa chính, khóa ngoại, ràng buộc toàn vẹn dữ liệu.</li><li>Thực hành thiết kế cấu trúc bảng và cập nhật schema an toàn.</li></ul><hr><h2>1. KHÁI NIỆM DDL</h2><p><b>DDL (Data Definition Language)</b> là tập hợp các lệnh SQL dùng để định nghĩa và quản lý cấu trúc dữ liệu trong cơ sở dữ liệu, bao gồm tạo, thay đổi, và xóa các đối tượng như bảng, chỉ mục, view, schema,…</p><p>Khác với DML, DDL tác động đến cấu trúc – không phải dữ liệu.</p><hr><h2>2. CÁC LỆNH DDL CƠ BẢN</h2><h3>2.1 CREATE – Tạo đối tượng</h3><pre><code>CREATE TABLE SINHVIEN (<br> MaSV CHAR(10) PRIMARY KEY,<br> TenSV NVARCHAR(50),<br> MaLop CHAR(10),<br> NgaySinh DATE,<br> Diem FLOAT CHECK (Diem BETWEEN 0 AND 10)<br>);</code></pre><p>Có thể tạo thêm các đối tượng khác như:</p><ul><li>CREATE INDEX – tạo chỉ mục.</li><li>CREATE VIEW – tạo khung nhìn.</li><li>CREATE SCHEMA – tạo không gian cơ sở dữ liệu.</li></ul><hr><h3>2.2 ALTER – Thay đổi cấu trúc</h3><p>Thêm, xóa, hoặc thay đổi cột/ràng buộc trong bảng.</p><pre><code>ALTER TABLE SINHVIEN ADD Email NVARCHAR(100);<br>ALTER TABLE SINHVIEN DROP COLUMN Email;<br>ALTER TABLE SINHVIEN ALTER COLUMN TenSV NVARCHAR(80);</code></pre><hr><h3>2.3 DROP – Xóa đối tượng</h3><p>Dùng để xóa bảng hoặc các đối tượng khác vĩnh viễn.</p><pre><code>DROP TABLE SINHVIEN;<br>DROP VIEW V_SV_TB;</code></pre><p>Lưu ý: thao tác này không thể ROLLBACK nếu chưa COMMIT.</p><hr><h3>2.4 TRUNCATE – Xóa toàn bộ dữ liệu trong bảng</h3><p>Khác với DELETE, TRUNCATE xóa toàn bộ dữ liệu mà không ghi log chi tiết từng dòng → nhanh hơn, nhưng không thể dùng WHERE.</p><pre><code>TRUNCATE TABLE SINHVIEN;</code></pre><hr><h2>3. RÀNG BUỘC (CONSTRAINTS)</h2><ul><li><b>PRIMARY KEY:</b> Xác định duy nhất bản ghi trong bảng.</li><li><b>FOREIGN KEY:</b> Liên kết giữa hai bảng (duy trì toàn vẹn tham chiếu).</li><li><b>UNIQUE:</b> Đảm bảo giá trị không trùng lặp.</li><li><b>CHECK:</b> Giới hạn giá trị hợp lệ cho cột.</li><li><b>NOT NULL:</b> Không cho phép giá trị trống.</li><li><b>DEFAULT:</b> Gán giá trị mặc định khi không nhập dữ liệu.</li></ul><p>Ví dụ:</p><pre><code>CREATE TABLE DIEM (<br> MaSV CHAR(10) NOT NULL,<br> MaMH CHAR(10) NOT NULL,<br> Diem FLOAT CHECK (Diem BETWEEN 0 AND 10),<br> PRIMARY KEY (MaSV, MaMH),<br> FOREIGN KEY (MaSV) REFERENCES SINHVIEN(MaSV)<br>);</code></pre><hr><h2>4. QUẢN LÝ LƯỢC ĐỒ (SCHEMA)</h2><p>Schema là không gian logic chứa các bảng, view, function,…</p><pre><code>CREATE SCHEMA QLSV AUTHORIZATION admin;<br>DROP SCHEMA QLSV;</code></pre><hr><h2>5. CÁC LƯU Ý KHI SỬ DỤNG DDL</h2><ul><li>DDL tự động COMMIT – không thể ROLLBACK nếu đã thực thi thành công.</li><li>Hạn chế DROP/TRUNCATE trên môi trường thật.</li><li>Luôn sao lưu trước khi thay đổi cấu trúc bảng lớn.</li><li>Kiểm tra ràng buộc khóa ngoại trước khi DROP bảng liên kết.</li></ul><hr><h2>✅ TỔNG KẾT</h2><ul><li>DDL định nghĩa cấu trúc dữ liệu, không tác động trực tiếp đến nội dung.</li><li>Các lệnh chính: CREATE, ALTER, DROP, TRUNCATE.</li><li>Ràng buộc giúp đảm bảo toàn vẹn dữ liệu trong thiết kế cơ sở dữ liệu.</li><li>DDL là bước nền tảng cho mọi hệ thống quản lý dữ liệu chuyên nghiệp.</li></ul>"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 8 – INTERFACE VÀ PACKAGE",
+  "created_at": "2025-10-19T13:17:37Z",
+  "url": "bai-8-interface-va-package",
+  "editing_roles": "teachers",
+  "page_id": 226,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-8-interface-va-package",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T13:17:52Z",
+  "locked_for_user": false,
+  "body": "<h1>BÀI 8 – INTERFACE VÀ PACKAGE</h1><h2>Mục tiêu học tập</h2><ul><li>Hiểu rõ khái niệm interface và package trong Java.</li><li>Phân biệt interface với abstract class, nắm cú pháp định nghĩa và hiện thực interface.</li><li>Áp dụng interface để thiết kế hệ thống linh hoạt, giảm coupling và tăng khả năng mở rộng.</li><li>Hiểu cách tổ chức mã nguồn bằng package, quản lý namespace và kiểm soát truy cập.</li></ul><hr><h2>1. Interface trong Java</h2><p><b>Interface</b> là một tập hợp các phương thức trừu tượng mô tả hành vi mà các lớp phải thực hiện. Interface được định nghĩa bằng từ khóa <code>interface</code>.</p><pre><code>interface Flyable { void fly(); }</code></pre><p>Một lớp sẽ dùng từ khóa <code>implements</code> để hiện thực các phương thức trong interface.</p><pre><code>class Bird implements Flyable { public void fly(){ System.out.println(\"Bird is flying\"); } }</code></pre><hr><h2>2. Quy tắc của Interface</h2><ul><li>Tất cả phương thức trong interface mặc định là <code>public abstract</code>.</li><li>Các biến trong interface là <code>public static final</code>.</li><li>Một lớp có thể <b>implements</b> nhiều interface cùng lúc (đa kế thừa hành vi).</li></ul><hr><h2>3. Interface vs Abstract Class</h2><table border=\"1\"><tbody><tr><th>Tiêu chí</th><th>Interface</th><th>Abstract Class</th></tr><tr><td>Kế thừa</td><td>Một lớp có thể implements nhiều interface</td><td>Chỉ kế thừa một abstract class</td></tr><tr><td>Thành phần</td><td>Chỉ chứa hằng và phương thức trừu tượng (từ Java 8 có default/static method)</td><td>Có thể chứa thuộc tính, constructor, phương thức có hoặc không có thân</td></tr><tr><td>Mục đích</td><td>Định nghĩa hợp đồng hành vi</td><td>Định nghĩa khuôn mẫu và chia sẻ cài đặt chung</td></tr></tbody></table><hr><h2>4. Interface kế thừa Interface</h2><p>Một interface có thể kế thừa từ interface khác bằng từ khóa <code>extends</code>.</p><pre><code>interface Moveable { void move(); } interface Flyable extends Moveable { void fly(); }</code></pre><p>Lớp hiện thực interface Flyable phải cài đặt cả hai phương thức move() và fly().</p><hr><h2>5. Interface với default và static method (Java 8+)</h2><p>Từ Java 8, interface có thể chứa phương thức mặc định (default method) và static method.</p><pre><code>interface Logger { default void log(String msg){ System.out.println(\"LOG: \"+msg); } static void info(String msg){ System.out.println(\"INFO: \"+msg); } }</code></pre><hr><h2>6. Interface Comparator và Comparable</h2><p>Java cung cấp hai interface phổ biến để so sánh đối tượng:</p><ul><li><b>Comparable:</b> định nghĩa trật tự tự nhiên cho lớp (dùng <code>compareTo()</code>).</li><li><b>Comparator:</b> cho phép định nghĩa nhiều cách sắp xếp khác nhau.</li></ul><pre><code>class Student implements Comparable { int id; String name; public int compareTo(Student s){ return this.id - s.id; } }</code></pre><hr><h2>7. Package trong Java</h2><p><b>Package</b> là cơ chế nhóm các lớp liên quan để tổ chức mã nguồn và tránh trùng tên.</p><pre><code>package com.myapp.model; public class Student { String name; }</code></pre><ul><li>Dùng câu lệnh <code>import</code> để sử dụng lớp từ package khác.</li></ul><pre><code>import com.myapp.model.Student; public class Main { public static void main(String[] args){ Student s = new Student(); } }</code></pre><hr><h2>8. Quản lý truy cập bằng package</h2><ul><li><b>public:</b> có thể truy cập từ mọi package.</li><li><b>protected:</b> trong cùng package và lớp con.</li><li><b>default:</b> chỉ trong cùng package.</li></ul><hr><h2>9. Tổ chức thư mục thực tế</h2><p>Package tương ứng với cấu trúc thư mục trong hệ thống. Ví dụ:</p><pre><code>src/com/company/app/Main.java → package com.company.app;</code></pre><hr><h2>10. Ứng dụng Interface và Package trong thiết kế</h2><p>Kết hợp interface và package giúp chia tách module, giảm phụ thuộc, dễ bảo trì. Interface định nghĩa hành vi, package quản lý cấu trúc dự án.</p><hr><h2>Kết luận</h2><p>Interface và Package là hai công cụ thiết kế quan trọng của Java. Interface tạo ra hợp đồng hành vi rõ ràng giữa các lớp, còn Package giúp quản lý mã nguồn và quyền truy cập hiệu quả.</p>"
+}

@@ -1,0 +1,47 @@
+{
+  "quiz_submissions": [
+    {
+      "id": 21,
+      "quiz_id": 63,
+      "quiz_version": 5,
+      "user_id": 38,
+      "submission_id": 1790,
+      "score": null,
+      "kept_score": 1.0,
+      "started_at": "2025-10-20T08:05:55Z",
+      "end_at": null,
+      "finished_at": null,
+      "attempt": 8,
+      "workflow_state": "untaken",
+      "fudge_points": null,
+      "quiz_points_possible": 20.0,
+      "extra_attempts": null,
+      "extra_time": null,
+      "manually_unlocked": null,
+      "validation_token": "1c12233fd6b7fc105640af25d5dbe7882faa7e9d5e01f53c917bf83e9c81b320",
+      "score_before_regrade": null,
+      "has_seen_results": false,
+      "time_spent": null,
+      "attempts_left": -1,
+      "overdue_and_needs_submission": false,
+      "excused?": false,
+      "html_url": "http://localhost:3000/courses/4/quizzes/63/submissions/21"
+    }
+  ],
+  "users": [
+    {
+      "id": 38,
+      "name": "Student 2",
+      "created_at": "2025-10-16T01:58:10-06:00",
+      "sortable_name": "2, Student",
+      "short_name": "Student2",
+      "sis_user_id": "s2",
+      "integration_id": null,
+      "sis_import_id": 69,
+      "login_id": "student2"
+    }
+  ],
+  "meta": {
+    "primaryCollection": "quiz_submissions"
+  }
+}

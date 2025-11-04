@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 4 🧩 RÀNG BUỘC TOÀN VẸN",
+  "created_at": "2025-10-24T09:57:14Z",
+  "url": "bai-4-rang-buoc-toan-ven",
+  "editing_roles": "teachers",
+  "page_id": 232,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-4-rang-buoc-toan-ven",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-24T09:57:31Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 4 – RÀNG BUỘC TOÀN VẸN (CONSTRAINTS)</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu được khái niệm và vai trò của ràng buộc toàn vẹn trong cơ sở dữ liệu.</li><li>Phân biệt được các loại ràng buộc: toàn vẹn thực thể, toàn vẹn tham chiếu và ràng buộc người dùng.</li><li>Vận dụng các câu lệnh SQL để định nghĩa ràng buộc trong bảng.</li><li>Kiểm soát và đảm bảo tính nhất quán dữ liệu trong hệ thống thực tế.</li></ul><hr><h2>1. KHÁI NIỆM RÀNG BUỘC TOÀN VẸN</h2><p>Ràng buộc toàn vẹn (Integrity Constraint) là các quy tắc được áp dụng lên dữ liệu để đảm bảo tính hợp lệ, chính xác và nhất quán của cơ sở dữ liệu. Mục tiêu là ngăn chặn các dữ liệu sai logic hoặc vi phạm quan hệ giữa các bảng.</p><hr><h2>2. CÁC LOẠI RÀNG BUỘC TOÀN VẸN</h2><h3>2.1 Toàn vẹn thực thể (Entity Integrity)</h3><p>Đảm bảo rằng mỗi bản ghi trong bảng được xác định duy nhất bằng khóa chính (Primary Key). Không cho phép giá trị NULL trong khóa chính.</p><pre><code>CREATE TABLE SINHVIEN ( MaSV CHAR(5) PRIMARY KEY, TenSV NVARCHAR(50), Diem FLOAT );</code></pre><h3>2.2 Toàn vẹn tham chiếu (Referential Integrity)</h3><p>Đảm bảo rằng giá trị của khóa ngoại (Foreign Key) phải tồn tại trong bảng cha được tham chiếu. Nếu bảng cha thay đổi hoặc xóa dữ liệu, hệ thống sẽ kiểm soát hành vi theo quy tắc ON DELETE hoặc ON UPDATE.</p><pre><code>CREATE TABLE DIEM ( MaSV CHAR(5) REFERENCES SINHVIEN(MaSV), Diem FLOAT );</code></pre><h3>2.3 Ràng buộc người dùng (User-defined Integrity)</h3><p>Cho phép định nghĩa các điều kiện tùy chỉnh bằng CHECK, DEFAULT, UNIQUE, NOT NULL.</p><ul><li><b>NOT NULL:</b> Không cho phép giá trị NULL.</li><li><b>UNIQUE:</b> Đảm bảo giá trị trong cột là duy nhất.</li><li><b>CHECK:</b> Kiểm tra giá trị theo điều kiện logic.</li><li><b>DEFAULT:</b> Cung cấp giá trị mặc định khi không nhập dữ liệu.</li></ul><pre><code>CREATE TABLE MONHOC ( MaMH CHAR(5) PRIMARY KEY, TenMH NVARCHAR(50) NOT NULL, SoTinChi INT CHECK(SoTinChi BETWEEN 1 AND 5), TrangThai NVARCHAR(20) DEFAULT 'Hoạt động' );</code></pre><hr><h2>3. QUẢN LÝ VÀ THAY ĐỔI RÀNG BUỘC</h2><ul><li>Dùng ALTER TABLE để thêm, sửa hoặc xóa constraint.</li><li>Hệ thống có thể tự động tạo tên constraint hoặc người dùng chỉ định thủ công.</li></ul><pre><code>ALTER TABLE SINHVIEN ADD CONSTRAINT FK_SV_Lop FOREIGN KEY (MaLop) REFERENCES LOP(MaLop);</code></pre><hr><h2>4. CƠ CHẾ DUY TRÌ TOÀN VẸN</h2><p>Hệ quản trị CSDL tự động kiểm tra ràng buộc khi thực hiện INSERT, UPDATE, DELETE. Nếu dữ liệu vi phạm, hệ thống sẽ từ chối giao dịch và thông báo lỗi để đảm bảo toàn vẹn dữ liệu.</p><hr><h2>✅ TỔNG KẾT</h2><ul><li>Ràng buộc toàn vẹn là công cụ quan trọng để duy trì tính đúng đắn và ổn định của dữ liệu.</li><li>Khóa chính, khóa ngoại, và các constraint CHECK, UNIQUE, NOT NULL, DEFAULT giúp ngăn ngừa dữ liệu sai logic.</li><li>DBMS tự động kiểm tra và từ chối các thao tác làm mất tính toàn vẹn.</li></ul>"
+}

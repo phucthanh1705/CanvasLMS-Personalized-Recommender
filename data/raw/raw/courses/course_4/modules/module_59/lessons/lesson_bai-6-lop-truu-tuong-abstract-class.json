@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 6 – LỚP TRỪU TƯỢNG (ABSTRACT CLASS)",
+  "created_at": "2025-10-19T13:01:45Z",
+  "url": "bai-6-lop-truu-tuong-abstract-class",
+  "editing_roles": "teachers",
+  "page_id": 224,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-6-lop-truu-tuong-abstract-class",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-19T13:02:00Z",
+  "locked_for_user": false,
+  "body": "<h1>BÀI 6 – LỚP TRỪU TƯỢNG (ABSTRACT CLASS)</h1><h2>Mục tiêu học tập</h2><ul><li>Hiểu khái niệm và vai trò của lớp trừu tượng (abstract class) trong lập trình hướng đối tượng.</li><li>Phân biệt lớp trừu tượng và interface.</li><li>Hiểu cách định nghĩa, kế thừa và triển khai phương thức trừu tượng.</li><li>Áp dụng lớp trừu tượng để thiết kế hệ thống có khả năng mở rộng, giảm trùng lặp mã và tăng tính trừu tượng hóa.</li></ul><hr><h2>1. Khái niệm lớp trừu tượng</h2><p><b>Lớp trừu tượng</b> là lớp không thể tạo đối tượng trực tiếp, được dùng để định nghĩa khuôn mẫu hành vi cho các lớp con. Một lớp được khai báo với từ khóa <code>abstract</code>.</p><pre><code>abstract class Animal { abstract void sound(); void eat(){ System.out.println(\"Eating...\"); } }</code></pre><p>Các lớp con của lớp trừu tượng phải hiện thực (override) tất cả các phương thức trừu tượng.</p><pre><code>class Dog extends Animal { void sound(){ System.out.println(\"Woof\"); } }</code></pre><hr><h2>2. Khi nào cần sử dụng lớp trừu tượng</h2><ul><li>Khi nhiều lớp có hành vi tương tự nhưng khác cách cài đặt cụ thể.</li><li>Khi cần chia sẻ một phần mã giữa các lớp con (ví dụ: phương thức chung).</li><li>Khi muốn đảm bảo các lớp con phải cài đặt một số hành vi bắt buộc.</li></ul><hr><h2>3. Định nghĩa lớp và phương thức trừu tượng</h2><p>Phương thức trừu tượng là phương thức không có phần thân, chỉ định nghĩa giao diện của hành vi.</p><pre><code>abstract class Shape { abstract double area(); }</code></pre><p>Lớp chứa ít nhất một phương thức trừu tượng thì phải được khai báo là abstract. Tuy nhiên, lớp abstract có thể có cả phương thức bình thường.</p><hr><h2>4. Tính kế thừa trong abstract class</h2><pre><code>abstract class Employee { String name; double salary; Employee(String name,double salary){this.name=name;this.salary=salary;} abstract double calcBonus(); } class Developer extends Employee { Developer(String n,double s){super(n,s);} double calcBonus(){ return salary*0.1; } } class Manager extends Employee { Manager(String n,double s){super(n,s);} double calcBonus(){ return salary*0.2; } }</code></pre><p>Lớp trừu tượng có thể chứa constructor để khởi tạo dữ liệu chung cho lớp con.</p><hr><h2>5. So sánh Abstract class và Interface</h2><table border=\"1\"><tbody><tr><th>Tiêu chí</th><th>Abstract Class</th><th>Interface</th></tr><tr><td>Thành phần</td><td>Có thể có biến instance, constructor, phương thức đã và chưa cài đặt</td><td>Chỉ có hằng số và phương thức abstract (từ Java 8 có default/static method)</td></tr><tr><td>Kế thừa</td><td>Chỉ kế thừa được 1 abstract class</td><td>Một lớp có thể implement nhiều interface</td></tr><tr><td>Mục đích</td><td>Xây dựng khuôn mẫu hành vi và chia sẻ cài đặt chung</td><td>Định nghĩa hợp đồng hành vi</td></tr></tbody></table><hr><h2>6. Phương thức và lớp final trong abstract class</h2><p>Phương thức trong abstract class có thể là <code>final</code> để ngăn lớp con override hành vi.</p><pre><code>abstract class Base { final void display(){ System.out.println(\"Final method\"); } }</code></pre><p>Tuy nhiên, không thể khai báo một lớp vừa abstract vừa final.</p><hr><h2>7. Abstract và Polymorphism</h2><p>Lớp trừu tượng thường được dùng kết hợp với đa hình để xử lý các đối tượng có hành vi khác nhau qua cùng giao diện.</p><pre><code>Shape s = new Circle(2.0); System.out.println(s.area());</code></pre><hr><h2>8. Ví dụ tổng hợp</h2><pre><code>abstract class Vehicle { String name; Vehicle(String name){this.name=name;} abstract void move(); void showName(){System.out.println(name);} } class Car extends Vehicle { Car(String n){super(n);} void move(){System.out.println(\"Car runs on road\");} } class Plane extends Vehicle { Plane(String n){super(n);} void move(){System.out.println(\"Plane flies in sky\");} } public class Main { public static void main(String[] args){ Vehicle v1 = new Car(\"Toyota\"); Vehicle v2 = new Plane(\"Boeing\"); v1.showName(); v1.move(); v2.showName(); v2.move(); } }</code></pre><hr><h2>Kết luận</h2><p>Lớp trừu tượng là công cụ mạnh mẽ giúp mô hình hóa hành vi chung và bắt buộc các lớp con phải hiện thực hành vi cụ thể. Kết hợp abstract class và interface giúp thiết kế hệ thống mở rộng, linh hoạt và dễ bảo trì.</p>"
+}

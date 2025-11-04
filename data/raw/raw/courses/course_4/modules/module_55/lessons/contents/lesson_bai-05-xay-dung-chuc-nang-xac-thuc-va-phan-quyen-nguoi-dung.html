@@ -1,0 +1,156 @@
+<h1>🧩 BÀI 05 – XÂY DỰNG CHỨC NĂNG XÁC THỰC VÀ PHÂN QUYỀN NGƯỜI DÙNG (SPRING SECURITY)</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu cơ chế xác thực (Authentication) và phân quyền (Authorization) trong Spring Security.</li>
+ <li>Cấu hình bảo mật cơ bản cho ứng dụng web.</li>
+ <li>Triển khai chức năng đăng nhập, đăng ký, và mã hóa mật khẩu.</li>
+ <li>Phân quyền theo vai trò người dùng (User / Admin).</li>
+</ul>
+<hr>
+
+<h2>1. Giới thiệu Spring Security</h2>
+<p><b>Spring Security</b> là module bảo mật mạnh mẽ cho ứng dụng Java, cung cấp cơ chế kiểm soát truy cập, xác thực người dùng, và bảo vệ CSRF.</p>
+<ul>
+ <li>Hỗ trợ xác thực qua form login, token, OAuth2.</li>
+ <li>Tích hợp sẵn với Spring Boot thông qua dependency <code>spring-boot-starter-security</code>.</li>
+</ul>
+<hr>
+
+<h2>2. Cấu hình Spring Security cơ bản</h2>
+<p>Thêm dependency vào <code>pom.xml</code>:</p>
+<pre><code>&lt;dependency&gt;
+ &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+ &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+<p>Tạo class <b>SecurityConfig.java</b>:</p>
+<pre><code>@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+ @Bean
+ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+ http
+ .authorizeHttpRequests(auth -&gt; auth
+ .requestMatchers("/admin/**").hasRole("ADMIN")
+ .requestMatchers("/user/**").hasAnyRole("USER","ADMIN")
+ .requestMatchers("/register", "/css/**").permitAll()
+ .anyRequest().authenticated()
+ )
+ .formLogin(form -&gt; form
+ .loginPage("/login")
+ .defaultSuccessUrl("/home", true)
+ .permitAll())
+ .logout(logout -&gt; logout.permitAll());
+ return http.build();
+ }
+}</code></pre>
+<p>✅ Mặc định Spring Security tự động bảo vệ tất cả route chưa cấu hình bằng login form.</p>
+<hr>
+
+<h2>3. Tạo Entity và Repository cho người dùng</h2>
+<pre><code>@Entity
+@Table(name = "users")
+public class User {
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Long id;
+ private String username;
+ private String password;
+ private String role; // ROLE_USER hoặc ROLE_ADMIN
+}
+
+@Repository
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+ Optional&lt;User&gt; findByUsername(String username);
+}</code></pre>
+<hr>
+
+<h2>4. Mã hóa mật khẩu</h2>
+<p>Spring Security sử dụng <code>BCryptPasswordEncoder</code> để mã hóa mật khẩu.</p>
+<pre><code>@Bean
+public PasswordEncoder passwordEncoder() {
+ return new BCryptPasswordEncoder();
+}</code></pre>
+<p>Khi người dùng đăng ký:</p>
+<pre><code>@Service
+public class UserService {
+ @Autowired private UserRepository repo;
+ @Autowired private PasswordEncoder encoder;
+
+ public void register(User user) {
+ user.setPassword(encoder.encode(user.getPassword()));
+ user.setRole("ROLE_USER");
+ repo.save(user);
+ }
+}</code></pre>
+<hr>
+
+<h2>5. Cấu hình Custom UserDetailsService</h2>
+<pre><code>@Service
+public class CustomUserDetailsService implements UserDetailsService {
+
+ @Autowired private UserRepository repo;
+
+ @Override
+ public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+ User user = repo.findByUsername(username)
+ .orElseThrow(() -&gt; new UsernameNotFoundException("User not found"));
+ return org.springframework.security.core.userdetails.User
+ .withUsername(user.getUsername())
+ .password(user.getPassword())
+ .roles(user.getRole().replace("ROLE_", ""))
+ .build();
+ }
+}</code></pre>
+<hr>
+
+<h2>6. Tạo form đăng nhập và đăng ký</h2>
+<p><b>login.html</b>:</p>
+<pre><code>
+ <h3>Đăng nhập</h3>
+ <br>
+ <br>
+ Đăng nhập
+</code></pre>
+<p><b>register.html</b>:</p>
+<pre><code>
+ <h3>Đăng ký tài khoản</h3>
+ <br>
+ <br>
+ Đăng ký
+</code></pre>
+<hr>
+
+<h2>7. Phân quyền route và xử lý truy cập</h2>
+<p>Ví dụ route <code>/admin/**</code> chỉ truy cập được với role <b>ADMIN</b>, còn route <code>/user/**</code> cho phép USER và ADMIN.</p>
+<p>Thêm @PreAuthorize cho các phương thức quan trọng:</p>
+<pre><code>@Service
+public class ProductService {
+ @PreAuthorize("hasRole('ADMIN')")
+ public void deleteProduct(Long id) { ... }
+}</code></pre>
+<hr>
+
+<h2>8. CSRF Protection</h2>
+<p>Spring Security bật CSRF mặc định để tránh tấn công giả mạo request.</p>
+<p>Nếu bạn muốn test REST API, có thể tạm tắt:</p>
+<pre><code>http.csrf().disable();</code></pre>
+<hr>
+
+<h2>9. Kiểm tra bảo mật và đăng xuất</h2>
+<ul>
+ <li>Truy cập <code>/login</code> để đăng nhập.</li>
+ <li>Sau khi đăng nhập thành công, chuyển đến <code>/home</code>.</li>
+ <li>Truy cập <code>/admin/**</code> nếu có quyền ADMIN.</li>
+ <li>Đăng xuất bằng <code>/logout</code>.</li>
+</ul>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>Spring Security giúp xác thực và phân quyền người dùng toàn diện.</li>
+ <li>Sử dụng <b>BCryptPasswordEncoder</b> để đảm bảo an toàn mật khẩu.</li>
+ <li>FilterChain và UserDetailsService là hai thành phần cốt lõi trong xác thực.</li>
+ <li>Phân quyền bằng annotation @PreAuthorize hoặc cấu hình HttpSecurity.</li>
+</ul>

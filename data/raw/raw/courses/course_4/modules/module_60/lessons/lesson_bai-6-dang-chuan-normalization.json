@@ -1,0 +1,24 @@
+{
+  "title": "BÀI 6 🧩 DẠNG CHUẨN (NORMALIZATION)",
+  "created_at": "2025-10-24T10:14:36Z",
+  "url": "bai-6-dang-chuan-normalization",
+  "editing_roles": "teachers",
+  "page_id": 234,
+  "last_edited_by": {
+    "id": 1,
+    "anonymous_id": "1",
+    "display_name": "admin@gmail.com",
+    "avatar_image_url": "http://localhost:3000/images/messages/avatar-50.png",
+    "html_url": "http://localhost:3000/courses/4/users/1",
+    "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "http://localhost:3000/courses/4/pages/bai-6-dang-chuan-normalization",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2025-10-24T10:14:52Z",
+  "locked_for_user": false,
+  "body": "<h1>🧩 BÀI 6 – DẠNG CHUẨN (NORMALIZATION)</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu mục tiêu và ý nghĩa của chuẩn hóa cơ sở dữ liệu.</li><li>Nhận biết các dạng chuẩn 1NF, 2NF, 3NF và BCNF.</li><li>Thực hiện được phân rã lược đồ quan hệ để loại bỏ dư thừa dữ liệu.</li><li>Phân tích được các bất thường (anomalies) trong thiết kế chưa chuẩn hóa.</li></ul><hr><h2>1. KHÁI NIỆM CHUẨN HÓA</h2><p>Chuẩn hóa (Normalization) là quá trình tổ chức dữ liệu trong cơ sở dữ liệu nhằm loại bỏ dư thừa và đảm bảo tính toàn vẹn. Mục tiêu: giảm trùng lặp, tránh mâu thuẫn khi cập nhật, xóa hoặc chèn dữ liệu.</p><h3>1.1 Lý do cần chuẩn hóa</h3><ul><li>Tránh trùng lặp dữ liệu (data redundancy).</li><li>Giảm lỗi cập nhật (update anomaly).</li><li>Đảm bảo toàn vẹn dữ liệu khi thêm, xóa.</li></ul><h3>1.2 Bất thường trong thiết kế</h3><ul><li><b>Insert anomaly:</b> Không thể thêm dữ liệu do phụ thuộc vào thuộc tính khác.</li><li><b>Update anomaly:</b> Cập nhật dữ liệu gây không nhất quán.</li><li><b>Delete anomaly:</b> Xóa dữ liệu làm mất thông tin liên quan.</li></ul><hr><h2>2. CÁC DẠNG CHUẨN CƠ BẢN</h2><h3>2.1 Dạng chuẩn 1 (1NF)</h3><p>Mọi giá trị thuộc tính phải nguyên tử (atomic). Không chứa tập hoặc danh sách giá trị trong cùng ô.</p><pre><code>Ví dụ: Bảng SINHVIEN(MaSV, TenSV, MonHoc) → Vi phạm 1NF nếu MonHoc chứa nhiều giá trị. Giải pháp: Tách thành bảng SINHVIEN_MONHOC(MaSV, MonHoc).</code></pre><h3>2.2 Dạng chuẩn 2 (2NF)</h3><p>Thoả 1NF và mọi thuộc tính không khóa phải phụ thuộc hoàn toàn vào khóa chính (loại bỏ phụ thuộc bộ phận).</p><pre><code>Ví dụ: R(MaSV, MaMon, TenSV, TenMon, Diem) → Vi phạm 2NF vì TenSV phụ thuộc vào MaSV. Cần tách thành SINHVIEN(MaSV, TenSV) và KETQUA(MaSV, MaMon, Diem).</code></pre><h3>2.3 Dạng chuẩn 3 (3NF)</h3><p>Thoả 2NF và không có phụ thuộc bắc cầu (transitive dependency) giữa các thuộc tính không khóa.</p><pre><code>Ví dụ: R(MaSV, MaLop, TenLop) → MaSV→MaLop, MaLop→TenLop ⇒ MaSV→TenLop (phụ thuộc bắc cầu). Cần tách thành SINHVIEN(MaSV, MaLop) và LOP(MaLop, TenLop).</code></pre><h3>2.4 Dạng chuẩn Boyce-Codd (BCNF)</h3><p>Một quan hệ ở BCNF nếu với mọi phụ thuộc hàm X→Y, X là khóa siêu khóa. BCNF là dạng mạnh hơn 3NF, loại bỏ tất cả phụ thuộc bất hợp lệ.</p><pre><code>Ví dụ: R(MaGV, MaMon, Phong) với phụ thuộc MaGV→Phong, MaMon→Phong ⇒ Không đạt BCNF vì MaGV không là siêu khóa. Phân rã thành GV(MaGV, Phong) và DAY(MaGV, MaMon).</code></pre><hr><h2>3. PHÂN RÃ LƯỢC ĐỒ</h2><p>Phân rã lược đồ (Decomposition) là chia một quan hệ phức tạp thành các quan hệ nhỏ hơn nhưng vẫn bảo toàn thông tin và phụ thuộc hàm.</p><ul><li><b>Phân rã bảo toàn phụ thuộc hàm:</b> Các phụ thuộc ban đầu vẫn tồn tại trong tập con.</li><li><b>Phân rã bảo toàn thông tin:</b> Có thể khôi phục quan hệ ban đầu bằng phép JOIN.</li></ul><h3>3.1 Thuật toán kiểm tra phân rã</h3><pre><code>Bước 1: Tính bao đóng của các thuộc tính khóa.<br>Bước 2: Kiểm tra từng phụ thuộc có được bảo toàn trong lược đồ con.<br>Bước 3: Kiểm tra nếu JOIN giữa các lược đồ con khôi phục dữ liệu ban đầu.</code></pre><hr><h2>✅ TỔNG KẾT</h2><ul><li>Chuẩn hóa giúp thiết kế cơ sở dữ liệu gọn gàng, không dư thừa.</li><li>Các dạng chuẩn từ 1NF đến BCNF loại bỏ dần các dạng phụ thuộc không hợp lệ.</li><li>Phân rã đúng giúp bảo toàn thông tin và toàn vẹn dữ liệu.</li></ul>"
+}
