@@ -1,0 +1,792 @@
+{
+  "id": "module_48",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-net-framework",
+      "title": "lesson_bai-01-tong-quan-ve-net-framework"
+    },
+    {
+      "id": "lesson_bai-02-ngon-ngu-lap-trinh-c-number-can-ban",
+      "title": "lesson_bai-02-ngon-ngu-lap-trinh-c-number-can-ban"
+    },
+    {
+      "id": "lesson_bai-03-lop-doi-tuong-va-giao-dien-trong-c-number",
+      "title": "lesson_bai-03-lop-doi-tuong-va-giao-dien-trong-c-number"
+    },
+    {
+      "id": "lesson_bai-04-delegate-va-event",
+      "title": "lesson_bai-04-delegate-va-event"
+    },
+    {
+      "id": "lesson_bai-06-windows-form",
+      "title": "lesson_bai-06-windows-form"
+    },
+    {
+      "id": "lesson_bai-07-windows-controls",
+      "title": "lesson_bai-07-windows-controls"
+    },
+    {
+      "id": "lesson_bai-08-ado-dot-net-ket-noi-co-so-du-lieu",
+      "title": "lesson_bai-08-ado-dot-net-ket-noi-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-09-data-binding-trong-windows-form",
+      "title": "lesson_bai-09-data-binding-trong-windows-form"
+    },
+    {
+      "id": "lesson_bai-10-entity-framework-orm",
+      "title": "lesson_bai-10-entity-framework-orm"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_100.json",
+      "question_count": 20,
+      "questions": [
+        "Control nào cho phép hiển thị danh sách nhiều cột?",
+        "Để hiển thị dữ liệu dạng bảng có thể chỉnh sửa, ta dùng control nào?",
+        "Phân tích code:<pre><code>listBox1.Items.Add(\"C#\"); listBox1.Items.Add(\"Java\"); listBox1.SelectedIndex=1; Console.WriteLine(listBox1.SelectedItem);</code></pre>",
+        "Thuộc tính nào của ComboBox giúp khóa việc nhập tay?",
+        "Đâu là sự kiện khi chọn item trong ComboBox?",
+        "ListView hoạt động ở chế độ chi tiết bằng cách thiết lập thuộc tính nào?",
+        "Phân tích code:<pre><code>progressBar1.Value = 120;</code></pre> Kết quả?",
+        "Control nào cho phép hiển thị hình ảnh?",
+        "Phân tích code:<pre><code>panel1.Controls.Add(new Button(){Text=\"Save\"});</code></pre>",
+        "TabControl cho phép:",
+        "Thuộc tính nào của ListBox trả về giá trị đang chọn?",
+        "Phân tích code:<pre><code>listView1.View = View.Details; listView1.Columns.Add(\"Mã\",100);</code></pre>",
+        "Control nào có thể chứa các control khác?",
+        "Phân tích code:<pre><code>comboBox1.SelectedIndex = -1;</code></pre>",
+        "Control nào phù hợp nhất để hiển thị danh sách sinh viên cùng điểm số?",
+        "Khi dùng CheckBox, thuộc tính nào kiểm tra trạng thái chọn?",
+        "Phân tích kết quả:<pre><code>comboBox1.Items.Clear(); comboBox1.SelectedIndex = 0;</code></pre>",
+        "DataGridView thường dùng kết hợp với kiểu dữ liệu nào?",
+        "Control nào dùng để nhóm các lựa chọn RadioButton?",
+        "Phân tích code:<pre><code>tabControl1.TabPages.Add(\"Cài đặt\");</code></pre>"
+      ]
+    },
+    {
+      "file": "quiz_101.json",
+      "question_count": 20,
+      "questions": [
+        "Đối tượng nào dùng để mở kết nối với cơ sở dữ liệu SQL Server?",
+        "Đối tượng nào được dùng để thực thi câu lệnh SQL?",
+        "Output của đoạn code:<pre><code>SqlConnection c = new SqlConnection(); c.Open();</code></pre>",
+        "Phương thức nào của SqlCommand dùng để thực thi INSERT/UPDATE/DELETE?",
+        "Phương thức nào trả về một giá trị duy nhất (ví dụ COUNT)?",
+        "Phân tích code:<pre><code>SqlDataReader dr = cmd.ExecuteReader(); while(dr.Read()) Console.WriteLine(dr[0]);</code></pre>",
+        "Thuộc tính nào của SqlConnection kiểm tra trạng thái kết nối?",
+        "Để tránh lỗi SQL Injection, nên dùng:",
+        "Phân tích code:<pre><code>SqlCommand cmd = new SqlCommand(\"SELECT * FROM SinhVien\", conn); conn.Open(); SqlDataReader r = cmd.ExecuteReader();</code></pre>",
+        "Phương thức nào của SqlDataAdapter dùng để nạp dữ liệu vào DataTable?",
+        "DataSet và DataTable thuộc mô hình nào?",
+        "Đâu là cách đúng để thêm tham số vào SqlCommand?",
+        "Phân tích code:<pre><code>string sql = \"DELETE FROM SinhVien\"; SqlCommand cmd = new SqlCommand(sql, conn); cmd.ExecuteNonQuery();</code></pre>",
+        "Khi chưa gọi conn.Open(), gọi ExecuteReader() sẽ gây lỗi gì?",
+        "Để cập nhật dữ liệu từ DataTable về SQL Server, dùng phương thức nào?",
+        "Phân biệt SqlDataReader và SqlDataAdapter:",
+        "Để đóng kết nối sau khi thực thi truy vấn, nên đặt lệnh ở đâu?",
+        "Khi dùng DataGridView với DataTable, để hiển thị dữ liệu ta cần:",
+        "Đối tượng nào thường dùng để gọi Stored Procedure?",
+        "Phân tích code:<pre><code>if(conn.State == ConnectionState.Closed) conn.Open();</code></pre>"
+      ]
+    },
+    {
+      "file": "quiz_102.json",
+      "question_count": 20,
+      "questions": [
+        "Data Binding trong Windows Forms là gì?",
+        "Phân biệt Simple và Complex Binding:",
+        "Phân tích code:<pre><code>txtName.DataBindings.Add(\"Text\", dt, \"HoTen\");</code></pre>",
+        "Đối tượng BindingSource có tác dụng gì?",
+        "Thuộc tính nào của ComboBox chỉ định cột hiển thị?",
+        "Thuộc tính nào của ComboBox lưu giá trị thực (ID)?",
+        "Phân tích code:<pre><code>bindingSource1.Position = 2;</code></pre>",
+        "Phương thức nào ghi giá trị thay đổi từ control về nguồn dữ liệu?",
+        "BindingContext dùng để làm gì?",
+        "Phân tích code:<pre><code>this.BindingContext[bs].Position = 0;</code></pre>",
+        "Sự kiện Format trong DataBinding được dùng để:",
+        "Sự kiện Parse được kích hoạt khi nào?",
+        "Phân biệt DisplayMember và ValueMember:",
+        "Phân tích code:<pre><code>dataGridView1.DataSource = bs;</code></pre>",
+        "Data Binding trong Windows Forms hỗ trợ loại cập nhật nào?",
+        "Phân tích lỗi: Gọi WriteValue() khi DataSource = null.",
+        "Khi thay đổi hàng trên DataGridView, control TextBox có cùng Binding sẽ:",
+        "Phương thức nào của BindingSource di chuyển đến bản ghi cuối cùng?",
+        "Khi ComboBox có DisplayMember = 'TenLop', ValueMember = 'MaLop', việc hiển thị sẽ:",
+        "BindingComplete được kích hoạt khi nào?"
+      ]
+    },
+    {
+      "file": "quiz_103.json",
+      "question_count": 20,
+      "questions": [
+        "Entity Framework là gì?",
+        "ORM viết tắt của cụm từ nào?",
+        "Trong EF, lớp DbContext dùng để:",
+        "Đối tượng DbSet&lt;T&gt; đại diện cho:",
+        "Phương thức nào lưu thay đổi vào database?",
+        "Trong mô hình Code First, database được tạo từ:",
+        "Phân tích code:<pre><code>db.SinhViens.Add(new SinhVien {HoTen=\"An\"}); db.SaveChanges();</code></pre>",
+        "Phương thức nào trả về danh sách toàn bộ dữ liệu trong DbSet?",
+        "LINQ-to-Entities cho phép:",
+        "Phương thức nào tìm bản ghi theo khóa chính?",
+        "Phân biệt Database First và Code First:",
+        "Lệnh nào dùng để khởi tạo Migration?",
+        "Phân tích code:<pre><code>var s = db.SinhViens.Where(x => x.Lop == \"CNTT1\");</code></pre>",
+        "Khi class Entity thay đổi, cần chạy lệnh nào để cập nhật DB?",
+        "Trong EF, Delete() được thực hiện bằng:",
+        "Khi SaveChanges() không được gọi, điều gì xảy ra?",
+        "Phân tích code:<pre><code>var count = db.SinhViens.Count();</code></pre>",
+        "Tệp nào chứa cấu hình kết nối trong EF?",
+        "Phương thức AsNoTracking() trong EF dùng để:",
+        "Khi dùng DbContext với khối using, điều gì xảy ra khi thoát khỏi using?"
+      ]
+    },
+    {
+      "file": "quiz_95.json",
+      "question_count": 20,
+      "questions": [
+        "CLR trong .NET Framework có nhiệm vụ chính là gì?",
+        "Khi chạy chương trình C#, mã MSIL được biên dịch thành mã máy bởi thành phần nào?",
+        "Lệnh nào dùng để xem nội dung Assembly ở dạng IL?",
+        "Kết quả khi chạy đoạn code sau là gì?<pre><code>class P{static void Main(){for(int i=0;i<3;i++)System.Console.Write(i);}}</code></pre>",
+        "CTS (Common Type System) đảm bảo điều gì?",
+        "Khi gọi GC.Collect(), điều gì xảy ra?",
+        "Dòng IL nào sau đây in ra chuỗi trong .NET?",
+        "Phân tích output của code sau:<pre><code>using System;class P{static void Main(){Console.WriteLine(3/2);}}</code></pre>",
+        "CLS (Common Language Specification) có vai trò gì?",
+        "Mỗi Assembly trong .NET luôn chứa phần nào?",
+        "Cơ chế nào giúp .NET hỗ trợ đa ngôn ngữ lập trình?",
+        "Khi biên dịch bằng CSC, đầu ra của chương trình là gì?",
+        "Mục tiêu chính của Garbage Collector là:",
+        "Trong .NET, lớp nào cho phép đọc thông tin Assembly hiện tại?",
+        "Khi biên dịch ứng dụng .NET, lệnh CSC thực hiện việc gì?",
+        "Điều gì xảy ra nếu chương trình không kích hoạt GC.Collect()?",
+        "Phát biểu nào đúng về JIT Compiler?",
+        "Đoạn code nào đúng để lấy phiên bản CLR hiện hành?",
+        "Khi một ứng dụng .NET được chạy, quá trình nào diễn ra đầu tiên?",
+        "Phân tích kết quả code:<pre><code>int x = 5; object o = x; int y = (int)o * 2; Console.WriteLine(y);</code></pre>"
+      ]
+    },
+    {
+      "file": "quiz_96.json",
+      "question_count": 20,
+      "questions": [
+        "Phương thức Main() trong C# có vai trò gì?",
+        "Kết quả của đoạn code sau là gì?<pre><code>int x = 5, y = 2; Console.WriteLine(x / y);</code></pre>",
+        "Đâu là kiểu dữ liệu tham chiếu?",
+        "Khi khai báo biến không khởi tạo giá trị trong phương thức, điều gì xảy ra?",
+        "Kết quả của đoạn code sau:<pre><code>int a = 3; a += 2 * 3; Console.WriteLine(a);</code></pre>",
+        "Toán tử 3 ngôi trong C# có dạng nào?",
+        "Phân tích kết quả:<pre><code>int i = 0; while (i++ < 3) Console.Write(i);</code></pre>",
+        "Đâu là cách khai báo phương thức đúng trong C#?",
+        "Phân tích kết quả đoạn code:<pre><code>int[] arr = {1,2,3}; Console.WriteLine(arr.Length);</code></pre>",
+        "Kết quả đoạn code:<pre><code>int i = 1; do { i++; } while(i < 3); Console.Write(i);</code></pre>",
+        "Từ khóa nào cho phép bắt lỗi trong C#?",
+        "Từ khóa 'static' có nghĩa là gì?",
+        "Khi nhập giá trị sai kiểu trong Console.ReadLine() + int.Parse(), lỗi nào xảy ra?",
+        "Kết quả của đoạn code:<pre><code>string s = \"A\"; s += \"B\"; Console.Write(s);</code></pre>",
+        "Đâu là vòng lặp duyệt mảng đúng nhất?",
+        "Phân tích kết quả:<pre><code>int a = 5; int b = ++a; Console.WriteLine(a+b);</code></pre>",
+        "Khi gặp lỗi không mong muốn, khối nào luôn được thực thi?",
+        "Trong C#, từ khóa 'var' có nghĩa là gì?",
+        "Câu lệnh nào in ra 'Hello World' hợp lệ trong C#?",
+        "Khi khai báo 'const double PI = 3.14;', điều gì đúng?"
+      ]
+    },
+    {
+      "file": "quiz_97.json",
+      "question_count": 20,
+      "questions": [
+        "Lớp (class) trong C# được xem là gì?",
+        "Khi nào constructor được gọi?",
+        "Output của đoạn code:<pre><code>class A{public A(){Console.Write(\"A\");}} class B:A{public B(){Console.Write(\"B\");}} static void Main(){new B();}</code></pre>",
+        "Phát biểu nào đúng về kế thừa trong C#?",
+        "Kết quả đoạn code:<pre><code>class Base{public virtual void Show(){Console.Write(\"Base\");}} class D:Base{public override void Show(){Console.Write(\"Child\");}} static void Main(){Base b=new D();b.Show();}</code></pre>",
+        "Từ khóa 'override' được dùng khi:",
+        "Đâu là khai báo interface hợp lệ?",
+        "Output của code sau:<pre><code>interface I{void A();} class X:I{public void A(){Console.Write(1);} } static void Main(){I i=new X();i.A();}</code></pre>",
+        "Từ khóa nào dùng để định nghĩa lớp trừu tượng?",
+        "Đoạn code nào hợp lệ để implement nhiều interface?",
+        "Phân tích kết quả:<pre><code>class P{public P(){Console.Write(\"P\");}} class Q:P{public Q(){Console.Write(\"Q\");}} static void Main(){Q q=new Q();}</code></pre>",
+        "Khi class chứa phương thức abstract, điều gì đúng?",
+        "Output của code:<pre><code>class X{public X(){Console.Write(\"X\");}} class Y:X{public Y(){Console.Write(\"Y\");}} static void Main(){X a=new Y();}</code></pre>",
+        "Từ khóa 'sealed' dùng để:",
+        "Đâu là kết quả của code:<pre><code>class A{public virtual void Show(){Console.Write(\"A\");}} class B:A{public new void Show(){Console.Write(\"B\");}} static void Main(){A a=new B();a.Show();}</code></pre>",
+        "Interface có thể chứa thành phần nào?",
+        "Đâu là cú pháp tạo object hợp lệ?",
+        "Phân biệt giữa 'new' và 'override':",
+        "Tính chất nào giúp phương thức cùng tên hoạt động khác nhau dựa vào kiểu đối tượng?",
+        "Khi nào destructor (~ClassName) được gọi?"
+      ]
+    },
+    {
+      "file": "quiz_98.json",
+      "question_count": 20,
+      "questions": [
+        "Delegate là gì trong C#?",
+        "Output của code sau:<pre><code>delegate void D(); class A{static void F(){Console.Write(\"A\");} static void Main(){D d=F;d();}}</code></pre>",
+        "Multicast Delegate là gì?",
+        "Khi delegate có nhiều phương thức, giá trị trả về cuối cùng là gì?",
+        "Output của đoạn code:<pre><code>delegate void D(); class T{static void A(){Console.Write(1);} static void B(){Console.Write(2);} static void Main(){D d=A;d+=B;d();}}</code></pre>",
+        "Cú pháp khai báo event hợp lệ là gì?",
+        "Phân tích code:<pre><code>delegate void D(string m); class C{static void Main(){D d=Console.WriteLine;d(\"Hi\");}}</code></pre>",
+        "Từ khóa nào dùng để kích hoạt event?",
+        "Event khác delegate ở điểm nào?",
+        "Output của code:<pre><code>delegate int D(); class X{static int F(){Console.Write(1);return 1;}static int G(){Console.Write(2);return 2;}static void Main(){D d=F;d+=G;d();}}</code></pre>",
+        "Phân biệt giữa Action và Func:",
+        "Đâu là cách khai báo delegate hợp lệ?",
+        "Output code:<pre><code>delegate void D(); class A{static void M(){Console.Write(\"X\");} static void Main(){D d=M;d+=M;d();}}</code></pre>",
+        "Sự kiện (Event) giúp:",
+        "Đâu là cách đăng ký phương thức xử lý sự kiện hợp lệ?",
+        "EventHandler&lt;T&gt; là gì?",
+        "Output của đoạn code:<pre><code>event Action E; E();</code></pre>",
+        "Cách dùng lambda với event hợp lệ:",
+        "Mô hình Event trong .NET tuân theo mẫu thiết kế nào?",
+        "Khi event có nhiều subscriber, điều gì xảy ra khi gọi event?"
+      ]
+    },
+    {
+      "file": "quiz_99.json",
+      "question_count": 20,
+      "questions": [
+        "Lớp cơ sở của tất cả Windows Form trong .NET là gì?",
+        "Sự kiện nào được kích hoạt khi Form được hiển thị lần đầu?",
+        "Output của đoạn code:<pre><code>Button b = new Button(); b.Text = \"OK\"; b.PerformClick();</code></pre>",
+        "Để hiển thị Form dạng modal, dùng phương thức nào?",
+        "Khi nào sự kiện FormClosing được kích hoạt?",
+        "Phân tích code:<pre><code>private void btn_Click(object s, EventArgs e){ this.Close(); }</code></pre>",
+        "Output của đoạn code:<pre><code>Form f = new Form(); f.Text = \"Demo\"; Application.Run(f);</code></pre>",
+        "Sự kiện nào dùng để xử lý khi người dùng thay đổi nội dung TextBox?",
+        "Câu lệnh nào đóng toàn bộ ứng dụng Windows Form?",
+        "Phân tích code:<pre><code>Button b = new Button(); b.Click += (s,e)=>MessageBox.Show(\"Click!\");</code></pre>",
+        "Đâu là thứ tự vòng đời Form đúng?",
+        "Sự khác biệt giữa Show() và ShowDialog() là gì?",
+        "Để xử lý khi người dùng nhấn phím Enter trong TextBox, dùng sự kiện nào?",
+        "Phân tích kết quả:<pre><code>this.Hide(); MessageBox.Show(\"Ẩn form\"); this.Show();</code></pre>",
+        "Control nào dùng để hiển thị hình ảnh?",
+        "Khi gán sự kiện cho Button, cú pháp nào đúng?",
+        "Form nào được khởi chạy đầu tiên trong ứng dụng?",
+        "Khi nhấn Alt+F4, sự kiện nào được gọi?",
+        "Phân tích lỗi: Gọi 'this.Close()' trong Form_Load().",
+        "Trong Windows Form, tất cả Control kế thừa từ lớp nào?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_100_submissions.json",
+      "count": 23,
+      "average_score": 17.04,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 100,
+          "submission_id": 706,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 47,
+          "quiz_id": 100,
+          "submission_id": 980,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 100,
+          "submission_id": 1377,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 100,
+          "submission_id": 1519,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 100,
+          "submission_id": 1700,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_101_submissions.json",
+      "count": 22,
+      "average_score": 17.09,
+      "top_5_students": [
+        {
+          "user_id": 44,
+          "quiz_id": 101,
+          "submission_id": 879,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 101,
+          "submission_id": 1078,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 101,
+          "submission_id": 1183,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 101,
+          "submission_id": 1516,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 101,
+          "submission_id": 1567,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_102_submissions.json",
+      "count": 24,
+      "average_score": 17.25,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 102,
+          "submission_id": 1179,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 102,
+          "submission_id": 1568,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 102,
+          "submission_id": 884,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 47,
+          "quiz_id": 102,
+          "submission_id": 982,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 102,
+          "submission_id": 1275,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 15,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_103_submissions.json",
+      "count": 23,
+      "average_score": 16.87,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 103,
+          "submission_id": 926,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 103,
+          "submission_id": 1423,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 103,
+          "submission_id": 1562,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 103,
+          "submission_id": 1696,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 103,
+          "submission_id": 703,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_95_submissions.json",
+      "count": 23,
+      "average_score": 17.3,
+      "top_5_students": [
+        {
+          "user_id": 57,
+          "quiz_id": 95,
+          "submission_id": 1421,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 95,
+          "submission_id": 704,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 95,
+          "submission_id": 1077,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 95,
+          "submission_id": 1180,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 95,
+          "submission_id": 878,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 15,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_96_submissions.json",
+      "count": 23,
+      "average_score": 16.96,
+      "top_5_students": [
+        {
+          "user_id": 57,
+          "quiz_id": 96,
+          "submission_id": 1418,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 96,
+          "submission_id": 1520,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 62,
+          "quiz_id": 96,
+          "submission_id": 1654,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 96,
+          "submission_id": 700,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 96,
+          "submission_id": 882,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_97_submissions.json",
+      "count": 23,
+      "average_score": 17.13,
+      "top_5_students": [
+        {
+          "user_id": 60,
+          "quiz_id": 97,
+          "submission_id": 1569,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 97,
+          "submission_id": 1082,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 97,
+          "submission_id": 1277,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 97,
+          "submission_id": 1370,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 97,
+          "submission_id": 1425,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_98_submissions.json",
+      "count": 23,
+      "average_score": 17.48,
+      "top_5_students": [
+        {
+          "user_id": 44,
+          "quiz_id": 98,
+          "submission_id": 876,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 98,
+          "submission_id": 925,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 50,
+          "quiz_id": 98,
+          "submission_id": 1125,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 98,
+          "submission_id": 1184,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 98,
+          "submission_id": 1278,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_99_submissions.json",
+      "count": 23,
+      "average_score": 17.09,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 99,
+          "submission_id": 1079,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 99,
+          "submission_id": 1373,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 99,
+          "submission_id": 1420,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 99,
+          "submission_id": 1521,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 99,
+          "submission_id": 1695,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

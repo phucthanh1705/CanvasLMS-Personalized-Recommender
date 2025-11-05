@@ -1,0 +1,182 @@
+<h1>🧩 BÀI 04 – XÂY DỰNG CHỨC NĂNG GIỎ HÀNG VÀ ĐẶT HÀNG (CART &amp; ORDER)</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu quy trình hoạt động của chức năng giỏ hàng và đặt hàng trong hệ thống thương mại điện tử.</li>
+ <li>Thiết kế entity <b>Order</b>, <b>OrderDetail</b>, <b>CartItem</b> và xử lý lưu trữ dữ liệu trong session.</li>
+ <li>Thực hành thêm, cập nhật, xóa sản phẩm khỏi giỏ hàng.</li>
+ <li>Triển khai chức năng thanh toán (Checkout) và lưu đơn hàng vào cơ sở dữ liệu.</li>
+</ul>
+<hr>
+
+<h2>1. Khái niệm giỏ hàng</h2>
+<p><b>Giỏ hàng (Cart)</b> là nơi lưu tạm sản phẩm mà người dùng chọn trước khi thanh toán. Dữ liệu có thể được lưu:</p>
+<ul>
+ <li>Trên session (khi người dùng chưa đăng nhập).</li>
+ <li>Trong database (khi người dùng đã đăng nhập).</li>
+</ul>
+<p>Spring Boot hỗ trợ session tự động thông qua đối tượng <code>HttpSession</code>.</p>
+<hr>
+
+<h2>2. Thiết kế mô hình dữ liệu</h2>
+<p>Hệ thống gồm các entity:</p>
+<ul>
+ <li><b>CartItem</b>: sản phẩm trong giỏ hàng.</li>
+ <li><b>Order</b>: đơn hàng tổng.</li>
+ <li><b>OrderDetail</b>: chi tiết sản phẩm trong đơn hàng.</li>
+</ul>
+<p><b>Ví dụ entity Order.java:</b></p>
+<pre><code>@Entity
+@Table(name = "orders")
+public class Order {
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Long id;
+
+ private LocalDateTime orderDate;
+
+ private Double total;
+
+ @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+ private List&lt;OrderDetail&gt; details;
+}
+</code></pre>
+<p><b>Ví dụ entity OrderDetail.java:</b></p>
+<pre><code>@Entity
+@Table(name = "order_details")
+public class OrderDetail {
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Long id;
+
+ @ManyToOne
+ @JoinColumn(name = "order_id")
+ private Order order;
+
+ @ManyToOne
+ @JoinColumn(name = "product_id")
+ private Product product;
+
+ private int quantity;
+ private double price;
+}</code></pre>
+<hr>
+
+<h2>3. Lưu giỏ hàng bằng Session</h2>
+<pre><code>@Controller
+@RequestMapping("/cart")
+public class CartController {
+
+ @Autowired
+ private ProductService productService;
+
+ @GetMapping
+ public String showCart(HttpSession session, Model model) {
+ List&lt;CartItem&gt; cart = (List&lt;CartItem&gt;) session.getAttribute("cart");
+ if (cart == null) cart = new ArrayList&lt;&gt;();
+ model.addAttribute("cart", cart);
+ double total = cart.stream().mapToDouble(i -&gt; i.getPrice() * i.getQuantity()).sum();
+ model.addAttribute("total", total);
+ return "cart";
+ }
+
+ @GetMapping("/add/{id}")
+ public String addToCart(@PathVariable Long id, HttpSession session) {
+ Product p = productService.getById(id);
+ List&lt;CartItem&gt; cart = (List&lt;CartItem&gt;) session.getAttribute("cart");
+ if (cart == null) cart = new ArrayList&lt;&gt;();
+ Optional&lt;CartItem&gt; existing = cart.stream().filter(i -&gt; i.getProduct().getId().equals(id)).findFirst();
+ if (existing.isPresent()) {
+ existing.get().setQuantity(existing.get().getQuantity() + 1);
+ } else {
+ cart.add(new CartItem(p, 1));
+ }
+ session.setAttribute("cart", cart);
+ return "redirect:/cart";
+ }
+}</code></pre>
+<hr>
+
+<h2>4. Tạo class CartItem</h2>
+<pre><code>public class CartItem {
+ private Product product;
+ private int quantity;
+
+ public CartItem(Product product, int quantity) {
+ this.product = product;
+ this.quantity = quantity;
+ }
+
+ public double getPrice() {
+ return product.getPrice();
+ }
+ public double getTotal() {
+ return getPrice() * quantity;
+ }
+}
+</code></pre>
+<hr>
+
+<h2>5. Xử lý thanh toán (Checkout)</h2>
+<pre><code>@Controller
+@RequestMapping("/order")
+public class OrderController {
+ @Autowired
+ private OrderRepository orderRepo;
+
+ @PostMapping("/checkout")
+ public String checkout(HttpSession session) {
+ List&lt;CartItem&gt; cart = (List&lt;CartItem&gt;) session.getAttribute("cart");
+ if (cart == null || cart.isEmpty()) return "redirect:/cart";
+
+ Order order = new Order();
+ order.setOrderDate(LocalDateTime.now());
+ order.setTotal(cart.stream().mapToDouble(CartItem::getTotal).sum());
+
+ List&lt;OrderDetail&gt; details = cart.stream().map(item -&gt; {
+ OrderDetail d = new OrderDetail();
+ d.setOrder(order);
+ d.setProduct(item.getProduct());
+ d.setPrice(item.getPrice());
+ d.setQuantity(item.getQuantity());
+ return d;
+ }).collect(Collectors.toList());
+
+ order.setDetails(details);
+ orderRepo.save(order);
+
+ session.removeAttribute("cart");
+ return "redirect:/order/success";
+ }
+}</code></pre>
+<hr>
+
+<h2>6. Giao diện giỏ hàng (cart.html)</h2>
+<pre><code>
+
+Giỏ hàng
+
+ <h2>🛒 Giỏ hàng của bạn</h2>
+ <table border="1">
+ <tbody><tr><th>Tên sản phẩm</th><th>Số lượng</th><th>Giá</th><th>Thành tiền</th></tr>
+ <tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ </tr>
+ </tbody></table>
+ <h3>Tổng cộng: <span></span></h3>
+ 
+ Thanh toán
+ 
+
+</code></pre>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>Chức năng giỏ hàng hoạt động dựa trên session hoặc database.</li>
+ <li>Checkout lưu thông tin đơn hàng và chi tiết sản phẩm xuống database qua JPA.</li>
+ <li>CartController và OrderController chịu trách nhiệm tách biệt logic và luồng xử lý.</li>
+</ul>

@@ -1,0 +1,331 @@
+{
+  "id": "module_65",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-ve-lap-trinh-mang",
+      "title": "lesson_bai-1-tong-quan-ve-lap-trinh-mang"
+    },
+    {
+      "id": "lesson_bai-2-quan-lu-cac-luong-nhap-xuat",
+      "title": "lesson_bai-2-quan-lu-cac-luong-nhap-xuat"
+    },
+    {
+      "id": "lesson_bai-3-lap-trinh-da-tuyen",
+      "title": "lesson_bai-3-lap-trinh-da-tuyen"
+    },
+    {
+      "id": "lesson_bai-4-quan-lu-dia-chi-ket-noi-mang",
+      "title": "lesson_bai-4-quan-lu-dia-chi-ket-noi-mang"
+    },
+    {
+      "id": "lesson_bai-5-lap-trinh-socket-cho-giao-thuc-tcp",
+      "title": "lesson_bai-5-lap-trinh-socket-cho-giao-thuc-tcp"
+    },
+    {
+      "id": "lesson_bai-6-ky-thuat-da-tien-trinh-va-tuan-tu-hoa-ung-dung-mang",
+      "title": "lesson_bai-6-ky-thuat-da-tien-trinh-va-tuan-tu-hoa-ung-dung-mang"
+    },
+    {
+      "id": "lesson_bai-7-lap-trinh-socket-cho-giao-thuc-udp",
+      "title": "lesson_bai-7-lap-trinh-socket-cho-giao-thuc-udp"
+    },
+    {
+      "id": "lesson_bai-8-lap-trinh-multicast",
+      "title": "lesson_bai-8-lap-trinh-multicast"
+    },
+    {
+      "id": "lesson_bai-9-phan-tan-doi-tuong-trong-java-bang-rmi",
+      "title": "lesson_bai-9-phan-tan-doi-tuong-trong-java-bang-rmi"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_247.json",
+      "question_count": 20,
+      "questions": [
+        "Ứng dụng mạng là gì?",
+        "Giao thức TCP thuộc tầng nào trong mô hình OSI?",
+        "Sự khác biệt chính giữa TCP và UDP là gì?",
+        "IP có chức năng chính là gì?",
+        "Một địa chỉ IPv4 hợp lệ có dạng nào sau đây?",
+        "DNS có nhiệm vụ gì trong ứng dụng mạng?",
+        "Khi bạn nhập www.google.com, giao thức nào được dùng đầu tiên?",
+        "Nếu gói tin bị mất khi truyền qua TCP, điều gì sẽ xảy ra?",
+        "Mô hình TCP/IP có bao nhiêu tầng?",
+        "Ứng dụng nào dưới đây thường dùng UDP?",
+        "Trong mô hình OSI, tầng nào chịu trách nhiệm truyền dữ liệu vật lý?",
+        "Vì sao UDP thường được chọn trong game online?",
+        "Giao thức nào đảm bảo dữ liệu được truyền đúng thứ tự?",
+        "Trong mô hình OSI, tầng Application giao tiếp trực tiếp với tầng nào?",
+        "Cổng (Port) trong TCP/IP dùng để:",
+        "Một server có thể phục vụ nhiều client cùng lúc vì:",
+        "Nếu DNS server không phản hồi, kết quả sẽ là:",
+        "Gói tin IP có thể bị phân mảnh khi nào?",
+        "Vì sao cần hiểu mô hình phân tầng khi lập trình mạng?",
+        "Lập trình viên nên chọn TCP thay vì UDP khi:"
+      ]
+    },
+    {
+      "file": "quiz_248.json",
+      "question_count": 20,
+      "questions": [
+        "Luồng (Stream) trong Java dùng để làm gì?",
+        "Gói nào chứa các lớp I/O trong Java?",
+        "Sự khác nhau giữa InputStream và Reader là gì?",
+        "Lớp nào giúp đọc dữ liệu từ file văn bản hiệu quả nhất?",
+        "Lớp nào dùng để ghi dữ liệu kiểu nguyên thủy vào luồng?",
+        "Công dụng của luồng đệm (Buffered Stream) là gì?",
+        "Vì sao cần đóng luồng sau khi sử dụng?",
+        "Phương thức nào của InputStream dùng để đọc 1 byte dữ liệu?",
+        "Để ghi chuỗi văn bản vào file, ta nên dùng lớp nào?",
+        "Sự khác biệt giữa FileInputStream và BufferedInputStream?",
+        "Phương thức writeUTF() của DataOutputStream dùng để:",
+        "Vì sao cần dùng Filter Stream trong I/O?",
+        "Khi đọc file lớn, cách tối ưu là:",
+        "ObjectOutputStream khác DataOutputStream ở điểm nào?",
+        "Luồng nào dùng để ghi văn bản kèm định dạng?",
+        "Hậu quả nếu quên đóng luồng trong lập trình mạng?",
+        "Để đọc từng dòng văn bản, bạn dùng phương thức nào của BufferedReader?",
+        "Tại sao nên dùng try-with-resources khi làm việc với I/O?",
+        "Khi cần đọc/ghi dữ liệu từ socket, loại luồng nào phù hợp nhất?",
+        "Điều gì chứng tỏ Java I/O được thiết kế hướng đối tượng?"
+      ]
+    },
+    {
+      "file": "quiz_249.json",
+      "question_count": 20,
+      "questions": [
+        "Thread trong Java là gì?",
+        "Phương thức nào dùng để khởi chạy một luồng mới?",
+        "Sự khác biệt giữa run() và start() là gì?",
+        "Độ ưu tiên mặc định của Thread trong Java là:",
+        "Phương thức nào làm luồng tạm nghỉ trong một khoảng thời gian?",
+        "Từ khóa synchronized có tác dụng gì?",
+        "Phương thức join() dùng để:",
+        "Khi nào nên dùng Runnable thay vì kế thừa Thread?",
+        "Từ khóa volatile trong Java đảm bảo điều gì?",
+        "Phương thức nào kiểm tra xem luồng còn hoạt động không?",
+        "Đâu là hậu quả khi hai luồng cùng ghi vào một biến mà không đồng bộ?",
+        "wait() và notify() chỉ có thể được gọi ở đâu?",
+        "Thread nào là luồng chính trong ứng dụng Java?",
+        "Nếu một luồng gọi sleep(5000), chuyện gì xảy ra?",
+        "Thread-safe nghĩa là gì?",
+        "Nếu một luồng chờ notify() mà không được đánh thức, điều gì xảy ra?",
+        "Phương thức nào của Thread dùng để chờ luồng khác hoàn tất?",
+        "Khi nào nên sử dụng đồng bộ hóa?",
+        "Phương thức yield() của Thread có tác dụng gì?",
+        "Khi lập trình đa tuyến cho server chat, cần quan tâm điều gì nhất?"
+      ]
+    },
+    {
+      "file": "quiz_250.json",
+      "question_count": 20,
+      "questions": [
+        "Lớp nào dùng để biểu diễn địa chỉ IP trong Java?",
+        "Phương thức nào trả về địa chỉ IP của máy cục bộ?",
+        "Phương thức nào trong InetAddress kiểm tra khả năng kết nối đến host?",
+        "URL là viết tắt của cụm từ nào?",
+        "Đâu KHÔNG phải là thành phần của một URL?",
+        "Nếu URL không chỉ định port, Java sẽ dùng port mặc định nào cho HTTPS?",
+        "Để lấy dữ liệu từ một trang web, ta cần gọi phương thức nào?",
+        "Phương thức nào dùng để gửi dữ liệu POST lên server?",
+        "Lớp nào được dùng để gửi và nhận dữ liệu HTTP trong Java?",
+        "Phương thức nào trả về danh sách tất cả IP của một tên miền?",
+        "Tại sao nên dùng BufferedReader khi đọc dữ liệu từ URLConnection?",
+        "Khi cần đọc nội dung HTML của trang web, nên kết hợp lớp nào?",
+        "Lớp InetAddress KHÔNG cung cấp chức năng nào sau đây?",
+        "Phương thức nào thiết lập Header cho HTTP request?",
+        "Phương thức getHeaderField() dùng để:",
+        "Nếu URL là 'https://example.com/api', phương thức getProtocol() trả về gì?",
+        "Làm sao để xác minh một domain có tồn tại bằng Java?",
+        "Trong lập trình mạng, lớp URLConnection hữu ích nhất khi nào?",
+        "Điều gì xảy ra nếu không gọi close() sau khi đọc dữ liệu từ URLConnection?",
+        "Khi lập trình client HTTP, vì sao nên dùng HttpURLConnection thay vì Socket?"
+      ]
+    },
+    {
+      "file": "quiz_251.json",
+      "question_count": 20,
+      "questions": [
+        "Giao thức TCP có đặc điểm nào sau đây?",
+        "Đối tượng nào trong Java đại diện cho socket phía client?",
+        "Phương thức nào dùng để chờ kết nối từ client?",
+        "Phương thức getInputStream() dùng để:",
+        "Lớp nào dùng để lắng nghe kết nối từ client?",
+        "Nếu quên gọi close() cho socket, điều gì xảy ra?",
+        "Khi client kết nối đến server, lớp nào sẽ được tạo ra để giao tiếp?",
+        "Port mặc định của HTTP là bao nhiêu?",
+        "Khi nhiều client cùng kết nối, giải pháp nào cho phép server xử lý song song?",
+        "TCP sử dụng cơ chế gì để đảm bảo dữ liệu không mất mát?",
+        "Để gửi dữ liệu từ client tới server, dùng phương thức nào?",
+        "Mỗi socket TCP được xác định duy nhất bởi:",
+        "Phương thức getInetAddress() trong Socket trả về:",
+        "Gọi accept() trong ServerSocket có đặc điểm gì?",
+        "Server đa luồng hoạt động như thế nào?",
+        "Điều gì xảy ra nếu client gửi dữ liệu mà server không đọc?",
+        "Khi client ngắt kết nối đột ngột, server sẽ nhận được gì?",
+        "Vì sao TCP phù hợp cho ứng dụng chat hơn UDP?",
+        "Ưu điểm chính của mô hình Client/Server là gì?",
+        "Khi server dùng vòng lặp accept() không giới hạn, cần lưu ý gì?"
+      ]
+    },
+    {
+      "file": "quiz_252.json",
+      "question_count": 20,
+      "questions": [
+        "Server đa tiến trình là gì?",
+        "Giao diện nào phải được cài đặt để đối tượng có thể tuần tự hóa?",
+        "Phương thức nào của ServerSocket dùng để chờ client?",
+        "Mỗi client được xử lý bởi gì trong mô hình multi-threaded server?",
+        "Từ khóa synchronized có tác dụng gì?",
+        "Nếu không dùng synchronized khi nhiều client cùng truy cập danh sách chung, điều gì có thể xảy ra?",
+        "Đối tượng Serializable được chuyển qua mạng bằng gì?",
+        "Phương thức nào của ObjectOutputStream dùng để gửi đối tượng?",
+        "Tại sao cần đa luồng trong ứng dụng chat?",
+        "Khi gửi object qua mạng, điều gì xảy ra nếu lớp đó không Serializable?",
+        "Để đọc đối tượng từ mạng, ta dùng phương thức nào?",
+        "Tại sao Object Stream cần được khởi tạo đúng thứ tự (output trước input)?",
+        "Khi nhiều Thread truy cập danh sách client để broadcast, cần gì để đảm bảo an toàn?",
+        "Phương pháp nào giúp truyền file hoặc object lớn an toàn hơn?",
+        "Lớp nào dùng để tạo server chấp nhận nhiều client song song?",
+        "Nếu một client treo khi đang gửi object, điều gì xảy ra với server?",
+        "Giải pháp nào cải thiện hiệu năng cho server nhiều client?",
+        "Tại sao nên đóng stream và socket sau mỗi phiên làm việc?",
+        "Khi thiết kế server đa luồng, cần ưu tiên điều gì nhất?",
+        "Ưu điểm lớn nhất của việc tuần tự hóa đối tượng trong lập trình mạng là gì?"
+      ]
+    },
+    {
+      "file": "quiz_253.json",
+      "question_count": 18,
+      "questions": [
+        "UDP là viết tắt của cụm từ nào?",
+        "Giao thức UDP có đặc điểm gì?",
+        "Lớp nào đại diện cho gói tin UDP?",
+        "Phương thức nào được dùng để gửi dữ liệu UDP?",
+        "Phương thức nào dùng để nhận gói dữ liệu UDP?",
+        "Để gửi broadcast trong mạng LAN, cần gọi phương thức nào?",
+        "Phần nào trong gói UDP chứa thông tin cổng nguồn và đích?",
+        "Nếu dữ liệu bị mất khi truyền qua UDP, ứng dụng cần làm gì?",
+        "Port mặc định của DNS (dùng UDP) là bao nhiêu?",
+        "Phương thức getLength() của DatagramPacket trả về:",
+        "Điều gì xảy ra nếu buffer trong receive() nhỏ hơn dữ liệu thật?",
+        "Phương thức getAddress() trong DatagramPacket trả về gì?",
+        "UDP khác TCP ở điểm nào?",
+        "Để gửi file nhỏ qua UDP, nên chia file thành gì?",
+        "Nếu cần UDP đáng tin cậy hơn, ta nên làm gì?",
+        "UDP phù hợp nhất với loại ứng dụng nào sau đây?",
+        "UDP sử dụng tầng nào trong mô hình TCP/IP?",
+        "Ưu điểm lớn nhất của UDP so với TCP là gì?"
+      ]
+    },
+    {
+      "file": "quiz_254.json",
+      "question_count": 20,
+      "questions": [
+        "Multicast dùng để làm gì?",
+        "Dải địa chỉ IPv4 dành cho Multicast là gì?",
+        "Multicast hoạt động dựa trên giao thức nào?",
+        "Lớp nào trong Java được dùng cho Multicast?",
+        "Phương thức nào dùng để tham gia nhóm multicast?",
+        "Phương thức nào rời nhóm multicast?",
+        "IGMP trong multicast có nhiệm vụ gì?",
+        "Tại sao multicast tiết kiệm băng thông hơn unicast?",
+        "Phương thức nào dùng để gửi gói tin multicast?",
+        "Tham số TTL trong multicast dùng để làm gì?",
+        "Nếu hai chương trình cùng tham gia cùng địa chỉ multicast, điều gì xảy ra?",
+        "Để tạo nhóm multicast riêng trong mạng nội bộ, nên dùng dải nào?",
+        "Multicast khác broadcast ở điểm nào?",
+        "Làm sao để gửi thông điệp 'Hello Group' đến 230.0.0.1:5000?",
+        "Vì sao Multicast thường không vượt qua router Internet?",
+        "Nếu cần gửi định kỳ gói multicast mỗi 5 giây, ta dùng cơ chế nào?",
+        "Multicast phù hợp nhất cho loại ứng dụng nào?",
+        "Điểm cần lưu ý khi dùng multicast trong LAN?",
+        "Nếu quên gọi leaveGroup(), hậu quả là gì?",
+        "Ưu điểm chính của Multicast là gì?"
+      ]
+    },
+    {
+      "file": "quiz_255.json",
+      "question_count": 20,
+      "questions": [
+        "RMI là viết tắt của cụm từ nào?",
+        "Giao thức nào được RMI sử dụng để truyền dữ liệu?",
+        "Interface trong RMI phải kế thừa lớp nào?",
+        "Phương thức nào được dùng để đăng ký đối tượng RMI vào Registry?",
+        "Cổng mặc định của RMI Registry là bao nhiêu?",
+        "Lớp nào trong Java dùng để khởi tạo Registry?",
+        "Stub trong RMI có chức năng gì?",
+        "Skeleton có nhiệm vụ gì?",
+        "Lớp nào được dùng để triển khai Remote Object?",
+        "Điều gì xảy ra nếu interface không extends Remote?",
+        "RMI sử dụng gói nào để đăng ký và tra cứu đối tượng?",
+        "Trong ví dụ RMI, dòng nào tạo đối tượng từ xa?",
+        "RMI Registry hoạt động như thế nào?",
+        "Tại sao cần khai báo throws RemoteException trong phương thức remote?",
+        "RMI khác với lập trình socket ở điểm nào?",
+        "Để client truy cập được dịch vụ RMI trên máy khác, cần đảm bảo gì?",
+        "Phần nào của RMI chịu trách nhiệm đóng gói dữ liệu trước khi gửi?",
+        "Phương thức nào client dùng để tìm đối tượng RMI?",
+        "Nếu server không khởi tạo LocateRegistry.createRegistry(1099), điều gì xảy ra?",
+        "Ưu điểm chính của RMI so với socket thuần là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_247_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_248_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_249_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_250_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_251_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_252_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_253_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_254_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_255_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "id": "module_68",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-phan-tich-thiet-ke-mot-he-thong-thong-tin",
+      "title": "lesson_bai-1-tong-quan-phan-tich-thiet-ke-mot-he-thong-thong-tin"
+    },
+    {
+      "id": "lesson_bai-2-ngon-ngu-mo-hinh-hoa",
+      "title": "lesson_bai-2-ngon-ngu-mo-hinh-hoa"
+    },
+    {
+      "id": "lesson_bai-3-khai-quat-ve-uml-unified-modeling-language",
+      "title": "lesson_bai-3-khai-quat-ve-uml-unified-modeling-language"
+    },
+    {
+      "id": "lesson_bai-4-mo-hinh-use-case",
+      "title": "lesson_bai-4-mo-hinh-use-case"
+    },
+    {
+      "id": "lesson_bai-5-mo-hinh-lop-doi-tuong",
+      "title": "lesson_bai-5-mo-hinh-lop-doi-tuong"
+    },
+    {
+      "id": "lesson_bai-6-mo-hinh-dong",
+      "title": "lesson_bai-6-mo-hinh-dong"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_270.json",
+      "question_count": 20,
+      "questions": [
+        "Phân tích hệ thống là gì?",
+        "Hệ thống thông tin gồm những thành phần nào?",
+        "Phương pháp 'so sánh tương tự – tương phản' trong phân tích dùng để:",
+        "Phương pháp quy nạp được sử dụng khi nào?",
+        "Hệ thống xử lý giao dịch (TPS) có chức năng gì?",
+        "Nếu công ty cần thống kê doanh số hằng tháng, hệ thống nào phù hợp nhất?",
+        "Để tìm quy luật hành vi mua hàng dựa trên dữ liệu quá khứ, nên áp dụng phương pháp nào?",
+        "Bước nào giúp phát hiện dữ liệu trùng lặp hoặc lỗi định dạng?",
+        "Phân tích dữ liệu thường trực là gì?",
+        "Khi một nhà phân tích cần đánh giá khả năng mở rộng của hệ thống hiện tại, họ nên dùng phương pháp nào?",
+        "Phương pháp nào thường dùng trong kiểm thử hệ thống?",
+        "Trong phân tích nghiệp vụ, nếu cần mô tả luồng thông tin ra – vào, công cụ nào nên sử dụng?",
+        "Điểm khác biệt giữa dữ liệu biến động và dữ liệu thường trực là:",
+        "Trong dự án phân tích hệ thống quản lý nhân sự, việc thu thập bảng chấm công thuộc giai đoạn nào?",
+        "Thành phần nào KHÔNG thuộc hệ thống thông tin?",
+        "Khi nào nên áp dụng mô hình DSS trong doanh nghiệp?",
+        "Một nhà phân tích muốn xác định các quy tắc nghiệp vụ hiện hành. Họ nên làm gì đầu tiên?",
+        "Tại sao cần phân tích nhu cầu tin học hóa trước khi thiết kế?",
+        "Giả sử bạn cần xây dựng hệ thống quản lý thư viện, bước đầu tiên cần làm là gì?",
+        "Tại sao kỹ năng phân tích lại được xem là nền tảng của một kỹ sư phần mềm giỏi?"
+      ]
+    },
+    {
+      "file": "quiz_271.json",
+      "question_count": 20,
+      "questions": [
+        "UML là viết tắt của cụm từ nào?",
+        "UML được phát triển bởi tổ chức nào?",
+        "Mục tiêu chính của UML là gì?",
+        "Trong giai đoạn phân tích, biểu đồ nào giúp xác định chức năng nghiệp vụ?",
+        "Khi muốn mô tả dòng công việc của quy trình nghiệp vụ, ta dùng biểu đồ nào?",
+        "UML KHÔNG phải là:",
+        "Để mô tả cách các đối tượng tương tác bằng thông điệp, dùng biểu đồ nào?",
+        "Khi thiết kế cấu trúc logic của hệ thống, công cụ UML nào hữu ích nhất?",
+        "Biểu đồ trạng thái (State Diagram) mô tả điều gì?",
+        "Khi thiết kế hệ thống ngân hàng có nhiều thành phần độc lập, ta nên dùng biểu đồ nào để mô tả kiến trúc triển khai?",
+        "UML giúp ích trong việc nào sau đây?",
+        "UML thuộc loại công cụ nào trong phát triển phần mềm?",
+        "Trong UML, biểu đồ nào mô tả cách triển khai phần mềm trên phần cứng?",
+        "Biểu đồ lớp trong UML biểu diễn điều gì?",
+        "UML có thể được tích hợp với quy trình phát triển phần mềm nào sau đây?",
+        "Vì sao UML lại được gọi là 'ngôn ngữ thống nhất'?",
+        "Nếu cần biểu diễn quy trình đăng ký môn học có điều kiện rẽ nhánh, biểu đồ nào phù hợp?",
+        "UML giúp giảm sai sót trong phát triển phần mềm bằng cách nào?",
+        "Công cụ nào KHÔNG phải là phần mềm hỗ trợ UML?",
+        "Vai trò lớn nhất của UML trong nhóm phát triển phần mềm là gì?"
+      ]
+    },
+    {
+      "file": "quiz_272.json",
+      "question_count": 20,
+      "questions": [
+        "UML được sử dụng trong giai đoạn nào của chu trình phát triển phần mềm?",
+        "Phần tử nào KHÔNG thuộc thành phần chính của UML?",
+        "Biểu đồ lớp (Class Diagram) thuộc nhóm nào trong UML?",
+        "Mối quan hệ kế thừa trong UML được gọi là gì?",
+        "Nếu cần mô tả quá trình đặt hàng của khách hàng, nên dùng biểu đồ nào?",
+        "UML chia biểu đồ thành mấy nhóm chính?",
+        "Stereotype trong UML dùng để làm gì?",
+        "Khi cần thể hiện cách các module phần mềm được triển khai trên máy chủ, ta dùng biểu đồ nào?",
+        "Tagged Values trong UML dùng để:",
+        "Nếu muốn mô tả hành vi thay đổi của đối tượng theo sự kiện, bạn dùng biểu đồ nào?",
+        "Ngôn ngữ OCL trong UML dùng để:",
+        "Quan hệ Aggregation biểu diễn điều gì?",
+        "Biểu đồ nào phù hợp để thể hiện sự tương tác theo thời gian giữa các đối tượng?",
+        "Biểu đồ Use Case giúp ích cho ai trong nhóm phát triển phần mềm?",
+        "Mối quan hệ nào thể hiện sự phụ thuộc giữa hai phần tử?",
+        "Khi thiết kế hệ thống lớn có nhiều module liên kết, biểu đồ nào giúp mô tả cấu trúc mã nguồn?",
+        "Constraint trong UML có chức năng gì?",
+        "Phần tử nào đại diện cho đối tượng cụ thể tại thời điểm chạy?",
+        "Trong UML, khi cần nhóm các phần tử cùng chức năng, ta nên dùng:",
+        "UML được xem là công cụ quan trọng nhất trong phân tích hướng đối tượng vì:"
+      ]
+    },
+    {
+      "file": "quiz_273.json",
+      "question_count": 20,
+      "questions": [
+        "Use Case dùng để mô tả điều gì trong hệ thống?",
+        "Thành phần nào đại diện cho người tương tác với hệ thống?",
+        "Quan hệ «include» trong Use Case thể hiện điều gì?",
+        "Quan hệ «extend» dùng để biểu diễn:",
+        "Biểu tượng Actor trong UML là:",
+        "Trong hệ thống ngân hàng, Actor 'Khách hàng' có thể tương tác với các Use Case nào?",
+        "System Boundary trong Use Case có vai trò gì?",
+        "Nếu một Actor có hành vi giống phần lớn Actor khác nhưng có thêm chức năng riêng, nên dùng quan hệ nào?",
+        "Trong Use Case 'Đăng nhập', trường hợp sai mật khẩu là ví dụ của:",
+        "Mục tiêu chính của mô hình Use Case là:",
+        "Khi mô tả Use Case 'Mượn sách', điều kiện tiên quyết là gì?",
+        "Pre-condition trong Use Case mô tả:",
+        "Biểu đồ Use Case phù hợp nhất với giai đoạn nào của dự án?",
+        "Trong mô hình Use Case, mối quan hệ giữa 'Người dùng' và 'Đăng nhập' là loại nào?",
+        "Khi nào nên sử dụng quan hệ «include» thay vì «extend»?",
+        "Một Use Case nên được mô tả bằng bao nhiêu luồng chính?",
+        "Khi cần xác định kịch bản thay thế cho luồng chính, bước nào cần thực hiện?",
+        "Lợi ích lớn nhất của biểu đồ Use Case là gì?",
+        "Trong biểu đồ Use Case, mũi tên «extend» được sử dụng khi:",
+        "Vì sao Use Case được xem là nền tảng của phân tích hướng đối tượng?"
+      ]
+    },
+    {
+      "file": "quiz_274.json",
+      "question_count": 20,
+      "questions": [
+        "Lớp (Class) là gì trong mô hình hướng đối tượng?",
+        "Đối tượng (Object) là:",
+        "Thuộc tính (Attribute) mô tả điều gì?",
+        "Phương thức (Method) biểu diễn:",
+        "Khi mô hình hóa hệ thống quản lý sinh viên, lớp nào phù hợp nhất?",
+        "Quan hệ Association thể hiện điều gì?",
+        "Trong mô hình lớp, khi một lớp sử dụng dữ liệu tạm thời của lớp khác, đó là quan hệ:",
+        "Nếu 'Đơn hàng' bị xóa thì 'Chi tiết đơn hàng' cũng bị xóa, đó là loại quan hệ nào?",
+        "Generalization dùng để mô tả:",
+        "Khi phân tích hệ thống, bạn nên tìm lớp dựa trên:",
+        "Lớp <i>GiangVien</i> kế thừa từ lớp <i>NhanVien</i> là ví dụ của:",
+        "Aggregation khác Composition ở điểm nào?",
+        "Một lớp có nhiều trách nhiệm sẽ gây ra vấn đề gì?",
+        "Trong mô hình lớp, nếu muốn thể hiện lớp <i>Khoa</i> gồm nhiều <i>GiangVien</i>, quan hệ nên dùng là:",
+        "Quan hệ nào thể hiện việc tái sử dụng hành vi chung?",
+        "Khi một lớp phức tạp cần được chia nhỏ để dễ quản lý, kỹ thuật nào nên áp dụng?",
+        "Trong UML, biểu đồ mô tả mối quan hệ giữa các lớp được gọi là:",
+        "Nguyên tắc SRP (Single Responsibility Principle) khuyến khích điều gì?",
+        "Khi hai lớp có quan hệ chặt chẽ và phụ thuộc nhau về vòng đời, nên dùng:",
+        "Tại sao mô hình lớp được xem là nền tảng của thiết kế hướng đối tượng?"
+      ]
+    },
+    {
+      "file": "quiz_275.json",
+      "question_count": 20,
+      "questions": [
+        "Mô hình động trong UML thể hiện điều gì?",
+        "Biểu đồ trình tự (Sequence Diagram) mô tả:",
+        "Biểu đồ trạng thái mô tả:",
+        "Khi muốn mô tả quy trình nghiệp vụ có rẽ nhánh và song song, nên dùng biểu đồ nào?",
+        "Ký hiệu trạng thái ban đầu trong State Diagram là:",
+        "Quan hệ giữa mô hình động và mô hình đối tượng là:",
+        "Thông điệp bất đồng bộ trong Sequence Diagram có nghĩa là:",
+        "Biểu đồ Communication Diagram khác Sequence Diagram ở điểm nào?",
+        "Trong quy trình 'Đăng nhập', việc nhập sai mật khẩu là ví dụ của:",
+        "Trong Activity Diagram, nút quyết định (Decision Node) có hình dạng:",
+        "Nếu cần biểu diễn cách các đối tượng phối hợp trong một chức năng cụ thể, ta dùng:",
+        "Biểu đồ hoạt động (Activity Diagram) tương tự với:",
+        "Trong State Diagram, khi đối tượng đạt điều kiện kết thúc, ký hiệu được dùng là:",
+        "Sự kiện (Event) trong mô hình động là gì?",
+        "Vòng đời của đối tượng bao gồm:",
+        "Trong hệ thống xử lý đơn hàng, biểu đồ nào thể hiện rõ luồng phê duyệt qua nhiều bước?",
+        "Thông điệp trong Sequence Diagram thể hiện điều gì?",
+        "Trong quá trình phân tích, việc dùng State Diagram giúp ích gì?",
+        "Khi nhiều quy trình chạy song song trong một Activity Diagram, ta cần dùng:",
+        "Tại sao mô hình động được xem là không thể thiếu trong thiết kế hệ thống?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_270_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_271_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_272_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_273_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_274_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_275_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

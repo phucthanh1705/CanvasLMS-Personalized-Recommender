@@ -1,0 +1,125 @@
+<h1>🧩 BÀI 07 – TỰ ĐỘNG HÓA KIỂM THỬ PHẦN MỀM</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu khái niệm và mục tiêu của tự động hóa kiểm thử (Automation Testing).</li>
+ <li>Phân biệt giữa kiểm thử thủ công (Manual) và kiểm thử tự động (Automation).</li>
+ <li>Nắm được quy trình, công cụ, framework phổ biến như Selenium, Katalon, TestNG, PyTest.</li>
+ <li>Xây dựng ca kiểm thử tự động, quản lý test suite, và tích hợp với CI/CD pipeline.</li>
+ <li>Hiểu các tiêu chí lựa chọn test case phù hợp cho automation.</li>
+</ul>
+<hr>
+
+<h2>1. Tổng quan về Automation Testing</h2>
+<p><b>Automation Testing</b> là quá trình sử dụng công cụ hoặc framework để thực thi tự động các ca kiểm thử, so sánh kết quả thực tế với mong đợi và báo cáo kết quả.</p>
+<p><b>Mục tiêu:</b></p>
+<ul>
+ <li>Tăng tốc độ và độ chính xác khi kiểm thử hồi quy (Regression Testing).</li>
+ <li>Giảm effort thủ công, đặc biệt trong CI/CD.</li>
+ <li>Tăng độ tin cậy của kiểm thử lặp lại nhiều lần.</li>
+</ul>
+<hr>
+
+<h2>2. So sánh Manual Testing và Automation Testing</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Tiêu chí</th><th>Manual Testing</th><th>Automation Testing</th></tr></thead>
+<tbody>
+<tr><td>Thực hiện</td><td>Bằng tay, do con người thực hiện</td><td>Bằng công cụ hoặc script</td></tr>
+<tr><td>Tốc độ</td><td>Chậm, phụ thuộc người</td><td>Nhanh, có thể chạy 24/7</td></tr>
+<tr><td>Độ chính xác</td><td>Dễ sai sót do con người</td><td>Ổn định và nhất quán</td></tr>
+<tr><td>Chi phí ban đầu</td><td>Thấp</td><td>Cao (cần setup framework và công cụ)</td></tr>
+<tr><td>Phù hợp</td><td>Kiểm thử ngắn hạn, exploratory</td><td>Kiểm thử lặp lại, regression, performance</td></tr>
+</tbody></table>
+<hr>
+
+<h2>3. Quy trình tự động hóa kiểm thử</h2>
+<ol>
+ <li>Xác định phạm vi test cần tự động hóa.</li>
+ <li>Lựa chọn công cụ phù hợp.</li>
+ <li>Thiết kế framework kiểm thử.</li>
+ <li>Viết test script.</li>
+ <li>Thực thi test, phân tích kết quả.</li>
+ <li>Bảo trì test script khi có thay đổi hệ thống.</li>
+</ol>
+<hr>
+
+<h2>4. Tiêu chí chọn test case để tự động hóa</h2>
+<ul>
+ <li>Test case được chạy lặp lại thường xuyên (Regression, Smoke).</li>
+ <li>Có dữ liệu ổn định và dễ xác định kết quả mong đợi.</li>
+ <li>Không phù hợp với exploratory hoặc usability test.</li>
+</ul>
+<hr>
+
+<h2>5. Ví dụ minh họa (Selenium Java)</h2>
+<pre><code>import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest {
+ public static void main(String[] args){
+ WebDriver driver = new ChromeDriver();
+ driver.get("https://shop.demo/login");
+ driver.findElement(By.id("email")).sendKeys("qa@test.com");
+ driver.findElement(By.id("password")).sendKeys("12345678");
+ driver.findElement(By.id("login")).click();
+
+ String expected = "Dashboard";
+ String actual = driver.getTitle();
+ if(actual.contains(expected))
+ System.out.println("✅ Test Passed");
+ else
+ System.out.println("❌ Test Failed");
+ driver.quit();
+ }
+}</code></pre>
+<hr>
+
+<h2>6. Framework tự động hóa phổ biến</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Framework</th><th>Ngôn ngữ</th><th>Đặc điểm nổi bật</th></tr></thead>
+<tbody>
+<tr><td>Selenium</td><td>Java, Python, C#</td><td>Hỗ trợ đa trình duyệt, open-source</td></tr>
+<tr><td>Katalon Studio</td><td>Java/Groovy</td><td>Dễ dùng, GUI + script mode</td></tr>
+<tr><td>TestNG</td><td>Java</td><td>Quản lý suite, report mạnh mẽ</td></tr>
+<tr><td>PyTest</td><td>Python</td><td>Đơn giản, dễ mở rộng, phù hợp API test</td></tr>
+</tbody></table>
+<hr>
+
+<h2>7. Kiến trúc framework tự động hóa</h2>
+<p><b>Thành phần chính:</b></p>
+<ul>
+ <li><b>Test Data:</b> chứa dữ liệu kiểm thử (CSV, Excel, DB).</li>
+ <li><b>Test Scripts:</b> chứa mã lệnh thực thi test.</li>
+ <li><b>Object Repository:</b> lưu trữ locator của phần tử UI.</li>
+ <li><b>Test Runner:</b> quản lý test suite (TestNG, JUnit).</li>
+ <li><b>Report:</b> tổng hợp kết quả test (Extent, Allure).</li>
+</ul>
+<hr>
+
+<h2>8. Tích hợp CI/CD Pipeline</h2>
+<p>Tự động hóa kiểm thử thường được tích hợp vào pipeline Continuous Integration (Jenkins, GitHub Actions, GitLab CI):</p>
+<pre><code>stage('Test') {
+ steps {
+ sh 'mvn test'
+ }
+}
+</code></pre>
+<p>→ Mỗi lần commit code mới, test sẽ tự chạy và gửi báo cáo về Slack/Email.</p>
+<hr>
+
+<h2>9. Ưu điểm và thách thức</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Ưu điểm</th><th>Thách thức</th></tr></thead>
+<tbody>
+<tr><td>Tốc độ nhanh, chính xác</td><td>Chi phí đầu tư ban đầu cao</td></tr>
+<tr><td>Phù hợp test lặp lại</td><td>Bảo trì test script phức tạp khi UI thay đổi</td></tr>
+<tr><td>Dễ tích hợp CI/CD</td><td>Khó áp dụng cho test mang tính cảm nhận</td></tr>
+</tbody></table>
+<hr>
+
+<h2>10. Tổng kết</h2>
+<ul>
+ <li>Tự động hóa kiểm thử là xu hướng tất yếu trong QA hiện đại.</li>
+ <li>Kết hợp manual và automation để đạt hiệu quả tối đa.</li>
+ <li>Automation hiệu quả khi có chiến lược test phù hợp, script ổn định và dữ liệu chuẩn hóa.</li>
+</ul>

@@ -1,0 +1,80 @@
+<h1>🧩 BÀI 04 – CÁC LOẠI KIỂM THỬ PHẦN MỀM</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Phân biệt rõ các loại kiểm thử phần mềm: chức năng (functional) và phi chức năng (non-functional).</li>
+ <li>Hiểu vai trò và phạm vi của các loại kiểm thử đặc biệt: Regression, Smoke, Sanity, Exploratory, Ad-hoc, Security, Performance, Usability.</li>
+ <li>Áp dụng các loại kiểm thử phù hợp trong quy trình phát triển phần mềm (Waterfall, Agile, DevOps).</li>
+ <li>Phân tích tình huống thực tế để lựa chọn chiến lược kiểm thử tối ưu.</li>
+</ul>
+<hr>
+
+<h2>1. Tổng quan về phân loại kiểm thử</h2>
+<p>Kiểm thử phần mềm được chia thành hai nhóm chính:</p>
+<ul>
+ <li><b>Kiểm thử chức năng (Functional Testing):</b> kiểm tra phần mềm hoạt động đúng yêu cầu nghiệp vụ.</li>
+ <li><b>Kiểm thử phi chức năng (Non-functional Testing):</b> đánh giá chất lượng hoạt động của phần mềm (hiệu năng, bảo mật, khả năng dùng, v.v.).</li>
+</ul>
+<hr>
+
+<h2>2. Kiểm thử chức năng (Functional Testing)</h2>
+<p>Functional Testing tập trung xác minh hệ thống có thực hiện đúng các chức năng đã được đặc tả trong tài liệu SRS hay không.</p>
+<table border="1" cellpadding="6">
+<thead><tr><th>Loại kiểm thử</th><th>Mục tiêu</th><th>Công cụ / Kỹ thuật</th></tr></thead>
+<tbody>
+<tr><td>Smoke Testing</td><td>Kiểm tra nhanh các chức năng chính sau khi build.</td><td>Jenkins, Selenium</td></tr>
+<tr><td>Sanity Testing</td><td>Xác minh chức năng cụ thể sau khi fix bug.</td><td>Postman, Manual</td></tr>
+<tr><td>Regression Testing</td><td>Đảm bảo các tính năng cũ không bị ảnh hưởng bởi thay đổi mới.</td><td>Selenium, TestNG, Katalon</td></tr>
+<tr><td>Exploratory / Ad-hoc Testing</td><td>Kiểm thử tự do, dựa vào kinh nghiệm để phát hiện lỗi tiềm ẩn.</td><td>Manual, Session-based</td></tr>
+</tbody></table>
+<hr>
+
+<h2>3. Kiểm thử phi chức năng (Non-functional Testing)</h2>
+<p>Non-functional Testing đo lường hiệu suất, bảo mật, tính dễ dùng và ổn định của phần mềm.</p>
+<table border="1" cellpadding="6">
+<thead><tr><th>Loại kiểm thử</th><th>Mục tiêu</th><th>Công cụ</th></tr></thead>
+<tbody>
+<tr><td>Performance Testing</td><td>Đánh giá tốc độ và khả năng chịu tải của hệ thống.</td><td>JMeter, LoadRunner</td></tr>
+<tr><td>Security Testing</td><td>Phát hiện lỗ hổng bảo mật, XSS, SQL Injection.</td><td>Burp Suite, OWASP ZAP</td></tr>
+<tr><td>Usability Testing</td><td>Đánh giá trải nghiệm người dùng (UX/UI).</td><td>Eye-tracking, Survey tools</td></tr>
+<tr><td>Compatibility Testing</td><td>Kiểm tra phần mềm hoạt động trên nhiều thiết bị, OS, trình duyệt khác nhau.</td><td>BrowserStack, CrossBrowserTesting</td></tr>
+<tr><td>Reliability / Stability Testing</td><td>Xác định độ ổn định của hệ thống khi hoạt động lâu dài.</td><td>Soak Testing, Endurance tools</td></tr>
+</tbody></table>
+<hr>
+
+<h2>4. Ví dụ thực tế</h2>
+<p><b>Tình huống:</b> Ứng dụng e-commerce mới triển khai tính năng thanh toán QR. Nhóm QA cần kiểm tra:</p>
+<ul>
+ <li>Smoke: có thể mở màn hình thanh toán không lỗi.</li>
+ <li>Functional: xác thực mã QR, tính toán tổng tiền chính xác.</li>
+ <li>Regression: chức năng giỏ hàng cũ không lỗi.</li>
+ <li>Performance: hệ thống xử lý 1000 giao dịch/giây.</li>
+ <li>Security: QR không bị giả mạo hoặc chèn script.</li>
+</ul>
+<hr>
+
+<h2>5. So sánh Smoke – Sanity – Regression</h2>
+<table border="1" cellpadding="6">
+<thead><tr><th>Tiêu chí</th><th>Smoke</th><th>Sanity</th><th>Regression</th></tr></thead>
+<tbody>
+<tr><td>Mục tiêu</td><td>Kiểm tra build có ổn định không</td><td>Xác minh fix bug hoặc tính năng cụ thể</td><td>Đảm bảo tính năng cũ vẫn hoạt động</td></tr>
+<tr><td>Phạm vi</td><td>Rộng nhưng nông</td><td>Hẹp nhưng sâu</td><td>Toàn bộ hoặc chọn lọc</td></tr>
+<tr><td>Tần suất</td><td>Mỗi build mới</td><td>Sau khi fix lỗi</td><td>Trước khi release</td></tr>
+<tr><td>Thực hiện</td><td>Automation thường dùng</td><td>Thủ công hoặc automation</td><td>Automation là chủ yếu</td></tr>
+</tbody></table>
+<hr>
+
+<h2>6. Kỹ thuật kiểm thử hiện đại</h2>
+<ul>
+ <li><b>Shift-Left Testing:</b> Bắt đầu test sớm ngay từ giai đoạn thiết kế.</li>
+ <li><b>Continuous Testing:</b> Kiểm thử liên tục trong pipeline CI/CD.</li>
+ <li><b>Risk-based Testing:</b> Ưu tiên kiểm thử theo mức độ rủi ro.</li>
+</ul>
+<hr>
+
+<h2>7. Tổng kết</h2>
+<ul>
+ <li>Phân biệt rõ loại kiểm thử giúp lập kế hoạch phù hợp với từng giai đoạn phát triển.</li>
+ <li>Kết hợp kiểm thử chức năng và phi chức năng giúp đảm bảo chất lượng toàn diện.</li>
+ <li>Áp dụng kỹ thuật hiện đại như shift-left và automation giúp tăng hiệu quả kiểm thử.</li>
+</ul>

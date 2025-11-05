@@ -1,0 +1,705 @@
+{
+  "id": "module_56",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-kien-thuc-co-ban-ve-may-tinh",
+      "title": "lesson_bai-01-kien-thuc-co-ban-ve-may-tinh"
+    },
+    {
+      "id": "lesson_bai-02-co-ban-lap-trinh-may-tinh",
+      "title": "lesson_bai-02-co-ban-lap-trinh-may-tinh"
+    },
+    {
+      "id": "lesson_bai-03-gioi-thieu-ve-ngon-ngu-lap-trinh-c",
+      "title": "lesson_bai-03-gioi-thieu-ve-ngon-ngu-lap-trinh-c"
+    },
+    {
+      "id": "lesson_bai-04-kieu-du-lieu-va-bieu-thuc-trong-c",
+      "title": "lesson_bai-04-kieu-du-lieu-va-bieu-thuc-trong-c"
+    },
+    {
+      "id": "lesson_bai-05-cac-toan-tu-dieu-khien",
+      "title": "lesson_bai-05-cac-toan-tu-dieu-khien"
+    },
+    {
+      "id": "lesson_bai-06-chuong-trinh-con-ham",
+      "title": "lesson_bai-06-chuong-trinh-con-ham"
+    },
+    {
+      "id": "lesson_bai-07-mang-and-chuoi-ku-tu",
+      "title": "lesson_bai-07-mang-and-chuoi-ku-tu"
+    },
+    {
+      "id": "lesson_bai-08-kieu-du-lieu-co-cau-truc-struct",
+      "title": "lesson_bai-08-kieu-du-lieu-co-cau-truc-struct"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_153.json",
+      "question_count": 20,
+      "questions": [
+        "Máy tính hoạt động theo nguyên lý nào?",
+        "Một byte tương đương với bao nhiêu bit?",
+        "Trong hệ nhị phân, số 1011 tương đương bao nhiêu trong hệ thập phân?",
+        "Ký tự 'A' trong bảng mã ASCII có mã thập phân là:",
+        "Mô hình máy tính Von Neumann đặc trưng bởi điều gì?",
+        "Số 15 trong hệ thập phân tương ứng với giá trị nào trong hệ nhị phân?",
+        "Trong biểu diễn IEEE 754, phần nào quy định độ lớn của số thực?",
+        "Bảng mã nào hỗ trợ ký tự của hầu hết ngôn ngữ trên thế giới?",
+        "Khi chuyển số 27 từ hệ thập phân sang hệ nhị phân, ta thu được:",
+        "Một hệ thống máy tính có 5 thành phần chính, trong đó ALU thuộc về bộ phận nào?",
+        "Trong các lựa chọn sau, đâu KHÔNG phải là thiết bị đầu ra?",
+        "Bit có thể biểu diễn được tối đa bao nhiêu trạng thái?",
+        "Công thức tính giá trị thập phân của dãy nhị phân là:",
+        "Hệ điều hành có vai trò gì?",
+        "Trong mạng máy tính, tầng nào của mô hình OSI chịu trách nhiệm định tuyến?",
+        "Một ký tự Unicode có thể chiếm tối đa bao nhiêu byte?",
+        "Nếu tốc độ CPU tăng gấp đôi nhưng băng thông bộ nhớ không đổi, hiệu năng tổng thể sẽ:",
+        "Công nghệ nào giúp giảm độ trễ truy cập dữ liệu giữa CPU và RAM?",
+        "Trọng số của bit thứ i (tính từ phải sang) trong hệ nhị phân là:",
+        "Khi máy tính truyền dữ liệu qua mạng, tầng ứng dụng OSI thường tương tác với giao thức nào?"
+      ]
+    },
+    {
+      "file": "quiz_154.json",
+      "question_count": 20,
+      "questions": [
+        "Giải thuật là gì?",
+        "Đặc trưng nào KHÔNG thuộc về giải thuật?",
+        "Cấu trúc cơ bản của giải thuật KHÔNG bao gồm:",
+        "Lưu đồ là gì?",
+        "Trong biểu diễn mã giả, từ khóa 'IF...THEN...ELSE' thuộc loại cấu trúc nào?",
+        "Kiểu dữ liệu xác định bởi tập giá trị và:",
+        "Trong ngôn ngữ lập trình, biến là:",
+        "Sự khác nhau giữa biên dịch và thông dịch là:",
+        "Cấu trúc lặp trong giải thuật dùng để:",
+        "Ví dụ nào sau đây là giải thuật?",
+        "Cấu trúc điều khiển nào được mô tả bằng câu lệnh 'for'?",
+        "Trong kiểu dữ liệu logic (Boolean), có bao nhiêu giá trị hợp lệ?",
+        "Hằng số có thể thay đổi trong khi chạy chương trình không?",
+        "Trong ngôn ngữ C, kiểu dữ liệu nào KHÔNG phải kiểu cơ bản?",
+        "Giải thuật tìm giá trị lớn nhất trong mảng thuộc nhóm thuật toán nào?",
+        "Ngôn ngữ Assembly thuộc loại:",
+        "Ngôn ngữ Python được phân loại là:",
+        "Một chương trình có thể biên dịch nhưng không chạy đúng là do:",
+        "Giải thuật nào sau đây có tính đệ quy?",
+        "Trong biểu diễn giải thuật, ký hiệu hình thoi trong lưu đồ có ý nghĩa là:"
+      ]
+    },
+    {
+      "file": "quiz_155.json",
+      "question_count": 20,
+      "questions": [
+        "Ngôn ngữ C được phát triển bởi ai?",
+        "Cấu trúc cơ bản của chương trình C luôn phải có hàm nào?",
+        "Câu lệnh tiền xử lý trong C bắt đầu bằng ký hiệu nào?",
+        "Trình biên dịch GCC thuộc thành phần nào trong Dev-C++?",
+        "Lệnh in ra màn hình trong C là:",
+        "Từ khóa nào được dùng để định nghĩa hàm chính trong C?",
+        "Một dòng lệnh trong C phải kết thúc bằng:",
+        "Thư viện nào cần thiết để sử dụng hàm printf()?",
+        "Giai đoạn nào trong biên dịch xử lý chỉ thị #include?",
+        "Khi gặp lỗi 'undefined reference to main', nguyên nhân thường là:",
+        "Lệnh nào dùng để kết thúc hàm và trả giá trị cho hệ thống?",
+        "Dev-C++ sử dụng trình biên dịch nào mặc định?",
+        "Phần mở rộng của tệp mã nguồn C là:",
+        "Cú pháp nào đúng khi khai báo hàm main trả về giá trị nguyên?",
+        "Lỗi nào xuất hiện khi quên dấu ';'?",
+        "Trong quá trình biên dịch, file trung gian có phần mở rộng là:",
+        "Dev-C++ thuộc loại phần mềm gì?",
+        "Khi chạy chương trình mà không thấy kết quả hiển thị, lỗi thường nằm ở:",
+        "Cấu trúc đúng để khai báo và in ra tổng hai số nguyên trong C là:",
+        "Khi biên dịch xong nhưng không thể chạy được chương trình, nguyên nhân có thể là:"
+      ]
+    },
+    {
+      "file": "quiz_156.json",
+      "question_count": 20,
+      "questions": [
+        "Kiểu dữ liệu nào trong C dùng để lưu số thực chính xác cao?",
+        "Biến là gì?",
+        "Lệnh nào dùng để định nghĩa hằng số trong C?",
+        "Kết quả của biểu thức 7 / 2 trong C là:",
+        "Thứ tự ưu tiên đúng của các toán tử sau: +, *, /, =",
+        "Phép toán 'a &= b' tương đương với:",
+        "Trong C, biểu thức logic nào đúng?",
+        "Phép toán dịch trái (<<) có tác dụng:",
+        "Khi thực hiện (float)a / b, điều gì xảy ra?",
+        "Toán tử nào có độ ưu tiên cao nhất trong danh sách sau?",
+        "Trong phép toán logic, biểu thức nào trả về true?",
+        "Giá trị của biểu thức 5 % 2 là:",
+        "Trong scanf(\"%d\", &x), dấu '&' có ý nghĩa gì?",
+        "Lệnh nào đúng để in số thực với 2 chữ số thập phân?",
+        "Khi cộng số nguyên và số thực, kiểu kết quả là:",
+        "Phép gán a += 3 tương đương với:",
+        "Khi nào cần dùng ép kiểu tường minh (cast)?",
+        "Giá trị của biểu thức (5 > 3) && (2 < 1) là:",
+        "Ký tự '\\\\n' trong printf có nghĩa là:",
+        "Toán tử nào có độ ưu tiên thấp nhất trong C?"
+      ]
+    },
+    {
+      "file": "quiz_157.json",
+      "question_count": 20,
+      "questions": [
+        "Lệnh if...else dùng để:",
+        "Trong biểu thức điều kiện, sai lầm phổ biến là:",
+        "Lệnh nào đúng để chọn giữa nhiều khả năng?",
+        "Kết quả sau đoạn mã: for(i=0;i<3;i++) printf('%d',i);",
+        "Câu lệnh nào trong switch được dùng để thoát khỏi cấu trúc?",
+        "Vòng lặp nào luôn được thực hiện ít nhất một lần?",
+        "Cấu trúc điều khiển nào phù hợp khi biết trước số lần lặp?",
+        "Trong vòng for, biểu thức thứ hai có ý nghĩa gì?",
+        "Nếu quên break trong switch, chương trình sẽ:",
+        "Phép toán điều kiện (?:) có thể thay thế cho:",
+        "Lệnh continue trong vòng lặp có tác dụng:",
+        "Kết quả đoạn mã: i=1; while(i<3){printf('%d',i);i++;}",
+        "Lỗi logic nào dẫn đến vòng lặp vô hạn?",
+        "Trong vòng for, phần nào có thể bỏ trống?",
+        "Vòng lặp lồng nhau là:",
+        "Toán tử điều kiện ?: hoạt động thế nào?",
+        "Lệnh return có thể được dùng để:",
+        "Trong đoạn mã for(i=0;i<10;i++){if(i==5) break;}, số lần lặp thực sự là:",
+        "Khi nào nên dùng switch thay vì if...else?",
+        "Để in ra các số chẵn từ 0 đến 10, lệnh nào phù hợp?"
+      ]
+    },
+    {
+      "file": "quiz_158.json",
+      "question_count": 20,
+      "questions": [
+        "Hàm trong C có tác dụng chính là gì?",
+        "Cấu trúc cơ bản của một hàm trong C gồm những phần nào?",
+        "Từ khóa nào dùng để khai báo hàm không trả về giá trị?",
+        "Hàm thư viện printf() nằm trong thư viện nào?",
+        "Lệnh return có chức năng:",
+        "Trong hàm đệ quy, điều gì bắt buộc phải có?",
+        "Khi truyền tham trị, điều gì xảy ra?",
+        "Để truyền địa chỉ của biến x vào hàm, ta dùng cú pháp:",
+        "Từ khóa static khi dùng trong hàm có tác dụng:",
+        "Nếu hàm không có lệnh return, nhưng có kiểu trả về int, điều gì xảy ra?",
+        "Kết quả của hàm factorial(3) trong ví dụ là:",
+        "Nếu quên điều kiện dừng trong đệ quy, chương trình sẽ:",
+        "Hàm main() có kiểu trả về mặc định là:",
+        "Phân biệt giữa tham số hình thức và tham số thực tế:",
+        "Câu lệnh nào gọi hàm void printHello()?",
+        "Khi truyền con trỏ int *p vào hàm, trong lời gọi ta cần:",
+        "Hàm nào trong các lựa chọn sau là hàm đệ quy hợp lệ?",
+        "Phạm vi hoạt động của biến toàn cục là:",
+        "Hàm có thể gọi chính nó bao nhiêu lần?",
+        "Ưu điểm chính của việc dùng hàm là gì?"
+      ]
+    },
+    {
+      "file": "quiz_159.json",
+      "question_count": 20,
+      "questions": [
+        "Chỉ số của phần tử đầu tiên trong mảng là:",
+        "Cú pháp khai báo mảng đúng trong C là:",
+        "Nếu mảng a có 10 phần tử, phần tử cuối cùng là:",
+        "Để in phần tử thứ i của mảng a, ta viết:",
+        "Mảng hai chiều 3x4 có tổng cộng bao nhiêu phần tử?",
+        "Khi khai báo char s[5] = {'H','e','l','l','o'}, chuỗi này có hợp lệ không?",
+        "Ký tự '\\\\0' có vai trò gì trong chuỗi?",
+        "Hàm strlen('Hello') trả về:",
+        "Trong C, chuỗi ký tự thực chất là:",
+        "Phép gán chuỗi nào đúng?",
+        "Hàm nào dùng để nối hai chuỗi trong C?",
+        "Truyền mảng vào hàm thực chất là:",
+        "Nếu int a[3]={1,2,3}, thì *(a+2) bằng:",
+        "Phép so sánh chuỗi s1 và s2 nên dùng:",
+        "Khi gọi strlen('C'), hàm trả về:",
+        "Nếu ta viết char str[] = \"ABC\";, kích thước mảng thực tế là:",
+        "Để đọc chuỗi có khoảng trắng, nên dùng hàm:",
+        "Tên mảng thực chất là:",
+        "Mảng hai chiều a[2][3] lưu trữ dữ liệu như thế nào?",
+        "Khi vượt quá giới hạn chỉ số mảng, điều gì xảy ra?"
+      ]
+    },
+    {
+      "file": "quiz_160.json",
+      "question_count": 20,
+      "questions": [
+        "Từ khóa nào được dùng để định nghĩa kiểu dữ liệu có cấu trúc?",
+        "Cú pháp nào đúng để khai báo struct trong C?",
+        "Toán tử nào dùng để truy cập thành phần của struct thông qua biến con trỏ?",
+        "Nếu struct có 3 thành phần int, float, char, dung lượng tối thiểu là:",
+        "Lệnh nào khai báo mảng struct gồm 10 sinh viên?",
+        "Hàm nào đúng khi truyền struct bằng tham chiếu?",
+        "Phép gán struct hợp lệ là:",
+        "Khi dùng typedef struct, lợi ích là gì?",
+        "Khi truyền struct lớn vào hàm bằng tham trị, vấn đề gì xảy ra?",
+        "Phép truy cập struct đúng là:",
+        "Khi dùng con trỏ p trỏ đến struct, cú pháp đúng để in tên là:",
+        "Struct có thể chứa:",
+        "Sự khác biệt chính giữa struct và union là:",
+        "Khi khai báo struct Date {int d,m,y;} và struct Date *p, biểu thức p->m nghĩa là:",
+        "Lệnh nào dưới đây KHÔNG hợp lệ?",
+        "Khi khai báo struct Student {char name[30]; int age;}, kích thước tối thiểu của struct là:",
+        "Câu lệnh nào dùng để sao chép chuỗi cho trường name trong struct?",
+        "Struct lồng nhau có nghĩa là:",
+        "Khi dùng typedef struct {char id[10];} SV; thì cú pháp khai báo biến đúng là:",
+        "Nếu struct Student có 3 trường, ta có thể truyền toàn bộ struct cho hàm bằng cách:"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_153_submissions.json",
+      "count": 28,
+      "average_score": 16.25,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 153,
+          "submission_id": 179,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 153,
+          "submission_id": 482,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 153,
+          "submission_id": 607,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 153,
+          "submission_id": 62,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 14,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 153,
+          "submission_id": 73,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_154_submissions.json",
+      "count": 27,
+      "average_score": 16.63,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 154,
+          "submission_id": 69,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 43,
+          "quiz_id": 154,
+          "submission_id": 98,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 154,
+          "submission_id": 116,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 154,
+          "submission_id": 577,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 154,
+          "submission_id": 66,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_155_submissions.json",
+      "count": 27,
+      "average_score": 16.11,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 155,
+          "submission_id": 177,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 155,
+          "submission_id": 67,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 155,
+          "submission_id": 70,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 155,
+          "submission_id": 166,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 155,
+          "submission_id": 584,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_156_submissions.json",
+      "count": 28,
+      "average_score": 16.61,
+      "top_5_students": [
+        {
+          "user_id": 65,
+          "quiz_id": 156,
+          "submission_id": 604,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 156,
+          "submission_id": 76,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 156,
+          "submission_id": 117,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 156,
+          "submission_id": 145,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 156,
+          "submission_id": 182,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_157_submissions.json",
+      "count": 29,
+      "average_score": 16.28,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 157,
+          "submission_id": 71,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 157,
+          "submission_id": 113,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 157,
+          "submission_id": 121,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 157,
+          "submission_id": 165,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 157,
+          "submission_id": 372,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 15,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_158_submissions.json",
+      "count": 28,
+      "average_score": 16.61,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 158,
+          "submission_id": 74,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 158,
+          "submission_id": 412,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 158,
+          "submission_id": 582,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 158,
+          "submission_id": 606,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 158,
+          "submission_id": 64,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 5,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_159_submissions.json",
+      "count": 28,
+      "average_score": 16.46,
+      "top_5_students": [
+        {
+          "user_id": 46,
+          "quiz_id": 159,
+          "submission_id": 122,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 159,
+          "submission_id": 178,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 15,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 159,
+          "submission_id": 411,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 159,
+          "submission_id": 579,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 159,
+          "submission_id": 602,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_160_submissions.json",
+      "count": 27,
+      "average_score": 16.63,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 160,
+          "submission_id": 168,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 160,
+          "submission_id": 72,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 160,
+          "submission_id": 481,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 160,
+          "submission_id": 605,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 160,
+          "submission_id": 65,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 4,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "id": "module_44",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-lap-trinh-java-can-ban",
+      "title": "lesson_bai-01-lap-trinh-java-can-ban"
+    },
+    {
+      "id": "lesson_bai-02-tong-quan-spring-framework",
+      "title": "lesson_bai-02-tong-quan-spring-framework"
+    },
+    {
+      "id": "lesson_bai-03-spring-mvc",
+      "title": "lesson_bai-03-spring-mvc"
+    },
+    {
+      "id": "lesson_bai-04-jdbc-va-spring-jdbc",
+      "title": "lesson_bai-04-jdbc-va-spring-jdbc"
+    },
+    {
+      "id": "lesson_bai-05-hibernate-orm",
+      "title": "lesson_bai-05-hibernate-orm"
+    },
+    {
+      "id": "lesson_bai-06-ung-dung-spring-mvc-+-hibernate-tong-hop-thuc-hanh",
+      "title": "lesson_bai-06-ung-dung-spring-mvc-+-hibernate-tong-hop-thuc-hanh"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_63.json",
+      "question_count": 20,
+      "questions": [
+        "Từ khóa nào dùng để khai báo một lớp trong Java?",
+        "Phương thức nào bắt buộc phải có khi chạy một chương trình Java?",
+        "Kiểu dữ liệu nào lưu trữ giá trị logic đúng/sai trong Java?",
+        "Biểu thức 5/2 trong Java cho kết quả là gì?",
+        "Cách ép kiểu từ double sang int đúng là gì?",
+        "Từ khóa final trong Java dùng để làm gì?",
+        "Lớp nào được dùng để nhập dữ liệu từ bàn phím trong Java?",
+        "Câu lệnh System.out.println(\"Hello\"); có tác dụng gì?",
+        "Phương thức nào được dùng để so sánh hai chuỗi trong Java?",
+        "Mảng trong Java có chỉ số bắt đầu từ bao nhiêu?",
+        "Cú pháp nào đúng để tạo mảng 10 phần tử kiểu int?",
+        "Lệnh break trong vòng lặp có tác dụng gì?",
+        "Kết quả của đoạn mã: String s = \"Java\"; System.out.println(s.length());",
+        "Phương thức nào của StringBuilder dùng để nối chuỗi?",
+        "Phương thức nào có thể dùng để đọc một dòng văn bản từ file?",
+        "Gói (package) mặc định chứa lớp System là gì?",
+        "Từ khóa nào dùng để kế thừa một lớp trong Java?",
+        "Từ khóa nào dùng để thực hiện interface trong Java?",
+        "Tính chất “đa hình” (Polymorphism) trong OOP nghĩa là gì?",
+        "Kết quả của đoạn mã sau là gì? int a = 5; a += 2 * 3; System.out.println(a);"
+      ]
+    },
+    {
+      "file": "quiz_64.json",
+      "question_count": 20,
+      "questions": [
+        "Câu nào sau đây mô tả đúng nhất cơ chế Inversion of Control (IoC) trong Spring?",
+        "Khi sử dụng cơ chế Dependency Injection, Spring có thể tiêm đối tượng bằng những cách nào?",
+        "Đoạn mã sau in ra gì? @Component class A { @Autowired B b; } @Component class B { @Autowired A a; }",
+        "Trong Spring, phạm vi (scope) mặc định của một Bean là gì?",
+        "Annotation nào cho phép cấu hình phạm vi của Bean trong Spring?",
+        "Bean có @Scope('prototype') khác gì với @Scope('singleton')?",
+        "Khi sử dụng Annotation cấu hình, @ComponentScan(basePackages = '...') có chức năng gì?",
+        "Trong cấu hình Java-based, để định nghĩa Bean thủ công trong @Configuration, ta dùng Annotation nào?",
+        "Khi nào @Autowired không hoạt động đúng?",
+        "Khi có nhiều Bean cùng kiểu được @Autowired, Spring sẽ xử lý thế nào?",
+        "Đoạn mã dưới đây in gì ra console? @Component class Demo { @PostConstruct public void init(){ System.out.println('Init called'); } }",
+        "Annotation nào được dùng để đánh dấu phương thức cleanup trong vòng đời Bean?",
+        "Bean được cấu hình trong XML có thể override Bean được định nghĩa bằng Annotation không?",
+        "ApplicationContext khác với BeanFactory ở điểm nào?",
+        "Đoạn mã sau hoạt động ra sao? @Configuration class Config { @Bean public A a(){ return new A(); } @Bean public B b(){ return new B(a()); } }",
+        "Khi cấu hình nhiều file XML trong Spring, cách nào đúng để load chúng cùng lúc?",
+        "Annotation nào bật khả năng xử lý AOP trong Spring?",
+        "Trong Spring, file application.properties thường được nạp bằng Annotation nào?",
+        "Khi sử dụng @Value('${db.url}'), giá trị được lấy từ đâu?",
+        "Đoạn mã sau minh họa điều gì? @Configuration public class AppConfig { @Bean(initMethod = 'start', destroyMethod = 'stop') public Server server(){ return new Server(); } }"
+      ]
+    },
+    {
+      "file": "quiz_65.json",
+      "question_count": 20,
+      "questions": [
+        "Spring MVC sử dụng mô hình thiết kế nào để xử lý tất cả các request?",
+        "Thành phần trung tâm chịu trách nhiệm phân phối request trong Spring MVC là gì?",
+        "Khi một request đến Spring MVC, bước nào xảy ra đầu tiên?",
+        "Annotation nào dùng để ánh xạ URL đến phương thức xử lý?",
+        "Trong Spring MVC, Annotation nào thay thế cho cặp @Controller và @ResponseBody?",
+        "Phương thức Controller trả về kiểu dữ liệu nào để hiển thị view?",
+        "Nếu Controller trả về 'home', ViewResolver sẽ tìm file nào theo cấu hình mặc định?",
+        "Annotation nào được sử dụng để nhận dữ liệu từ form HTML (input name='username')?",
+        "Khi nào nên sử dụng @ModelAttribute thay vì @RequestParam?",
+        "Phương thức nào trong Controller có thể xử lý POST request?",
+        "Đoạn mã nào cấu hình đúng ViewResolver trong XML?",
+        "Trong luồng xử lý của Spring MVC, lớp nào gọi đến ViewResolver?",
+        "Đoạn code sau in ra gì khi truy cập /home? @Controllerpublic class TestController { @RequestMapping('/home') public String home(Model model){ model.addAttribute('msg','Xin chào'); return 'home'; }}",
+        "Annotation nào dùng để trả dữ liệu JSON về client mà không cần view?",
+        "Annotation nào dùng để xử lý ngoại lệ toàn cục trong tất cả Controller?",
+        "Khi một phương thức Controller trả về redirect:/student, điều gì xảy ra?",
+        "Annotation nào được dùng để cấu hình upload file trong Spring MVC?",
+        "Cấu hình nào cho phép Spring truy cập file CSS, JS trong thư mục /resources/?",
+        "Khi sử dụng @ResponseBody, dữ liệu trả về mặc định được convert sang định dạng nào?",
+        "Trong Spring MVC, khi cấu hình sai ViewResolver (ví dụ sai prefix/suffix), điều gì xảy ra?"
+      ]
+    },
+    {
+      "file": "quiz_66.json",
+      "question_count": 20,
+      "questions": [
+        "JDBC là viết tắt của cụm từ nào?",
+        "Interface nào đại diện cho kết nối tới cơ sở dữ liệu trong JDBC?",
+        "Lớp nào chịu trách nhiệm quản lý các JDBC driver và tạo kết nối?",
+        "Phương thức nào của PreparedStatement dùng để gán giá trị tham số?",
+        "Đoạn mã sau in ra gì? Connection c = DriverManager.getConnection(url,user,pass);c.close();System.out.println(c.isClosed());",
+        "Khi nào nên sử dụng PreparedStatement thay vì Statement?",
+        "Phương thức nào của Statement được sử dụng để thực thi truy vấn SELECT?",
+        "Phương thức executeUpdate() trả về giá trị gì?",
+        "Trong Spring JDBC, lớp nào được sử dụng để đơn giản hóa thao tác với cơ sở dữ liệu?",
+        "Phương thức nào của JdbcTemplate dùng để thực hiện INSERT/UPDATE/DELETE?",
+        "Đoạn mã nào đúng để ánh xạ dữ liệu từ ResultSet sang đối tượng Student?",
+        "Khi sử dụng JdbcTemplate.queryForObject() mà không có kết quả, điều gì xảy ra?",
+        "Annotation nào trong Spring được sử dụng để bật transaction tự động?",
+        "Trong Spring, interface nào đại diện cho nguồn kết nối cơ sở dữ liệu?",
+        "Lợi ích chính của Spring JdbcTemplate so với JDBC thuần là gì?",
+        "Nếu một transaction có hai lệnh UPDATE và lệnh thứ hai bị lỗi, điều gì xảy ra khi dùng @Transactional?",
+        "Lớp nào trong Spring JDBC quản lý transaction theo cơ chế lập trình (programmatic)?",
+        "Ngoại lệ nào được Spring ném ra khi có lỗi SQL sai cú pháp?",
+        "Đoạn mã sau thuộc loại lỗi gì? jdbcTemplate.update('INSERT INTO student(id,name) VALUES(1, 'A')');",
+        "Phương thức nào của JdbcTemplate dùng để thực hiện nhiều câu lệnh SQL cùng lúc?"
+      ]
+    },
+    {
+      "file": "quiz_67.json",
+      "question_count": 20,
+      "questions": [
+        "Hibernate là framework gì trong Java?",
+        "Annotation nào được dùng để đánh dấu một class là Entity trong Hibernate?",
+        "Trong Hibernate, thuộc tính nào của @GeneratedValue dùng để tự động tăng ID?",
+        "Tệp nào chứa thông tin cấu hình kết nối cơ sở dữ liệu trong Hibernate?",
+        "Đoạn mã sau dùng để làm gì? session.beginTransaction(); ... session.getTransaction().commit();",
+        "Interface nào trong Hibernate đại diện cho một phiên làm việc với cơ sở dữ liệu?",
+        "Đoạn mã sau thực hiện thao tác gì? session.createQuery('from Student', Student.class).list();",
+        "Phương thức nào được dùng để lưu một đối tượng mới vào cơ sở dữ liệu?",
+        "Cấu hình 'hbm2ddl.auto=update' trong Hibernate có tác dụng gì?",
+        "Phương thức nào dùng để lấy dữ liệu theo khóa chính (primary key)?",
+        "Điểm khác biệt giữa session.get() và session.load() là gì?",
+        "Trong HQL, truy vấn 'FROM Student WHERE score > 8' nghĩa là gì?",
+        "Annotation nào dùng để ánh xạ một trường Java với cột trong bảng?",
+        "Trong Hibernate, lazy loading có nghĩa là gì?",
+        "Lệnh HQL nào đúng để sắp xếp danh sách sinh viên theo điểm giảm dần?",
+        "Trong Hibernate, SessionFactory có vai trò gì?",
+        "Annotation nào cho phép ánh xạ quan hệ giữa hai entity (One-to-Many)?",
+        "Đoạn cấu hình nào trong Spring cho phép tích hợp Hibernate thông qua SessionFactory?",
+        "Khi sử dụng @Repository với Hibernate DAO, Spring cung cấp lợi ích gì?",
+        "Cấu hình nào trong Hibernate cho phép in câu lệnh SQL ra console?"
+      ]
+    },
+    {
+      "file": "quiz_68.json",
+      "question_count": 20,
+      "questions": [
+        "Ứng dụng Spring MVC + Hibernate thường được tổ chức theo mô hình kiến trúc nào?",
+        "Tầng Controller trong ứng dụng có vai trò gì?",
+        "Trong tầng Service, annotation nào được dùng để khai báo lớp dịch vụ?",
+        "Tầng DAO thường được đánh dấu bằng annotation nào trong Spring?",
+        "Annotation nào dùng để đảm bảo tất cả các thao tác trong Service được thực hiện trong cùng một transaction?",
+        "Trong lớp AppConfig, annotation nào bật tính năng quản lý transaction của Spring?",
+        "Lớp nào chịu trách nhiệm tạo SessionFactory trong ứng dụng Hibernate?",
+        "Trong DAO, phương thức nào dùng để lấy danh sách tất cả sinh viên?",
+        "Khi gọi session.saveOrUpdate(student), điều gì xảy ra?",
+        "Annotation nào giúp ánh xạ đường dẫn '/students/list' tới phương thức Controller tương ứng?",
+        "Trong Controller, annotation nào được dùng để bind dữ liệu form vào đối tượng Student?",
+        "Annotation nào trong Controller giúp lấy giá trị {id} từ URL '/delete/{id}'?",
+        "Trong cấu hình Spring, đối tượng nào quản lý transaction của Hibernate?",
+        "File JSP 'list.jsp' có chức năng gì trong ứng dụng?",
+        "Trong form.jsp, dữ liệu người dùng nhập được gửi về Controller thông qua:",
+        "Khi Controller trả về 'redirect:/students/list', điều gì xảy ra?",
+        "Cấu hình nào trong AppConfig giúp Hibernate tự tạo hoặc cập nhật bảng CSDL?",
+        "Annotation nào trong entity giúp ánh xạ lớp Student với bảng 'student'?",
+        "Khi sử dụng @Autowired trong Controller, Spring thực hiện điều gì?",
+        "Ưu điểm chính của việc kết hợp Spring MVC và Hibernate là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_63_submissions.json",
+      "count": 1,
+      "average_score": 0.0,
+      "top_5_students": [
+        {
+          "user_id": 38,
+          "quiz_id": 63,
+          "submission_id": 21,
+          "score": 0.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": null,
+          "attempt": 8,
+          "workflow_state": "untaken"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_64_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_65_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_66_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_67_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_68_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

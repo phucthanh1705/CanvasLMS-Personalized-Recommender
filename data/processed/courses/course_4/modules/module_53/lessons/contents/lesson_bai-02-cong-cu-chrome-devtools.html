@@ -1,0 +1,95 @@
+<h1>🧩 BÀI 02 – CÔNG CỤ CHROME DEVTOOLS</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu rõ vai trò và chức năng của Chrome DevTools trong phát triển ứng dụng web.</li>
+ <li>Nhận biết các khung công cụ chính (Elements, Console, Network, Sources, Performance,...).</li>
+ <li>Thực hành chỉnh sửa trực tiếp HTML/CSS, phân tích hiệu suất, debug mã JavaScript.</li>
+ <li>Biết cách theo dõi request/response, cache và lỗi mạng.</li>
+ <li>Sử dụng phím tắt và kỹ thuật nâng cao để tăng hiệu suất làm việc.</li>
+</ul>
+<hr>
+
+<h2>1. Giới thiệu chung</h2>
+<p><b>Chrome DevTools</b> là bộ công cụ mạnh mẽ tích hợp sẵn trong trình duyệt Google Chrome, cho phép lập trình viên web kiểm tra, phân tích và tối ưu mã nguồn HTML, CSS, JavaScript cũng như hiệu suất tải trang.</p>
+<p><b>Cách mở DevTools:</b></p>
+<ul>
+ <li>Phím tắt: <code>F12</code> hoặc <code>Ctrl + Shift + I</code> (Windows) / <code>Cmd + Opt + I</code> (macOS)</li>
+ <li>Hoặc chuột phải → Inspect</li>
+</ul>
+<hr>
+
+<h2>2. Cấu trúc và thành phần chính</h2>
+<ul>
+ <li><b>Elements:</b> Hiển thị cấu trúc DOM và CSS của trang. Có thể chỉnh sửa trực tiếp HTML/CSS và quan sát thay đổi tức thì.</li>
+ <li><b>Console:</b> Ghi log, hiển thị lỗi, chạy lệnh JavaScript trực tiếp.</li>
+ <li><b>Network:</b> Phân tích các yêu cầu HTTP/HTTPS, kích thước file, cache và thời gian tải.</li>
+ <li><b>Sources:</b> Xem, sửa và đặt breakpoint trong mã JavaScript.</li>
+ <li><b>Performance:</b> Ghi lại quá trình render, layout và JavaScript execution để tối ưu tốc độ.</li>
+ <li><b>Application:</b> Quản lý Local Storage, Session Storage, Cookies, Service Workers.</li>
+ <li><b>Security:</b> Kiểm tra chứng chỉ HTTPS, Mixed Content và lỗi CSP.</li>
+</ul>
+<hr>
+
+<h2>3. Tab Elements – Kiểm tra và chỉnh sửa giao diện</h2>
+<p>Tab Elements cho phép xem cây DOM, thêm/xóa class, thuộc tính, hoặc thay đổi trực tiếp CSS để kiểm tra bố cục.</p>
+<pre><code>&lt;div class='container'&gt;
+ &lt;h1&gt;Xin chào!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<p>Người học có thể chỉnh sửa trực tiếp thẻ <code>&lt;h1&gt;</code> để thay đổi nội dung mà không cần reload trang.</p>
+<hr>
+
+<h2>4. Tab Console – Debug và thực thi JavaScript</h2>
+<p>Console hỗ trợ nhập lệnh JS, kiểm tra giá trị biến, log dữ liệu.</p>
+<pre><code>let user = 'Admin';
+console.log('Xin chào ' + user);
+</code></pre>
+<p><b>Lỗi phổ biến:</b> ReferenceError, TypeError, SyntaxError hiển thị trực tiếp cùng số dòng.</p>
+<hr>
+
+<h2>5. Tab Network – Phân tích request và hiệu năng</h2>
+<p>Tab Network hiển thị tất cả request gửi đi từ trình duyệt: file HTML, JS, CSS, hình ảnh, API,...</p>
+<ul>
+ <li>Cột <b>Name</b>: tên tài nguyên.</li>
+ <li><b>Status</b>: mã HTTP (200, 404, 500,...).</li>
+ <li><b>Type</b>: loại file (document, script, image,...).</li>
+ <li><b>Waterfall</b>: thời gian tải từng request.</li>
+</ul>
+<p>Người học có thể lọc request theo loại (JS, CSS, Img, XHR) và xem header chi tiết.</p>
+<hr>
+
+<h2>6. Tab Sources – Debug JavaScript</h2>
+<p>Tab Sources cung cấp IDE nhỏ giúp đặt breakpoint, xem stack trace, theo dõi giá trị biến runtime.</p>
+<pre><code>function tinhTong(a, b) {
+ return a + b;
+}
+console.log(tinhTong(5, 10));</code></pre>
+<p>Người học có thể đặt breakpoint tại dòng <code>return a + b;</code> để xem giá trị a, b khi chạy.</p>
+<hr>
+
+<h2>7. Tab Performance – Phân tích hiệu suất</h2>
+<p>Cho phép ghi lại và phân tích quá trình render trang: thời gian script, paint, layout. Giúp tối ưu khi trang bị chậm.</p>
+<p><b>Thực hành:</b> Mở Performance → Record → Thao tác trang → Stop → Phân tích biểu đồ.</p>
+<hr>
+
+<h2>8. Tab Application và Security</h2>
+<ul>
+ <li><b>Application:</b> Xem dữ liệu lưu trữ (Local Storage, Session, Cookies,...)</li>
+ <li><b>Security:</b> Kiểm tra chứng chỉ SSL, trạng thái HTTPS.</li>
+</ul>
+<hr>
+
+<h2>9. Phím tắt và mẹo hữu ích</h2>
+<ul>
+ <li><code>Ctrl + Shift + C</code>: Chọn phần tử trên trang.</li>
+ <li><code>Ctrl + /</code>: Comment nhanh trong Console.</li>
+ <li><code>$0</code>: Truy cập phần tử hiện đang chọn trong Elements.</li>
+ <li><code>Ctrl + P</code>: Tìm và mở nhanh file JS/CSS.</li>
+</ul>
+<hr>
+
+<h2>10. Tổng kết</h2>
+<ul>
+ <li>Chrome DevTools là công cụ không thể thiếu trong kiểm thử, debug và tối ưu web.</li>
+ <li>Giúp lập trình viên nắm rõ luồng hoạt động trình duyệt, tối ưu tốc độ và sửa lỗi nhanh chóng.</li>
+</ul>

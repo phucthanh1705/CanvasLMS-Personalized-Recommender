@@ -1,0 +1,122 @@
+<h1>🧩 BÀI 06 – RESTful API TRONG J2EE (SPRING BOOT + JSON + POSTMAN)</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu kiến trúc RESTful và sự khác biệt với mô hình MVC truyền thống.</li>
+ <li>Xây dựng API CRUD (Create, Read, Update, Delete) bằng Spring Boot.</li>
+ <li>Biết cách sử dụng các annotation REST (@RestController, @RequestMapping, @PathVariable...).</li>
+ <li>Hiểu cơ chế gửi – nhận dữ liệu JSON và kiểm thử API bằng Postman.</li>
+</ul>
+<hr>
+
+<h2>1. RESTful là gì?</h2>
+<p><b>REST (Representational State Transfer)</b> là phong cách kiến trúc xây dựng dịch vụ web đơn giản, sử dụng giao thức HTTP làm nền tảng truyền thông.</p>
+<ul>
+ <li>Mỗi tài nguyên (resource) được định danh bằng một URI duy nhất.</li>
+ <li>Dữ liệu trao đổi thường ở định dạng <b>JSON</b> hoặc <b>XML</b>.</li>
+ <li>Các phương thức HTTP biểu diễn hành động lên tài nguyên: GET, POST, PUT, DELETE.</li>
+</ul>
+<p><b>Ví dụ:</b></p>
+<pre><code>GET /api/products → Lấy danh sách sản phẩm
+GET /api/products/1 → Lấy thông tin sản phẩm có ID = 1
+POST /api/products → Thêm sản phẩm mới
+PUT /api/products/1 → Cập nhật sản phẩm ID = 1
+DELETE /api/products/1 → Xóa sản phẩm ID = 1</code></pre>
+<hr>
+
+<h2>2. Tạo Controller RESTful</h2>
+<p>Tạo lớp <b>ProductRestController</b>:</p>
+<pre><code>@RestController
+@RequestMapping("/api/products")
+public class ProductRestController {
+
+ @Autowired
+ private ProductService service;
+
+ @GetMapping
+ public List&lt;Product&gt; getAll() {
+ return service.getAll();
+ }
+
+ @GetMapping("/{id}")
+ public ResponseEntity&lt;Product&gt; getById(@PathVariable Long id) {
+ Product p = service.getById(id);
+ return p != null ? ResponseEntity.ok(p) : ResponseEntity.notFound().build();
+ }
+
+ @PostMapping
+ public ResponseEntity&lt;Product&gt; create(@RequestBody Product product) {
+ Product saved = service.save(product);
+ return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+ }
+
+ @PutMapping("/{id}")
+ public ResponseEntity&lt;Product&gt; update(@PathVariable Long id, @RequestBody Product product) {
+ Product existing = service.getById(id);
+ if (existing == null) return ResponseEntity.notFound().build();
+ product.setId(id);
+ return ResponseEntity.ok(service.save(product));
+ }
+
+ @DeleteMapping("/{id}")
+ public ResponseEntity&lt;Void&gt; delete(@PathVariable Long id) {
+ service.delete(id);
+ return ResponseEntity.noContent().build();
+ }
+}</code></pre>
+<hr>
+
+<h2>3. Cấu trúc dữ liệu phản hồi (ResponseEntity)</h2>
+<p><b>ResponseEntity</b> là lớp đại diện cho phản hồi HTTP bao gồm: body, header, và status code.</p>
+<p><b>Ví dụ:</b></p>
+<pre><code>return ResponseEntity.status(HttpStatus.CREATED).body(savedProduct);</code></pre>
+<p>Trả về JSON tự động nhờ <b>Jackson</b> converter.</p>
+<hr>
+
+<h2>4. Xử lý Exception và Validation</h2>
+<p>Tạo class <b>GlobalExceptionHandler</b> để xử lý lỗi toàn cục:</p>
+<pre><code>@ControllerAdvice
+public class GlobalExceptionHandler {
+
+ @ExceptionHandler(MethodArgumentNotValidException.class)
+ public ResponseEntity&lt;Map&lt;String, String&gt;&gt; handleValidationError(MethodArgumentNotValidException ex) {
+ Map&lt;String, String&gt; errors = new HashMap&lt;&gt;();
+ ex.getBindingResult().getFieldErrors().forEach(err -&gt; errors.put(err.getField(), err.getDefaultMessage()));
+ return ResponseEntity.badRequest().body(errors);
+ }
+}</code></pre>
+<hr>
+
+<h2>5. Test API với Postman</h2>
+<ul>
+ <li><b>GET</b> → Kiểm tra danh sách sản phẩm: <code>GET http://localhost:8080/api/products</code></li>
+ <li><b>POST</b> → Gửi JSON tạo mới sản phẩm:</li>
+</ul>
+<pre><code>{
+ "name": "Laptop Dell XPS 13",
+ "price": 32000,
+ "description": "Mỏng nhẹ, cấu hình cao"
+}</code></pre>
+<ul>
+ <li><b>PUT</b> → Cập nhật sản phẩm ID=1.</li>
+ <li><b>DELETE</b> → Xóa sản phẩm ID=1.</li>
+</ul>
+<hr>
+
+<h2>6. Best Practices REST API</h2>
+<ul>
+ <li>Sử dụng danh từ số nhiều trong URI: /api/products.</li>
+ <li>Dữ liệu trả về ở dạng JSON.</li>
+ <li>Sử dụng mã HTTP tương ứng: 200, 201, 400, 404, 500.</li>
+ <li>Xử lý lỗi nhất quán qua Exception Handler.</li>
+ <li>Bảo vệ API bằng token (JWT, OAuth2).</li>
+</ul>
+<hr>
+
+<h2>✅ Tổng kết</h2>
+<ul>
+ <li>RESTful API giúp frontend và backend giao tiếp hiệu quả.</li>
+ <li>Spring Boot cung cấp công cụ mạnh mẽ để xây dựng REST controller nhanh chóng.</li>
+ <li>Postman là công cụ cần thiết để kiểm thử endpoint và phản hồi JSON.</li>
+ <li>Áp dụng chuẩn REST và mã trạng thái HTTP giúp hệ thống dễ bảo trì và mở rộng.</li>
+</ul>

@@ -1,0 +1,189 @@
+{
+  "id": "module_67",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-ve-tri-tue-nhan-tao",
+      "title": "lesson_bai-1-tong-quan-ve-tri-tue-nhan-tao"
+    },
+    {
+      "id": "lesson_bai-2-to-mau-do-thi",
+      "title": "lesson_bai-2-to-mau-do-thi"
+    },
+    {
+      "id": "lesson_bai-3-cac-phuong-phap-tim-kiem-loi-giai",
+      "title": "lesson_bai-3-cac-phuong-phap-tim-kiem-loi-giai"
+    },
+    {
+      "id": "lesson_bai-4-bieu-dien-va-xu-lu-tri-thuc",
+      "title": "lesson_bai-4-bieu-dien-va-xu-lu-tri-thuc"
+    },
+    {
+      "id": "lesson_bai-5-hoc-may-machine-learning",
+      "title": "lesson_bai-5-hoc-may-machine-learning"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_265.json",
+      "question_count": 20,
+      "questions": [
+        "Trí tuệ nhân tạo (AI) là gì?",
+        "Thuật ngữ 'Artificial Intelligence' được ai đưa ra?",
+        "Bài kiểm tra Turing được sử dụng để làm gì?",
+        "Hội nghị Dartmouth (1956) có ý nghĩa gì với ngành AI?",
+        "Trong ba làn sóng phát triển AI, giai đoạn nào gắn liền với mạng nơ-ron sâu?",
+        "Alan Turing đóng góp gì cho AI?",
+        "AI khác Machine Learning ở điểm nào?",
+        "Khi nào xuất hiện hệ chuyên gia (Expert System)?",
+        "Ứng dụng nào sau đây là của AI trong y tế?",
+        "Mối quan hệ giữa AI, Machine Learning và Deep Learning là gì?",
+        "Công cụ nào được xem là biểu tượng đầu tiên của AI?",
+        "AI được ứng dụng như thế nào trong giao thông thông minh?",
+        "Điểm yếu chính của Symbolic AI là gì?",
+        "Vì sao AI phát triển mạnh mẽ sau năm 2010?",
+        "AI chỉ dùng trong lĩnh vực công nghiệp nặng.",
+        "Mục tiêu của AI là gì?",
+        "Mối liên hệ giữa AI và khoa học nhận thức là gì?",
+        "Một công ty muốn dự đoán khách hàng rời bỏ dịch vụ, họ nên áp dụng nhánh nào của AI?",
+        "Deep Learning giải quyết được hạn chế nào của các mô hình AI truyền thống?",
+        "Tác động của AI đến xã hội hiện nay là gì?"
+      ]
+    },
+    {
+      "file": "quiz_266.json",
+      "question_count": 20,
+      "questions": [
+        "Tô màu đồ thị là gì?",
+        "Số sắc (Chromatic Number) là gì?",
+        "Bài toán tô màu đồ thị thuộc loại bài toán nào?",
+        "Ứng dụng nào sau đây là của bài toán tô màu đồ thị?",
+        "Đồ thị đầy đủ (Complete Graph) là gì?",
+        "Bậc của một đỉnh là gì?",
+        "Thuật giải tham lam hoạt động theo nguyên tắc nào?",
+        "Tại sao thuật giải tham lam có thể không tối ưu?",
+        "Độ phức tạp trung bình của thuật giải tham lam là gì?",
+        "Thuật giải di truyền mô phỏng điều gì trong tự nhiên?",
+        "Hàm Fitness trong thuật giải di truyền có ý nghĩa gì?",
+        "Tại sao cần phép đột biến (mutation) trong thuật giải di truyền?",
+        "Tỷ lệ lai ghép (Pc) ảnh hưởng đến yếu tố nào?",
+        "Hàm fitness nào phản ánh kết quả tốt nhất?",
+        "Bài toán tô màu đồ thị thường dùng trong lĩnh vực nào?",
+        "Giả sử 4 đỉnh nối vòng, cần ít nhất bao nhiêu màu?",
+        "Điều gì xảy ra nếu trong di truyền không có chọn lọc cá thể tốt?",
+        "Đồ thị có hướng có thể áp dụng tô màu đồ thị không?",
+        "Khi nào nên chọn thuật giải lai ghép thay vì tham lam?",
+        "Ưu điểm chính của thuật giải di truyền so với tham lam?"
+      ]
+    },
+    {
+      "file": "quiz_267.json",
+      "question_count": 20,
+      "questions": [
+        "Thành phần nào KHÔNG thuộc mô hình bài toán tìm kiếm?",
+        "Không gian tìm kiếm là gì?",
+        "Chiến lược BFS đảm bảo điều gì?",
+        "DFS có nhược điểm chính là gì?",
+        "Hàm heuristic h(n) dùng để làm gì?",
+        "Khi nào A* đảm bảo tìm được lời giải tối ưu?",
+        "Công thức tổng quát của A* là gì?",
+        "Điểm yếu của Hill Climbing là gì?",
+        "Best-First Search chọn nút mở rộng dựa trên gì?",
+        "Simulated Annealing bắt chước quá trình nào trong tự nhiên?",
+        "Vì sao BFS tiêu tốn bộ nhớ nhiều?",
+        "Trong thuật toán A*, vai trò của g(n) là gì?",
+        "Nếu h(n)=0 với mọi n, A* trở thành thuật toán nào?",
+        "Beam Search khác Best-First Search ở điểm nào?",
+        "Bài toán phân công công việc thuộc loại gì?",
+        "Thuật toán Hungarian có độ phức tạp bao nhiêu?",
+        "Heuristic 'admissible' nghĩa là gì?",
+        "Nếu h(n) đánh giá sai lệch quá lớn, A* sẽ bị ảnh hưởng như thế nào?",
+        "Trong bài toán người bán hàng (TSP), tại sao heuristic là cần thiết?",
+        "Vì sao tìm kiếm là nền tảng của AI?"
+      ]
+    },
+    {
+      "file": "quiz_268.json",
+      "question_count": 20,
+      "questions": [
+        "Logic mệnh đề dùng để biểu diễn loại tri thức nào?",
+        "Phép toán nào biểu thị phủ định?",
+        "Mệnh đề (A → B) tương đương với biểu thức nào?",
+        "Câu dạng Horn có đặc điểm gì?",
+        "Luật Modus Ponens cho phép suy luận gì?",
+        "CNF viết tắt của cụm nào?",
+        "Mục đích của chuyển biểu thức về CNF là gì?",
+        "Trong hợp giải, từ (A ∨ B) và (¬A ∨ C) ta thu được gì?",
+        "Resolution hoạt động dựa trên nguyên tắc nào?",
+        "Vì sao câu Horn được dùng nhiều trong Prolog?",
+        "Luật sản xuất có dạng gì?",
+        "Trong mạng ngữ nghĩa, mối quan hệ ISA có nghĩa là gì?",
+        "Ưu điểm chính của mạng ngữ nghĩa là gì?",
+        "Nhược điểm của mạng ngữ nghĩa là gì?",
+        "Trong hệ chuyên gia, hợp giải được dùng để làm gì?",
+        "Luật Modus Tollens phát biểu như thế nào?",
+        "Tại sao CNF được ưu tiên trong chứng minh tự động?",
+        "Trong hệ thống AI thực tế, mạng ngữ nghĩa thường kết hợp với gì?",
+        "Hệ chuyên gia thường lưu tri thức ở dạng nào?",
+        "Điều gì quyết định sức mạnh suy luận của hệ AI?"
+      ]
+    },
+    {
+      "file": "quiz_269.json",
+      "question_count": 20,
+      "questions": [
+        "Học máy là gì?",
+        "Theo Tom Mitchell, yếu tố nào quyết định việc 'máy học'?",
+        "Học có giám sát nghĩa là gì?",
+        "Học không giám sát khác học có giám sát ở điểm nào?",
+        "Bước nào KHÔNG thuộc quy trình học máy?",
+        "Độ đo nào phản ánh cân bằng giữa precision và recall?",
+        "Thuật toán ID3 chọn thuộc tính phân tách dựa trên tiêu chí nào?",
+        "Nếu dữ liệu có nhiều giá trị thiếu, thuật toán nào phù hợp hơn ID3?",
+        "Trong Naive Bayes, giả định quan trọng là gì?",
+        "Công thức Entropy trong ID3 phản ánh điều gì?",
+        "ILA học quy tắc từ dữ liệu theo dạng nào?",
+        "Ưu điểm của Naive Bayes là gì?",
+        "Thuật toán gom cụm phổ biến nhất là gì?",
+        "K-Means cần xác định tham số nào trước?",
+        "Tại sao K-Medoids ít bị ảnh hưởng bởi nhiễu hơn K-Means?",
+        "Để phân loại email spam, nên dùng thuật toán nào?",
+        "Overfitting là gì?",
+        "Giảm overfitting có thể thực hiện bằng cách nào?",
+        "Reinforcement Learning khác Supervised Learning ở điểm nào?",
+        "Tác động lớn nhất của học máy trong AI hiện đại là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_265_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_266_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_267_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_268_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_269_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

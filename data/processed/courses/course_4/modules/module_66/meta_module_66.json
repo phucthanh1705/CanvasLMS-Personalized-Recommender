@@ -1,0 +1,792 @@
+{
+  "id": "module_66",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-ve-bao-mat-thong-tin",
+      "title": "lesson_bai-1-tong-quan-ve-bao-mat-thong-tin"
+    },
+    {
+      "id": "lesson_bai-2-ma-hoa-doi-xung-co-dien",
+      "title": "lesson_bai-2-ma-hoa-doi-xung-co-dien"
+    },
+    {
+      "id": "lesson_bai-3-ma-hoa-doi-xung-hien-dai",
+      "title": "lesson_bai-3-ma-hoa-doi-xung-hien-dai"
+    },
+    {
+      "id": "lesson_bai-4-ma-hoa-khoa-cong-khai-rsa",
+      "title": "lesson_bai-4-ma-hoa-khoa-cong-khai-rsa"
+    },
+    {
+      "id": "lesson_bai-5-quan-lu-khoa-dung-ma-khoa-cong-khai",
+      "title": "lesson_bai-5-quan-lu-khoa-dung-ma-khoa-cong-khai"
+    },
+    {
+      "id": "lesson_bai-6-ma-chung-thuc-thong-diep-va-ham-bam",
+      "title": "lesson_bai-6-ma-chung-thuc-thong-diep-va-ham-bam"
+    },
+    {
+      "id": "lesson_bai-7-bao-mat-mang-noi-bo-va-an-toan-ip",
+      "title": "lesson_bai-7-bao-mat-mang-noi-bo-va-an-toan-ip"
+    },
+    {
+      "id": "lesson_bai-8-bao-mat-web-va-mail",
+      "title": "lesson_bai-8-bao-mat-web-va-mail"
+    },
+    {
+      "id": "lesson_bai-9-ung-dung-kiem-soat-truy-cap-aaa-tacacs+-radius",
+      "title": "lesson_bai-9-ung-dung-kiem-soat-truy-cap-aaa-tacacs+-radius"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_256.json",
+      "question_count": 20,
+      "questions": [
+        "Tập mục tiêu cốt lõi của an toàn thông tin thường được viết tắt là gì?",
+        "Nguyên tắc Kerckhoffs nhấn mạnh điều nào sau đây?",
+        "Dịch vụ an ninh nào đảm bảo chống chối bỏ khi truyền thông điệp?",
+        "Bạn cần bảo vệ dữ liệu ở lớp mạng (IP layer) cho kết nối site-to-site. Cơ chế phù hợp nhất là:",
+        "Một tổ chức triển khai Zero Trust. Kiểm soát nào phù hợp nhất với nguyên tắc này?",
+        "Tấn công nào thuộc nhóm thụ động?",
+        "MAC/HMAC cung cấp thuộc tính an ninh nào tốt nhất?",
+        "Trong một phiên TLS 1.3 có PFS, kẻ tấn công thu được khóa riêng máy chủ sau khi phiên kết thúc. Khả năng giải mã lưu lượng đã ghi lại là:",
+        "Bạn muốn ngăn phân tích lưu lượng (traffic analysis). Biện pháp nào trực tiếp nhất?",
+        "Thành phần nào dưới đây là <i>kênh kề</i> (side-channel)?",
+        "Sự khác biệt chính giữa bảo mật đầu cuối (E2E) và bảo mật điểm-điểm là:",
+        "Một API nội bộ bị tấn công <i>replay</i>. Kiểm soát đơn giản và hiệu quả là:",
+        "Tổ chức muốn giảm rủi ro supply-chain ở CI/CD. Kiểm soát <b>mạnh nhất</b> dưới đây là:",
+        "Dịch vụ an ninh nào <b>không</b> được đảm bảo bởi IPsec AH nhưng có ở IPsec ESP?",
+        "Bạn thiết kế BCP/DRP cho dữ liệu quan trọng. Cặp mục tiêu đúng là:",
+        "Một hệ thống dùng AES-GCM đúng chuẩn nhưng sinh <i>nonce</i> trùng lặp cho cùng khóa. Hệ quả <b>nguy hiểm nhất</b> là:",
+        "Khẳng định nào phản ánh đúng chiến lược defense-in-depth?",
+        "Trong khung STRIDE, <i>Elevation of Privilege</i> thường đối phó bằng:",
+        "Một dịch vụ công khai cần chống DDoS volumetric. Kiến trúc nào thực tế nhất?",
+        "Hệ thống ghi log phục vụ <i>accountability</i>. Chọn bộ biện pháp mạnh và thực tế nhất:"
+      ]
+    },
+    {
+      "file": "quiz_257.json",
+      "question_count": 20,
+      "questions": [
+        "Hệ mã đối xứng có đặc điểm nào sau đây?",
+        "Điểm yếu chính của hệ mã Caesar là gì?",
+        "Nếu Caesar dùng dịch 5 vị trí, ký tự 'W' sẽ thành gì?",
+        "Phương pháp phân tích nào thường được dùng để phá mã Monoalphabetic?",
+        "Trong mã Vigenère, nếu khóa là 'KEY' và P = 'ABC', thì C là:",
+        "One-Time Pad được xem là an toàn tuyệt đối vì:",
+        "Khi mã hóa OTP, phép toán chính được sử dụng là gì?",
+        "Nếu khóa OTP được dùng lại cho hai bản rõ khác nhau, hệ thống bị lộ thông tin vì:",
+        "Hệ mã nào sử dụng nhiều bảng thay thế (polyalphabetic)?",
+        "Phương pháp phá mã Vigenère phổ biến là:",
+        "Trong mã Rail Fence 3 hàng, bản rõ 'HELLO' sẽ mã hóa thành:",
+        "Điểm yếu chung của các hệ mã cổ điển là:",
+        "Hệ mã Caesar có bao nhiêu khóa khả dĩ (với 26 ký tự)?",
+        "Trong mã Vigenère, nếu độ dài khóa bằng độ dài bản rõ và hoàn toàn ngẫu nhiên, nó trở thành:",
+        "Tấn công phân tích tần suất hoạt động dựa trên:",
+        "Giả sử bản rõ có 100 ký tự, khóa OTP có 90 ký tự. Hệ quả là:",
+        "Phát biểu nào phản ánh đúng nhất giá trị học thuật của mã cổ điển?",
+        "Hệ mã hoán vị khác hệ mã thay thế ở điểm nào?",
+        "Một kẻ tấn công có thể phá mã Caesar bằng:",
+        "Vì sao hệ mã cổ điển không còn được dùng trong thực tế?"
+      ]
+    },
+    {
+      "file": "quiz_258.json",
+      "question_count": 20,
+      "questions": [
+        "Mã dòng (Stream Cipher) mã hóa dữ liệu như thế nào?",
+        "Điểm yếu chính của RC4 là gì?",
+        "Nếu sử dụng cùng keystream để mã hóa hai bản rõ khác nhau, điều gì xảy ra?",
+        "Cấu trúc Feistel cho phép điều gì đặc biệt?",
+        "Trong DES, kích thước khóa thực tế là bao nhiêu bit?",
+        "Tại sao DES không còn an toàn?",
+        "Mã khối AES hoạt động theo mô hình nào?",
+        "Trong AES, phép MixColumns hoạt động trên:",
+        "Mode nào không nên sử dụng trong mã khối do lộ mẫu dữ liệu?",
+        "Tại sao CBC cần IV ngẫu nhiên?",
+        "Trong AES-128, có bao nhiêu vòng lặp biến đổi?",
+        "OFB và CFB khác nhau chủ yếu ở điểm nào?",
+        "AES-GCM cung cấp thêm tính năng nào ngoài mã hóa?",
+        "Kích thước khối chuẩn của AES là bao nhiêu?",
+        "Tại sao CTR mode phù hợp cho xử lý song song?",
+        "Trong mô hình Feistel, hàm F đóng vai trò gì?",
+        "Phát biểu nào đúng về 3DES?",
+        "Tính chất Avalanche trong mã khối có nghĩa là:",
+        "Giả sử AES dùng cùng IV hai lần trong CBC. Hệ quả là:",
+        "Vì sao AES được chọn thay thế DES làm chuẩn?"
+      ]
+    },
+    {
+      "file": "quiz_259.json",
+      "question_count": 20,
+      "questions": [
+        "RSA là viết tắt của tên ba nhà phát minh nào?",
+        "Tính bảo mật của RSA dựa vào điều gì?",
+        "Nếu p=11, q=17, hãy tính n và φ(n).",
+        "Với e=7, φ(n)=160, tìm d sao cho e×d ≡ 1 mod 160.",
+        "Khóa công khai RSA gồm các thành phần nào?",
+        "Phát biểu nào đúng về RSA?",
+        "Với p=13, q=17, e=7, tính n và φ(n).",
+        "Hàm Euler φ(n) được định nghĩa như thế nào khi n=p×q?",
+        "Công thức mã hóa trong RSA là:",
+        "Công thức giải mã trong RSA là:",
+        "Vì sao e thường được chọn là 65537?",
+        "Khi e quá nhỏ (vd e=3) và không có padding, có thể dẫn đến:",
+        "Vai trò của padding OAEP trong RSA là gì?",
+        "Nếu n=143, e=7, P=9, tính bản mã C.",
+        "RSA an toàn đến mức nào?",
+        "Giải pháp nào tăng tốc RSA mà vẫn an toàn?",
+        "RSA thường được dùng trong giao thức nào?",
+        "Nếu hai người dùng RSA khác nhau nhưng có cùng modulus n, điều gì có thể xảy ra?",
+        "RSA nên được sử dụng cho mục đích nào?",
+        "Khi sử dụng RSA để ký số, quá trình nào diễn ra trước?"
+      ]
+    },
+    {
+      "file": "quiz_260.json",
+      "question_count": 20,
+      "questions": [
+        "PKI là viết tắt của cụm từ nào?",
+        "Thành phần nào trong PKI chịu trách nhiệm cấp chứng chỉ số?",
+        "Chứng chỉ số X.509 chứa thông tin nào sau đây?",
+        "RA (Registration Authority) có vai trò gì trong PKI?",
+        "Nếu khóa riêng của người dùng bị lộ, CA cần làm gì?",
+        "Thuật ngữ 'CRL' viết tắt của:",
+        "OCSP có vai trò gì trong PKI?",
+        "OCSP Stapling giúp cải thiện điều gì trong TLS?",
+        "Chuỗi tin cậy trong PKI gồm những thành phần nào?",
+        "Chứng chỉ số được ký bằng gì?",
+        "Nếu trình duyệt báo lỗi 'Untrusted Root', nguyên nhân có thể là gì?",
+        "Key Escrow dùng để làm gì?",
+        "Điều gì xảy ra nếu CA trung gian bị xâm phạm?",
+        "Cấu trúc chuẩn của chứng chỉ số theo chuẩn nào?",
+        "Một chứng chỉ có thời hạn 1 năm. Sau thời gian này cần:",
+        "Key Rotation là gì?",
+        "Vì sao Root CA thường hoạt động offline?",
+        "Phát biểu nào sau đây đúng nhất về PKI?",
+        "TLS sử dụng PKI để làm gì?",
+        "HSM đóng vai trò gì trong quản lý khóa?"
+      ]
+    },
+    {
+      "file": "quiz_261.json",
+      "question_count": 20,
+      "questions": [
+        "Hàm băm là gì?",
+        "Tính chất nào đảm bảo khó tìm hai thông điệp khác nhau có cùng giá trị băm?",
+        "Nếu H(M) = 0x5A23 và kẻ tấn công tìm được M' sao cho H(M') = 0x5A23, đây là loại tấn công nào?",
+        "MD5 có độ dài giá trị băm bao nhiêu bit?",
+        "SHA-3 khác với SHA-2 ở điểm nào?",
+        "Nếu một hệ thống dùng SHA-1 để kiểm tra toàn vẹn file, rủi ro lớn nhất là gì?",
+        "MAC dùng để đảm bảo điều gì?",
+        "Điểm yếu chính của MAC so với chữ ký số là gì?",
+        "Trong HMAC, tại sao cần hai lớp XOR với ipad và opad?",
+        "Cho K=0xAA và M='abc', HMAC-SHA256(K,M) có chiều dài kết quả là bao nhiêu bit?",
+        "Tấn công length extension ảnh hưởng đến loại hàm băm nào?",
+        "Biện pháp nào giúp lưu mật khẩu an toàn hơn?",
+        "SHA-256 tạo giá trị băm dài bao nhiêu bit?",
+        "Hàm băm có tính chất 'pre-image resistance' nghĩa là gì?",
+        "Trong xác thực API, vì sao HMAC thường được dùng thay vì hash thuần?",
+        "Ứng dụng nào sử dụng HMAC trong thực tế?",
+        "Công thức của HMAC là:",
+        "Vì sao SHA-3 an toàn hơn SHA-2 trong nhiều tình huống?",
+        "Phát biểu nào sau đây đúng nhất về MD5 và SHA-1?",
+        "Khi ký số tài liệu, tại sao ta chỉ ký trên H(M) thay vì M?"
+      ]
+    },
+    {
+      "file": "quiz_262.json",
+      "question_count": 20,
+      "questions": [
+        "IPsec hoạt động ở tầng nào của mô hình OSI?",
+        "Giao thức nào của IPsec chỉ cung cấp xác thực và toàn vẹn mà không mã hóa dữ liệu?",
+        "ESP cung cấp những tính năng nào?",
+        "Hai chế độ hoạt động của IPsec là gì?",
+        "Chế độ Tunnel của IPsec mã hóa phần nào của gói tin?",
+        "Trong doanh nghiệp, kiểu VPN nào thường dùng IPsec Tunnel Mode để kết nối hai chi nhánh?",
+        "Giao thức IKE trong IPsec có nhiệm vụ gì?",
+        "NAT Traversal (NAT-T) được sử dụng để:",
+        "Nếu ESP bị chặn bởi NAT, biện pháp khả thi là:",
+        "Firewall lớp 3–4 lọc gói dựa trên tiêu chí nào?",
+        "AH khác ESP ở điểm nào?",
+        "Tường lửa nào có khả năng kiểm tra trạng thái kết nối?",
+        "VPN giúp đạt được mục tiêu nào trong bộ tam giác bảo mật CIA?",
+        "Tại sao mode ECB không được dùng trong IPsec?",
+        "Để ngăn replay attack trong IPsec, cơ chế nào được sử dụng?",
+        "Khi triển khai IPsec VPN, SA (Security Association) được thiết lập như thế nào?",
+        "IKE Phase 1 tạo gì?",
+        "Thuật toán nào thường được dùng trong ESP để mã hóa dữ liệu?",
+        "So sánh IPsec và SSL VPN, lựa chọn nào đúng?",
+        "Phát biểu nào đúng nhất về NAT-T?"
+      ]
+    },
+    {
+      "file": "quiz_263.json",
+      "question_count": 20,
+      "questions": [
+        "HTTPS là sự kết hợp của hai giao thức nào?",
+        "TLS cung cấp những thuộc tính bảo mật nào?",
+        "TLS hoạt động ở tầng nào trong mô hình OSI?",
+        "Trong TLS handshake, chứng chỉ số của server được dùng để:",
+        "Tấn công SSL Stripping nhằm mục đích gì?",
+        "TLS 1.3 khác TLS 1.2 ở điểm nào sau đây?",
+        "Công nghệ nào buộc trình duyệt chỉ sử dụng HTTPS?",
+        "Giải pháp nào giúp xác thực chứng chỉ của server trong TLS?",
+        "STARTTLS là gì?",
+        "S/MIME sử dụng loại chứng chỉ nào để ký và mã hóa email?",
+        "Cơ chế nào giúp xác thực nguồn gửi email hợp lệ?",
+        "DKIM sử dụng khóa gì để ký phần header của email?",
+        "DMARC có nhiệm vụ gì trong xác thực email?",
+        "Một email bị giả mạo địa chỉ 'admin@company.com' nhưng không qua SPF và DKIM, hệ thống sẽ:",
+        "Tấn công MITM nhằm vào giai đoạn nào của TLS?",
+        "Khi trình duyệt báo lỗi 'NET::ERR_CERT_COMMON_NAME_INVALID', điều đó nghĩa là:",
+        "DNSSEC giúp ngăn chặn loại tấn công nào?",
+        "DANE (DNS-based Authentication of Named Entities) được dùng để:",
+        "Điểm khác biệt giữa S/MIME và PGP là gì?",
+        "Công nghệ nào kết hợp SPF, DKIM và DMARC để tối ưu phát hiện giả mạo email?"
+      ]
+    },
+    {
+      "file": "quiz_264.json",
+      "question_count": 20,
+      "questions": [
+        "AAA gồm ba thành phần chính nào?",
+        "Authentication trong AAA có nhiệm vụ gì?",
+        "RADIUS hoạt động trên giao thức nào và cổng bao nhiêu?",
+        "TACACS+ được sử dụng phổ biến trong thiết bị nào?",
+        "Nếu RADIUS chỉ mã hóa phần mật khẩu, rủi ro là gì?",
+        "Port mặc định của TACACS+ là gì?",
+        "Tình huống: Một kỹ sư muốn phân quyền từng lệnh cho người quản trị thiết bị mạng. Giao thức nào phù hợp nhất?",
+        "Accounting trong AAA dùng để làm gì?",
+        "Khi người dùng VPN đăng nhập, yêu cầu xác thực thường được chuyển đến:",
+        "RADIUS sử dụng thuật toán nào để bảo vệ mật khẩu trong gói tin?",
+        "TACACS+ mã hóa phần nào của gói tin?",
+        "Trong mạng Wi-Fi doanh nghiệp, xác thực 802.1X thường sử dụng giao thức:",
+        "Khi tích hợp RADIUS với LDAP, lợi ích chính là gì?",
+        "Điểm khác biệt chính giữa RADIUS và TACACS+ là:",
+        "LDAP thường được dùng để:",
+        "Trong mô hình AAA, Authorization quyết định:",
+        "Nếu TACACS+ server bị tấn công, hậu quả có thể là gì?",
+        "RADIUS sử dụng port nào cho Accounting?",
+        "AAA giúp doanh nghiệp đạt được mục tiêu nào trong an ninh thông tin?",
+        "Vì sao TACACS+ được ưa chuộng trong môi trường quản trị thiết bị Cisco?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_256_submissions.json",
+      "count": 24,
+      "average_score": 17.38,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 256,
+          "submission_id": 1201,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 256,
+          "submission_id": 1356,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 256,
+          "submission_id": 1498,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 256,
+          "submission_id": 895,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 256,
+          "submission_id": 906,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_257_submissions.json",
+      "count": 24,
+      "average_score": 16.92,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 257,
+          "submission_id": 691,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 257,
+          "submission_id": 905,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 257,
+          "submission_id": 1095,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 257,
+          "submission_id": 1205,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 257,
+          "submission_id": 1546,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_258_submissions.json",
+      "count": 24,
+      "average_score": 16.88,
+      "top_5_students": [
+        {
+          "user_id": 44,
+          "quiz_id": 258,
+          "submission_id": 902,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 258,
+          "submission_id": 907,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 47,
+          "quiz_id": 258,
+          "submission_id": 1006,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 258,
+          "submission_id": 1198,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 258,
+          "submission_id": 1254,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_259_submissions.json",
+      "count": 24,
+      "average_score": 17.21,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 259,
+          "submission_id": 911,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 259,
+          "submission_id": 1257,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 259,
+          "submission_id": 1357,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 259,
+          "submission_id": 1399,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 259,
+          "submission_id": 1496,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_260_submissions.json",
+      "count": 24,
+      "average_score": 17.21,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 260,
+          "submission_id": 910,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 50,
+          "quiz_id": 260,
+          "submission_id": 1150,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 260,
+          "submission_id": 1202,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 260,
+          "submission_id": 1260,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 260,
+          "submission_id": 1497,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_261_submissions.json",
+      "count": 24,
+      "average_score": 16.71,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 261,
+          "submission_id": 1100,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 261,
+          "submission_id": 1204,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 261,
+          "submission_id": 696,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 261,
+          "submission_id": 1350,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 261,
+          "submission_id": 1495,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_262_submissions.json",
+      "count": 24,
+      "average_score": 16.92,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 262,
+          "submission_id": 1102,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 262,
+          "submission_id": 698,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 262,
+          "submission_id": 897,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 47,
+          "quiz_id": 262,
+          "submission_id": 1004,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 262,
+          "submission_id": 1262,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_263_submissions.json",
+      "count": 22,
+      "average_score": 17.09,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 263,
+          "submission_id": 1203,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 263,
+          "submission_id": 1352,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 263,
+          "submission_id": 1098,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 263,
+          "submission_id": 1499,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 263,
+          "submission_id": 1544,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_264_submissions.json",
+      "count": 23,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 57,
+          "quiz_id": 264,
+          "submission_id": 1402,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 264,
+          "submission_id": 694,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 264,
+          "submission_id": 901,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 264,
+          "submission_id": 1101,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 264,
+          "submission_id": 1501,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

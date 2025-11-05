@@ -1,0 +1,705 @@
+{
+  "id": "module_49",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-gioi-thieu-flutter-va-moi-truong-phat-trien",
+      "title": "lesson_bai-01-gioi-thieu-flutter-va-moi-truong-phat-trien"
+    },
+    {
+      "id": "lesson_bai-02-ngon-ngu-dart-co-ban",
+      "title": "lesson_bai-02-ngon-ngu-dart-co-ban"
+    },
+    {
+      "id": "lesson_bai-03-cau-truc-ung-dung-va-widget-co-ban",
+      "title": "lesson_bai-03-cau-truc-ung-dung-va-widget-co-ban"
+    },
+    {
+      "id": "lesson_bai-04-thiet-ke-giao-dien-nang-cao-material-and-cupertino-layout-nang-cao",
+      "title": "lesson_bai-04-thiet-ke-giao-dien-nang-cao-material-and-cupertino-layout-nang-cao"
+    },
+    {
+      "id": "lesson_bai-05-su-dung-thu-vien-trong-flutter",
+      "title": "lesson_bai-05-su-dung-thu-vien-trong-flutter"
+    },
+    {
+      "id": "lesson_bai-06-lap-trinh-mang-va-co-so-du-lieu",
+      "title": "lesson_bai-06-lap-trinh-mang-va-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-07-quan-lu-trang-thai-va-logic-ung-dung",
+      "title": "lesson_bai-07-quan-lu-trang-thai-va-logic-ung-dung"
+    },
+    {
+      "id": "lesson_bai-08-xuat-ban-ung-dung-flutter",
+      "title": "lesson_bai-08-xuat-ban-ung-dung-flutter"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_104.json",
+      "question_count": 20,
+      "questions": [
+        "Flutter được phát triển bởi công ty nào?",
+        "Ngôn ngữ lập trình chính của Flutter là gì?",
+        "Lệnh nào dùng để tạo một dự án Flutter mới?",
+        "File nào chứa danh sách dependencies của dự án Flutter?",
+        "Hot Reload trong Flutter có tác dụng gì?",
+        "Thành phần nào của Flutter chịu trách nhiệm render UI?",
+        "Lệnh kiểm tra cài đặt Flutter hợp lệ là:",
+        "Kết quả của đoạn code sau là gì?<pre><code>int x = 5;print(x++);print(++x);</code></pre>",
+        "Thư mục nào chứa mã nguồn chính của ứng dụng Flutter?",
+        "Công cụ nào được dùng để biên dịch Flutter sang mã native?",
+        "Trong kiến trúc Flutter, phần 'Embedder' có nhiệm vụ gì?",
+        "Phương thức nào được gọi đầu tiên trong Flutter app?",
+        "Widget nào trong Flutter dùng để căn giữa nội dung?",
+        "Trong MaterialApp, thuộc tính nào để cấu hình chủ đề màu sắc?",
+        "Đoạn mã nào sau đây KHÔNG hợp lệ trong Dart?",
+        "Khi nào nên dùng const thay vì final trong Dart?",
+        "Lệnh nào chạy ứng dụng Flutter trên thiết bị thật?",
+        "Trong VS Code, extension nào cần thiết để lập trình Flutter?",
+        "Lỗi nào thường gặp khi chưa thêm đường dẫn PATH đúng cách?",
+        "Khi thay đổi code mà UI không cập nhật, cần thử bước nào đầu tiên?"
+      ]
+    },
+    {
+      "file": "quiz_105.json",
+      "question_count": 20,
+      "questions": [
+        "Dart được phát triển bởi ai?",
+        "Tệp nguồn chính trong dự án Dart/Flutter thường có phần mở rộng nào?",
+        "Từ khóa nào được dùng để định nghĩa một hằng số compile-time trong Dart?",
+        "Kết quả của đoạn mã sau là gì?<pre><code>int a = 5;int b = ++a + a++;print(b);</code></pre>",
+        "Để khai báo danh sách trong Dart, cú pháp nào đúng?",
+        "Câu lệnh nào dùng để chạy ứng dụng Dart?",
+        "Từ khóa nào trong Dart thể hiện kế thừa?",
+        "Trong Dart, kiểu dữ liệu nào không cho phép trùng giá trị?",
+        "Kết quả của đoạn code sau là gì?<pre><code>void main() async { print('A'); await Future.delayed(Duration(seconds:1)); print('B'); print('C');}</code></pre>",
+        "Hàm main() trong Dart có thể là async không?",
+        "Đoạn mã nào định nghĩa một hàm hợp lệ trong Dart?",
+        "Trong lập trình bất đồng bộ, từ khóa nào được dùng để đợi một Future hoàn thành?",
+        "Khi nào nên dùng 'final' thay vì 'var'?",
+        "Dart hỗ trợ bao nhiêu kiểu vòng lặp cơ bản?",
+        "Đoạn mã nào tạo một lớp hợp lệ?",
+        "Phương thức nào được override trong ví dụ kế thừa sau?<pre><code>class Dog extends Animal { @override void speak() { print('Woof'); }}</code></pre>",
+        "Lệnh nào in ra tổng các phần tử của danh sách?",
+        "Toán tử '??' trong Dart có nghĩa là gì?",
+        "Kết quả của đoạn mã:<pre><code>var a = [1,2,3];a.add(4);print(a.length);</code></pre>",
+        "Từ khóa nào được dùng để khai báo interface trong Dart?"
+      ]
+    },
+    {
+      "file": "quiz_106.json",
+      "question_count": 20,
+      "questions": [
+        "Widget nào được dùng làm điểm khởi đầu cho ứng dụng Flutter?",
+        "Phương thức nào được gọi đầu tiên trong chương trình Flutter?",
+        "Khác biệt chính giữa StatelessWidget và StatefulWidget là gì?",
+        "Widget nào cung cấp khung giao diện tiêu chuẩn cho Flutter App?",
+        "Widget nào dùng để sắp xếp các phần tử theo hàng ngang?",
+        "Thuộc tính nào của Column giúp căn giữa các phần tử theo chiều dọc?",
+        "Để thay đổi trạng thái của StatefulWidget, ta dùng phương thức nào?",
+        "Thuộc tính nào của Scaffold định nghĩa phần thân của ứng dụng?",
+        "FloatingActionButton nằm ở vị trí nào mặc định?",
+        "Đoạn code nào tạo Text có cỡ chữ 24?",
+        "Widget nào chồng các phần tử lên nhau?",
+        "Widget nào thường dùng để tạo khoảng cách giữa các phần tử?",
+        "Đoạn code nào hiển thị danh sách cuộn?",
+        "Widget nào giúp hiển thị hình ảnh từ internet?",
+        "Phương thức nào của StatefulWidget chỉ gọi 1 lần khi khởi tạo?",
+        "Đoạn code sau hiển thị gì?<pre><code>Row(children:[Icon(Icons.star), Icon(Icons.star)])</code></pre>",
+        "Widget nào cung cấp menu trượt từ cạnh trái màn hình?",
+        "Widget nào trong Flutter hỗ trợ bo góc, nền, margin, padding cùng lúc?",
+        "Cấu trúc Scaffold cơ bản có tối thiểu bao nhiêu phần chính?",
+        "Widget nào dùng để căn giữa phần tử con trong Flutter?"
+      ]
+    },
+    {
+      "file": "quiz_107.json",
+      "question_count": 20,
+      "questions": [
+        "Material Design do công ty nào phát triển?",
+        "Cupertino widget mô phỏng giao diện của hệ điều hành nào?",
+        "Widget nào được dùng để hiển thị khung thông tin bo góc và đổ bóng?",
+        "Widget nào cho phép cuộn nội dung vượt quá màn hình?",
+        "Đoạn mã nào tạo danh sách động đúng trong Flutter?",
+        "Widget nào dùng để bố trí phần tử theo dạng lưới?",
+        "Để hiển thị thông báo tạm thời, dùng widget nào?",
+        "Phương thức nào được dùng để hiển thị hộp thoại xác nhận?",
+        "Thuộc tính nào của Form dùng để xác định khóa duy nhất cho Form?",
+        "Validator trong TextFormField dùng để làm gì?",
+        "Widget nào dùng để chia không gian trong Row/Column tỉ lệ linh hoạt?",
+        "Wrap khác Row ở điểm nào?",
+        "Thuộc tính nào của AnimatedContainer quy định thời gian hiệu ứng?",
+        "Phương thức nào của Scaffold hiển thị SnackBar?",
+        "Widget nào hiển thị giao diện có nhiều tab?",
+        "Widget nào thường được dùng trong CupertinoApp để tạo thanh điều hướng?",
+        "Widget nào sắp xếp các phần tử con dạng dòng chip có khoảng cách?",
+        "Trong Animation, muốn thay đổi kích thước Container theo trạng thái, ta dùng widget nào?",
+        "Phần tử nào trong MaterialApp định nghĩa giao diện chính?",
+        "CupertinoButton khác ElevatedButton ở điểm nào?"
+      ]
+    },
+    {
+      "file": "quiz_108.json",
+      "question_count": 20,
+      "questions": [
+        "Kho lưu trữ thư viện chính thức của Flutter là gì?",
+        "Tệp nào chứa danh sách thư viện sử dụng trong dự án Flutter?",
+        "Lệnh nào để tải thư viện sau khi chỉnh sửa pubspec.yaml?",
+        "Thư viện nào được dùng để gọi API HTTP?",
+        "Thư viện nào giúp quản lý trạng thái theo mô hình ChangeNotifier?",
+        "SharedPreferences lưu trữ dữ liệu ở dạng gì?",
+        "Đoạn mã nào lưu giá trị trong SharedPreferences?",
+        "Provider thông báo cho UI thay đổi bằng cách nào?",
+        "Lệnh nào dùng để tạo một package Flutter mới?",
+        "Widget nào giúp cung cấp đối tượng Provider cho toàn bộ ứng dụng?",
+        "Để mở liên kết web, ta dùng thư viện nào?",
+        "Firebase Core trong Flutter dùng để làm gì?",
+        "Khi thêm package mới, cần chú ý điều gì để tránh lỗi build?",
+        "Lệnh nào kiểm tra thử gói trước khi publish lên pub.dev?",
+        "Package nào hỗ trợ chọn ảnh từ camera và thư viện?",
+        "Làm thế nào để sử dụng http.get trong Flutter?",
+        "Pubspec.yaml dùng format dữ liệu nào?",
+        "Lệnh nào để cập nhật phiên bản các package đang sử dụng?",
+        "Provider thường được kết hợp với widget nào để rebuild UI?",
+        "Khi một gói bị xung đột phiên bản, nên xử lý như thế nào?"
+      ]
+    },
+    {
+      "file": "quiz_109.json",
+      "question_count": 20,
+      "questions": [
+        "Gói nào trong Flutter thường dùng để gọi REST API?",
+        "Gói nào được dùng để xử lý cơ sở dữ liệu SQLite?",
+        "JSON là viết tắt của gì?",
+        "Phương thức nào của HTTPClient được dùng để lấy dữ liệu?",
+        "Câu lệnh nào đúng để parse chuỗi JSON trong Dart?",
+        "Gói nào cung cấp đường dẫn lưu trữ cho SQLite?",
+        "Khi API trả về mã lỗi, mã trạng thái nào thường gặp?",
+        "Lệnh SQL nào dùng để tạo bảng mới?",
+        "Firebase Firestore thuộc loại cơ sở dữ liệu nào?",
+        "Để lắng nghe dữ liệu realtime từ Firestore, ta dùng phương thức nào?",
+        "Đoạn mã nào thêm dữ liệu vào SQLite đúng cách?",
+        "Firebase hỗ trợ đồng bộ dữ liệu realtime qua tính năng nào?",
+        "Để bắt lỗi mạng trong Dart, ta dùng cấu trúc nào?",
+        "Hàm nào cần gọi trước khi sử dụng Firebase trong Flutter?",
+        "Định dạng dữ liệu phổ biến khi giao tiếp giữa client và server là gì?",
+        "Lệnh nào dùng để mở hoặc tạo cơ sở dữ liệu SQLite?",
+        "Câu lệnh nào đọc toàn bộ dữ liệu trong bảng SQLite?",
+        "Cơ chế async/await giúp ích gì khi lập trình mạng?",
+        "Khi nào nên dùng SQLite thay vì Firebase?",
+        "Câu lệnh nào gọi API đúng chuẩn trong Flutter?"
+      ]
+    },
+    {
+      "file": "quiz_110.json",
+      "question_count": 20,
+      "questions": [
+        "Khái niệm state trong Flutter là gì?",
+        "Phương thức nào dùng để cập nhật UI trong StatefulWidget?",
+        "Provider dựa trên cơ chế nào để cập nhật UI?",
+        "Trong mô hình Bloc, dữ liệu truyền qua đâu?",
+        "Phương thức nào trong GetX được dùng để quan sát dữ liệu?",
+        "Ưu điểm chính của Bloc so với setState là gì?",
+        "Provider sử dụng kiểu thiết kế nào?",
+        "Trong Provider, hàm nào báo cho UI biết dữ liệu đã thay đổi?",
+        "Phương thức nào trong Bloc thêm dữ liệu mới vào Stream?",
+        "Trong GetX, biến phản ứng (reactive variable) được khai báo như thế nào?",
+        "Phương thức nào giải phóng StreamController trong Bloc?",
+        "Mô hình nào giúp tách biệt UI và logic trong Flutter?",
+        "Trong Provider, để truy cập state ta dùng gì?",
+        "Bloc phù hợp với ứng dụng có đặc điểm nào?",
+        "GetX có thể thay thế những gì trong Flutter?",
+        "Khi nào nên dùng setState thay vì Provider?",
+        "Get.put() trong GetX dùng để làm gì?",
+        "Trong mô hình MVVM, ViewModel có nhiệm vụ gì?",
+        "Bloc sử dụng kiểu dữ liệu nào để truyền luồng sự kiện?",
+        "Phương pháp nào giúp tái sử dụng logic trong nhiều màn hình Flutter?"
+      ]
+    },
+    {
+      "file": "quiz_111.json",
+      "question_count": 20,
+      "questions": [
+        "Có bao nhiêu chế độ build trong Flutter?",
+        "Lệnh nào dùng để build file APK release?",
+        "File nào chứa thông tin ký ứng dụng Android?",
+        "Lệnh nào tạo App Bundle để upload lên Google Play?",
+        "Công cụ nào dùng để tạo key ký ứng dụng?",
+        "File APK sau khi build được lưu ở đâu?",
+        "AAB là viết tắt của gì?",
+        "Lệnh nào làm sạch bộ build Flutter?",
+        "Trong Xcode, file nào cấu hình quyền truy cập iOS?",
+        "Ứng dụng Flutter iOS được upload lên App Store bằng công cụ nào?",
+        "Khi build ứng dụng release, Flutter tự động:",
+        "Lệnh nào build ứng dụng iOS release?",
+        "Google Play bắt buộc định dạng nào để phát hành?",
+        "CI/CD là viết tắt của:",
+        "Lệnh nào cài các gói dependency trước khi build?",
+        "File Info.plist dùng cho nền tảng nào?",
+        "Phần mềm nào có thể tự động hóa build Flutter?",
+        "Câu lệnh nào khởi tạo quy trình CI cơ bản trên GitHub?",
+        "Để phát hành iOS app cần tài khoản gì?",
+        "File .jks dùng để làm gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_104_submissions.json",
+      "count": 24,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 56,
+          "quiz_id": 104,
+          "submission_id": 1381,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 104,
+          "submission_id": 1429,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 104,
+          "submission_id": 872,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 104,
+          "submission_id": 1072,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 104,
+          "submission_id": 1173,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_105_submissions.json",
+      "count": 24,
+      "average_score": 17.17,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 105,
+          "submission_id": 938,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 50,
+          "quiz_id": 105,
+          "submission_id": 1115,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 105,
+          "submission_id": 1175,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 105,
+          "submission_id": 1286,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 105,
+          "submission_id": 1573,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_106_submissions.json",
+      "count": 24,
+      "average_score": 16.79,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 106,
+          "submission_id": 936,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 106,
+          "submission_id": 1071,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 106,
+          "submission_id": 1288,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 106,
+          "submission_id": 688,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 106,
+          "submission_id": 868,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_107_submissions.json",
+      "count": 23,
+      "average_score": 17.09,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 107,
+          "submission_id": 685,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 107,
+          "submission_id": 939,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 107,
+          "submission_id": 1282,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 107,
+          "submission_id": 1382,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 107,
+          "submission_id": 1522,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_108_submissions.json",
+      "count": 24,
+      "average_score": 17.29,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 108,
+          "submission_id": 935,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 108,
+          "submission_id": 1524,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 108,
+          "submission_id": 686,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 108,
+          "submission_id": 874,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 108,
+          "submission_id": 1068,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_109_submissions.json",
+      "count": 24,
+      "average_score": 17.08,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 109,
+          "submission_id": 1070,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 109,
+          "submission_id": 1171,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 109,
+          "submission_id": 689,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 109,
+          "submission_id": 937,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 109,
+          "submission_id": 1426,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_110_submissions.json",
+      "count": 24,
+      "average_score": 16.83,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 110,
+          "submission_id": 1287,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 110,
+          "submission_id": 683,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 110,
+          "submission_id": 875,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 110,
+          "submission_id": 933,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 110,
+          "submission_id": 1067,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_111_submissions.json",
+      "count": 24,
+      "average_score": 16.75,
+      "top_5_students": [
+        {
+          "user_id": 44,
+          "quiz_id": 111,
+          "submission_id": 873,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 111,
+          "submission_id": 1073,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 111,
+          "submission_id": 1177,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 111,
+          "submission_id": 1379,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 111,
+          "submission_id": 1432,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

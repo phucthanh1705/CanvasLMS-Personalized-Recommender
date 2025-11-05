@@ -1,0 +1,879 @@
+{
+  "id": "module_59",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-gioi-thieu-ve-lap-trinh-huong-doi-tuong",
+      "title": "lesson_bai-1-gioi-thieu-ve-lap-trinh-huong-doi-tuong"
+    },
+    {
+      "id": "lesson_bai-10-xu-lu-tep-file-handling-trong-java",
+      "title": "lesson_bai-10-xu-lu-tep-file-handling-trong-java"
+    },
+    {
+      "id": "lesson_bai-2-cac-khai-niem-co-so-cua-lap-trinh-huong-doi-tuong",
+      "title": "lesson_bai-2-cac-khai-niem-co-so-cua-lap-trinh-huong-doi-tuong"
+    },
+    {
+      "id": "lesson_bai-3-gioi-thieu-ve-java",
+      "title": "lesson_bai-3-gioi-thieu-ve-java"
+    },
+    {
+      "id": "lesson_bai-4-lop-va-doi-tuong",
+      "title": "lesson_bai-4-lop-va-doi-tuong"
+    },
+    {
+      "id": "lesson_bai-5-tinh-ke-thua-va-da-hinh",
+      "title": "lesson_bai-5-tinh-ke-thua-va-da-hinh"
+    },
+    {
+      "id": "lesson_bai-6-lop-truu-tuong-abstract-class",
+      "title": "lesson_bai-6-lop-truu-tuong-abstract-class"
+    },
+    {
+      "id": "lesson_bai-7-xu-lu-ngoai-le-exception-handling",
+      "title": "lesson_bai-7-xu-lu-ngoai-le-exception-handling"
+    },
+    {
+      "id": "lesson_bai-8-interface-va-package",
+      "title": "lesson_bai-8-interface-va-package"
+    },
+    {
+      "id": "lesson_bai-9-lap-trinh-tong-quat-generic-programming",
+      "title": "lesson_bai-9-lap-trinh-tong-quat-generic-programming"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_178.json",
+      "question_count": 20,
+      "questions": [
+        "Mệnh đề nào mô tả chính xác nhất mục tiêu của đóng gói (encapsulation)?",
+        "Trong Java, phát biểu nào <b>vi phạm</b> nguyên tắc thay thế Liskov (LSP)?",
+        "Chọn phát biểu đúng về POP vs OOP:",
+        "Cho mã: class A{public int f(){return 1;}} class B extends A{public int f(){return 2;}} A x=new B(); x.f(); Kết quả là?",
+        "Đâu <b>không</b> phải lợi ích trực tiếp của trừu tượng hóa?",
+        "Khi nào nên ưu tiên ủy quyền (composition) thay vì kế thừa?",
+        "Trong lớp Account ở phần bài học, biện pháp nào đảm bảo bất biến số dư không âm?",
+        "Phát biểu nào đúng về đa hình thời gian chạy (runtime polymorphism) ở Java?",
+        "Xác định <b>mùi thiết kế</b> (code smell): lớp Service có 30 phương thức không liên quan, tham chiếu tới 10 repository khác nhau.",
+        "Giả sử interface Payment có phương thức pay(long). Lớp VNPay và Momo hiện thực khác nhau. Đâu là lợi ích chính khi client lập trình theo interface Payment?",
+        "Chọn câu <b>sai</b> về access modifiers:",
+        "Khi nào dùng abstract class thay vì interface (Java 17)?",
+        "Đoạn nào thể hiện <b>overriding</b> đúng cách?",
+        "Vì sao public field là thiết kế kém?",
+        "Chọn mô tả đúng về 'message' trong OOP.",
+        "Cho hệ phân cấp Shape -> Rect/Circle. Hàm totalArea nhận List<Shape>. Gọi totalArea(List<Rect>) có biên dịch được không (Java generic)?",
+        "Một lớp có cohesion cao thể hiện ở:",
+        "Kỹ thuật nào <b>trực tiếp</b> giúp giảm coupling?",
+        "Trong thiết kế ATM, chọn ánh xạ hợp lý theo OOP:",
+        "Đâu là lý do chính khiến kế thừa sai có thể gây 'Fragile Base Class'?"
+      ]
+    },
+    {
+      "file": "quiz_179.json",
+      "question_count": 20,
+      "questions": [
+        "Khái niệm nào dưới đây mô tả đúng nhất về kiểu dữ liệu trừu tượng (ADT)?",
+        "Trong OOP, khái niệm 'instance' được hiểu là:",
+        "Khi nào sử dụng mối quan hệ composition thay vì aggregation?",
+        "Đâu là đặc điểm không đúng của đối tượng trong OOP?",
+        "Trong ví dụ 'Car myCar = new Car();', từ khóa 'new' có tác dụng gì?",
+        "Đâu là sự khác biệt chính giữa 'class' và 'object'?",
+        "Trong Java, lời gọi 'account.deposit(100)' là ví dụ của:",
+        "Khi một lớp con ghi đè phương thức lớp cha, điều kiện nào phải được đảm bảo?",
+        "Trong Java, phương thức được nạp chồng (overloading) khi nào?",
+        "Phát biểu nào đúng nhất về mối quan hệ giữa các đối tượng?",
+        "Tại sao trừu tượng hóa giúp giảm độ phức tạp của hệ thống?",
+        "Cho ví dụ interface Stack<E> có các phương thức push/pop/isEmpty. Đây là ví dụ điển hình của:",
+        "Trong UML Class Diagram, ký hiệu hình thoi đặc thể hiện mối quan hệ nào?",
+        "Điều gì xảy ra nếu không tuân thủ nguyên tắc đóng gói trong thiết kế?",
+        "Khi nào nên sử dụng interface thay vì lớp trừu tượng?",
+        "Khái niệm nào mô tả việc nhiều đối tượng khác nhau phản hồi cùng một thông điệp theo cách riêng?",
+        "Trong mô hình UML, mối quan hệ giữa lớp 'Student' và lớp 'Course' với mũi tên <> là:",
+        "Tại sao nên mô hình hóa hệ thống trước khi lập trình?",
+        "Câu nào mô tả đúng nhất về class và instance trong Java?",
+        "Phát biểu nào dưới đây thể hiện nguyên lý thiết kế tốt trong OOP?"
+      ]
+    },
+    {
+      "file": "quiz_180.json",
+      "question_count": 20,
+      "questions": [
+        "Phát biểu nào mô tả đúng nhất về triết lý thiết kế của Java?",
+        "JVM có vai trò gì trong hệ thống Java?",
+        "Bộ công cụ nào chứa compiler, debugger và thư viện Java?",
+        "Đâu là phương thức bắt đầu của mọi chương trình Java?",
+        "Lệnh nào in ra dòng chữ 'Hello Java'?",
+        "Trong cấu trúc 'for (int i=0; i<5; i++)', giá trị i cuối cùng khi vòng lặp kết thúc là gì?",
+        "Mảng trong Java có chỉ số bắt đầu từ:",
+        "Phát biểu nào đúng về lớp Wrapper?",
+        "Phát biểu nào đúng về Java?",
+        "Đâu là tên tệp chứa bytecode trong Java?",
+        "Từ khóa nào dùng để khai báo lớp trong Java?",
+        "Phát biểu nào đúng về System.out.println()?",
+        "Phương thức nào sau đây hợp lệ trong Java?",
+        "Điểm khác biệt chính giữa JDK và JRE là gì?",
+        "Lệnh 'javac Hello.java' thực hiện điều gì?",
+        "Lệnh 'java Hello' thực hiện điều gì?",
+        "Phát biểu nào mô tả đúng về Java SE?",
+        "Trong Java, kiểu dữ liệu nào không phải kiểu nguyên thủy?",
+        "Khi khai báo 'int[] arr = new int[5];', mảng arr có:",
+        "Lớp nào trong Java cho phép nhập dữ liệu từ bàn phím?"
+      ]
+    },
+    {
+      "file": "quiz_181.json",
+      "question_count": 20,
+      "questions": [
+        "Phát biểu nào đúng nhất về mối quan hệ giữa lớp và đối tượng?",
+        "Constructor có đặc điểm nào sau đây?",
+        "Từ khóa this trong Java được sử dụng để:",
+        "Phát biểu nào đúng về thuộc tính static?",
+        "Overloading xảy ra khi:",
+        "Khi nào sử dụng từ khóa static cho phương thức?",
+        "Phạm vi truy cập nào cho phép truy cập trong cùng package?",
+        "Trong Java, việc thu hồi bộ nhớ của đối tượng được thực hiện bởi:",
+        "Khi nào cần dùng từ khóa this()?",
+        "Lớp nào dưới đây minh họa tốt nhất khái niệm đóng gói?",
+        "Một phương thức được overload khi nào?",
+        "Tại sao nên sử dụng access modifier private cho thuộc tính?",
+        "Trong đoạn code 'static int count=0;', giá trị count sẽ:",
+        "Phát biểu nào đúng về phương thức static?",
+        "Điểm khác biệt giữa overloading và overriding?",
+        "Lệnh nào tạo đối tượng từ lớp Person có constructor Person(String name)?",
+        "Khi nào constructor mặc định được tạo tự động?",
+        "Khi gọi phương thức static showCount() bằng tên lớp Counter, lệnh nào đúng?",
+        "Từ khóa nào trong Java cho phép truy cập thành phần của lớp cha từ lớp con?",
+        "Khi nào nên sử dụng biến static final?"
+      ]
+    },
+    {
+      "file": "quiz_182.json",
+      "question_count": 20,
+      "questions": [
+        "Kế thừa trong Java được khai báo bằng từ khóa nào?",
+        "Phát biểu nào đúng về kế thừa?",
+        "Từ khóa super trong Java dùng để:",
+        "Khi override phương thức, quy tắc nào sau đây phải được tuân thủ?",
+        "Phát biểu nào mô tả đúng nguyên lý Liskov Substitution?",
+        "Từ khóa final khi khai báo lớp có ý nghĩa gì?",
+        "Đa hình thời gian chạy (runtime polymorphism) xảy ra khi nào?",
+        "Phát biểu nào đúng về overriding?",
+        "Đâu là ví dụ đúng về đa hình?",
+        "Phương thức nào sau đây là ví dụ của overloading?",
+        "Lớp nào không thể kế thừa trong Java?",
+        "Tại sao Java không hỗ trợ đa kế thừa lớp?",
+        "Khi gọi phương thức lớp cha từ lớp con, ta dùng:",
+        "Phát biểu nào đúng về interface?",
+        "Khi lớp A kế thừa lớp B, điều gì xảy ra?",
+        "Phát biểu nào đúng về từ khóa final khi áp dụng cho phương thức?",
+        "Đa hình compile-time trong Java đạt được thông qua:",
+        "Khi gọi super() trong constructor, lệnh này phải được đặt ở đâu?",
+        "Khi nào nên sử dụng abstract class thay vì interface?",
+        "Phát biểu nào thể hiện ưu điểm chính của đa hình?"
+      ]
+    },
+    {
+      "file": "quiz_183.json",
+      "question_count": 20,
+      "questions": [
+        "Phát biểu nào đúng về lớp trừu tượng trong Java?",
+        "Từ khóa nào dùng để khai báo lớp trừu tượng?",
+        "Khi một lớp chứa phương thức abstract, điều gì bắt buộc phải có?",
+        "Có thể khai báo constructor trong abstract class không?",
+        "Phát biểu nào đúng về việc kế thừa abstract class?",
+        "Có thể khai báo một lớp vừa abstract vừa final không?",
+        "Sự khác biệt chính giữa abstract class và interface là gì?",
+        "Trong lớp trừu tượng, phương thức final được sử dụng để:",
+        "Khi nào nên sử dụng abstract class thay vì interface?",
+        "Trong đoạn code 'abstract class Shape { abstract double area(); }', phương thức area() là:",
+        "Nếu lớp con không override tất cả phương thức abstract, điều gì xảy ra?",
+        "Có thể tạo biến tham chiếu kiểu abstract class không?",
+        "Phát biểu nào đúng về phương thức non-abstract trong abstract class?",
+        "Interface trong Java có thể chứa phương thức nào dưới đây?",
+        "Lớp trừu tượng có thể kế thừa từ lớp khác không?",
+        "Phát biểu nào mô tả đúng cơ chế đa hình với abstract class?",
+        "Trong abstract class, có thể khai báo phương thức static không?",
+        "Khi lớp con override phương thức abstract, điều gì phải được đảm bảo?",
+        "Phát biểu nào đúng về abstract class trong Java?",
+        "Ưu điểm chính của việc sử dụng abstract class trong thiết kế phần mềm là gì?"
+      ]
+    },
+    {
+      "file": "quiz_184.json",
+      "question_count": 20,
+      "questions": [
+        "Phát biểu nào đúng nhất về ngoại lệ (Exception) trong Java?",
+        "Checked Exception là gì?",
+        "Từ khóa nào dùng để ném ngoại lệ trong Java?",
+        "Từ khóa nào dùng để khai báo ngoại lệ mà phương thức có thể ném ra?",
+        "Khối nào luôn được thực thi dù có hay không xảy ra ngoại lệ?",
+        "Phát biểu nào đúng về try-with-resources?",
+        "Phát biểu nào sai về xử lý ngoại lệ?",
+        "Custom Exception trong Java thường kế thừa từ lớp nào?",
+        "Khi xảy ra lỗi chia cho 0, Java ném ngoại lệ nào?",
+        "Lệnh nào tạo custom exception hợp lệ?",
+        "Khi bắt nhiều ngoại lệ, thứ tự đặt các catch nên là:",
+        "Khi không xử lý Checked Exception, điều gì xảy ra?",
+        "Khối finally được thực thi khi nào?",
+        "Phát biểu nào đúng về Error trong Java?",
+        "Khi khai báo 'void readFile() throws IOException', điều này có nghĩa gì?",
+        "Câu lệnh nào dưới đây là sai?",
+        "Phát biểu nào đúng về Exception Chaining?",
+        "Lớp cơ sở chung cho tất cả ngoại lệ trong Java là:",
+        "Khi xảy ra NullPointerException, nguyên nhân là gì?",
+        "Nguyên tắc thiết kế xử lý ngoại lệ tốt là gì?"
+      ]
+    },
+    {
+      "file": "quiz_185.json",
+      "question_count": 20,
+      "questions": [
+        "Interface trong Java được khai báo bằng từ khóa nào?",
+        "Một lớp có thể implements bao nhiêu interface?",
+        "Tất cả các phương thức trong interface mặc định là:",
+        "Biến trong interface mặc định có thuộc tính nào?",
+        "Phương thức nào có thể được định nghĩa trong interface từ Java 8?",
+        "Phát biểu nào đúng về interface và abstract class?",
+        "Từ khóa nào được dùng để kế thừa interface khác?",
+        "Phát biểu nào đúng về interface kế thừa interface khác?",
+        "Phát biểu nào đúng về default method trong interface?",
+        "Từ khóa nào được dùng để thực hiện interface trong lớp?",
+        "Phát biểu nào đúng về Comparable?",
+        "Phát biểu nào đúng về Comparator?",
+        "Package trong Java dùng để:",
+        "Câu lệnh nào dùng để nhập lớp từ package khác?",
+        "Phát biểu nào đúng về cấu trúc thư mục và package?",
+        "Phạm vi truy cập default cho phép:",
+        "Phát biểu nào đúng về static method trong interface?",
+        "Khi hai interface có cùng phương thức default, lớp implement cả hai phải:",
+        "Phát biểu nào mô tả đúng nhất lợi ích của interface trong thiết kế?",
+        "Phát biểu nào đúng về package-private (default)?"
+      ]
+    },
+    {
+      "file": "quiz_186.json",
+      "question_count": 20,
+      "questions": [
+        "Generic Programming cho phép:",
+        "Tham số kiểu trong Generic được đặt trong:",
+        "Phát biểu nào đúng về lợi ích của Generic?",
+        "Trong khai báo 'class Box<T>', T là gì?",
+        "Generic giúp phát hiện lỗi kiểu dữ liệu tại:",
+        "Giới hạn kiểu (Bounded Type) trong Generic dùng để:",
+        "Khai báo nào đúng về lớp tổng quát?",
+        "Wildcard '?' trong Generic có nghĩa là gì?",
+        "Trong 'List<? extends Number>', ký hiệu này nghĩa là:",
+        "Phát biểu nào đúng về Type Erasure?",
+        "Lệnh nào không hợp lệ trong Generic?",
+        "Interface Comparable định nghĩa phương thức nào?",
+        "Khi nào nên dùng Comparator thay vì Comparable?",
+        "Phát biểu nào đúng về Map<K,V>?",
+        "Generic trong Java được xử lý bởi:",
+        "Phát biểu nào đúng về 'List<?> list = new ArrayList<String>();'?",
+        "Phương thức Template trong Generic cho phép:",
+        "Phát biểu nào đúng về Collection Framework với Generic?",
+        "Trong generic, 'T extends Number' có nghĩa là:",
+        "Ưu điểm chính của Generic trong Java là gì?"
+      ]
+    },
+    {
+      "file": "quiz_187.json",
+      "question_count": 20,
+      "questions": [
+        "Lớp nào trong Java đại diện cho đường dẫn đến một tệp hoặc thư mục?",
+        "Phát biểu nào đúng về lớp File?",
+        "Để đọc tệp văn bản từng ký tự, ta nên dùng lớp nào?",
+        "Để ghi tệp nhị phân, ta sử dụng:",
+        "BufferedReader được dùng để:",
+        "Interface Serializable có tác dụng gì?",
+        "Phương thức nào dùng để đọc từng dòng văn bản trong BufferedReader?",
+        "Phát biểu nào đúng về try-with-resources?",
+        "Trong java.nio, lớp nào dùng để đọc toàn bộ nội dung file vào List?",
+        "Phương thức nào của Files được dùng để ghi dữ liệu ra file?",
+        "Phát biểu nào đúng về FileInputStream?",
+        "Để sao chép file nhị phân, ta cần sử dụng:",
+        "Phương thức listFiles() của lớp File trả về:",
+        "Lỗi nào xảy ra nếu tệp cần đọc không tồn tại?",
+        "Phát biểu nào đúng về ObjectInputStream?",
+        "Phương thức exists() trong lớp File trả về:",
+        "Trong FileWriter, phương thức write() có tác dụng:",
+        "Lớp nào dùng để xử lý đường dẫn trong gói java.nio?",
+        "Phát biểu nào đúng về Buffered Streams?",
+        "Phát biểu nào thể hiện nguyên tắc xử lý file tốt?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_178_submissions.json",
+      "count": 28,
+      "average_score": 16.46,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 178,
+          "submission_id": 1086,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 178,
+          "submission_id": 915,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 178,
+          "submission_id": 1270,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 178,
+          "submission_id": 663,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 12,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 178,
+          "submission_id": 893,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_179_submissions.json",
+      "count": 28,
+      "average_score": 16.64,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 179,
+          "submission_id": 661,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 179,
+          "submission_id": 886,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 179,
+          "submission_id": 914,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 179,
+          "submission_id": 1084,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 179,
+          "submission_id": 1414,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_180_submissions.json",
+      "count": 28,
+      "average_score": 16.75,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 180,
+          "submission_id": 1264,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 180,
+          "submission_id": 890,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 180,
+          "submission_id": 1361,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 180,
+          "submission_id": 1415,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 180,
+          "submission_id": 1692,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_181_submissions.json",
+      "count": 26,
+      "average_score": 16.73,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 181,
+          "submission_id": 668,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 181,
+          "submission_id": 1088,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 181,
+          "submission_id": 1189,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 181,
+          "submission_id": 1509,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 181,
+          "submission_id": 888,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_182_submissions.json",
+      "count": 26,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 182,
+          "submission_id": 1190,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 182,
+          "submission_id": 1092,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 182,
+          "submission_id": 1271,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 182,
+          "submission_id": 1364,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 182,
+          "submission_id": 1409,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_183_submissions.json",
+      "count": 26,
+      "average_score": 16.81,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 183,
+          "submission_id": 1272,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 183,
+          "submission_id": 1359,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 183,
+          "submission_id": 1416,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 183,
+          "submission_id": 1775,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 183,
+          "submission_id": 662,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_184_submissions.json",
+      "count": 27,
+      "average_score": 16.96,
+      "top_5_students": [
+        {
+          "user_id": 59,
+          "quiz_id": 184,
+          "submission_id": 1506,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 184,
+          "submission_id": 917,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 53,
+          "quiz_id": 184,
+          "submission_id": 1237,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 184,
+          "submission_id": 664,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 42,
+          "quiz_id": 184,
+          "submission_id": 784,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_185_submissions.json",
+      "count": 26,
+      "average_score": 16.5,
+      "top_5_students": [
+        {
+          "user_id": 59,
+          "quiz_id": 185,
+          "submission_id": 1508,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 185,
+          "submission_id": 666,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 185,
+          "submission_id": 1269,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 185,
+          "submission_id": 1407,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 185,
+          "submission_id": 889,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_186_submissions.json",
+      "count": 28,
+      "average_score": 16.68,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 186,
+          "submission_id": 1194,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 186,
+          "submission_id": 1263,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 186,
+          "submission_id": 1363,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 186,
+          "submission_id": 1512,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 186,
+          "submission_id": 1554,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_187_submissions.json",
+      "count": 28,
+      "average_score": 16.61,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 187,
+          "submission_id": 1267,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 187,
+          "submission_id": 665,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 187,
+          "submission_id": 918,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 187,
+          "submission_id": 1408,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 187,
+          "submission_id": 887,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

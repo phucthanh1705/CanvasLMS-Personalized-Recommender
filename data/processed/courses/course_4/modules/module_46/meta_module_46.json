@@ -1,0 +1,1053 @@
+{
+  "id": "module_46",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-asp-dot-net",
+      "title": "lesson_bai-01-tong-quan-ve-asp-dot-net"
+    },
+    {
+      "id": "lesson_bai-02-cac-lop-su-dung-trong-asp-dot-net",
+      "title": "lesson_bai-02-cac-lop-su-dung-trong-asp-dot-net"
+    },
+    {
+      "id": "lesson_bai-03-truy-cap-du-lieu-trong-asp-dot-net",
+      "title": "lesson_bai-03-truy-cap-du-lieu-trong-asp-dot-net"
+    },
+    {
+      "id": "lesson_bai-04-lap-trinh-voi-jquery-trong-asp-dot-net",
+      "title": "lesson_bai-04-lap-trinh-voi-jquery-trong-asp-dot-net"
+    },
+    {
+      "id": "lesson_bai-05-tong-quan-ve-asp-dot-net-mvc",
+      "title": "lesson_bai-05-tong-quan-ve-asp-dot-net-mvc"
+    },
+    {
+      "id": "lesson_bai-06-tong-quan-ve-asp-dot-net-core-mvc",
+      "title": "lesson_bai-06-tong-quan-ve-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-07-xay-dung-ung-dung-asp-dot-net-core-mvc",
+      "title": "lesson_bai-07-xay-dung-ung-dung-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-08-ky-thuat-truyen-du-lieu-trong-asp-dot-net-core-mvc",
+      "title": "lesson_bai-08-ky-thuat-truyen-du-lieu-trong-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-09-dinh-tuyen-routing-trong-asp-dot-net-core-mvc",
+      "title": "lesson_bai-09-dinh-tuyen-routing-trong-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-10-quan-lu-trang-thai-session-and-cookie-trong-asp-dot-net-core-mvc",
+      "title": "lesson_bai-10-quan-lu-trang-thai-session-and-cookie-trong-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-11-xac-thuc-va-phan-quyen-trong-asp-dot-net-core-mvc",
+      "title": "lesson_bai-11-xac-thuc-va-phan-quyen-trong-asp-dot-net-core-mvc"
+    },
+    {
+      "id": "lesson_bai-12-asp-dot-net-identity-va-entity-framework",
+      "title": "lesson_bai-12-asp-dot-net-identity-va-entity-framework"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_70.json",
+      "question_count": 20,
+      "questions": [
+        "ASP.NET thuộc nền tảng nào của Microsoft?",
+        "Tệp nào dùng để cấu hình toàn bộ ứng dụng ASP.NET?",
+        "Ngôn ngữ nào phổ biến nhất khi lập trình ASP.NET?",
+        "ASP.NET biên dịch mã nguồn thành gì trước khi chạy?",
+        "Khi người dùng gửi request đến server, tiến trình nào xử lý đầu tiên?",
+        "Đâu là chuỗi xử lý đúng trong vòng đời trang ASP.NET WebForm?",
+        "Trong tệp Web.config, cấu hình nào bật xác thực Windows?",
+        "Trong ASP.NET, `Session` khác `ViewState` ở điểm nào?",
+        "Khi một trang ASP.NET không tồn tại, mã trạng thái HTTP trả về là gì?",
+        "Lợi ích chính của Bundling & Minification trong ASP.NET là gì?",
+        "Xem đoạn mã sau trong WebForm:<pre><code>&lt;asp:Button ID=\\\"btnSubmit\\\" runat=\\\"server\\\" Text=\\\"Gửi\\\" OnClick=\\\"btnSubmit_Click\\\" /&gt;</code></pre>Đây là loại control nào?",
+        "Khi người dùng nhấn nút trong WebForm, sự kiện OnClick được xử lý ở đâu?",
+        "Đoạn code sau thực hiện gì?<pre><code>if (!IsPostBack) { Label1.Text = \\\"Welcome!\\\";}</code></pre>",
+        "Cho đoạn mã trong controller ASP.NET MVC:<pre><code>public ActionResult Index() { ViewBag.Message = \\\"Xin chào ASP.NET MVC\\\"; return View();}</code></pre>Khi gọi /Home/Index, điều gì xảy ra?",
+        "Khi khai báo cấu hình routing mặc định trong MVC:<pre><code>url: \\\"{controller}/{action}/{id}\\\"</code></pre>Giá trị `controller` mặc định nằm ở đâu?",
+        "Đoạn mã sau cho kết quả gì?<pre><code>Response.Write(\\\"Hello, ASP.NET!\\\");</code></pre>",
+        "Giả sử trong Web.config có cấu hình:<pre><code>&lt;compilation debug=\\\"true\\\" /&gt;</code></pre>Tác dụng của nó là gì?",
+        "Phân tích đoạn code C# sau trong Controller:<pre><code>public string Info() { return DateTime.Now.ToString();}</code></pre>Khi truy cập /Home/Info, trình duyệt nhận được gì?",
+        "Cho đoạn mã trong ASPX:<pre><code>&lt;%= 5 + 3 %&gt;</code></pre>Kết quả hiển thị trên trình duyệt là gì?",
+        "Giả sử bạn tạo ứng dụng ASP.NET 4.5, muốn bật WebSocket để giao tiếp thời gian thực. Cần đảm bảo điều kiện nào?"
+      ]
+    },
+    {
+      "file": "quiz_71.json",
+      "question_count": 20,
+      "questions": [
+        "Đối tượng nào trong ASP.NET dùng để nhận dữ liệu từ client?",
+        "Phương thức nào của Response dùng để chuyển hướng sang trang khác?",
+        "Thuộc tính nào của Request chứa dữ liệu gửi qua phương thức POST?",
+        "Khi muốn lấy địa chỉ IP của client, ta dùng thuộc tính nào?",
+        "Phương thức nào của Server giúp lấy đường dẫn vật lý từ đường dẫn ảo?",
+        "Session khác Application ở điểm nào?",
+        "Để xóa toàn bộ dữ liệu trong Session, ta dùng lệnh nào?",
+        "Đoạn code sau có tác dụng gì?<pre><code>Response.Cookies[\\\"user\\\"].Value = \\\"admin\\\";</code></pre>",
+        "Khi muốn đọc giá trị cookie tên 'user', lệnh đúng là gì?",
+        "Phương thức nào của Response dùng để kết thúc quá trình xử lý trang?",
+        "Khi sử dụng Server.HtmlEncode(\\\"<b>Hi</b>\\\"), kết quả trả về là gì?",
+        "Trong WebForm, đoạn code sau thực hiện gì?<pre><code>string name = Request.QueryString[\\\"name\\\"];</code></pre>",
+        "Thuộc tính Response.ContentType = \\\"application/json\\\" có tác dụng gì?",
+        "Giả sử ta viết: <pre><code>Session[\\\"user\\\"] = null;</code></pre> điều này có nghĩa là gì?",
+        "Trong file Global.asax, sự kiện nào kích hoạt khi ứng dụng ASP.NET khởi động?",
+        "Đoạn mã sau in ra kết quả gì?<pre><code>Application[\\\"count\\\"] = 5;Response.Write(Application[\\\"count\\\"]);</code></pre>",
+        "Trong trang ASP.NET, nếu muốn truy cập dữ liệu header, ta dùng:",
+        "Giả sử trong Session không tồn tại khóa 'username', lệnh sau sẽ gây ra lỗi nếu không kiểm tra null:<pre><code>string name = Session[\\\"username\\\"].ToString();</code></pre>Để tránh lỗi, nên viết:",
+        "Để tăng thời gian timeout của Session lên 40 phút, ta cấu hình ở đâu?",
+        "Trong MVC, nếu muốn trả dữ liệu cookie về client, ta có thể viết:"
+      ]
+    },
+    {
+      "file": "quiz_72.json",
+      "question_count": 20,
+      "questions": [
+        "ADO.NET được sử dụng để làm gì trong ứng dụng ASP.NET?",
+        "Lớp nào trong ADO.NET dùng để mở kết nối với SQL Server?",
+        "Lệnh SQL nào sau đây KHÔNG trả về tập dữ liệu?",
+        "Phương thức nào của SqlCommand thực thi lệnh SELECT và trả kết quả đọc tuần tự?",
+        "Phương thức nào trả về giá trị đầu tiên (ô đầu tiên của dòng đầu tiên)?",
+        "Trong ví dụ sau, conn là gì?<pre><code>using (SqlConnection conn = new SqlConnection(connStr)){ conn.Open();}</code></pre>",
+        "Thuộc tính nào trong Web.config dùng để khai báo chuỗi kết nối CSDL?",
+        "Khi muốn thêm tham số vào câu lệnh SQL, ta dùng lệnh nào sau đây?",
+        "Khi nào nên dùng SqlDataAdapter và DataSet?",
+        "LINQ to SQL cho phép làm gì?",
+        "Khi thực thi đoạn code:<pre><code>SqlDataReader rd = cmd.ExecuteReader();while (rd.Read()) { Response.Write(rd[\\\"HoTen\\\"]);}</code></pre>Lệnh rd.Read() có ý nghĩa gì?",
+        "Trong mô hình ADO.NET, DataSet thuộc loại:",
+        "Lớp nào chịu trách nhiệm chứa và thực thi câu lệnh SQL?",
+        "Trong LINQ to SQL, từ khóa nào mở đầu cho một truy vấn?",
+        "Đoạn mã sau sẽ hiển thị gì?<pre><code>int count = (int)cmd.ExecuteScalar();Response.Write(count);</code></pre>",
+        "Khi xảy ra lỗi kết nối SQL, loại ngoại lệ nào được ném ra?",
+        "Đoạn code nào đúng để hiển thị dữ liệu từ DataSet lên GridView?",
+        "Trong đoạn code:<pre><code>if (conn.State == ConnectionState.Closed) conn.Open();</code></pre>Tác dụng là gì?",
+        "Khi sử dụng khối using (SqlConnection conn = new SqlConnection(...)), lợi ích chính là gì?",
+        "Đoạn code sau sẽ in ra gì?<pre><code>try { conn.Open(); Response.Write(\\\"Kết nối thành công!\\\");} catch (SqlException ex) { Response.Write(\\\"Lỗi kết nối: \\\" + ex.Message);}</code></pre>"
+      ]
+    },
+    {
+      "file": "quiz_73.json",
+      "question_count": 20,
+      "questions": [
+        "Thư viện jQuery được viết bằng ngôn ngữ nào?",
+        "Cú pháp cơ bản của jQuery là gì?",
+        "Để chọn phần tử có id là 'btnSave', ta dùng selector nào?",
+        "Đoạn mã $('.item') có ý nghĩa gì?",
+        "Hàm nào được gọi khi DOM đã tải xong?",
+        "Phương thức nào trong jQuery dùng để ẩn phần tử?",
+        "Đoạn mã sau thực hiện gì? <pre><code>$('#btnShow').click(function(){ $('#box').show(); });</code></pre>",
+        "Phương thức fadeOut() có tác dụng gì?",
+        "Trong jQuery, để thay đổi nội dung của phần tử <p id='msg'>, ta dùng:",
+        "Sự khác biệt giữa text() và html() là gì?",
+        "Trong ASP.NET, jQuery thường được nhúng vào trang bằng cách nào?",
+        "Sự kiện nào được kích hoạt khi người dùng thay đổi giá trị trong input?",
+        "Đoạn code sau có tác dụng gì? <pre><code>$('#list').append('<li>Mục mới</li>');</code></pre>",
+        "Hàm nào được dùng để xóa phần tử khỏi DOM?",
+        "Đoạn mã jQuery sau thực hiện gì? <pre><code>$('#txtSearch').keyup(function(){ var key = $(this).val().toLowerCase(); $('#students tr').filter(function(){ $(this).toggle($(this).text().toLowerCase().indexOf(key) > -1); }); });</code></pre>",
+        "Đoạn mã AJAX sau có tác dụng gì? <pre><code>$.ajax({ url: 'Default.aspx/GetTime', type: 'POST', success: function(r){ alert(r.d); } });</code></pre>",
+        "Trong code-behind ASP.NET, phương thức nào tương thích với lệnh AJAX từ jQuery?",
+        "Nếu quên khai báo 'contentType: application/json' trong $.ajax, điều gì có thể xảy ra?",
+        "Câu nào sau đây KHÔNG phải là hiệu ứng của jQuery?",
+        "Đoạn mã nào dưới đây sẽ hiển thị hộp thoại 'Hello jQuery' khi người dùng nhấn nút?"
+      ]
+    },
+    {
+      "file": "quiz_74.json",
+      "question_count": 20,
+      "questions": [
+        "MVC viết tắt của cụm từ nào?",
+        "Trong MVC, phần nào chịu trách nhiệm xử lý logic và điều hướng?",
+        "Thành phần nào trong MVC chứa dữ liệu và nghiệp vụ ứng dụng?",
+        "ASP.NET MVC khác WebForm ở điểm nào?",
+        "View trong MVC thường được viết bằng ngôn ngữ gì?",
+        "Cấu trúc dự án MVC gồm thư mục nào sau đây?",
+        "Tệp nào chịu trách nhiệm định nghĩa cấu trúc URL (routing)?",
+        "Mặc định, trang nào sẽ được gọi khi URL là rỗng?",
+        "Trong Controller, phương thức trả về View có kiểu dữ liệu nào?",
+        "Trong View, cú pháp hiển thị biến ViewBag.Message là:",
+        "Từ khóa nào được dùng để chỉ định phương thức xử lý POST trong Controller?",
+        "Đoạn code sau nằm ở đâu? <pre><code>return View();</code></pre>",
+        "Thuộc tính nào của ViewBag thường được dùng để truyền thông báo ra View?",
+        "Trong MVC, Razor sử dụng ký hiệu nào để chèn code C# vào HTML?",
+        "Đoạn code sau sẽ hiển thị gì? <pre><code>@ViewData[\"Name\"] = \"A\";&lt;h3&gt;@ViewData[\"Name\"]&lt;/h3&gt;</code></pre>",
+        "Phương thức nào trong Controller được gọi khi người dùng truy cập URL '/Home/About'?",
+        "Trong MVC, dữ liệu truyền qua ViewBag và ViewData có đặc điểm gì?",
+        "Để nhận dữ liệu form POST, ta khai báo tham số trong action như thế nào?",
+        "Câu lệnh nào sau đây dùng để hiển thị View 'Result' từ Controller?",
+        "Ưu điểm của ASP.NET MVC là gì?"
+      ]
+    },
+    {
+      "file": "quiz_75.json",
+      "question_count": 20,
+      "questions": [
+        "ASP.NET Core là phiên bản kế thừa của công nghệ nào?",
+        "ASP.NET Core có thể chạy trên những hệ điều hành nào?",
+        "Thành phần nào chịu trách nhiệm xử lý luồng request trong ASP.NET Core?",
+        "File nào trong dự án ASP.NET Core thay thế cho Web.config?",
+        "Trong Startup.cs, phương thức nào được dùng để thêm dịch vụ MVC?",
+        "Cấu trúc URL mặc định trong ASP.NET Core MVC là gì?",
+        "Trong Startup.cs, phương thức nào chịu trách nhiệm xử lý routing?",
+        "Lệnh nào dùng để tạo project ASP.NET Core MVC mới bằng CLI?",
+        "Trong file Startup.cs, khối lệnh app.UseEndpoints(...) có nhiệm vụ gì?",
+        "Phương thức nào trong Controller trả về View?",
+        "Trong ASP.NET Core, Dependency Injection (DI) dùng để làm gì?",
+        "Dịch vụ được đăng ký bằng lệnh services.AddScoped<IStudentService, StudentService>() sẽ:",
+        "Đoạn code env.IsDevelopment() trong Startup.cs dùng để:",
+        "Trong ASP.NET Core, file nào chứa hàm Main() để khởi động ứng dụng?",
+        "Đoạn mã sau in ra gì? <pre><code>ViewData[\"Msg\"] = \"Core MVC\";&lt;h3&gt;@ViewData[\"Msg\"]&lt;/h3&gt;</code></pre>",
+        "Phương thức nào được dùng để truy xuất chuỗi kết nối trong appsettings.json?",
+        "Khi truy cập URL '/Home/About', phương thức nào được gọi?",
+        "Để hiển thị file CSS hoặc JS trong wwwroot, cần gọi:",
+        "Ưu điểm nổi bật của ASP.NET Core MVC so với ASP.NET MVC cũ là gì?",
+        "Lệnh nào trong CLI dùng để chạy ứng dụng ASP.NET Core?"
+      ]
+    },
+    {
+      "file": "quiz_76.json",
+      "question_count": 20,
+      "questions": [
+        "CRUD viết tắt của các thao tác nào?",
+        "Công cụ nào trong ASP.NET Core cho phép tự động tạo Controller và View CRUD?",
+        "Để kết nối SQL Server, chuỗi kết nối được lưu ở đâu?",
+        "Trong EF Core, lớp kế thừa từ DbContext có vai trò gì?",
+        "Phương thức nào trong Controller dùng để lưu bản ghi mới vào CSDL?",
+        "Sau khi thêm bản ghi mới, ta gọi phương thức nào để ghi thay đổi vào CSDL?",
+        "Lệnh CLI nào tạo controller CRUD với EF Core?",
+        "Attribute nào trong Model được dùng để kiểm tra dữ liệu nhập?",
+        "Lệnh nào hiển thị danh sách sinh viên trong Controller?",
+        "Đoạn code nào hiển thị thông báo lỗi khi form nhập sai?",
+        "Phương thức nào dùng để cập nhật dữ liệu trong EF Core?",
+        "Để xóa một sinh viên, ta dùng:",
+        "Khi dùng [ValidateAntiForgeryToken], mục đích là gì?",
+        "Trong Razor View, cú pháp hiển thị tên sinh viên là:",
+        "Phương thức nào tìm sinh viên theo Id trong Controller?",
+        "Tệp nào chứa cấu hình chuỗi kết nối mặc định?",
+        "Lệnh nào chạy ứng dụng ASP.NET Core MVC?",
+        "Trong View, thẻ <form> cần có thuộc tính gì để gửi dữ liệu đến Controller?",
+        "Khi ModelState không hợp lệ, Controller nên làm gì?",
+        "Phần mở rộng của View trong ASP.NET Core MVC là gì?"
+      ]
+    },
+    {
+      "file": "quiz_77.json",
+      "question_count": 20,
+      "questions": [
+        "ViewData trong ASP.NET Core MVC là kiểu dữ liệu gì?",
+        "Phạm vi tồn tại của ViewBag là gì?",
+        "Câu lệnh nào đúng để truyền dữ liệu bằng ViewBag?",
+        "Để truyền dữ liệu qua nhiều request (Redirect), ta dùng:",
+        "Sau khi đọc, dữ liệu trong TempData sẽ:",
+        "Cú pháp lấy dữ liệu từ ViewData là:",
+        "Model Binding trong MVC dùng để:",
+        "Khi sử dụng Model Binding, tên thuộc tính input trong form phải:",
+        "Trong Controller, để trả về View cùng dữ liệu Model, ta dùng:",
+        "ViewBag và ViewData khác nhau ở điểm nào?",
+        "Đoạn code nào đúng để hiển thị dữ liệu từ ViewBag trong View?",
+        "Khi người dùng gửi form POST, ASP.NET Core sẽ:",
+        "Trong form Razor, thuộc tính asp-action dùng để:",
+        "Để hiển thị thông báo sau khi Redirect, ta nên dùng:",
+        "Đoạn code sau sẽ hiển thị gì? <pre><code>ViewData['Msg'] = 'Hello';&lt;p&gt;@ViewData['Msg']&lt;/p&gt;</code></pre>",
+        "TempData lưu dữ liệu bằng cơ chế nào?",
+        "Để kiểm tra ModelState hợp lệ trong POST Action, ta dùng:",
+        "Khi sử dụng AJAX, dữ liệu JSON gửi lên Controller sẽ được nhận bằng:",
+        "Câu nào đúng về vòng đời dữ liệu trong MVC?",
+        "Khi dữ liệu cần dùng nhiều lần trong cùng Controller, ta nên dùng:"
+      ]
+    },
+    {
+      "file": "quiz_78.json",
+      "question_count": 20,
+      "questions": [
+        "Routing trong ASP.NET Core MVC có nhiệm vụ gì?",
+        "Mẫu định tuyến mặc định trong ASP.NET Core là gì?",
+        "File nào thường chứa cấu hình định tuyến trong ASP.NET Core?",
+        "Đoạn code nào cấu hình route mặc định đúng?",
+        "Attribute Routing được định nghĩa ở đâu?",
+        "Cú pháp gán route attribute đúng là:",
+        "Trong route mặc định, tham số {id?} nghĩa là gì?",
+        "Khi truy cập /Home/About, hệ thống gọi:",
+        "Route constraint {id:int} nghĩa là gì?",
+        "Để định nghĩa nhiều route cho cùng một action, ta dùng:",
+        "Cách đặt tên cho route là:",
+        "Tag Helper nào tạo liên kết dựa vào controller/action?",
+        "Để truyền dữ liệu qua URL, ta có thể định nghĩa:",
+        "Khi có hai route trùng khớp, ASP.NET Core sẽ:",
+        "Lệnh CLI nào khởi chạy ứng dụng ASP.NET Core để test route?",
+        "Trong route '{controller=Home}/{action=Index}/{id?}', khi gõ /Product thì action nào được gọi?",
+        "Để giới hạn độ dài tham số name ≤ 10 ký tự, dùng constraint nào?",
+        "RouteConfig của ASP.NET MVC cũ tương đương file nào trong ASP.NET Core?",
+        "Khi muốn redirect đến route có tên 'student_detail', ta dùng:",
+        "Ưu điểm của Attribute Routing là gì?"
+      ]
+    },
+    {
+      "file": "quiz_79.json",
+      "question_count": 20,
+      "questions": [
+        "HTTP là giao thức có đặc điểm gì?",
+        "Session trong ASP.NET Core được lưu trữ ở đâu?",
+        "Cookie được lưu ở đâu?",
+        "Mặc định Session tồn tại trong bao lâu (nếu không cấu hình)?",
+        "Để bật Session, cần gọi phương thức nào trong middleware?",
+        "Câu lệnh lưu chuỗi vào Session đúng là:",
+        "Để đọc dữ liệu từ Session, ta dùng:",
+        "Phương thức nào xóa toàn bộ dữ liệu Session?",
+        "Câu lệnh tạo Cookie đúng là:",
+        "Để xóa Cookie có tên 'User', ta dùng:",
+        "Thuộc tính nào của Cookie cho phép đặt thời hạn hết hạn?",
+        "Cookie có kích thước tối đa bao nhiêu?",
+        "TempData lưu dữ liệu qua cơ chế nào?",
+        "Sau khi đọc, dữ liệu TempData sẽ:",
+        "Session phù hợp dùng cho mục đích nào?",
+        "Cookie phù hợp cho mục đích nào?",
+        "Cách đọc cookie đúng là:",
+        "Khi người dùng đăng xuất, nên làm gì với Session?",
+        "Thuộc tính nào của Cookie giúp chỉ truy cập qua HTTPS?",
+        "Ưu điểm của Session so với Cookie là:"
+      ]
+    },
+    {
+      "file": "quiz_80.json",
+      "question_count": 20,
+      "questions": [
+        "Authentication là gì?",
+        "Authorization là gì?",
+        "Thuộc tính nào cho phép bảo vệ Action chỉ cho người đăng nhập?",
+        "Câu nào cho phép truy cập công khai?",
+        "Phương thức nào dùng để đăng nhập người dùng trong Cookie Authentication?",
+        "Phương thức đăng xuất là:",
+        "Trong cấu hình Authentication, LoginPath dùng để:",
+        "AccessDeniedPath là gì?",
+        "Thuộc tính nào dùng để kiểm tra vai trò người dùng?",
+        "Đối tượng nào chứa thông tin người dùng hiện tại?",
+        "Câu nào in ra tên người dùng đã đăng nhập?",
+        "ClaimsIdentity dùng để:",
+        "Câu lệnh nào tạo cookie xác thực?",
+        "Thuộc tính nào kiểm tra người dùng đã đăng nhập hay chưa?",
+        "Khi sử dụng [Authorize(Roles = 'Admin')], người dùng cần có:",
+        "Phương thức nào xóa thông tin đăng nhập hiện tại?",
+        "Trang /Account/Login nên được đánh dấu bằng:",
+        "Khi chưa đăng nhập mà truy cập [Authorize], ASP.NET Core sẽ:",
+        "Một người dùng có thể có nhiều Role không?",
+        "Ưu điểm của Cookie Authentication là:"
+      ]
+    },
+    {
+      "file": "quiz_81.json",
+      "question_count": 20,
+      "questions": [
+        "ASP.NET Identity là gì?",
+        "ASP.NET Identity thường kết hợp với công nghệ nào để lưu dữ liệu?",
+        "Tên bảng chứa thông tin người dùng trong Identity là:",
+        "Lớp mặc định đại diện cho người dùng trong Identity là:",
+        "Để đăng ký người dùng mới, phương thức nào được gọi?",
+        "Đăng nhập người dùng được thực hiện bởi:",
+        "Đăng xuất người dùng được thực hiện bằng:",
+        "Role trong Identity dùng để:",
+        "Bảng lưu mối quan hệ giữa người dùng và vai trò là:",
+        "Để tạo vai trò mới, dùng phương thức nào?",
+        "Để gán người dùng vào role, dùng:",
+        "Cấu hình Identity được thêm bằng:",
+        "Để lưu thông tin tài khoản, Identity sử dụng cơ chế nào?",
+        "Thuộc tính LoginPath trong CookieOptions dùng để:",
+        "Identity lưu mật khẩu người dùng dưới dạng:",
+        "Khi đăng nhập sai nhiều lần, Identity có thể:",
+        "Phương thức tạo database cho Identity:",
+        "Khi người dùng đã đăng nhập, tên hiển thị trong View lấy từ:",
+        "Để bảo vệ Action chỉ cho phép Role Admin, dùng:",
+        "Ưu điểm của ASP.NET Identity là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_70_submissions.json",
+      "count": 24,
+      "average_score": 16.96,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 70,
+          "submission_id": 710,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 70,
+          "submission_id": 866,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 70,
+          "submission_id": 940,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 70,
+          "submission_id": 1295,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 70,
+          "submission_id": 1394,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_71_submissions.json",
+      "count": 24,
+      "average_score": 16.96,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 71,
+          "submission_id": 1167,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 71,
+          "submission_id": 1720,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 71,
+          "submission_id": 860,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 71,
+          "submission_id": 951,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 71,
+          "submission_id": 1300,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_72_submissions.json",
+      "count": 24,
+      "average_score": 17.12,
+      "top_5_students": [
+        {
+          "user_id": 57,
+          "quiz_id": 72,
+          "submission_id": 1441,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 72,
+          "submission_id": 672,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 72,
+          "submission_id": 947,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 72,
+          "submission_id": 1058,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 72,
+          "submission_id": 1296,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_73_submissions.json",
+      "count": 23,
+      "average_score": 17.26,
+      "top_5_students": [
+        {
+          "user_id": 45,
+          "quiz_id": 73,
+          "submission_id": 948,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 73,
+          "submission_id": 1159,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 73,
+          "submission_id": 1532,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 73,
+          "submission_id": 1589,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 73,
+          "submission_id": 676,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_74_submissions.json",
+      "count": 24,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 74,
+          "submission_id": 1060,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 74,
+          "submission_id": 859,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 74,
+          "submission_id": 1301,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 74,
+          "submission_id": 1436,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 74,
+          "submission_id": 1540,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_75_submissions.json",
+      "count": 24,
+      "average_score": 16.88,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 75,
+          "submission_id": 1166,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 75,
+          "submission_id": 943,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 75,
+          "submission_id": 1055,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 75,
+          "submission_id": 1299,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 75,
+          "submission_id": 1580,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_76_submissions.json",
+      "count": 24,
+      "average_score": 16.92,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 76,
+          "submission_id": 671,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 76,
+          "submission_id": 862,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 76,
+          "submission_id": 1388,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 60,
+          "quiz_id": 76,
+          "submission_id": 1586,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 76,
+          "submission_id": 946,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_77_submissions.json",
+      "count": 24,
+      "average_score": 17.08,
+      "top_5_students": [
+        {
+          "user_id": 39,
+          "quiz_id": 77,
+          "submission_id": 680,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 77,
+          "submission_id": 1541,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 77,
+          "submission_id": 1438,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 77,
+          "submission_id": 865,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 77,
+          "submission_id": 944,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_78_submissions.json",
+      "count": 24,
+      "average_score": 17.08,
+      "top_5_students": [
+        {
+          "user_id": 44,
+          "quiz_id": 78,
+          "submission_id": 864,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 78,
+          "submission_id": 1386,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 78,
+          "submission_id": 1442,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 78,
+          "submission_id": 1531,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 78,
+          "submission_id": 678,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_79_submissions.json",
+      "count": 23,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 54,
+          "quiz_id": 79,
+          "submission_id": 1290,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 42,
+          "quiz_id": 79,
+          "submission_id": 802,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 79,
+          "submission_id": 1057,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 79,
+          "submission_id": 674,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 79,
+          "submission_id": 715,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_80_submissions.json",
+      "count": 23,
+      "average_score": 16.96,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 80,
+          "submission_id": 1065,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 80,
+          "submission_id": 1396,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 57,
+          "quiz_id": 80,
+          "submission_id": 1434,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 63,
+          "quiz_id": 80,
+          "submission_id": 1713,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 80,
+          "submission_id": 677,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_81_submissions.json",
+      "count": 24,
+      "average_score": 17.25,
+      "top_5_students": [
+        {
+          "user_id": 60,
+          "quiz_id": 81,
+          "submission_id": 1588,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 81,
+          "submission_id": 679,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 44,
+          "quiz_id": 81,
+          "submission_id": 857,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 45,
+          "quiz_id": 81,
+          "submission_id": 941,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 81,
+          "submission_id": 1059,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

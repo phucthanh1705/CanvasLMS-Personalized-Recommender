@@ -1,0 +1,549 @@
+{
+  "id": "module_64",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-ve-mang",
+      "title": "lesson_bai-1-tong-quan-ve-mang"
+    },
+    {
+      "id": "lesson_bai-10-cau-hinh-co-ban-router",
+      "title": "lesson_bai-10-cau-hinh-co-ban-router"
+    },
+    {
+      "id": "lesson_bai-11-dia-chi-ipv4",
+      "title": "lesson_bai-11-dia-chi-ipv4"
+    },
+    {
+      "id": "lesson_bai-12-dia-chi-ipv6",
+      "title": "lesson_bai-12-dia-chi-ipv6"
+    },
+    {
+      "id": "lesson_bai-13-icmp-internet-control-message-protocol",
+      "title": "lesson_bai-13-icmp-internet-control-message-protocol"
+    },
+    {
+      "id": "lesson_bai-14-tang-transport",
+      "title": "lesson_bai-14-tang-transport"
+    },
+    {
+      "id": "lesson_bai-15-tang-application",
+      "title": "lesson_bai-15-tang-application"
+    },
+    {
+      "id": "lesson_bai-2-cau-hinh-thiet-bi-dau-cuoi-va-switch",
+      "title": "lesson_bai-2-cau-hinh-thiet-bi-dau-cuoi-va-switch"
+    },
+    {
+      "id": "lesson_bai-3-cac-giao-thuc-va-mo-hinh",
+      "title": "lesson_bai-3-cac-giao-thuc-va-mo-hinh"
+    },
+    {
+      "id": "lesson_bai-4-tang-physical-vat-lu",
+      "title": "lesson_bai-4-tang-physical-vat-lu"
+    },
+    {
+      "id": "lesson_bai-5-cac-he-co-so-trong-mang-may-tinh",
+      "title": "lesson_bai-5-cac-he-co-so-trong-mang-may-tinh"
+    },
+    {
+      "id": "lesson_bai-6-tang-data-link-lien-ket-du-lieu",
+      "title": "lesson_bai-6-tang-data-link-lien-ket-du-lieu"
+    },
+    {
+      "id": "lesson_bai-7-ethernet-switching",
+      "title": "lesson_bai-7-ethernet-switching"
+    },
+    {
+      "id": "lesson_bai-8-tang-network",
+      "title": "lesson_bai-8-tang-network"
+    },
+    {
+      "id": "lesson_bai-9-phan-giai-dia-chi",
+      "title": "lesson_bai-9-phan-giai-dia-chi"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_232.json",
+      "question_count": 20,
+      "questions": [
+        "Thiết bị nào sau đây được xem là host trong mạng máy tính?",
+        "Mô hình nào cho phép các máy tính chia sẻ tài nguyên trực tiếp không qua máy chủ trung tâm?",
+        "Trong mô hình Star topology, thiết bị trung tâm thường là gì?",
+        "Điểm khác biệt chính giữa LAN và WAN là gì?",
+        "Intranet và Extranet khác nhau ở đặc điểm nào?",
+        "Một công ty muốn kết nối nhiều chi nhánh tại các quốc gia khác nhau. Loại mạng phù hợp là gì?",
+        "Để đảm bảo mạng hoạt động khi một node bị lỗi, nên chọn topology nào?",
+        "Vì sao QoS (Quality of Service) quan trọng trong hệ thống mạng truyền video trực tuyến?",
+        "Trong một mạng doanh nghiệp, việc sử dụng MPLS thay vì VPN thường nhằm mục tiêu gì?",
+        "Kỹ thuật truy cập Internet nào sau đây có tốc độ cao và ổn định nhất?",
+        "Giao tiếp video, hội nghị trực tuyến thuộc loại ứng dụng nào trong mạng?",
+        "Để bảo vệ người dùng khỏi truy cập trái phép vào hệ thống nội bộ, ta nên triển khai:",
+        "Khi mạng có quá nhiều thiết bị IoT, yếu tố nào cần được tăng cường để duy trì hiệu năng?",
+        "Điện toán đám mây (Cloud Computing) liên quan trực tiếp đến yếu tố nào của mạng?",
+        "Thiết bị nào dùng để kết nối nhiều mạng khác nhau?",
+        "Nếu một tổ chức cần phân tách lưu lượng giữa các phòng ban nhưng vẫn dùng chung hạ tầng vật lý, họ nên dùng kỹ thuật nào?",
+        "Điểm yếu chính của mô hình Bus topology là gì?",
+        "Nếu tất cả thiết bị trong mạng đều dừng hoạt động khi một node lỗi, mạng đó có thể thuộc topology nào?",
+        "Khi người dùng truy cập trang web https://, yếu tố bảo mật nào đang được áp dụng?",
+        "Trong hệ thống mạng hội tụ tích hợp thoại, video và dữ liệu, yếu tố nào cần tối ưu nhất để tránh giật lag?"
+      ]
+    },
+    {
+      "file": "quiz_233.json",
+      "question_count": 20,
+      "questions": [
+        "Cisco IOS là viết tắt của cụm từ nào?",
+        "Trong chế độ EXEC người dùng có dấu nhắc là gì?",
+        "Lệnh nào dùng để chuyển từ chế độ User EXEC sang Privileged EXEC?",
+        "Phím tắt nào hiển thị danh sách lệnh có thể dùng trong IOS?",
+        "Lệnh nào dùng để lưu cấu hình hiện tại vào bộ nhớ khởi động?",
+        "Khi bạn muốn đặt tên router là R1, lệnh nào đúng?",
+        "Lệnh nào dùng để xem danh sách các cổng mạng và IP đang cấu hình?",
+        "Nếu cấu hình IP đúng nhưng cổng không hoạt động, cần kiểm tra lệnh nào?",
+        "Khi cấu hình mật khẩu cho console, bạn cần nhập vào chế độ nào?",
+        "Cấu hình banner cảnh báo bảo mật sử dụng lệnh nào?",
+        "Lệnh nào được dùng để xóa cấu hình khởi động của router?",
+        "Lệnh cấu hình IP cho interface đúng cú pháp là gì?",
+        "Tại sao nên sử dụng enable secret thay vì enable password?",
+        "Sau khi cấu hình VLAN, để áp dụng thay đổi ta cần:",
+        "Dấu nhắc (prompt) nào cho biết bạn đang ở chế độ cấu hình interface?",
+        "Bạn cấu hình IP 192.168.10.1/24 trên interface FastEthernet0/0. Lệnh đúng là:",
+        "Nếu sau khi reload router mất toàn bộ cấu hình, nguyên nhân có thể là:",
+        "Vì sao cần tắt (shutdown) các cổng không sử dụng trên switch?",
+        "Trong môi trường doanh nghiệp, truy cập thiết bị qua Telnet bị thay thế bởi SSH vì lý do gì?",
+        "Nếu bạn gõ nhầm lệnh và router tự động chuyển sang chế độ DNS lookup, bạn có thể tắt bằng lệnh:"
+      ]
+    },
+    {
+      "file": "quiz_234.json",
+      "question_count": 20,
+      "questions": [
+        "Mục đích chính của giao thức mạng là gì?",
+        "Tầng nào của mô hình OSI chịu trách nhiệm định tuyến gói tin?",
+        "Giao thức TCP hoạt động ở tầng nào trong mô hình OSI?",
+        "Sự khác biệt chính giữa TCP và UDP là gì?",
+        "Tầng Presentation trong OSI có chức năng nào sau đây?",
+        "Khi bạn truy cập trang web, giao thức nào hoạt động ở tầng ứng dụng?",
+        "Quy trình đóng gói dữ liệu được thực hiện theo thứ tự nào?",
+        "Trong mô hình TCP/IP, tầng nào tương ứng với tầng Liên kết dữ liệu của OSI?",
+        "Khi một máy tính không thể truy cập mạng do lỗi MAC, vấn đề thuộc tầng nào của OSI?",
+        "Nếu lỗi định tuyến xảy ra, bạn nên kiểm tra tầng nào trong mô hình OSI?",
+        "Giao thức nào dưới đây không thuộc tầng mạng?",
+        "Cơ quan nào chịu trách nhiệm duy trì các tiêu chuẩn giao thức Internet?",
+        "Tầng vật lý (Physical) chịu trách nhiệm:",
+        "Một gói tin bị mất trong quá trình truyền, tầng nào sẽ đảm nhiệm việc gửi lại?",
+        "Giao thức CSMA/CD được sử dụng trong công nghệ nào?",
+        "Vì sao mô hình OSI quan trọng dù Internet hiện nay dùng TCP/IP?",
+        "Nếu người dùng nhận được dữ liệu sai định dạng, vấn đề nằm ở tầng nào?",
+        "Đóng gói dữ liệu giúp ích gì cho mạng đa tầng?",
+        "Một ứng dụng gửi file qua mạng dùng TCP thay vì UDP vì:",
+        "Khi thiết kế ứng dụng streaming video, tại sao UDP thường được chọn thay vì TCP?"
+      ]
+    },
+    {
+      "file": "quiz_235.json",
+      "question_count": 20,
+      "questions": [
+        "Tầng vật lý chịu trách nhiệm chính về điều gì?",
+        "Đơn vị đo tốc độ truyền dữ liệu của tầng vật lý là gì?",
+        "Phương thức truyền nào cho phép gửi và nhận đồng thời?",
+        "Chuẩn IEEE nào quy định về Ethernet?",
+        "Loại cáp nào chống nhiễu tốt nhất?",
+        "Nếu cần kết nối PC với Switch, bạn nên dùng loại cáp nào?",
+        "Một mạng Wi-Fi hoạt động ở 2.4GHz thuộc chuẩn nào?",
+        "Khi dây mạng quá dài vượt 100m, hiện tượng nào có thể xảy ra?",
+        "T568A và T568B khác nhau ở điểm nào?",
+        "Loại cáp nào truyền xa nhất trong mạng backbone?",
+        "Đèn LED trên cổng mạng thường báo hiệu điều gì?",
+        "Cáp UTP có bao nhiêu cặp dây xoắn?",
+        "Tại sao cáp quang có bảo mật tốt hơn cáp đồng?",
+        "Khi cần truyền dữ liệu qua môi trường có nhiều nhiễu điện từ, nên chọn:",
+        "Một kỹ sư kiểm tra dây mạng bằng thiết bị đo và thấy tín hiệu phản hồi cao (echo). Nguyên nhân có thể là:",
+        "Chuẩn nào cho phép truyền tín hiệu ở tốc độ 10 Gbps và khoảng cách 100m?",
+        "Wi-Fi 5 (802.11ac) hoạt động chủ yếu ở băng tần nào?",
+        "Tại sao khi kéo dây mạng gần nguồn điện cao thế, tín hiệu dễ bị suy giảm?",
+        "Trong hệ thống mạng tốc độ cao, việc sử dụng cáp Cat5e thay cho Cat6 có thể gây ra:",
+        "Một kỹ sư thiết kế cần mạng nội bộ 10Gbps trong tòa nhà. Giải pháp tối ưu về chi phí và hiệu năng là:"
+      ]
+    },
+    {
+      "file": "quiz_236.json",
+      "question_count": 20,
+      "questions": [
+        "Cơ số của hệ nhị phân là bao nhiêu?",
+        "Hệ thập lục phân sử dụng bao nhiêu ký hiệu?",
+        "Giá trị của 1010(2) tương đương bao nhiêu ở hệ 10?",
+        "Số 255(10) tương đương bao nhiêu ở hệ 16?",
+        "Số nhị phân 11110000(2) tương đương bao nhiêu ở hệ thập lục phân?",
+        "Biểu diễn 192(10) ở dạng nhị phân là gì?",
+        "Địa chỉ IP 192.168.1.1 gồm bao nhiêu bit?",
+        "Trong IPv6, mỗi nhóm ký hiệu biểu diễn bao nhiêu bit?",
+        "Giá trị Hex 0x1A tương đương bao nhiêu ở hệ 10?",
+        "Số 11001000(2) tương đương bao nhiêu ở hệ 10?",
+        "Tính kết quả phép AND giữa IP 192.168.1.10 và Subnet Mask 255.255.255.0",
+        "Trong mã Hex, ký tự A đại diện cho giá trị nào ở hệ thập phân?",
+        "Địa chỉ MAC 00:1A:2B:3C:4D:5E sử dụng hệ cơ số nào?",
+        "Tại sao hệ nhị phân được máy tính sử dụng thay vì hệ thập phân?",
+        "Số 7F(16) tương đương bao nhiêu ở hệ 10?",
+        "Subnet mask /26 có bao nhiêu bit dùng cho phần mạng?",
+        "Tính số lượng host khả dụng trong mạng /29.",
+        "Một địa chỉ IPv6 có bao nhiêu bit?",
+        "Khi rút gọn địa chỉ IPv6 2001:0DB8:0000:0000:0000:0000:0000:1, kết quả đúng là:",
+        "Tại sao kỹ sư mạng cần hiểu rõ hệ cơ số khi cấu hình IP?"
+      ]
+    },
+    {
+      "file": "quiz_237.json",
+      "question_count": 20,
+      "questions": [
+        "Tầng Data Link nằm ở vị trí nào trong mô hình OSI?",
+        "Tên gọi của đơn vị dữ liệu ở tầng Liên kết dữ liệu là gì?",
+        "Mục đích chính của tầng Data Link là gì?",
+        "Địa chỉ MAC gồm bao nhiêu bit?",
+        "Thành phần nào của Frame dùng để phát hiện lỗi?",
+        "Khi Switch không có địa chỉ MAC đích trong bảng CAM, nó sẽ làm gì?",
+        "Cơ chế CSMA/CD được sử dụng trong công nghệ nào?",
+        "Hai thành phần con của tầng Data Link là gì?",
+        "Switch hoạt động chủ yếu dựa trên địa chỉ nào?",
+        "Công nghệ nào sử dụng cơ chế Token Passing?",
+        "Mỗi card mạng (NIC) có địa chỉ MAC được cấp bởi:",
+        "Chuẩn IEEE 802.11 tương ứng với công nghệ nào?",
+        "Cơ chế phát hiện lỗi CRC hoạt động như thế nào?",
+        "Frame Ethernet có kích thước tối đa là bao nhiêu byte?",
+        "Khi có hai thiết bị cùng truyền trên Ethernet, điều gì xảy ra?",
+        "Khi dùng Wi-Fi, cơ chế nào được áp dụng để tránh xung đột tín hiệu?",
+        "Khi bạn kết nối hai switch bằng cáp thẳng, điều gì xảy ra nếu không bật Auto MDI-X?",
+        "Tại sao tầng Data Link lại chia làm hai phần LLC và MAC?",
+        "Nếu FCS báo lỗi, thiết bị nhận sẽ:",
+        "Tầng Data Link được xem là nền tảng của LAN vì:"
+      ]
+    },
+    {
+      "file": "quiz_238.json",
+      "question_count": 20,
+      "questions": [
+        "Ethernet Frame có kích thước tối thiểu là bao nhiêu byte?",
+        "Thành phần nào trong Frame chứa mã kiểm tra lỗi?",
+        "MAC Address dài bao nhiêu bit?",
+        "Địa chỉ MAC có chức năng gì?",
+        "Khi switch nhận được khung dữ liệu có MAC đích không nằm trong bảng MAC, nó sẽ:",
+        "Switch học địa chỉ MAC bằng cách nào?",
+        "Phương thức Store-and-Forward có đặc điểm gì?",
+        "Phương thức nào phù hợp với mạng yêu cầu độ chính xác cao?",
+        "Nếu hai switch cùng tốc độ nhưng khác phương thức forwarding, điều nào đúng?",
+        "Trường Type/Length trong Ethernet Frame có kích thước bao nhiêu byte?",
+        "MAC Table của switch bị đầy sẽ dẫn đến điều gì?",
+        "Bảng MAC được lưu trong bộ nhớ nào của switch?",
+        "Khi hai thiết bị cùng MAC trên hai cổng khác nhau, switch sẽ:",
+        "Tốc độ 1 Gbps tương ứng với loại Ethernet nào?",
+        "Nếu một switch cấu hình chế độ Fragment-Free, nó sẽ gửi Frame khi:",
+        "Ethernet hoạt động ở tầng nào của mô hình OSI?",
+        "Làm sao để xóa toàn bộ MAC Table trên switch Cisco?",
+        "Vì sao phương thức Cut-Through phù hợp cho môi trường game hoặc streaming?",
+        "Một Frame Ethernet có kích thước 1518 byte bao gồm gì?",
+        "Tại sao switch được xem là thiết bị thông minh hơn hub?"
+      ]
+    },
+    {
+      "file": "quiz_239.json",
+      "question_count": 20,
+      "questions": [
+        "Tầng Network là tầng thứ mấy trong mô hình OSI?",
+        "Đơn vị dữ liệu ở tầng Network được gọi là gì?",
+        "Thiết bị nào hoạt động ở tầng Network?",
+        "Địa chỉ IP được gọi là loại địa chỉ gì?",
+        "Trường TTL trong gói IPv4 có ý nghĩa gì?",
+        "Giao thức nào xác định tầng Transport được sử dụng trong gói IP?",
+        "IPv4 sử dụng bao nhiêu bit cho địa chỉ?",
+        "IPv6 sử dụng bao nhiêu bit cho địa chỉ?",
+        "So sánh IPv6 với IPv4, điểm khác biệt chính là:",
+        "Router sử dụng thông tin nào để quyết định gửi gói tin?",
+        "Trên Windows, lệnh nào hiển thị bảng định tuyến?",
+        "Trường nào trong IPv4 xác định tầng Transport?",
+        "Tại sao IPv6 không có trường Checksum?",
+        "Địa chỉ 0.0.0.0/0 trong bảng định tuyến biểu thị điều gì?",
+        "Khi gói tin vượt quá MTU, router sẽ:",
+        "Trên Linux, lệnh thêm tuyến tĩnh là gì?",
+        "Trong gói IPv6, trường Next Header tương đương với trường nào trong IPv4?",
+        "Một router có hai tuyến đến cùng mạng đích, nó sẽ chọn tuyến nào?",
+        "Khi TTL = 0, gói tin sẽ:",
+        "Điểm khác biệt lớn nhất giữa định tuyến tĩnh và động là gì?"
+      ]
+    },
+    {
+      "file": "quiz_240.json",
+      "question_count": 20,
+      "questions": [
+        "Địa chỉ MAC hoạt động ở tầng nào của mô hình OSI?",
+        "Địa chỉ IP thuộc tầng nào của mô hình OSI?",
+        "Mục đích của giao thức ARP là gì?",
+        "Gói ARP Request được gửi dưới dạng nào?",
+        "Gói ARP Reply được gửi dưới dạng nào?",
+        "Lệnh nào trên Windows dùng để xem bảng ARP cache?",
+        "Khi nào một host xóa thông tin trong ARP cache?",
+        "Điều gì xảy ra nếu có hai thiết bị có cùng IP trong mạng LAN?",
+        "ARP Spoofing có thể gây ra hậu quả gì?",
+        "Công cụ nào giúp chống lại ARP Spoofing trên switch Cisco?",
+        "Trong IPv6, giao thức nào thay thế ARP?",
+        "Neighbor Solicitation trong IPv6 tương đương với gì trong IPv4?",
+        "Neighbor Advertisement trong IPv6 tương đương với gì trong IPv4?",
+        "Tại sao IPv6 không cần broadcast để phân giải địa chỉ?",
+        "Thông điệp nào trong NDP cho phép router quảng bá thông tin đến host?",
+        "Giải pháp bảo mật nào cho NDP?",
+        "ARP hoạt động ở tầng nào trong mô hình OSI?",
+        "Khi ARP Reply giả mạo xuất hiện, điều gì có thể xảy ra?",
+        "Lệnh nào trong Linux để hiển thị Neighbor Cache?",
+        "Điểm khác biệt lớn nhất giữa ARP và NDP là gì?"
+      ]
+    },
+    {
+      "file": "quiz_241.json",
+      "question_count": 20,
+      "questions": [
+        "Router hoạt động ở tầng nào của mô hình OSI?",
+        "Lệnh nào dùng để vào chế độ cấu hình toàn cục?",
+        "Chế độ nào có dấu nhắc ‘#’ trên router Cisco?",
+        "Lệnh ‘no shutdown’ có tác dụng gì?",
+        "Để cấu hình IP cho cổng GigabitEthernet 0/0, dùng lệnh nào?",
+        "Lệnh nào dùng để lưu cấu hình hiện tại vào bộ nhớ khởi động?",
+        "Lệnh nào hiển thị danh sách IP trên tất cả các interface?",
+        "Nếu cổng hiển thị trạng thái ‘administratively down’, điều đó có nghĩa là gì?",
+        "Cấu hình default route trên router được thực hiện bằng lệnh nào?",
+        "Hostname của router được đặt bằng lệnh nào?",
+        "Lệnh nào cho phép kiểm tra bảng định tuyến hiện tại của router?",
+        "Nếu quên lưu cấu hình, điều gì xảy ra khi router khởi động lại?",
+        "Router có bao nhiêu bảng quan trọng chính?",
+        "Banner MOTD dùng để làm gì?",
+        "Làm thế nào để bật giao diện bị tắt thủ công?",
+        "Khi cấu hình static route sai gateway, điều gì xảy ra?",
+        "Tuyến ‘S* 0.0.0.0/0 via 192.168.2.1’ trong bảng định tuyến có nghĩa gì?",
+        "Router dùng bảng định tuyến để:",
+        "Nếu một router có hai tuyến đến cùng đích, nó chọn tuyến nào?",
+        "Vì sao việc lưu cấu hình startup là cần thiết?"
+      ]
+    },
+    {
+      "file": "quiz_242.json",
+      "question_count": 20,
+      "questions": [
+        "Địa chỉ IPv4 dài bao nhiêu bit?",
+        "Dải địa chỉ Private Class C là gì?",
+        "Địa chỉ broadcast của mạng 192.168.1.0/24 là:",
+        "Địa chỉ loopback được sử dụng để:",
+        "Một mạng /26 có bao nhiêu host khả dụng?",
+        "Subnet mask của /27 tương ứng là:",
+        "Địa chỉ đầu tiên trong một mạng con được gọi là gì?",
+        "Số subnet khi mượn 3 bit từ phần host là:",
+        "Tính subnet mask khi mượn 2 bit từ /24:",
+        "Số host tối đa trong mạng /30 là:",
+        "Địa chỉ 169.254.x.x được cấp khi nào?",
+        "Trong mạng 192.168.10.0/26, địa chỉ usable đầu tiên và cuối cùng là:",
+        "Địa chỉ 10.0.0.0/8 thuộc lớp nào?",
+        "Một công ty cần 5 mạng, mỗi mạng 25 host. Nên chọn subnet mask nào?",
+        "Địa chỉ nào sau đây là broadcast của mạng 10.1.4.0/22?",
+        "Địa chỉ nào thuộc dải Multicast?",
+        "Một mạng /25 có thể chia thành bao nhiêu mạng /27?",
+        "Vì sao cần dùng VLSM thay vì chia subnet đều?",
+        "Subnet mask 255.255.255.128 tương ứng với tiền tố nào?",
+        "Khi thiết kế mạng, tiêu chí quan trọng nhất của việc chia subnet là gì?"
+      ]
+    },
+    {
+      "file": "quiz_243.json",
+      "question_count": 20,
+      "questions": [
+        "IPv6 dài bao nhiêu bit?",
+        "Dạng rút gọn của địa chỉ 2001:0DB8:0000:0000:0000:8A2E:0370:7334 là:",
+        "Địa chỉ IPv6 bắt đầu bằng FE80:: thuộc loại nào?",
+        "IPv6 không có cơ chế nào sau đây?",
+        "Prefix /64 có bao nhiêu bit dành cho phần host?",
+        "GUA (Global Unicast Address) trong IPv6 tương tự với loại địa chỉ nào trong IPv4?",
+        "Địa chỉ IPv6 nào là Multicast?",
+        "Khi host dùng SLAAC để tự động cấu hình IPv6, router gửi bản tin gì?",
+        "Địa chỉ bắt đầu bằng FC00::/7 thuộc loại nào?",
+        "Địa chỉ FE80::A00:27FF:FE4E:66A1 dùng để:",
+        "IPv6 Anycast gửi dữ liệu đến:",
+        "Lệnh cấu hình địa chỉ IPv6 trên Cisco router là:",
+        "Vì sao IPv6 không cần NAT như IPv4?",
+        "Địa chỉ nào trong IPv6 là loopback?",
+        "Khi router gửi RA, nó chứa thông tin nào?",
+        "Nếu một host chỉ có FE80::, nó có thể truy cập Internet không?",
+        "Multicast FF02::2 tương ứng nhóm nào?",
+        "Khi chia 2001:DB8::/48 thành /64, ta được bao nhiêu mạng con?",
+        "Ưu điểm nổi bật nhất của IPv6 là gì?",
+        "Trong IPv6, Router Advertisement định kỳ có vai trò gì?"
+      ]
+    },
+    {
+      "file": "quiz_244.json",
+      "question_count": 20,
+      "questions": [
+        "ICMP hoạt động ở tầng nào của mô hình OSI?",
+        "Ping sử dụng loại thông điệp ICMP nào?",
+        "Trường 'TTL' trong phản hồi ping cho biết:",
+        "ICMP được đóng gói bên trong giao thức nào?",
+        "Lệnh nào dùng để kiểm tra đường đi của gói tin?",
+        "Type của gói ICMP Echo Request là bao nhiêu?",
+        "Thông điệp ICMP Type 3 (Destination Unreachable) xảy ra khi:",
+        "Khi TTL = 0, router sẽ gửi lại thông điệp gì?",
+        "Một router nhận được ICMP Redirect, điều đó có nghĩa là:",
+        "Khi ping 8.8.8.8 nhưng không nhận phản hồi, nguyên nhân có thể là:",
+        "Gói ICMP có thể mang dữ liệu ứng dụng không?",
+        "Lệnh 'ping -t 8.8.8.8' trong Windows có ý nghĩa gì?",
+        "Traceroute xác định các router trung gian bằng cách sử dụng:",
+        "Gói ICMP có giá trị Protocol field trong header IP là:",
+        "ICMP thường bị chặn trong tường lửa vì lý do gì?",
+        "Khi một thiết bị nhận được thông điệp 'Destination Port Unreachable', nguyên nhân là:",
+        "Ping báo 'Request Timed Out' nhưng traceroute vẫn chạy được, nguyên nhân có thể là:",
+        "Sự khác biệt chính giữa ICMPv4 và ICMPv6 là:",
+        "Nếu ping một địa chỉ nhưng chỉ thấy 'Destination host unreachable', lỗi nằm ở đâu?",
+        "Khi thiết kế bảo mật, nên xử lý ICMP thế nào?"
+      ]
+    },
+    {
+      "file": "quiz_245.json",
+      "question_count": 20,
+      "questions": [
+        "Tầng Transport trong mô hình OSI có chức năng chính là gì?",
+        "Giao thức nào là hướng kết nối?",
+        "Cờ nào được sử dụng trong quá trình bắt tay TCP?",
+        "UDP phù hợp với loại ứng dụng nào sau đây?",
+        "Port 80 được dùng cho giao thức nào?",
+        "Trong quá trình kết thúc kết nối TCP, có bao nhiêu bước (handshake)?",
+        "Nếu một ứng dụng cần độ trễ thấp nhưng không yêu cầu tin cậy, nên dùng:",
+        "Cờ TCP nào thể hiện việc kết thúc phiên kết nối?",
+        "Số port tối đa có thể tồn tại trong một giao thức là:",
+        "Cơ chế nào trong TCP dùng để tránh tràn bộ đệm phía nhận?",
+        "Trong 3-way handshake, gói tin thứ hai có chứa cờ gì?",
+        "Giao thức nào dùng cho DNS Query?",
+        "Cờ TCP PSH có nghĩa là gì?",
+        "Well-known port nằm trong khoảng nào?",
+        "Khi TCP phát hiện mất gói, nó sẽ:",
+        "Nếu client gửi SYN mà không nhận SYN-ACK, lỗi có thể là:",
+        "Congestion Control trong TCP được dùng để:",
+        "Wireshark hiển thị cờ TCP SYN, nghĩa là:",
+        "Lý do chính khiến TCP phù hợp cho HTTPS và Email:",
+        "Tại sao UDP thường được chọn cho trò chơi trực tuyến?"
+      ]
+    },
+    {
+      "file": "quiz_246.json",
+      "question_count": 20,
+      "questions": [
+        "Tầng Application thuộc tầng số mấy trong mô hình OSI?",
+        "Tầng Presentation có chức năng chính là gì?",
+        "Mô hình Peer-to-Peer có đặc điểm nào sau đây?",
+        "Giao thức nào dùng để gửi email?",
+        "Port mặc định của HTTPS là:",
+        "Giao thức nào dùng để phân giải tên miền thành IP?",
+        "Trong quy trình DORA của DHCP, bước 'Offer' có ý nghĩa gì?",
+        "POP3 khác IMAP ở điểm nào?",
+        "Giao thức FTP dùng các port nào?",
+        "Khi bạn truy cập https://example.com, trình tự giao thức là:",
+        "TFTP khác FTP ở điểm nào?",
+        "Nếu DNS server không phản hồi, hệ quả là gì?",
+        "Port 53 được sử dụng cho dịch vụ nào?",
+        "Bước nào trong DORA client chính thức nhận IP?",
+        "Giao thức IMAP thích hợp cho người dùng di động vì:",
+        "Giao thức nào chịu trách nhiệm cấp IP động?",
+        "Khi tải file qua FTP, dữ liệu được truyền qua port nào?",
+        "SMB hoạt động ở môi trường nào chủ yếu?",
+        "Khi truy cập web mà nhận lỗi 'Name not resolved', điều này do:",
+        "Vì sao hiểu rõ tầng Application giúp quản trị mạng hiệu quả hơn?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_232_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_233_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_234_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_235_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_236_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_237_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_238_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_239_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_240_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_241_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_242_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_243_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_244_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_245_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_246_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

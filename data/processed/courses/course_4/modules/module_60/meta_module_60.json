@@ -1,0 +1,481 @@
+{
+  "id": "module_60",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-co-so-du-lieu",
+      "title": "lesson_bai-01-tong-quan-ve-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-10-phuc-hoi-and-sao-luu-du-lieu",
+      "title": "lesson_bai-10-phuc-hoi-and-sao-luu-du-lieu"
+    },
+    {
+      "id": "lesson_bai-11-ngon-ngu-dieu-khien-du-lieu-dcl",
+      "title": "lesson_bai-11-ngon-ngu-dieu-khien-du-lieu-dcl"
+    },
+    {
+      "id": "lesson_bai-12-ngon-ngu-dinh-nghia-du-lieu-ddl",
+      "title": "lesson_bai-12-ngon-ngu-dinh-nghia-du-lieu-ddl"
+    },
+    {
+      "id": "lesson_bai-2-co-so-du-lieu-quan-he",
+      "title": "lesson_bai-2-co-so-du-lieu-quan-he"
+    },
+    {
+      "id": "lesson_bai-3-ngon-ngu-hoi-co-cau-truc-sql",
+      "title": "lesson_bai-3-ngon-ngu-hoi-co-cau-truc-sql"
+    },
+    {
+      "id": "lesson_bai-4-rang-buoc-toan-ven",
+      "title": "lesson_bai-4-rang-buoc-toan-ven"
+    },
+    {
+      "id": "lesson_bai-5-thiet-ke-co-so-du-lieu",
+      "title": "lesson_bai-5-thiet-ke-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-6-dang-chuan-normalization",
+      "title": "lesson_bai-6-dang-chuan-normalization"
+    },
+    {
+      "id": "lesson_bai-7-chi-muc-index",
+      "title": "lesson_bai-7-chi-muc-index"
+    },
+    {
+      "id": "lesson_bai-8-khung-nhin-view",
+      "title": "lesson_bai-8-khung-nhin-view"
+    },
+    {
+      "id": "lesson_bai-9-giao-dich-transaction",
+      "title": "lesson_bai-9-giao-dich-transaction"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_188.json",
+      "question_count": 20,
+      "questions": [
+        "Cơ sở dữ liệu được định nghĩa là gì?",
+        "DBMS là viết tắt của cụm từ nào?",
+        "Tác giả đề xuất mô hình dữ liệu quan hệ là ai?",
+        "Trong mô hình phân cấp, dữ liệu được tổ chức theo dạng nào?",
+        "Hệ quản trị CSDL có chức năng nào sau đây?",
+        "Thuộc tính nào sau đây KHÔNG phải đặc tính của CSDL?",
+        "Trong mô hình quan hệ, bảng được gọi là gì?",
+        "Phát biểu nào sau đây về DBMS là đúng?",
+        "Câu SQL sau có chức năng gì: CREATE TABLE sinhvien (...)?",
+        "Thuộc tính ACID trong giao dịch thể hiện điều gì?",
+        "Nhận định: “Mô hình mạng không thể biểu diễn quan hệ nhiều-nhiều.” Câu này đúng hay sai?",
+        "Trong DBMS, Query Processor có nhiệm vụ gì?",
+        "Mô hình nào phù hợp nhất cho hệ thống quản lý đa phương tiện (ảnh, video)?",
+        "Phân biệt DDL và DML theo chức năng chính.",
+        "Câu SQL sau hợp lệ hay không: SELECT name salary FROM student;",
+        "Khi một giao dịch bị lỗi giữa chừng, DBMS sẽ:",
+        "Đâu là lợi ích chính của việc tách biệt mức vật lý và mức logic trong CSDL?",
+        "Câu SQL sau thực hiện điều gì: DELETE FROM sinhvien WHERE diem<5;",
+        "Phát biểu nào mô tả đúng nhất vai trò của Transaction Manager?",
+        "Mô hình nào là nền tảng của các hệ quản trị hiện đại như MySQL, SQL Server?"
+      ]
+    },
+    {
+      "file": "quiz_189.json",
+      "question_count": 20,
+      "questions": [
+        "Trong mô hình quan hệ, mỗi bảng được gọi là gì?",
+        "Khóa chính có đặc điểm nào sau đây?",
+        "Phép toán σ (select) trong đại số quan hệ dùng để?",
+        "Phép chiếu π trong đại số quan hệ có tác dụng gì?",
+        "Một thuộc tính có thể nhận các giá trị từ tập hợp xác định gọi là?",
+        "Câu SQL tương đương với phép chọn σ<sub>Diem>8</sub>(SINHVIEN) là gì?",
+        "Trong đại số quan hệ, phép giao (∩) giữa hai quan hệ A và B cho kết quả là?",
+        "Phát biểu đúng: Mỗi quan hệ có thể có nhiều khóa tối thiểu?",
+        "Phép nối (JOIN) thường được thực hiện dựa trên điều kiện nào?",
+        "Lược đồ quan hệ R(A,B,C) có bao nhiêu thuộc tính?",
+        "Toàn vẹn tham chiếu đảm bảo điều gì?",
+        "Nhận định: 'Quan hệ là tập hợp của các bộ không trùng lặp'. Phát biểu này?",
+        "Câu SQL nào thực hiện phép chiếu π<sub>TenSV,Diem</sub>(SINHVIEN)?",
+        "Nếu bảng A có 5 dòng và bảng B có 3 dòng, phép tích Descartes (A×B) cho kết quả?",
+        "Phép toán nào có tính đóng trong đại số quan hệ?",
+        "Câu SQL sau sai ở đâu: SELECT TenSV FROM SINHVIEN WHERE Diem>8;",
+        "Khóa chính được chọn từ?",
+        "Quan hệ có thể xem là tập con của tích Descartes của các miền giá trị. Phát biểu này?",
+        "Nếu một thuộc tính có thể chứa nhiều giá trị, điều này vi phạm?",
+        "Trong đại số quan hệ, phép kết nối tự nhiên (NATURAL JOIN) khác gì với JOIN có điều kiện?"
+      ]
+    },
+    {
+      "file": "quiz_190.json",
+      "question_count": 20,
+      "questions": [
+        "Câu lệnh nào dùng để truy xuất dữ liệu từ bảng?",
+        "Câu SQL hợp lệ để chọn tất cả cột của bảng SINHVIEN?",
+        "Mệnh đề WHERE được sử dụng để:",
+        "Kết quả của câu: SELECT COUNT(*) FROM SINHVIEN WHERE Diem>=8; là gì?",
+        "Câu lệnh nào sắp xếp sinh viên theo tên tăng dần?",
+        "Phát biểu nào đúng về HAVING?",
+        "Phép toán nào tương đương với π trong đại số quan hệ?",
+        "Lệnh SQL nào tạo bảng mới?",
+        "Câu lệnh SQL sau có hợp lệ không: SELECT TenSV Diem FROM SINHVIEN;",
+        "Câu SQL nào xóa toàn bộ dữ liệu trong bảng mà không xóa cấu trúc?",
+        "Nhận định: 'ORDER BY có thể sắp xếp theo nhiều cột' là?",
+        "Câu SQL nào tìm sinh viên có điểm cao nhất?",
+        "Câu SQL nào tạo cột mới 'Tuoi' trong bảng SINHVIEN?",
+        "Khi thực hiện UPDATE mà quên mệnh đề WHERE, điều gì xảy ra?",
+        "Câu SQL sau có hợp lệ không: SELECT AVG(Diem) FROM SINHVIEN GROUP BY MaLop HAVING AVG(Diem)>8;",
+        "Câu SQL: SELECT DISTINCT MaLop FROM SINHVIEN; cho kết quả là gì?",
+        "Câu SQL nào thêm dữ liệu hợp lệ?",
+        "Phát biểu đúng: 'GROUP BY có thể dùng mà không có hàm tổng hợp'?",
+        "Từ khóa nào dùng để sắp xếp giảm dần?",
+        "Khi thực thi câu lệnh DROP TABLE SINHVIEN, điều gì xảy ra?"
+      ]
+    },
+    {
+      "file": "quiz_191.json",
+      "question_count": 20,
+      "questions": [
+        "Ràng buộc toàn vẹn trong cơ sở dữ liệu có vai trò gì?",
+        "Ràng buộc nào đảm bảo rằng giá trị khóa chính không được NULL?",
+        "Ràng buộc FOREIGN KEY dùng để:",
+        "Câu SQL nào định nghĩa khóa chính đúng cú pháp?",
+        "Ràng buộc CHECK có tác dụng gì?",
+        "Nếu một giá trị NULL được chèn vào cột có ràng buộc NOT NULL thì điều gì xảy ra?",
+        "Câu SQL nào tạo ràng buộc CHECK đúng cú pháp?",
+        "Câu lệnh nào dùng để thêm ràng buộc FOREIGN KEY vào bảng có sẵn?",
+        "Ràng buộc DEFAULT được sử dụng khi:",
+        "Nếu bảng LOP có khóa chính MaLop, và bảng SINHVIEN có MaLop làm khóa ngoại, điều nào đúng?",
+        "Câu SQL nào dưới đây sai cú pháp?",
+        "Nhận định: 'Một bảng có thể có nhiều khóa chính' là?",
+        "Khi xóa bảng cha trong ràng buộc khóa ngoại, điều gì xảy ra nếu không có ON DELETE CASCADE?",
+        "Ràng buộc UNIQUE khác PRIMARY KEY ở điểm nào?",
+        "Phát biểu nào mô tả đúng nhất về CHECK?",
+        "Câu SQL nào thêm constraint đặt tên thủ công?",
+        "Nhận định: 'DEFAULT áp dụng kể cả khi có giá trị nhập vào' là?",
+        "Ràng buộc nào được sử dụng để ngăn trùng dữ liệu trong cột Email?",
+        "Câu SQL: ALTER TABLE SINHVIEN DROP CONSTRAINT FK_Lop; có tác dụng gì?",
+        "Phát biểu đúng nhất: Ràng buộc toàn vẹn giúp hệ thống CSDL?"
+      ]
+    },
+    {
+      "file": "quiz_192.json",
+      "question_count": 20,
+      "questions": [
+        "Phụ thuộc hàm X→Y có nghĩa là:",
+        "Phụ thuộc A→B và B→C cho ta suy ra A→C theo luật nào?",
+        "Trong ví dụ R(A,B,C), F={A→B, B→C}, bao đóng của A là gì?",
+        "Nếu Y⊆X thì X→Y thuộc loại phụ thuộc gì?",
+        "Luật nào của Armstrong cho phép thêm thuộc tính vào cả hai vế của phụ thuộc?",
+        "Cho R(A,B,C), F={A→B, B→C}. Khóa của R là?",
+        "Nếu X⁺ chứa tất cả thuộc tính của quan hệ R thì X là gì?",
+        "Một khóa tối thiểu là siêu khóa mà:",
+        "Cho R(A,B,C,D), F={A→B, C→D}. Có bao nhiêu khóa tối thiểu?",
+        "Nếu có phụ thuộc A→B và A→C, ta có thể viết lại thành:",
+        "Luật nào cho phép tách X→YZ thành X→Y và X→Z?",
+        "Trong F={A→B, B→C}, A→C là kết quả của luật nào?",
+        "Bao đóng A⁺= {A,B,C,D} thì A là?",
+        "Phát biểu nào sau đây sai?",
+        "Tập F có thể sinh ra tập phụ thuộc tương đương gọi là:",
+        "Thuật toán tìm bao đóng của X dừng khi:",
+        "Nếu A→B và B→A thì mối quan hệ giữa A và B là?",
+        "Phụ thuộc hàm đóng vai trò gì trong thiết kế CSDL?",
+        "Cho R(A,B,C), F={A→B, B→A}, số khóa tối thiểu là?",
+        "Phát biểu đúng nhất: Phụ thuộc hàm giúp?"
+      ]
+    },
+    {
+      "file": "quiz_193.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của chuẩn hóa dữ liệu là gì?",
+        "Dạng chuẩn 1NF yêu cầu điều gì?",
+        "Một bảng vi phạm 2NF khi:",
+        "Quan hệ ở 3NF nếu:",
+        "BCNF là gì?",
+        "Quan hệ ở 3NF nhưng không ở BCNF khi:",
+        "Trong ví dụ R(MaSV, MaLop, TenLop), điều nào đúng?",
+        "Bất thường khi cập nhật dữ liệu (update anomaly) xảy ra khi:",
+        "Trong 1NF, thuộc tính phải có dạng:",
+        "Quan hệ R ở 2NF nếu:",
+        "Phát biểu nào đúng về BCNF?",
+        "Phép phân rã bảo toàn thông tin nghĩa là:",
+        "Câu nào dưới đây mô tả đúng phân rã không bảo toàn phụ thuộc?",
+        "Ví dụ nào vi phạm 1NF?",
+        "Phụ thuộc bộ phận nghĩa là:",
+        "Mối quan hệ giữa chuẩn hóa và phụ thuộc hàm là:",
+        "Quan hệ ở 2NF nhưng không ở 3NF khi:",
+        "Trong thiết kế CSDL, khi nào nên dừng chuẩn hóa?",
+        "Chuẩn hóa quá mức có thể gây:",
+        "Phát biểu đúng nhất: Chuẩn hóa giúp hệ thống CSDL?"
+      ]
+    },
+    {
+      "file": "quiz_194.json",
+      "question_count": 40,
+      "questions": [
+        "Chỉ mục (Index) được sử dụng để:",
+        "Cấu trúc dữ liệu phổ biến của chỉ mục là:",
+        "Clustered Index có đặc điểm nào sau đây?",
+        "Một bảng có thể có bao nhiêu Clustered Index?",
+        "Non-Clustered Index lưu trữ dữ liệu như thế nào?",
+        "Unique Index đảm bảo điều gì?",
+        "Composite Index là gì?",
+        "Lệnh SQL nào tạo Non-Clustered Index?",
+        "Tác dụng phụ của việc tạo quá nhiều chỉ mục là:",
+        "Index Covering là gì?",
+        "Khi nào không nên tạo chỉ mục?",
+        "Chỉ mục tự động được tạo khi khai báo ràng buộc nào?",
+        "Lệnh nào xóa chỉ mục tên IX_SV_TenSV?",
+        "Clustered Index thường được tạo trên:",
+        "Lệnh SQL nào cho phép xem danh sách chỉ mục của bảng?",
+        "Phát biểu nào sau đây sai?",
+        "Khi truy vấn không dùng điều kiện WHERE, DBMS có thể bỏ qua chỉ mục. Phát biểu này:",
+        "Lợi ích chính của chỉ mục dạng B-Tree là:",
+        "Lệnh nào tạo Composite Index trên hai cột MaLop và Diem?",
+        "Phát biểu đúng nhất: Chỉ mục giúp hệ thống CSDL?",
+        "Chỉ mục (Index) là gì?",
+        "Cấu trúc phổ biến dùng để lưu chỉ mục là gì?",
+        "Một bảng có thể có bao nhiêu clustered index?",
+        "Chỉ mục không phân cụm (non-clustered) hoạt động thế nào?",
+        "Lệnh nào tạo chỉ mục tổng hợp trên cột MaSV và MaMon?",
+        "Chỉ mục duy nhất (unique index) dùng để:",
+        "Tác động của chỉ mục đến câu lệnh INSERT là gì?",
+        "Lệnh nào xóa chỉ mục?",
+        "Clustered Index khác Non-clustered Index ở điểm nào?",
+        "Khi nào nên tạo Index?",
+        "Lệnh SQL nào xem thông tin chỉ mục của bảng?",
+        "Tại sao không nên tạo nhiều Index trên bảng có nhiều cập nhật?",
+        "Tạo chỉ mục duy nhất trên MSSV dùng cú pháp nào?",
+        "Index ảnh hưởng nhiều nhất đến loại truy vấn nào?",
+        "Cách tối ưu truy vấn sử dụng Index là:",
+        "Khi nào nên dùng Composite Index?",
+        "Chỉ mục nào giúp đảm bảo tính duy nhất của dữ liệu?",
+        "Câu nào đúng về tác động của Index?",
+        "Lệnh nào dùng để tái tổ chức lại chỉ mục?",
+        "Nguyên tắc quan trọng nhất khi thiết kế chỉ mục là gì?"
+      ]
+    },
+    {
+      "file": "quiz_195.json",
+      "question_count": 40,
+      "questions": [
+        "Khung nhìn (View) là gì?",
+        "View có lưu trữ dữ liệu vật lý không?",
+        "Câu lệnh nào tạo View đúng cú pháp?",
+        "View giúp ích gì trong bảo mật?",
+        "View có thể cập nhật khi nào?",
+        "Câu lệnh xóa View là:",
+        "Câu SQL sau có hợp lệ không: CREATE VIEW V_SV AS SELECT MaSV, Diem FROM SINHVIEN WHERE Diem>8;",
+        "Lợi ích chính của View là gì?",
+        "View vật hóa khác View thường ở điểm nào?",
+        "View có thể được tạo từ nhiều bảng bằng phép:",
+        "Câu SQL nào tạo View tổng hợp không thể cập nhật?",
+        "Phát biểu nào sai về View?",
+        "Khi thay đổi dữ liệu trong bảng gốc, View sẽ:",
+        "Lệnh nào sửa View đã tồn tại?",
+        "View có thể giúp giảm quyền truy cập trực tiếp vào:",
+        "Câu lệnh nào tạo View trên nhiều bảng?",
+        "View có thể được dùng trong mệnh đề FROM của câu SELECT khác không?",
+        "Lợi ích của View vật hóa là:",
+        "Câu SQL nào xóa View V_TBLOP?",
+        "Phát biểu đúng nhất: View giúp hệ thống CSDL?",
+        "View là gì trong cơ sở dữ liệu?",
+        "View có lưu dữ liệu vật lý không?",
+        "Cú pháp tạo View đúng là:",
+        "Lệnh nào dùng để xóa View?",
+        "Lệnh nào tạo View xem sinh viên có điểm ≥ 8?",
+        "Khi nào View có thể cập nhật dữ liệu?",
+        "Lệnh cập nhật View hợp lệ là:",
+        "Tác dụng bảo mật chính của View là gì?",
+        "Có thể tạo bao nhiêu View trên một bảng?",
+        "View lồng nhau nghĩa là gì?",
+        "Materialized View khác View thường ở điểm nào?",
+        "View nào chỉ hiển thị cột được phép?",
+        "Câu lệnh nào không thể thực hiện trên View chứa GROUP BY?",
+        "Tại sao View giúp tăng khả năng bảo trì hệ thống?",
+        "View nào sau đây không thể cập nhật?",
+        "Lệnh nào thay đổi cấu trúc View?",
+        "View có thể được dùng trong các câu lệnh nào?",
+        "Nếu View dựa trên hai bảng JOIN, điều gì xảy ra khi UPDATE?",
+        "Tại sao View hữu ích trong thiết kế hệ thống lớn?",
+        "Ưu điểm lớn nhất của View là gì?"
+      ]
+    },
+    {
+      "file": "quiz_196.json",
+      "question_count": 20,
+      "questions": [
+        "Giao dịch (Transaction) trong CSDL là gì?",
+        "Thuộc tính A trong ACID nghĩa là gì?",
+        "Lệnh nào dùng để xác nhận giao dịch?",
+        "Lệnh nào dùng để hủy giao dịch và khôi phục dữ liệu trước đó?",
+        "Khi nào sử dụng SAVEPOINT?",
+        "Thuộc tính nào của ACID đảm bảo dữ liệu không bị lỗi khi hệ thống sập?",
+        "Trong mức cô lập 'Read Uncommitted', lỗi nào có thể xảy ra?",
+        "Khi hai giao dịch cùng chờ nhau giải phóng tài nguyên, hiện tượng đó gọi là:",
+        "COMMIT thực hiện điều gì?",
+        "ROLLBACK sẽ khôi phục dữ liệu đến:",
+        "Isolation trong ACID đảm bảo điều gì?",
+        "Dirty read xảy ra khi:",
+        "Mức cô lập nào đảm bảo cao nhất?",
+        "Lệnh nào khởi tạo một giao dịch mới?",
+        "Trong ví dụ chuyển tiền giữa hai tài khoản, nếu hệ thống dừng giữa chừng, thuộc tính nào đảm bảo dữ liệu không mất cân đối?",
+        "Câu SQL sau có kết quả gì?<br><code>BEGIN TRAN; UPDATE SV SET Diem=10; ROLLBACK;</code>",
+        "Khi xảy ra deadlock, DBMS thường làm gì?",
+        "Khóa chia sẻ (Shared Lock) cho phép:",
+        "Phát biểu nào sai?",
+        "Phát biểu đúng nhất: Mục tiêu của giao dịch là?"
+      ]
+    },
+    {
+      "file": "quiz_197.json",
+      "question_count": 20,
+      "questions": [
+        "Backup là gì?",
+        "Recovery là gì?",
+        "Full Backup có đặc điểm gì?",
+        "Differential Backup lưu lại:",
+        "Incremental Backup khác Differential ở điểm nào?",
+        "Lệnh SQL nào thực hiện sao lưu toàn bộ CSDL?",
+        "Checkpoint có vai trò gì trong phục hồi dữ liệu?",
+        "Transaction Log ghi lại điều gì?",
+        "Phục hồi theo thời điểm (Point-in-Time Recovery) cho phép:",
+        "Lệnh nào dùng để phục hồi dữ liệu từ file sao lưu?",
+        "Checkpoint giúp giảm thời gian phục hồi vì:",
+        "Khi hệ thống sập giữa COMMIT, log được dùng để:",
+        "Sao lưu định kỳ giúp:",
+        "RESTORE LOG ... WITH STOPAT dùng để:",
+        "Backup vi sai yêu cầu điều gì trước đó?",
+        "Lợi thế của Incremental Backup là:",
+        "Chiến lược Backup hiệu quả nhất thường là:",
+        "DBMS có thể tự phục hồi sau crash bằng cách:",
+        "Việc kiểm tra khôi phục thử (test restore) giúp:",
+        "Phát biểu đúng nhất: Backup & Recovery giúp hệ thống CSDL?"
+      ]
+    },
+    {
+      "file": "quiz_198.json",
+      "question_count": 20,
+      "questions": [
+        "DCL viết tắt của:",
+        "Câu lệnh nào dùng để cấp quyền cho người dùng?",
+        "Câu lệnh nào thu hồi quyền đã cấp?",
+        "DENY khác GRANT ở điểm nào?",
+        "System Privilege cho phép:",
+        "Object Privilege áp dụng cho:",
+        "Cú pháp đúng để cấp quyền SELECT và UPDATE cho userA trên bảng SINHVIEN:",
+        "Role trong CSDL là gì?",
+        "Lệnh nào dùng để tạo Role mới?",
+        "Lệnh SQL nào đúng để thu hồi quyền INSERT trên bảng DIEM của userB?",
+        "GRANT ALL PRIVILEGES có nghĩa là:",
+        "DENY có độ ưu tiên như thế nào so với GRANT?",
+        "Phát biểu nào đúng về REVOKE?",
+        "Câu SQL nào cấp quyền UPDATE cho Role GIAOVIEN?",
+        "Role giúp ích gì trong quản trị quyền?",
+        "Phát biểu nào sai về DCL?",
+        "Câu SQL nào tạo user hợp lệ?",
+        "Câu lệnh nào cấm userB xóa dữ liệu?",
+        "Phân quyền gián tiếp thông qua Role có lợi ích gì?",
+        "Phát biểu đúng nhất: DCL giúp hệ thống CSDL?"
+      ]
+    },
+    {
+      "file": "quiz_199.json",
+      "question_count": 20,
+      "questions": [
+        "DDL viết tắt của gì?",
+        "Lệnh nào dùng để tạo bảng mới?",
+        "Lệnh ALTER TABLE dùng để:",
+        "Lệnh DROP TABLE thực hiện điều gì?",
+        "TRUNCATE TABLE khác DELETE ở điểm nào?",
+        "Câu SQL nào đúng để thêm cột mới vào bảng SINHVIEN?",
+        "Ràng buộc PRIMARY KEY có tác dụng gì?",
+        "FOREIGN KEY dùng để:",
+        "Câu SQL nào tạo ràng buộc khóa ngoại đúng?",
+        "Lệnh nào xóa cột Email khỏi bảng SINHVIEN?",
+        "Ràng buộc CHECK dùng để:",
+        "DDL có thể ROLLBACK được không?",
+        "Câu SQL nào tạo schema mới?",
+        "Ràng buộc nào đảm bảo giá trị trong cột không được trùng?",
+        "Câu SQL nào tạo bảng có ràng buộc CHECK hợp lệ?",
+        "Lệnh DROP SCHEMA QLSV; có tác dụng:",
+        "Lệnh nào nhanh nhất để làm trống bảng lớn?",
+        "Ràng buộc NOT NULL đảm bảo điều gì?",
+        "Câu SQL nào đúng để thay đổi độ dài cột TenSV thành NVARCHAR(80)?",
+        "Phát biểu đúng nhất: DDL giúp hệ thống CSDL?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_188_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_189_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_190_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_191_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_192_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_193_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_194_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_195_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_196_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_197_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_198_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_199_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

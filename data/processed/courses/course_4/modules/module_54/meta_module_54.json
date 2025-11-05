@@ -1,0 +1,369 @@
+{
+  "id": "module_54",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-kiem-thu-phan-mem",
+      "title": "lesson_bai-01-tong-quan-ve-kiem-thu-phan-mem"
+    },
+    {
+      "id": "lesson_bai-02-quy-trinh-kiem-thu-phan-mem-stlc",
+      "title": "lesson_bai-02-quy-trinh-kiem-thu-phan-mem-stlc"
+    },
+    {
+      "id": "lesson_bai-03-cac-muc-kiem-thu-phan-mem",
+      "title": "lesson_bai-03-cac-muc-kiem-thu-phan-mem"
+    },
+    {
+      "id": "lesson_bai-04-cac-loai-kiem-thu-phan-mem",
+      "title": "lesson_bai-04-cac-loai-kiem-thu-phan-mem"
+    },
+    {
+      "id": "lesson_bai-05-ky-thuat-thiet-ke-ca-kiem-thu",
+      "title": "lesson_bai-05-ky-thuat-thiet-ke-ca-kiem-thu"
+    },
+    {
+      "id": "lesson_bai-06-quan-lu-loi-va-bao-cao-loi",
+      "title": "lesson_bai-06-quan-lu-loi-va-bao-cao-loi"
+    },
+    {
+      "id": "lesson_bai-07-tu-dong-hoa-kiem-thu-phan-mem",
+      "title": "lesson_bai-07-tu-dong-hoa-kiem-thu-phan-mem"
+    },
+    {
+      "id": "lesson_bai-08-kiem-thu-trong-agile-va-devops",
+      "title": "lesson_bai-08-kiem-thu-trong-agile-va-devops"
+    },
+    {
+      "id": "lesson_bai-09-danh-gia-chat-luong-va-bao-cao-kiem-thu",
+      "title": "lesson_bai-09-danh-gia-chat-luong-va-bao-cao-kiem-thu"
+    },
+    {
+      "id": "lesson_bai-10-thuc-hanh-tong-hop-du-an-kiem-thu-phan-mem",
+      "title": "lesson_bai-10-thuc-hanh-tong-hop-du-an-kiem-thu-phan-mem"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_136.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của kiểm thử phần mềm là gì?",
+        "Khác biệt giữa Verification và Validation là gì?",
+        "Nguyên tắc 'Defect Clustering' nghĩa là gì?",
+        "Trong SDLC, tester nên tham gia từ giai đoạn nào để tối ưu chi phí sửa lỗi?",
+        "Hãy xác định cấp độ kiểm thử phù hợp: 'Kiểm tra toàn bộ chức năng web app trước khi bàn giao cho khách hàng'.",
+        "Test Case nào dưới đây thể hiện đúng nguyên tắc kiểm thử hộp đen?",
+        "Câu nào sau đây đúng về nguyên tắc kiểm thử?",
+        "Trong ví dụ Selenium, phương thức nào dùng để nhập dữ liệu vào textbox?",
+        "Điều nào đúng về SQA so với Testing?",
+        "Tình huống: Tester phát hiện yêu cầu không rõ ràng trong SRS. Hành động đúng là?",
+        "Đâu là ví dụ đúng cho nguyên tắc 'Kiểm thử phụ thuộc vào ngữ cảnh'?",
+        "Phát biểu nào đúng về 'Kiểm thử sớm' (Early Testing)?",
+        "Trong bảng phân biệt SQA và Testing, SQA có đặc trưng nào?",
+        "Câu nào sau đây đúng về Defect?",
+        "Hãy chọn câu lệnh Selenium hợp lệ để kiểm tra tiêu đề trang chứa 'Dashboard':",
+        "Khi nào nên sử dụng kiểm thử tự động hóa thay cho thủ công?",
+        "Tester cần kỹ năng nào quan trọng nhất khi phân tích lỗi?",
+        "Nguyên tắc Pareto 80/20 trong kiểm thử nghĩa là:",
+        "Mục tiêu của kiểm thử không bao gồm:",
+        "Khi kiểm thử hệ thống ngân hàng, loại kiểm thử nào cần ưu tiên?"
+      ]
+    },
+    {
+      "file": "quiz_137.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của STLC là gì?",
+        "STLC khác SDLC ở điểm nào?",
+        "Tài liệu đầu ra quan trọng nhất của giai đoạn Test Planning là:",
+        "Entry Criteria của Test Execution bao gồm điều nào sau đây?",
+        "Công thức tính DRE (Defect Removal Efficiency) là:",
+        "Trong giai đoạn Test Analysis, tester nên làm gì?",
+        "Tình huống: Tester phát hiện lỗi ở Test Execution, bước tiếp theo hợp lý là:",
+        "Trong ví dụ login, giá trị password = '1234' thuộc loại ca kiểm thử nào?",
+        "Test Case Pass Rate 90/100 tương đương:",
+        "Khi lỗi có trạng thái Fixed, bước tiếp theo của tester là:",
+        "Trong Agile, STLC được áp dụng như thế nào?",
+        "Câu nào đúng về Test Closure?",
+        "Tài liệu nào giúp liên kết giữa yêu cầu và test case?",
+        "Trạng thái bug hợp lý trong vòng đời lỗi là:",
+        "Nếu tester phát hiện lỗi UI nhưng không ảnh hưởng logic, severity phù hợp là:",
+        "Khi test automation thất bại do trang load chậm, nguyên nhân khả dĩ nhất là:",
+        "Khi nào nên kết thúc kiểm thử (Exit Criteria)?",
+        "Phần tử nào KHÔNG thuộc Test Plan?",
+        "Defect Density = 30 lỗi / 10 KLOC. Kết quả là:",
+        "Kết luận nào đúng nhất về STLC?"
+      ]
+    },
+    {
+      "file": "quiz_138.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của Unit Testing là gì?",
+        "Công cụ nào sau đây dùng phổ biến cho Unit Test trong Java?",
+        "Trong Integration Testing, Stub và Driver được dùng để:",
+        "Trong ví dụ V-Model, Unit Test tương ứng với giai đoạn nào trong SDLC?",
+        "Test Case: 'Kiểm tra phản hồi HTTP 504 khi Auth Service không phản hồi trong 3s' thuộc mức kiểm thử nào?",
+        "Mức kiểm thử nào thường do khách hàng hoặc nhóm UAT thực hiện?",
+        "Trong Unit Test sau, mục tiêu chính của assertEquals là gì? <pre><code>@Test public void testAdd(){ assertEquals(5, Calculator.add(2,3)); }</code></pre>",
+        "Chiến lược nào KHÔNG phải là kiểu Integration Testing?",
+        "System Testing chủ yếu được thực hiện để:",
+        "Trong Integration Testing, Mock Object có tác dụng:",
+        "Acceptance Testing được xem là giai đoạn:",
+        "Trong ví dụ hàm add(2,3), nếu tester dùng giá trị -2 và 3, mục tiêu là:",
+        "Điểm khác biệt giữa System Test và Integration Test là gì?",
+        "Test nào sau đây KHÔNG phù hợp với Acceptance Test?",
+        "Ưu điểm lớn nhất của Unit Test là gì?",
+        "Khi nào nên thực hiện Integration Test?",
+        "System Test bao gồm các loại kiểm thử nào?",
+        "Chiến lược Big Bang Integration Test có nhược điểm gì?",
+        "Tester phát hiện bug khi tích hợp API Order và Payment – mức kiểm thử đó là:",
+        "Tổng kết đúng nhất về các mức kiểm thử:"
+      ]
+    },
+    {
+      "file": "quiz_140.json",
+      "question_count": 20,
+      "questions": [
+        "Phân biệt cơ bản giữa kiểm thử chức năng và phi chức năng là gì?",
+        "Mục tiêu chính của Regression Testing là:",
+        "Smoke Testing thường được thực hiện khi nào?",
+        "Sanity Testing khác gì với Smoke Testing?",
+        "Công cụ phổ biến cho kiểm thử hiệu năng (Performance Testing) là:",
+        "Trong Security Testing, mục tiêu chính là:",
+        "Usability Testing tập trung vào:",
+        "Kiểm thử Exploratory khác với Scripted Testing ở điểm nào?",
+        "Khi tester xác minh fix bug cho tính năng cụ thể, đó là loại test nào?",
+        "Test Case: 'Gửi 1000 request login/giây và đo phản hồi trung bình' thuộc loại kiểm thử nào?",
+        "Công cụ nào phù hợp cho Security Testing web app?",
+        "Kiểm thử Compatibility dùng để:",
+        "Risk-based Testing ưu tiên dựa trên:",
+        "Test nào KHÔNG thuộc nhóm non-functional?",
+        "Kiểm thử Reliability (Stability) nhằm:",
+        "Shift-left testing có ý nghĩa là:",
+        "Continuous Testing trong DevOps giúp:",
+        "Tình huống: Sau khi thêm tính năng chat, QA test lại toàn bộ website. Đây là:",
+        "Khi tester test thử giao diện mà không theo test case nào, đó là:",
+        "Mục tiêu của việc kết hợp Functional + Non-functional Testing là:"
+      ]
+    },
+    {
+      "file": "quiz_141.json",
+      "question_count": 20,
+      "questions": [
+        "Kỹ thuật Equivalence Partitioning giúp:",
+        "Nếu điều kiện nhập tuổi hợp lệ từ 18–60, bộ ca BVA đúng là:",
+        "Decision Table phù hợp khi:",
+        "Trong ví dụ Decision Table, TC3 kiểm tra hành vi nào?",
+        "Kỹ thuật State Transition Testing áp dụng khi nào?",
+        "White-box testing tập trung vào:",
+        "Để đạt Branch Coverage 100% cho hàm calcFee(age), cần tối thiểu bao nhiêu ca test?",
+        "Khi tester dự đoán lỗi null pointer, kỹ thuật nào đang được áp dụng?",
+        "Pairwise Testing hữu ích khi:",
+        "Trong Use Case Testing, test được xây dựng dựa trên:",
+        "Ví dụ: Nếu đầu vào là số nguyên dương, nhóm hợp lệ theo EP là:",
+        "Trong State Transition Test, ca 'New → Delivered' là:",
+        "Statement coverage yêu cầu:",
+        "Condition coverage đảm bảo:",
+        "Khi test ứng dụng ngân hàng, nên ưu tiên kỹ thuật nào để kiểm tra xác thực giao dịch?",
+        "Nếu cần kiểm thử 1 form gồm 5 trường (tuổi, giới, email, quốc tịch, nghề), kỹ thuật giúp giảm tổ hợp test hiệu quả nhất là:",
+        "Với hệ thống có workflow: Draft → Review → Approved, test 'Draft → Approved' trực tiếp là:",
+        "Hộp đen (Black-box) tập trung vào điều nào sau đây?",
+        "Trong thiết kế test, điều nào giúp tăng hiệu quả phát hiện lỗi nhất?",
+        "Kết luận đúng về kỹ thuật thiết kế ca kiểm thử:"
+      ]
+    },
+    {
+      "file": "quiz_142.json",
+      "question_count": 20,
+      "questions": [
+        "Lỗi phần mềm (Bug/Defect) được định nghĩa là gì?",
+        "Trường hợp nào sau đây có Severity cao nhất?",
+        "Priority khác Severity ở điểm nào?",
+        "Trạng thái nào KHÔNG thuộc vòng đời lỗi?",
+        "Sau khi dev sửa lỗi và gửi lại build, tester cần làm gì?",
+        "Khi tester phát hiện bug vẫn tồn tại sau khi fix, bước đúng là:",
+        "Câu mô tả lỗi nào sau đây là tốt nhất?",
+        "Trường 'Steps to Reproduce' trong bug report có mục đích gì?",
+        "Công cụ nào phổ biến nhất để quản lý bug trong quy trình Agile?",
+        "Bug 'Sai tổng tiền thanh toán' có Severity và Priority phù hợp là:",
+        "Trong Bug Life Cycle, ai chịu trách nhiệm chuyển bug từ 'Fixed' sang 'Retest'?",
+        "Bug bị đóng (Closed) nghĩa là:",
+        "Tình huống: Tester phát hiện lỗi login, nhưng mô tả thiếu bước thực hiện. Kết quả là:",
+        "Redmine khác Jira ở điểm nào?",
+        "Bug 'Mất dữ liệu khách hàng khi cập nhật hồ sơ' thuộc loại nào?",
+        "Trường nào KHÔNG bắt buộc trong Bug Report chuyên nghiệp?",
+        "Nguyên tắc ghi bug hiệu quả là:",
+        "Khi có 2 lỗi khác nhau xuất hiện trong cùng 1 màn hình, tester nên:",
+        "Khi bug lặp lại nhiều lần ở cùng module, QA nên:",
+        "Kết luận đúng nhất về quản lý lỗi:"
+      ]
+    },
+    {
+      "file": "quiz_143.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của Automation Testing là gì?",
+        "Khi nào KHÔNG nên áp dụng automation?",
+        "Framework nào phổ biến nhất cho automation web?",
+        "Trong đoạn code Selenium, hàm nào dùng để mở URL?",
+        "Phần tử nào trong framework dùng để lưu các locator của UI?",
+        "Test case nào phù hợp nhất để tự động hóa?",
+        "Công cụ nào sau đây hỗ trợ viết test script bằng Groovy?",
+        "Trong CI/CD pipeline, lệnh nào được dùng để chạy test Maven?",
+        "Ưu điểm lớn nhất của automation so với manual testing là:",
+        "Nguyên nhân chính khiến automation test thất bại thường là:",
+        "Framework nào trong Python thường dùng cho automation testing?",
+        "Automation Framework thường KHÔNG bao gồm thành phần nào?",
+        "Báo cáo test tự động phổ biến nhất dùng trong Java là:",
+        "TestNG trong Java được dùng để:",
+        "Công cụ nào giúp trigger test automation khi có commit code mới?",
+        "Trong đoạn code Selenium, hàm nào đóng trình duyệt sau test?",
+        "Automation phù hợp nhất với mô hình phát triển nào?",
+        "Một trong các thách thức lớn nhất của automation là:",
+        "Trong TestNG, annotation nào dùng để chạy test trước khi toàn bộ suite bắt đầu?",
+        "Kết luận đúng nhất về Automation Testing:"
+      ]
+    },
+    {
+      "file": "quiz_144.json",
+      "question_count": 20,
+      "questions": [
+        "Điểm khác biệt lớn nhất giữa kiểm thử trong Agile và Waterfall là gì?",
+        "Trong Scrum, ai chịu trách nhiệm xác định Acceptance Criteria?",
+        "Vai trò chính của QA trong nhóm Agile là:",
+        "Continuous Testing là gì?",
+        "Công cụ nào phổ biến để tự động hóa kiểm thử trong Agile?",
+        "Khi nào tester nên bắt đầu viết test case trong Agile?",
+        "Trong CI/CD pipeline, stage nào chịu trách nhiệm chạy automation test?",
+        "Công cụ nào sau đây thuộc nhóm CI/CD?",
+        "Trong Agile, Sprint Review được thực hiện để:",
+        "Câu nào đúng nhất về vai trò của QA trong DevOps?",
+        "Automation test nên được tích hợp ở đâu trong DevOps pipeline?",
+        "Vai trò của Scrum Master trong kiểm thử Agile là:",
+        "Công cụ báo cáo kết quả test automation phổ biến nhất là:",
+        "Trong mô hình Agile, kiểm thử được thực hiện:",
+        "DevOps kết hợp ba yếu tố chính là:",
+        "Khi có commit code mới, quy trình DevOps sẽ:",
+        "Mục tiêu chính của Continuous Testing là:",
+        "Tester nên làm gì khi phát hiện bug trong sprint?",
+        "Công cụ nào được dùng phổ biến để quản lý sprint và backlog?",
+        "Kết luận đúng nhất về kiểm thử trong Agile & DevOps:"
+      ]
+    },
+    {
+      "file": "quiz_145.json",
+      "question_count": 20,
+      "questions": [
+        "Test Metrics là gì?",
+        "Chỉ số Defect Density phản ánh điều gì?",
+        "Công thức tính DRE (Defect Removal Efficiency) là:",
+        "Chỉ số Defect Leakage cao nghĩa là gì?",
+        "Pass Rate 90% nghĩa là gì?",
+        "Chỉ số nào dùng để đo độ bao phủ kiểm thử?",
+        "Test Summary Report (TSR) nhằm mục đích gì?",
+        "Defect Leakage = (12/30) × 100%. Kết quả là:",
+        "Chỉ số nào thể hiện tốc độ phát hiện lỗi?",
+        "Dự án có 300 test case, 240 executed, 180 pass. Pass Rate là:",
+        "Khi Defect Reopen Rate cao, điều đó thể hiện:",
+        "Trong báo cáo kiểm thử, phần 'Recommendation' nên chứa:",
+        "DRE thấp nghĩa là:",
+        "Test Metrics giúp QA team:",
+        "Báo cáo Pass/Fail được thể hiện tốt nhất bằng:",
+        "Metric nào dùng để đo năng suất của QA team?",
+        "Nếu Defect Density giảm dần qua từng sprint, điều đó nghĩa là:",
+        "Mean Time To Repair (MTTR) dùng để:",
+        "Chỉ số nào sau đây KHÔNG thuộc nhóm Quality Metrics?",
+        "Kết luận đúng nhất về Test Metrics:"
+      ]
+    },
+    {
+      "file": "quiz_146.json",
+      "question_count": 20,
+      "questions": [
+        "Tài liệu nào xác định phạm vi, mục tiêu và chiến lược kiểm thử?",
+        "Mục đích của RTM là gì?",
+        "Test Summary Report được viết khi nào?",
+        "Defect Report phải chứa thông tin nào sau đây?",
+        "Test Case tốt nhất cần có đặc điểm gì?",
+        "Trong RTM, khi REQ-05 chưa có test case, điều đó thể hiện:",
+        "Chỉ số nào thể hiện hiệu quả loại bỏ lỗi trong dự án?",
+        "Ai chịu trách nhiệm phê duyệt Test Plan?",
+        "Khi test case 'Fail', tester cần làm gì?",
+        "Trong Defect Report, trường Severity thể hiện:",
+        "Khi lỗi được fix nhưng tester phát hiện vẫn xảy ra, cần:",
+        "Mục đích chính của Test Summary Report là:",
+        "Công cụ nào phù hợp nhất để quản lý Test Case và kết quả thực thi?",
+        "Phần 'Entry Criteria' trong Test Plan có nghĩa là:",
+        "Nếu module có 50 test case, 45 pass, 5 fail → Pass Rate là:",
+        "Trong dự án kiểm thử tổng hợp, vai trò của QA Lead là:",
+        "Tại sao cần RTM trong dự án thực tế?",
+        "Công cụ nào thường dùng để log bug trong dự án thực hành?",
+        "Khi QA ghi nhận 14 lỗi (Critical: 3, Major: 6, Minor: 5), lỗi nào cần fix đầu tiên?",
+        "Kết luận đúng nhất về bài thực hành tổng hợp:"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_136_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_137_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_138_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_140_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_141_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_142_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_143_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_144_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_145_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_146_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

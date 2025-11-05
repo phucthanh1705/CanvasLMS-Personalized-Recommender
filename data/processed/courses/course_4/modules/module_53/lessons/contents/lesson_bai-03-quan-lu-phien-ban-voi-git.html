@@ -1,0 +1,106 @@
+<h1>🧩 BÀI 03 – QUẢN LÝ PHIÊN BẢN VỚI GIT</h1>
+
+<h2>🎯 Mục tiêu học tập</h2>
+<ul>
+ <li>Hiểu khái niệm về hệ thống quản lý phiên bản (Version Control System – VCS).</li>
+ <li>Phân biệt Git với các hệ thống VCS khác như SVN hoặc Mercurial.</li>
+ <li>Nắm vững quy trình làm việc cơ bản của Git (init → add → commit → push).</li>
+ <li>Biết sử dụng các lệnh Git cơ bản: init, clone, add, commit, log, diff, branch, merge.</li>
+ <li>Thực hành tạo kho Git cục bộ và kết nối với GitHub.</li>
+</ul>
+<hr>
+
+<h2>1. Giới thiệu hệ thống quản lý phiên bản</h2>
+<p><b>Version Control System (VCS)</b> là công cụ theo dõi lịch sử thay đổi mã nguồn. Mỗi lần lưu (commit) được xem như một snapshot của toàn bộ project.</p>
+<p>Ba loại hệ thống VCS phổ biến:</p>
+<ul>
+ <li><b>Local VCS:</b> Lưu trữ thay đổi trong máy cá nhân (ví dụ: RCS).</li>
+ <li><b>Centralized VCS:</b> Mọi người dùng kết nối đến máy chủ trung tâm (ví dụ: SVN, CVS).</li>
+ <li><b>Distributed VCS:</b> Mỗi máy đều có bản sao đầy đủ lịch sử – Git là ví dụ điển hình.</li>
+</ul>
+<hr>
+
+<h2>2. Lịch sử và đặc trưng của Git</h2>
+<p>Git được phát triển bởi Linus Torvalds năm 2005 để quản lý mã nguồn của Linux Kernel. Git nổi bật bởi:</p>
+<ul>
+ <li><b>Hiệu suất cao:</b> Lưu snapshot thay vì diff.</li>
+ <li><b>Bảo mật:</b> Mọi dữ liệu được kiểm tra bằng mã SHA-1.</li>
+ <li><b>Phân tán:</b> Mỗi người dùng có toàn bộ lịch sử commit.</li>
+</ul>
+<p><b>Git = Fast + Secure + Distributed.</b></p>
+<hr>
+
+<h2>3. Quy trình làm việc cơ bản của Git</h2>
+<p>Vòng đời của một tệp trong Git:</p>
+<ul>
+ <li><b>Working Directory:</b> Thư mục làm việc chứa file thật.</li>
+ <li><b>Staging Area:</b> Nơi lưu các file đã sẵn sàng để commit.</li>
+ <li><b>Repository:</b> Lưu các bản snapshot (commit) chính thức.</li>
+</ul>
+<p><b>Chu trình:</b></p>
+<pre><code>git add → git commit → git push</code></pre>
+<p>Ví dụ:</p>
+<pre><code>git init
+git add index.html
+git commit -m "Thêm giao diện trang chủ"
+git log</code></pre>
+<hr>
+
+<h2>4. Cấu hình Git lần đầu</h2>
+<p>Cấu hình thông tin người dùng toàn cục:</p>
+<pre><code>git config --global user.name "Nguyen Van A"
+git config --global user.email "vana@example.com"</code></pre>
+<p>Kiểm tra cấu hình:</p>
+<pre><code>git config --list</code></pre>
+<hr>
+
+<h2>5. Làm việc với Repository từ xa</h2>
+<p>Kết nối với kho từ xa (GitHub, GitLab...):</p>
+<pre><code>git remote add origin https://github.com/user/repo.git
+git push -u origin main</code></pre>
+<p>Tải dự án có sẵn:</p>
+<pre><code>git clone https://github.com/user/project.git</code></pre>
+<hr>
+
+<h2>6. Nhánh (Branch) và hợp nhất (Merge)</h2>
+<p>Nhánh cho phép làm việc song song mà không ảnh hưởng đến nhánh chính:</p>
+<pre><code>git branch feature-ui
+git checkout feature-ui
+# Thực hiện chỉnh sửa
+git add .
+git commit -m "Xây dựng giao diện người dùng"
+git checkout main
+git merge feature-ui</code></pre>
+<p>Tránh merge conflict bằng cách pull cập nhật mới nhất trước khi merge.</p>
+<hr>
+
+<h2>7. Các lệnh thường dùng khác</h2>
+<ul>
+ <li><code>git status</code> – kiểm tra trạng thái file.</li>
+ <li><code>git diff</code> – so sánh khác biệt giữa các phiên bản.</li>
+ <li><code>git log</code> – xem lịch sử commit.</li>
+ <li><code>git revert</code> – hoàn tác commit.</li>
+ <li><code>git rm</code> – xóa file khỏi repository.</li>
+</ul>
+<hr>
+
+<h2>8. Bảo mật và kiểm soát phiên bản</h2>
+<p>Mọi commit trong Git đều gắn mã <b>SHA-1</b> (40 ký tự) đảm bảo dữ liệu không thể sửa mà không bị phát hiện.</p>
+<p>Ví dụ mã SHA:</p>
+<pre><code>commit 3f4a2b67a18bc4bfc8a0a25b1f4e21f1e6bfc219</code></pre>
+<hr>
+
+<h2>9. Thực hành</h2>
+<ol>
+ <li>Tạo repository mới có tên “myproject”.</li>
+ <li>Thêm file <code>index.html</code> và commit với message “Khởi tạo dự án”.</li>
+ <li>Tạo nhánh mới “feature-login” và thực hiện merge vào main.</li>
+ <li>Đẩy toàn bộ dự án lên GitHub.</li>
+</ol>
+<hr>
+
+<h2>10. Tổng kết</h2>
+<ul>
+ <li>Git là hệ thống quản lý phiên bản phân tán mạnh mẽ, phổ biến nhất hiện nay.</li>
+ <li>Nắm được các thao tác cơ bản sẽ giúp kiểm soát mã nguồn hiệu quả và làm việc nhóm tốt hơn.</li>
+</ul>

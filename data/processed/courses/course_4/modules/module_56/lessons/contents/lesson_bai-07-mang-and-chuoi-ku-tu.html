@@ -1,0 +1,34 @@
+<h1>🧩 BÀI 07 – MẢNG &amp; CHUỖI KÝ TỰ</h1><h2>🎯 Mục tiêu học tập</h2><ul><li>Hiểu khái niệm, cách khai báo, khởi tạo và truy cập phần tử trong mảng.</li><li>Nắm vững cách truyền mảng cho hàm và xử lý mảng trong C.</li><li>Hiểu cơ chế hoạt động của chuỗi ký tự và mối liên hệ với mảng một chiều kiểu char.</li><li>Thực hành sử dụng các hàm thư viện trong <code>&lt;string.h&gt;</code>.</li></ul><hr><h2>1. KHÁI NIỆM VỀ MẢNG</h2><p><b>Mảng (Array)</b> là tập hợp các phần tử cùng kiểu dữ liệu, được lưu trữ liên tiếp trong bộ nhớ và truy cập bằng chỉ số (index).</p><h3>1.1. Khai báo và khởi tạo</h3><pre><code>int a[5];              // khai báo mảng 5 phần tử
+int b[5] = {1, 2, 3, 4, 5};  // khởi tạo trực tiếp
+float c[] = {1.1, 2.2, 3.3}; // compiler tự xác định kích thước</code></pre><p><b>Chú ý:</b> Chỉ số mảng trong C bắt đầu từ 0, phần tử cuối cùng có chỉ số <code>n-1</code>.</p><h3>1.2. Truy cập và gán giá trị</h3><pre><code>a[0] = 10;
+printf("Phan tu thu 1 la: %d", a[0]);</code></pre><hr><h2>2. MẢNG MỘT CHIỀU</h2><p>Dùng để lưu trữ danh sách các giá trị cùng loại (ví dụ: điểm thi, chiều cao, nhiệt độ...).</p><pre><code>#include &lt;stdio.h&gt;
+#define N 5
+
+int main() {
+   int arr[N];
+   for (int i = 0; i &lt; N; i++) {
+      printf("Nhap phan tu %d: ", i);
+      scanf("%d", &amp;arr[i]);
+   }
+   int sum = 0;
+   for (int i = 0; i &lt; N; i++) sum += arr[i];
+   printf("Tong = %d\n", sum);
+   return 0;
+}</code></pre><p><b>Ứng dụng:</b> tính tổng, tìm min/max, đếm phần tử thỏa điều kiện.</p><hr><h2>3. MẢNG HAI CHIỀU</h2><p>Dùng để biểu diễn bảng hoặc ma trận.</p><pre><code>int matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+printf("Phan tu o dong 2, cot 3: %d", matrix[1][2]);</code></pre><h3>Truy cập phần tử:</h3><p>Phần tử hàng i, cột j được truy cập bằng <code>matrix[i][j]</code>.</p><hr><h2>4. CHUỖI KÝ TỰ</h2><p><b>Chuỗi (String)</b> là mảng một chiều kiểu <code>char</code> kết thúc bằng ký tự <b>\0</b>.</p><pre><code>char name[20] = "Nguyen An";
+printf("Ten: %s", name);</code></pre><h3>4.1. Nhập và xuất chuỗi</h3><pre><code>char str[50];
+printf("Nhap chuoi: ");
+gets(str); // KHÔNG AN TOÀN
+printf("Chuoi vua nhap: %s", str);</code></pre><p>Hàm <b>fgets()</b> an toàn hơn:</p><pre><code>fgets(str, sizeof(str), stdin);</code></pre><h3>4.2. Một số hàm xử lý chuỗi trong &lt;string.h&gt;</h3><ul><li><code>strlen(s)</code>: độ dài chuỗi</li><li><code>strcpy(dest, src)</code>: sao chép chuỗi</li><li><code>strcat(s1, s2)</code>: nối chuỗi</li><li><code>strcmp(s1, s2)</code>: so sánh chuỗi</li></ul><pre><code>#include &lt;string.h&gt;
+char s1[20] = "Hello", s2[20] = "World";
+strcat(s1, s2);
+printf("%s", s1); // Kết quả: HelloWorld</code></pre><hr><h2>5. TRUYỀN MẢNG VÀO HÀM</h2><p>Thực chất là truyền địa chỉ phần tử đầu tiên.</p><pre><code>void printArray(int arr[], int n) {
+   for (int i = 0; i &lt; n; i++)
+      printf("%d ", arr[i]);
+}
+
+int main() {
+   int a[3] = {10, 20, 30};
+   printArray(a, 3);
+}</code></pre><hr><h2>6. LIÊN HỆ MẢNG &amp; CON TRỎ</h2><p>Tên mảng chính là địa chỉ phần tử đầu tiên → <code>a[i]</code> tương đương với <code>*(a + i)</code>.</p><pre><code>int a[3] = {1,2,3};
+printf("%d", *(a+1)); // 2</code></pre><hr><h2>✅ TỔNG KẾT</h2><ul><li>Mảng giúp lưu trữ dữ liệu đồng loại hiệu quả.</li><li>Chuỗi là dạng đặc biệt của mảng char, kết thúc bằng '\0'.</li><li>Cần cẩn trọng khi làm việc với mảng và con trỏ để tránh lỗi tràn bộ nhớ (overflow).</li></ul>

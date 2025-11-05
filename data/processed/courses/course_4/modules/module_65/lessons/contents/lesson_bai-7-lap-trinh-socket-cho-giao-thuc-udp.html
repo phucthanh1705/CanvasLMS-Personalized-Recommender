@@ -1,0 +1,44 @@
+<h1>📡 BÀI 7 – LẬP TRÌNH SOCKET CHO GIAO THỨC UDP</h1><h2>7.1 GIỚI THIỆU GIAO THỨC UDP</h2><p><b>UDP (User Datagram Protocol)</b> là giao thức tầng Transport trong mô hình TCP/IP, tương tự TCP nhưng <b>không đảm bảo độ tin cậy</b>. Dữ liệu được gửi theo từng gói (datagram) mà không cần thiết lập kết nối trước.</p><ul><li>Không có cơ chế xác nhận (ACK).</li><li>Không đảm bảo gói đến đúng thứ tự.</li><li>Tốc độ truyền nhanh, phù hợp ứng dụng thời gian thực.</li></ul><p>⚙️ <b>Ứng dụng thực tế:</b> Truyền video, âm thanh, game online, DNS, VoIP.</p><hr><h2>7.2 MÔ HÌNH GỬI – NHẬN DỮ LIỆU UDP</h2><p>UDP sử dụng hai lớp chính trong Java:</p><ul><li><b>DatagramSocket</b>: tạo cổng giao tiếp để gửi/nhận dữ liệu.</li><li><b>DatagramPacket</b>: đại diện cho một gói dữ liệu UDP.</li></ul><h3>📦 Cấu trúc gói UDP:</h3><pre><code>| Header (8 bytes) | Data |
+Header = Source Port + Destination Port + Length + Checksum</code></pre><hr><h2>7.3 LỚP DATAGRAMSOCKET</h2><p><code>DatagramSocket</code> được dùng để gửi hoặc nhận gói UDP.</p><pre><code>DatagramSocket socket = new DatagramSocket(); // client
+DatagramSocket server = new DatagramSocket(9999); // server</code></pre><p>Các phương thức quan trọng:</p><ul><li><code>send(DatagramPacket)</code>: gửi gói dữ liệu.</li><li><code>receive(DatagramPacket)</code>: nhận gói dữ liệu.</li><li><code>close()</code>: đóng socket.</li></ul><hr><h2>7.4 LỚP DATAGRAMPACKET</h2><p><code>DatagramPacket</code> chứa dữ liệu và địa chỉ đích.</p><pre><code>byte[] data = "Hello UDP".getBytes();
+InetAddress ip = InetAddress.getByName("localhost");
+DatagramPacket packet = new DatagramPacket(data, data.length, ip, 9999);
+socket.send(packet);</code></pre><p>Trên phía nhận:</p><pre><code>byte[] buffer = new byte[1024];
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+socket.receive(packet);
+String msg = new String(packet.getData(), 0, packet.getLength());
+System.out.println("Nhận: " + msg);</code></pre><hr><h2>7.5 VÍ DỤ CHƯƠNG TRÌNH UDP</h2><h3>UDP Server</h3><pre><code>import java.net.*;
+public class UDPServer {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket server = new DatagramSocket(9999);
+        byte[] buf = new byte[1024];
+        System.out.println("Server đang chờ dữ liệu UDP...");
+        while(true){
+            DatagramPacket packet = new DatagramPacket(buf, buf.length);
+            server.receive(packet);
+            String msg = new String(packet.getData(), 0, packet.getLength());
+            System.out.println("Client: " + msg);
+            byte[] reply = ("Server nhận: " + msg).getBytes();
+            DatagramPacket response = new DatagramPacket(reply, reply.length, packet.getAddress(), packet.getPort());
+            server.send(response);
+        }
+    }
+}</code></pre><h3>UDP Client</h3><pre><code>import java.net.*;
+public class UDPClient {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket socket = new DatagramSocket();
+        InetAddress ip = InetAddress.getByName("localhost");
+        byte[] data = "Xin chào UDP Server".getBytes();
+        DatagramPacket packet = new DatagramPacket(data, data.length, ip, 9999);
+        socket.send(packet);
+
+        byte[] buf = new byte[1024];
+        DatagramPacket reply = new DatagramPacket(buf, buf.length);
+        socket.receive(reply);
+        System.out.println("Server trả lời: " + new String(reply.getData(), 0, reply.getLength()));
+        socket.close();
+    }
+}</code></pre><hr><h2>7.6 UDP BROADCAST</h2><p>UDP cho phép gửi dữ liệu đến nhiều host trong cùng mạng qua <b>broadcast address</b> (ví dụ: 192.168.1.255).</p><pre><code>socket.setBroadcast(true);
+InetAddress broadcast = InetAddress.getByName("192.168.1.255");
+DatagramPacket packet = new DatagramPacket(data, data.length, broadcast, 9999);
+socket.send(packet);</code></pre><p>⚠️ Cần cấu hình router hoặc firewall cho phép broadcast.</p><hr><h2>7.7 ƯU NHƯỢC ĐIỂM CỦA UDP</h2><p><b>Ưu điểm:</b></p><ul><li>Tốc độ cao, độ trễ thấp.</li><li>Không yêu cầu handshake như TCP.</li><li>Thích hợp truyền dữ liệu liên tục.</li></ul><p><b>Nhược điểm:</b></p><ul><li>Không đảm bảo dữ liệu đến đích.</li><li>Không có cơ chế xác nhận hoặc kiểm soát luồng.</li><li>Không sắp xếp lại gói tin bị đảo lộn.</li></ul><hr><h2>✅ TỔNG KẾT</h2><ul><li>UDP là giao thức không kết nối, truyền dữ liệu dạng gói (datagram).</li><li>Java hỗ trợ UDP thông qua lớp <code>DatagramSocket</code> và <code>DatagramPacket</code>.</li><li>Phù hợp ứng dụng cần tốc độ hơn độ tin cậy.</li><li>Cần xử lý lỗi và mất gói ở tầng ứng dụng nếu cần bảo đảm.</li></ul>

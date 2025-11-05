@@ -1,0 +1,333 @@
+{
+  "id": "module_62",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-cac-he-co-so-dem",
+      "title": "lesson_bai-1-cac-he-co-so-dem"
+    },
+    {
+      "id": "lesson_bai-2-tinh-toan-nhi-phan",
+      "title": "lesson_bai-2-tinh-toan-nhi-phan"
+    },
+    {
+      "id": "lesson_bai-3-dai-so-boole-va-mach-so",
+      "title": "lesson_bai-3-dai-so-boole-va-mach-so"
+    },
+    {
+      "id": "lesson_bai-4-cac-mach-so-co-ban",
+      "title": "lesson_bai-4-cac-mach-so-co-ban"
+    },
+    {
+      "id": "lesson_bai-5-to-chuc-may-tinh",
+      "title": "lesson_bai-5-to-chuc-may-tinh"
+    },
+    {
+      "id": "lesson_bai-6-kien-truc-bo-xu-lu-hien-dai",
+      "title": "lesson_bai-6-kien-truc-bo-xu-lu-hien-dai"
+    },
+    {
+      "id": "lesson_bai-7-trinh-dieu-khien-thiet-bi",
+      "title": "lesson_bai-7-trinh-dieu-khien-thiet-bi"
+    },
+    {
+      "id": "lesson_bai-8-toi-uu-hieu-nang",
+      "title": "lesson_bai-8-toi-uu-hieu-nang"
+    },
+    {
+      "id": "lesson_bai-9-ao-hoa",
+      "title": "lesson_bai-9-ao-hoa"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_215.json",
+      "question_count": 20,
+      "questions": [
+        "Trong hệ nhị phân, có bao nhiêu ký hiệu hợp lệ?",
+        "Chữ số A trong hệ thập lục phân tương ứng giá trị nào?",
+        "Một chữ số hex tương ứng bao nhiêu bit nhị phân?",
+        "Chuyển (110010)<sub>2</sub> sang thập phân.",
+        "Chuyển (255)<sub>10</sub> sang hệ thập lục phân.",
+        "Trong hệ bát phân, nhóm bao nhiêu bit nhị phân cho một chữ số?",
+        "Tại sao máy tính sử dụng hệ nhị phân thay vì thập phân?",
+        "Chuyển (100111)<sub>2</sub> sang hệ bát phân.",
+        "Chuyển (0.625)<sub>10</sub> sang nhị phân.",
+        "Sai số làm tròn trong nhị phân xảy ra vì:",
+        "Chuyển (−5) sang dạng bù 2 trên 8 bit.",
+        "Biên biểu diễn của số bù 2 8 bit là:",
+        "Ưu điểm chính của dạng bù 2 so với sign-magnitude là gì?",
+        "Chuyển (3A9F)<sub>16</sub> sang nhị phân.",
+        "Trong hệ Q1.7, bước lượng tử là:",
+        "Chuyển 0.1<sub>10</sub> sang nhị phân. Kết luận nào đúng?",
+        "Tràn số (Overflow) xảy ra khi:",
+        "Giá trị nhị phân 1001 0110 trong bù 2 8 bit tương ứng:",
+        "Một số fixed-point Q1.7 có giá trị nhị phân 0111 1110. Giá trị thực là:",
+        "So sánh giữa fixed-point và floating-point:"
+      ]
+    },
+    {
+      "file": "quiz_216.json",
+      "question_count": 20,
+      "questions": [
+        "Trong phép cộng nhị phân, 1 + 1 bằng gì?",
+        "Phép trừ 0101 - 0011 trong bù 2 cho kết quả nào?",
+        "Tính 101 × 11 trong nhị phân.",
+        "Một Full Adder có bao nhiêu đầu vào?",
+        "Phép chia nhị phân sử dụng thao tác nào lặp lại?",
+        "IEEE 754 single precision có bao nhiêu bit?",
+        "Trong IEEE 754 single precision, bias của phần mũ là bao nhiêu?",
+        "Số 5 trong mã Excess-3 được biểu diễn là:",
+        "Mã BCD của 47 là:",
+        "Ưu điểm của mã Gray là gì?",
+        "Biểu diễn 6.75<sub>10</sub> trong IEEE 754 single precision gần đúng là:",
+        "Trong floating-point, phần mantissa có vai trò gì?",
+        "Khi nào xảy ra tràn trong cộng nhị phân có dấu?",
+        "Chuyển 7<sub>10</sub> sang mã Gray 3-bit.",
+        "Nhân nhị phân 1011 × 10 cho kết quả:",
+        "Giả sử cộng hai số bù 2: 0111 + 0101 = ?",
+        "So sánh Fixed-point và Floating-point:",
+        "Trong CPU, phép nhân có thể thay thế bằng gì để tối ưu tốc độ?",
+        "Khi tính toán nhị phân, sai số làm tròn xuất hiện do:",
+        "Phát biểu đúng nhất về chuẩn IEEE 754 là:"
+      ]
+    },
+    {
+      "file": "quiz_217.json",
+      "question_count": 20,
+      "questions": [
+        "Đại số Boole chỉ làm việc với bao nhiêu giá trị logic?",
+        "Cổng logic thực hiện phép đảo là cổng nào?",
+        "Cổng XOR cho kết quả 1 khi nào?",
+        "Phép toán tương đương giữa XOR và các phép cơ bản là:",
+        "Theo định luật Boole, A + A' bằng:",
+        "Theo định luật Boole, A·A' bằng:",
+        "Theo luật De Morgan, (A + B)' bằng:",
+        "Rút gọn biểu thức: A + A·B = ?",
+        "Cho Y = A·(B + C'). Cổng NOT tác động lên biến nào?",
+        "Biểu thức tổng chuẩn tắc (Sum of Products) là gì?",
+        "Trong bản đồ Karnaugh 3 biến, có bao nhiêu ô?",
+        "Hai ô liền kề trong K-map khác nhau ở:",
+        "Khi nhóm 4 ô 1 liền kề trong K-map, mỗi nhóm giảm bao nhiêu biến?",
+        "Rút gọn biểu thức Y = A·B + A·B' theo Boole:",
+        "Phương pháp Quine–McCluskey chủ yếu dùng cho:",
+        "Mạch nào có thể thay thế toàn bộ các cổng logic khác?",
+        "Phát biểu đúng về cổng XOR:",
+        "Cho biểu thức Y = (A + B)'·(A' + B'). Rút gọn:",
+        "Nếu hàm logic có 4 biến, bản đồ Karnaugh có bao nhiêu ô?",
+        "Vai trò của đại số Boole trong thiết kế mạch số là:"
+      ]
+    },
+    {
+      "file": "quiz_218.json",
+      "question_count": 20,
+      "questions": [
+        "Mạch số có bao nhiêu mức logic cơ bản?",
+        "Điểm khác biệt giữa mạch tổ hợp và mạch tuần tự là gì?",
+        "Cổng logic nào được dùng để tạo mạch cộng nửa?",
+        "Công thức tổng của mạch cộng toàn phần (Full Adder) là gì?",
+        "Mạch trừ thực hiện phép trừ bằng cách nào?",
+        "Trong mạch nhân nhị phân, khi nhân 101 × 11, kết quả là gì?",
+        "Đầu ra của mạch Half Adder là:",
+        "Trong mạch Half Subtractor, Borrow bằng công thức nào?",
+        "MUX 4→1 cần bao nhiêu bit chọn?",
+        "DEMUX 1→8 cần bao nhiêu tín hiệu điều khiển?",
+        "ALU thực hiện nhóm phép toán nào sau đây?",
+        "Trong ALU, cờ Zero (Z) được bật khi:",
+        "Mạch so sánh 1-bit có thể xác định những trạng thái nào?",
+        "Tín hiệu chọn của MUX được dùng để:",
+        "Nếu một ALU 8-bit thực hiện phép cộng 255 + 2, điều gì xảy ra?",
+        "Tại sao cổng NAND được gọi là universal gate?",
+        "Trong mạch cộng toàn phần, Carry được tính bằng công thức nào?",
+        "Mạch Ripple Carry Adder bị hạn chế bởi điều gì?",
+        "Nếu dùng 3 MUX 4→1 để tạo MUX 8→1, cần thêm bao nhiêu MUX nữa?",
+        "Mạch số cơ bản có vai trò gì trong CPU?"
+      ]
+    },
+    {
+      "file": "quiz_219.json",
+      "question_count": 20,
+      "questions": [
+        "Ba thành phần chính của hệ thống máy tính là gì?",
+        "ALU trong CPU có chức năng gì?",
+        "Thanh ghi Instruction Pointer (IP) có vai trò gì?",
+        "BIU trong 8086 chịu trách nhiệm:",
+        "Bus dữ liệu 16-bit có thể truyền tối đa bao nhiêu byte trong một chu kỳ?",
+        "Cờ Zero (Z) trong thanh ghi cờ có ý nghĩa gì?",
+        "Lệnh MOV AX, BX có opcode nhị phân bắt đầu bằng:",
+        "DMA (Direct Memory Access) có tác dụng gì?",
+        "Bus địa chỉ dùng để:",
+        "Bus điều khiển chứa tín hiệu nào sau đây?",
+        "Kiến trúc Von Neumann có đặc điểm gì?",
+        "CPU thực thi lệnh theo chu trình nào?",
+        "Trong 8086, thanh ghi AX thuộc nhóm nào?",
+        "BIU và EU trong 8086 hoạt động song song nhằm:",
+        "Khi CPU gửi tín hiệu READ, bộ nhớ phải:",
+        "Bus nội bộ của CPU dùng để:",
+        "Nếu CPU 32-bit có Address Bus 32-bit, bộ nhớ tối đa truy cập được là:",
+        "Trong mô hình Harvard, dữ liệu và chương trình được:",
+        "Khi có tràn số trong phép cộng, cờ nào được bật?",
+        "Tại sao 8086 được xem là nền tảng của kiến trúc x86?"
+      ]
+    },
+    {
+      "file": "quiz_220.json",
+      "question_count": 20,
+      "questions": [
+        "Kiến trúc x86 thuộc loại nào?",
+        "Tập lệnh của x86 có đặc điểm gì?",
+        "x64 mở rộng từ kiến trúc nào?",
+        "Điểm mạnh của x64 so với x86 là gì?",
+        "ARM thuộc loại kiến trúc nào?",
+        "ARM 32-bit sử dụng bao nhiêu thanh ghi tổng quát?",
+        "Lợi thế của ARM so với x86 trong thiết bị di động là:",
+        "AArch64 là gì?",
+        "Thanh ghi nào đặc trưng của ARM 64-bit?",
+        "Công nghệ bảo mật phần cứng trong ARM là:",
+        "Vì sao x86 tiêu thụ năng lượng nhiều hơn ARM?",
+        "Kiến trúc ARMv8 hỗ trợ song song chế độ nào?",
+        "Chip Apple M1 sử dụng kiến trúc nào?",
+        "Pipeline giúp CPU:",
+        "Công nghệ SIMD cho phép:",
+        "Vì sao x64 vẫn duy trì khả năng tương thích với x86?",
+        "CPU ARM có thể tiết kiệm năng lượng bằng cách nào?",
+        "Tập lệnh CISC đặc trưng bởi:",
+        "Vì sao ARM đang chiếm ưu thế trong thiết bị di động?",
+        "Xu hướng phát triển CPU hiện đại là gì?"
+      ]
+    },
+    {
+      "file": "quiz_221.json",
+      "question_count": 20,
+      "questions": [
+        "Trình điều khiển thiết bị (driver) có chức năng gì?",
+        "Cổng Parallel truyền dữ liệu như thế nào?",
+        "Thiết bị nào thường kết nối qua PCIe?",
+        "Driver PCIe thường hoạt động ở mức nào?",
+        "BIOS là gì?",
+        "Quy trình đầu tiên BIOS thực hiện khi bật máy là gì?",
+        "UEFI khắc phục hạn chế nào của BIOS?",
+        "Công nghệ bảo mật được UEFI hỗ trợ là gì?",
+        "BIOS lưu trữ trong loại bộ nhớ nào?",
+        "Giao diện khởi động của UEFI có điểm gì khác so với BIOS?",
+        "Nếu cập nhật BIOS thất bại, hậu quả là:",
+        "Hệ điều hành quản lý thiết bị thông qua:",
+        "Trong Linux, driver thường được triển khai dưới dạng:",
+        "Giao thức PCIe truyền dữ liệu theo cơ chế:",
+        "BIOS sử dụng kiểu phân vùng nào?",
+        "Trong hệ điều hành, mô hình WDM thuộc nền tảng nào?",
+        "Hệ điều hành có thể giao tiếp trực tiếp với phần cứng không?",
+        "UEFI sử dụng kiểu phân vùng đĩa nào để khởi động?",
+        "Điểm khác biệt chính giữa BIOS và UEFI là gì?",
+        "Tại sao driver cần được cập nhật định kỳ?"
+      ]
+    },
+    {
+      "file": "quiz_222.json",
+      "question_count": 20,
+      "questions": [
+        "Bộ nhớ đệm có vai trò gì trong CPU?",
+        "L1 Cache khác L3 Cache ở điểm nào?",
+        "SRAM được dùng trong cache vì:",
+        "Pipeline giúp tăng hiệu suất bằng cách:",
+        "Data hazard xảy ra khi:",
+        "Multithreading giúp CPU:",
+        "Hyper-Threading là công nghệ của:",
+        "Cache miss nghĩa là:",
+        "Giải pháp nào giảm control hazard?",
+        "Pipeline gồm bao nhiêu giai đoạn cơ bản?",
+        "Out-of-Order Execution giúp:",
+        "Tại sao pipeline bị dừng khi gặp lệnh nhảy (branch)?",
+        "Bộ nhớ cache được chế tạo bằng loại RAM nào?",
+        "Để tăng hiệu năng, CPU có thể:",
+        "Pipeline superscalar khác pipeline thường ở điểm nào?",
+        "Prefetching có tác dụng gì?",
+        "Tại sao CPU có L3 cache dùng chung giữa các lõi?",
+        "Dynamic Frequency Scaling giúp:",
+        "Yếu tố nào dưới đây ảnh hưởng lớn nhất đến hiệu năng hệ thống?",
+        "Điều gì xảy ra nếu không có pipeline trong CPU?"
+      ]
+    },
+    {
+      "file": "quiz_223.json",
+      "question_count": 20,
+      "questions": [
+        "Ảo hóa là gì?",
+        "Hypervisor có chức năng gì?",
+        "Ảo hóa hệ điều hành còn gọi là gì?",
+        "Docker là ví dụ của loại ảo hóa nào?",
+        "Ảo hóa mạng giúp:",
+        "Intel VT-x là gì?",
+        "Khi không có hỗ trợ phần cứng, hypervisor hoạt động như thế nào?",
+        "ARM hỗ trợ ảo hóa qua chế độ nào?",
+        "Hypervisor loại 1 khác loại 2 ở điểm nào?",
+        "VMware ESXi thuộc loại hypervisor nào?",
+        "VirtualBox sử dụng loại hypervisor nào?",
+        "KVM là công nghệ ảo hóa thuộc hệ điều hành nào?",
+        "Công cụ nào kết hợp giả lập và tăng tốc phần cứng?",
+        "Ảo hóa lưu trữ có thể thực hiện bằng:",
+        "Tại sao ảo hóa giúp điện toán đám mây hiệu quả hơn?",
+        "IaaS trong điện toán đám mây cung cấp:",
+        "AWS EC2 là ví dụ của mô hình nào?",
+        "RISC-V hỗ trợ ảo hóa qua module nào?",
+        "Điểm khác biệt giữa container và máy ảo là:",
+        "Vì sao ảo hóa được xem là nền tảng của đám mây?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_215_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_216_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_217_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_218_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_219_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_220_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_221_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_222_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_223_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

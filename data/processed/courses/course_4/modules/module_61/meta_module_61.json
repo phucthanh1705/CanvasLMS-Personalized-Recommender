@@ -1,0 +1,549 @@
+{
+  "id": "module_61",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-cac-giai-doan-trong-qua-trinh-thiet-ke-mot-csdl",
+      "title": "lesson_bai-01-cac-giai-doan-trong-qua-trinh-thiet-ke-mot-csdl"
+    },
+    {
+      "id": "lesson_bai-02-noi-dung-co-ban-cua-cac-giai-doan-thiet-ke-mot-csdl",
+      "title": "lesson_bai-02-noi-dung-co-ban-cua-cac-giai-doan-thiet-ke-mot-csdl"
+    },
+    {
+      "id": "lesson_bai-03-mo-hinh-quan-he-va-phu-thuoc-du-lieu",
+      "title": "lesson_bai-03-mo-hinh-quan-he-va-phu-thuoc-du-lieu"
+    },
+    {
+      "id": "lesson_bai-04-chuan-hoa-du-lieu-va-cac-dang-chuan",
+      "title": "lesson_bai-04-chuan-hoa-du-lieu-va-cac-dang-chuan"
+    },
+    {
+      "id": "lesson_bai-05-thiet-ke-luoc-do-co-so-du-lieu",
+      "title": "lesson_bai-05-thiet-ke-luoc-do-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-06-ngon-ngu-dinh-nghia-va-thao-tac-du-lieu-sql",
+      "title": "lesson_bai-06-ngon-ngu-dinh-nghia-va-thao-tac-du-lieu-sql"
+    },
+    {
+      "id": "lesson_bai-07-cau-lenh-truy-van-nang-cao-trong-sql",
+      "title": "lesson_bai-07-cau-lenh-truy-van-nang-cao-trong-sql"
+    },
+    {
+      "id": "lesson_bai-08-ham-va-bieu-thuc-trong-sql",
+      "title": "lesson_bai-08-ham-va-bieu-thuc-trong-sql"
+    },
+    {
+      "id": "lesson_bai-09-rang-buoc-toan-ven-va-khoa-trong-co-so-du-lieu",
+      "title": "lesson_bai-09-rang-buoc-toan-ven-va-khoa-trong-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-10-giao-dich-va-dieu-khien-tuong-tranh-trong-csdl",
+      "title": "lesson_bai-10-giao-dich-va-dieu-khien-tuong-tranh-trong-csdl"
+    },
+    {
+      "id": "lesson_bai-11-phuc-hoi-va-sao-luu-du-lieu-trong-co-so-du-lieu",
+      "title": "lesson_bai-11-phuc-hoi-va-sao-luu-du-lieu-trong-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-12-an-toan-va-bao-mat-trong-co-so-du-lieu",
+      "title": "lesson_bai-12-an-toan-va-bao-mat-trong-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-13-toi-uu-hoa-hieu-nang-truy-van-trong-csdl",
+      "title": "lesson_bai-13-toi-uu-hoa-hieu-nang-truy-van-trong-csdl"
+    },
+    {
+      "id": "lesson_bai-14-chuan-hoa-du-lieu-trong-co-so-du-lieu",
+      "title": "lesson_bai-14-chuan-hoa-du-lieu-trong-co-so-du-lieu"
+    },
+    {
+      "id": "lesson_bai-15-truy-van-con-ham-tap-hop-va-view-trong-co-so-du-lieu",
+      "title": "lesson_bai-15-truy-van-con-ham-tap-hop-va-view-trong-co-so-du-lieu"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_200.json",
+      "question_count": 20,
+      "questions": [
+        "Trong vòng đời CSDL, giai đoạn nào đầu tiên tạo ra ERD độc lập công nghệ?",
+        "Chọn phát biểu đúng về sự khác nhau giữa mô hình logic và vật lý.",
+        "Khi yêu cầu chính là OLTP ghi/đọc nhỏ nhưng dày đặc, lựa chọn nào hợp lý nhất?",
+        "Bạn có ERD với quan hệ N–N giữa Customer và Product qua Purchase. Hãy chọn lược đồ logic phù hợp nhất.",
+        "Một bảng ORDERS có tần suất SELECT theo MaKhach và NgayDat. Chiến lược index hiệu quả hơn cả là gì?",
+        "Yêu cầu RPO=5 phút, RTO=30 phút. Giải pháp nào phù hợp?",
+        "Khi nào nên ưu tiên giải chuẩn (denormalization)?",
+        "Dữ liệu đơn hàng lịch sử >5 năm hiếm khi truy cập, nhưng cần giữ để tuân thủ. Chọn phương án tối ưu vật lý.",
+        "Bạn cần chuyển schema v1 → v2 (thêm cột NOT NULL có default) mà không downtime. Kỹ thuật migration phù hợp?",
+        "Deliverable nào KHÔNG thuộc mô hình khái niệm?",
+        "Chọn tiêu chí đánh giá ‘đúng & đầy đủ’ của thiết kế CSDL.",
+        "Hệ thống cần báo cáo tổng hợp giờ–ngày theo StoreID. Chọn giải pháp thân thiện hiệu năng nhất.",
+        "Bảng USERS chứa PII. Yêu cầu giảm rò rỉ dữ liệu cho team analytics nhưng vẫn chạy báo cáo. Phương án?",
+        "Một truy vấn join 4 bảng chậm bất thường sau khi thêm index mới. Nguyên nhân hợp lý nhất?",
+        "Khi tích hợp hệ cũ (bottom–up), hoạt động nào quan trọng nhất để xây dựng lược đồ hợp nhất?",
+        "Thuật ngữ nào mô tả mục tiêu ‘thời gian khôi phục cho phép’ trong kế hoạch DR?",
+        "Vì sao nên đưa ràng buộc nghiệp vụ quan trọng thành constraint ở DB thay vì chỉ kiểm tra ở ứng dụng?",
+        "Một kho dữ liệu cần nạp hằng đêm 2TB. Cách thiết kế vật lý giúp tăng thông lượng nạp?",
+        "Bạn có bảng FACT giao dịch lớn. Báo cáo theo tháng bị ‘skew’ do một tháng có dữ liệu vượt trội. Chọn chiến lược partition hợp lý.",
+        "Hãy chọn chuỗi deliverables đúng thứ tự cho dự án mới theo tiếp cận top–down."
+      ]
+    },
+    {
+      "file": "quiz_201.json",
+      "question_count": 20,
+      "questions": [
+        "Giai đoạn đầu tiên trong thiết kế CSDL là gì?",
+        "Sản phẩm đầu ra của giai đoạn thiết kế khái niệm là gì?",
+        "Thiết kế logic tập trung vào việc gì?",
+        "Chuẩn hóa dữ liệu thường được áp dụng trong giai đoạn nào?",
+        "Phân tích nghiệp vụ nhằm mục đích gì?",
+        "Tại sao cần phân rã mô hình ER thành các bảng trong thiết kế logic?",
+        "Trong thiết kế vật lý, việc chọn kiểu dữ liệu ảnh hưởng đến yếu tố nào?",
+        "Mối quan hệ 1–N trong mô hình ER thường được triển khai bằng cách nào?",
+        "Trong quá trình kiểm thử thiết kế, việc nhập dữ liệu mẫu nhằm mục đích gì?",
+        "Tình huống: Khi một thực thể phụ thuộc vào hai thực thể chính, nên biểu diễn như thế nào trong mô hình ER?",
+        "Giai đoạn nào chịu trách nhiệm chọn chỉ mục và tối ưu truy vấn?",
+        "Tại sao cần mô hình hóa nghiệp vụ bằng ERD thay vì chỉ mô tả văn bản?",
+        "Một bảng có nhiều phụ thuộc bắc cầu. Trước khi chuẩn hóa, điều gì nên được thực hiện?",
+        "Kết quả của giai đoạn thiết kế vật lý có thể bao gồm:",
+        "Khi hệ thống cần truy vấn nhanh nhưng ít cập nhật, nên làm gì?",
+        "Làm thế nào để đảm bảo phân rã bảng không mất thông tin?",
+        "Phụ thuộc hàm được sử dụng trong giai đoạn nào của thiết kế?",
+        "Trong thiết kế vật lý, nếu một bảng có hàng trăm triệu bản ghi, nên áp dụng kỹ thuật gì?",
+        "Thứ tự đúng của các giai đoạn thiết kế CSDL là:",
+        "Khi nào nên quay lại chỉnh sửa thiết kế khái niệm?"
+      ]
+    },
+    {
+      "file": "quiz_202.json",
+      "question_count": 20,
+      "questions": [
+        "Ai là người đề xuất mô hình dữ liệu quan hệ?",
+        "Khóa chính (Primary Key) có đặc điểm nào?",
+        "Nếu A → B và B → C thì theo tiên đề Armstrong, điều nào đúng?",
+        "Một phụ thuộc hàm được gọi là phụ thuộc đầy đủ khi:",
+        "Phụ thuộc hàm nào là ví dụ của phụ thuộc bắc cầu?",
+        "Khóa ứng viên là gì?",
+        "Cho R(A,B,C) và F = {A → B, B → C}. Bao đóng A⁺ bằng gì?",
+        "Vì sao cần tìm phủ tối thiểu của tập phụ thuộc hàm?",
+        "Thuộc tính nào có thể xác định duy nhất một bản ghi trong bảng?",
+        "Nếu R(A,B,C,D) với F = {A → B, B → C, AC → D}, tập khóa tối thiểu là gì?",
+        "Phép suy luận nào được sử dụng để kiểm tra A → C từ A → B và B → C?",
+        "Trong tiên đề Armstrong, luật nào cho phép thêm thuộc tính vào cả hai vế?",
+        "Khi tính bao đóng X⁺, nếu A → B và A ⊆ X⁺ thì bước tiếp theo là gì?",
+        "Điều kiện để R1 và R2 tương đương về phụ thuộc hàm là gì?",
+        "Một phụ thuộc A → B có thể được phân rã thành các phụ thuộc nào?",
+        "Khi nào hai tập phụ thuộc F và G được coi là tương đương?",
+        "Phụ thuộc bộ phận thường dẫn đến lỗi gì trong thiết kế?",
+        "Khi kiểm tra phủ tối thiểu, bước cuối cùng là gì?",
+        "Chọn phát biểu đúng về khóa của quan hệ:",
+        "Tại sao xác định phụ thuộc hàm đúng là điều kiện tiên quyết của chuẩn hóa?"
+      ]
+    },
+    {
+      "file": "quiz_203.json",
+      "question_count": 20,
+      "questions": [
+        "Chuẩn hóa dữ liệu nhằm mục đích gì?",
+        "Một thuộc tính được coi là nguyên tố khi nào?",
+        "Bảng đạt 2NF khi nào?",
+        "Nếu tồn tại phụ thuộc MaSV → MaLop và MaLop → GV thì bảng đang ở dạng nào?",
+        "BCNF là viết tắt của gì?",
+        "Trong 1NF, lỗi thường gặp nhất là gì?",
+        "Để chuyển từ 2NF sang 3NF cần loại bỏ gì?",
+        "Phụ thuộc đa trị được loại bỏ ở dạng chuẩn nào?",
+        "Nếu quan hệ R(A,B,C) có A→B và B→A thì R ở dạng chuẩn nào?",
+        "Tại sao giải chuẩn có thể cần thiết trong hệ thống lớn?",
+        "Một bảng có thuộc tính lặp (Danh sách môn học trong một ô) vi phạm dạng chuẩn nào?",
+        "Điều kiện để đạt 3NF là gì?",
+        "Một bảng có A→B, B→C và A là khóa chính. Bảng đó ở dạng chuẩn nào?",
+        "Tại sao chuẩn hóa có thể làm giảm hiệu năng?",
+        "Trong BCNF, mỗi phụ thuộc A→B thỏa điều kiện gì?",
+        "5NF còn được gọi là dạng chuẩn nào?",
+        "Khi nào nên dừng ở 3NF thay vì BCNF?",
+        "Trong bảng KHACHHANG(MaKH, TenKH, DiaChi, MaTinh, TenTinh), cần tách bảng nào để đạt 3NF?",
+        "Thứ tự đúng của các dạng chuẩn từ thấp đến cao là:",
+        "Vì sao không nên áp dụng 5NF trong hệ thống OLTP thông thường?"
+      ]
+    },
+    {
+      "file": "quiz_204.json",
+      "question_count": 20,
+      "questions": [
+        "Lược đồ cơ sở dữ liệu mô tả điều gì?",
+        "Thực thể mạnh trong ERD chuyển thành gì trong mô hình quan hệ?",
+        "Quan hệ 1–N được triển khai bằng cách nào?",
+        "Quan hệ N–N trong ER được biểu diễn như thế nào?",
+        "Ràng buộc PRIMARY KEY đảm bảo điều gì?",
+        "Toàn vẹn tham chiếu đảm bảo điều gì?",
+        "Khi nào cần tạo chỉ mục (INDEX)?",
+        "Trong lược đồ, vì sao nên tránh tạo nhiều khóa ngoại vòng lặp?",
+        "Thuộc tính nào thường được dùng làm khóa chính trong bảng SINHVIEN?",
+        "Nếu hai bảng có cùng khóa chính, ta nên xử lý quan hệ thế nào?",
+        "Ràng buộc CHECK trong SQL dùng để làm gì?",
+        "Khi mô hình có nhiều mối quan hệ 1–N lồng nhau, nên xử lý thế nào?",
+        "Thực thể yếu cần có điều kiện gì để tồn tại?",
+        "Vì sao nên đánh chỉ mục cho khóa ngoại?",
+        "Mối quan hệ 1–1 thường được thiết kế thế nào?",
+        "Khi thiết kế lược đồ, điều gì quan trọng nhất để tránh lỗi toàn vẹn?",
+        "Quan hệ nào cần bảng trung gian để thể hiện?",
+        "Nếu một bảng có quá nhiều thuộc tính NULL, ta nên làm gì?",
+        "Thứ tự đúng của các bước thiết kế lược đồ là:",
+        "Một thiết kế lược đồ tốt nhất khi nào?"
+      ]
+    },
+    {
+      "file": "quiz_205.json",
+      "question_count": 20,
+      "questions": [
+        "SQL là viết tắt của cụm từ nào?",
+        "Lệnh CREATE TABLE thuộc nhóm nào của SQL?",
+        "Lệnh DELETE dùng để làm gì?",
+        "Từ khóa WHERE được sử dụng trong mệnh đề nào?",
+        "Lệnh nào dùng để cấp quyền cho người dùng?",
+        "Tại sao cần dùng COMMIT trong SQL?",
+        "Câu lệnh nào đúng để xóa toàn bộ dữ liệu trong bảng nhưng giữ cấu trúc?",
+        "Khi nào nên sử dụng DISTINCT trong câu lệnh SELECT?",
+        "Lệnh nào được dùng để thay đổi cấu trúc bảng hiện có?",
+        "Cho câu lệnh: SELECT MaLop, COUNT(*) FROM SinhVien GROUP BY MaLop HAVING COUNT(*)>20; Chức năng của HAVING là gì?",
+        "Mệnh đề ORDER BY mặc định sắp xếp dữ liệu theo hướng nào?",
+        "Ràng buộc CHECK trong SQL dùng để:",
+        "Lệnh nào sau đây sẽ thất bại nếu bảng có ràng buộc khóa ngoại?",
+        "Mệnh đề GROUP BY thường đi kèm với hàm nào?",
+        "Khi thực hiện giao dịch, lệnh ROLLBACK dùng để:",
+        "Chỉ mục (INDEX) giúp cải thiện yếu tố nào?",
+        "Câu lệnh SQL nào dùng để đổi tên cột trong bảng?",
+        "Giả sử bạn muốn hiển thị danh sách sinh viên và điểm trung bình, câu lệnh nào phù hợp?",
+        "Thứ tự thực thi các mệnh đề trong câu SELECT là:",
+        "Vì sao cần phân biệt rõ các nhóm lệnh SQL (DDL, DML, DCL, TCL)?"
+      ]
+    },
+    {
+      "file": "quiz_206.json",
+      "question_count": 20,
+      "questions": [
+        "INNER JOIN thực hiện điều gì?",
+        "LEFT JOIN khác INNER JOIN ở điểm nào?",
+        "Khi nào nên dùng VIEW?",
+        "Subquery được đặt ở đâu trong câu lệnh SQL?",
+        "Từ khóa WITH trong SQL dùng để tạo gì?",
+        "Câu lệnh nào hiển thị sinh viên có điểm lớn hơn trung bình toàn bảng?",
+        "Phép JOIN nào có thể trả về NULL ở cả hai phía?",
+        "Câu truy vấn nào tính điểm trung bình theo lớp học?",
+        "CTE khác VIEW ở điểm nào?",
+        "Khi cần xếp hạng sinh viên theo điểm, hàm nào nên dùng?",
+        "Phép CROSS JOIN cho kết quả thế nào?",
+        "Để tìm sinh viên chưa đăng ký môn học, dùng truy vấn nào?",
+        "Câu truy vấn nào sử dụng Subquery trong SELECT?",
+        "Hàm COUNT(*) trong SQL có ý nghĩa gì?",
+        "Khi JOIN nhiều bảng, điều quan trọng nhất để tránh trùng dữ liệu là gì?",
+        "UNION và UNION ALL khác nhau thế nào?",
+        "Khi cần hiển thị top 5 sinh viên có điểm cao nhất, dùng truy vấn nào?",
+        "Phép INTERSECT trả về kết quả nào?",
+        "Thứ tự xử lý các mệnh đề trong truy vấn SELECT nâng cao là:",
+        "Khi nào nên dùng CTE thay vì Subquery?"
+      ]
+    },
+    {
+      "file": "quiz_207.json",
+      "question_count": 20,
+      "questions": [
+        "Hàm COUNT(*) dùng để làm gì?",
+        "Hàm nào dùng để nối chuỗi trong SQL?",
+        "Hàm SUBSTRING('Database', 2, 3) trả về gì?",
+        "Hàm DATEDIFF(YEAR, '2000-01-01', '2020-01-01') trả về bao nhiêu?",
+        "Hàm nào trả về ngày hiện tại của hệ thống?",
+        "Hàm UPPER('sql') trả về kết quả gì?",
+        "Câu lệnh nào tính tuổi sinh viên từ cột NgaySinh?",
+        "Để thay 'Nguyen' bằng 'Trần' trong cột HoTen, dùng hàm nào?",
+        "Hàm nào trả về giá trị khác NULL đầu tiên?",
+        "Hàm CASE WHEN dùng để làm gì?",
+        "Sự khác nhau giữa CAST và CONVERT là gì?",
+        "Hàm nào cho phép định dạng ngày theo chuẩn 103 (dd/mm/yyyy)?",
+        "Hàm AVG() khác SUM() ở điểm nào?",
+        "Khi nào nên dùng hàm người dùng (UDF)?",
+        "Giả sử có hàm fn_TinhDiemTB(MaSV), cách gọi đúng là gì?",
+        "Kết quả của ISNULL(NULL, 'Chưa có') là gì?",
+        "Hàm RANK() OVER(ORDER BY Diem DESC) khác COUNT() thế nào?",
+        "Để tạo cột điểm quy đổi theo công thức Diem*0.4+DiemKT*0.6, cần gì?",
+        "Trong SQL, hàm tổng hợp được phép dùng ở đâu?",
+        "Vì sao nên hạn chế dùng hàm trong WHERE khi dữ liệu lớn?"
+      ]
+    },
+    {
+      "file": "quiz_208.json",
+      "question_count": 20,
+      "questions": [
+        "Ràng buộc PRIMARY KEY đảm bảo điều gì?",
+        "FOREIGN KEY được sử dụng để:",
+        "Ràng buộc CHECK dùng để:",
+        "UNIQUE khác PRIMARY KEY ở điểm nào?",
+        "DEFAULT dùng để:",
+        "Nếu xóa sinh viên có bản ghi đăng ký, nhưng khai báo ON DELETE CASCADE, điều gì xảy ra?",
+        "Lệnh nào tạo khóa ngoại hợp lệ?",
+        "Tại sao cần khai báo khóa chính?",
+        "Tình huống nào sau đây vi phạm toàn vẹn tham chiếu?",
+        "Một bảng có thể có bao nhiêu khóa chính?",
+        "Nếu muốn tự động đặt trạng thái = 'Đang học' khi thêm sinh viên, nên dùng:",
+        "Khóa tổng hợp (Composite Key) là gì?",
+        "Lệnh nào đảm bảo tuổi sinh viên phải từ 18 đến 60?",
+        "Khi nên dùng ON UPDATE CASCADE?",
+        "Kết quả của ràng buộc FOREIGN KEY bị vi phạm là gì?",
+        "Khóa ứng viên (Candidate Key) là gì?",
+        "Giả sử bảng A tham chiếu bảng B, nếu xóa dòng trong B mà không khai báo CASCADE sẽ:",
+        "Khi dùng UNIQUE và NOT NULL đồng thời, điều gì xảy ra?",
+        "Nếu bảng DangKy có khóa chính (MaSV, MaMH), đó là loại khóa nào?",
+        "Vì sao cần thiết lập đầy đủ các loại ràng buộc trong thiết kế CSDL?"
+      ]
+    },
+    {
+      "file": "quiz_209.json",
+      "question_count": 20,
+      "questions": [
+        "Giao dịch trong CSDL là gì?",
+        "ACID trong giao dịch viết tắt của:",
+        "Tính Isolation đảm bảo điều gì?",
+        "Mức cô lập nào dễ gây dirty read nhất?",
+        "Phép khóa Exclusive Lock (X) cho phép:",
+        "Lệnh COMMIT trong SQL có tác dụng gì?",
+        "Vấn đề nào xảy ra khi hai giao dịch ghi đè lên nhau?",
+        "Cách nào để tránh Dirty Read?",
+        "Khi hai giao dịch chờ nhau giải phóng tài nguyên, đó là:",
+        "Câu lệnh SQL nào bắt đầu một giao dịch?",
+        "Nếu giao dịch thất bại, cần dùng lệnh nào để hoàn tác?",
+        "Mức SERIALIZABLE đảm bảo điều gì?",
+        "Optimistic Concurrency Control phù hợp khi nào?",
+        "Phương pháp Two-Phase Locking đảm bảo điều gì?",
+        "Dirty Read có thể dẫn đến hậu quả gì?",
+        "REDO log dùng để:",
+        "Nếu hai giao dịch cùng cập nhật một bản ghi mà không khóa, sẽ gây ra:",
+        "Phantom Read xảy ra khi:",
+        "Mức READ COMMITTED có thể ngăn được vấn đề nào?",
+        "Vì sao cần điều khiển tương tranh trong hệ CSDL nhiều người dùng?"
+      ]
+    },
+    {
+      "file": "quiz_210.json",
+      "question_count": 20,
+      "questions": [
+        "Backup trong CSDL là gì?",
+        "Phục hồi (Recovery) giúp:",
+        "Full Backup có đặc điểm gì?",
+        "Incremental Backup lưu lại điều gì?",
+        "Differential Backup khác Incremental ở điểm nào?",
+        "Redo log có vai trò gì?",
+        "Undo log dùng để:",
+        "Checkpoint trong log có tác dụng gì?",
+        "Point-in-Time Recovery cho phép:",
+        "Lệnh nào dùng để khôi phục dữ liệu trong SQL Server?",
+        "Khi nào nên dùng Full + Incremental thay vì chỉ Full?",
+        "Online Backup có thể thực hiện khi:",
+        "Lệnh RESTORE LOG kèm STOPAT dùng để:",
+        "Tại sao cần lưu log giao dịch?",
+        "Nếu mất toàn bộ file log và chưa có full backup mới, hậu quả là gì?",
+        "Khi nào cần kết hợp Redo và Undo log trong phục hồi?",
+        "Tần suất sao lưu log nên dựa vào yếu tố nào?",
+        "Vì sao cần lưu backup ở 2 vị trí khác nhau (local + cloud)?",
+        "Nếu muốn rollback về thời điểm 10:30 sáng, cần điều kiện nào?",
+        "Lý do quan trọng nhất để thiết lập kế hoạch backup định kỳ là:"
+      ]
+    },
+    {
+      "file": "quiz_211.json",
+      "question_count": 20,
+      "questions": [
+        "Ba nguyên tắc cơ bản của bảo mật dữ liệu là gì?",
+        "Lệnh GRANT dùng để:",
+        "REVOKE trong SQL có tác dụng gì?",
+        "Vai trò của ROLE trong DBMS là gì?",
+        "Audit log giúp:",
+        "Row-Level Security giúp:",
+        "Lệnh SQL nào để gán quyền cho nhóm người dùng?",
+        "Cách mã hóa dữ liệu trong SQL Server là gì?",
+        "Bảo mật ở mức ứng dụng khác bảo mật ở mức DBMS như thế nào?",
+        "Mã hóa dữ liệu giúp đạt được yếu tố nào trong CIA?",
+        "Trigger bảo mật thường dùng để:",
+        "Để bảo vệ dữ liệu khi truyền qua mạng, nên dùng:",
+        "Điểm khác nhau giữa Encryption và Masking là gì?",
+        "Vì sao nên lưu log bảo mật ở server riêng?",
+        "Lệnh REVOKE khác DROP ở điểm nào?",
+        "Để xác thực mạnh, nên kết hợp phương thức nào?",
+        "Tại sao cần cập nhật thường xuyên DBMS?",
+        "Row-Level Security thường được triển khai cho:",
+        "Phương pháp nào KHÔNG phải là biện pháp bảo mật dữ liệu?",
+        "Điều quan trọng nhất trong bảo mật CSDL là gì?"
+      ]
+    },
+    {
+      "file": "quiz_212.json",
+      "question_count": 20,
+      "questions": [
+        "Index trong CSDL có tác dụng gì?",
+        "Khi nào không nên sử dụng index?",
+        "Lệnh nào tạo chỉ mục trong SQL?",
+        "Clustered Index khác Non-clustered Index ở điểm nào?",
+        "Câu lệnh nào dùng để phân tích kế hoạch thực thi trong PostgreSQL?",
+        "Tại sao không nên dùng WHERE YEAR(NgayLap)=2025 trong truy vấn?",
+        "Cách tối ưu truy vấn JOIN hai bảng lớn?",
+        "Partitioning trong CSDL giúp:",
+        "EXPLAIN trong SQL có chức năng gì?",
+        "Query Cache dùng để:",
+        "Lệnh nào giúp cập nhật thống kê dữ liệu cho optimizer?",
+        "Khi truy vấn quét toàn bảng, DBMS đang thực hiện:",
+        "Khi truy vấn GROUP BY và ORDER BY cùng cột đã có index, kết quả là gì?",
+        "Optimizer trong DBMS có nhiệm vụ gì?",
+        "Cấu trúc dữ liệu phổ biến nhất trong index là:",
+        "Nếu truy vấn trả về hơn 80% bản ghi, việc tạo index có hiệu quả không?",
+        "Cột nào nên được tạo index?",
+        "Khi kết quả EXPLAIN hiển thị cost cao, điều đó nghĩa là:",
+        "Lợi ích của việc cập nhật thống kê (ANALYZE) thường xuyên là gì?",
+        "Yếu tố quan trọng nhất để tối ưu hóa hệ thống truy vấn lớn là gì?"
+      ]
+    },
+    {
+      "file": "quiz_213.json",
+      "question_count": 20,
+      "questions": [
+        "Chuẩn hóa dữ liệu nhằm mục đích chính là gì?",
+        "Dạng chuẩn 1NF yêu cầu điều gì?",
+        "Điều kiện để đạt 2NF là gì?",
+        "Phụ thuộc bắc cầu xuất hiện khi:",
+        "BCNF là viết tắt của:",
+        "BCNF khác 3NF ở điểm nào?",
+        "Bảng có thuộc tính MaSV → TenSV và MaSV, MaMon → Diem đang vi phạm chuẩn nào?",
+        "Chuẩn hóa đến 3NF sẽ loại bỏ được:",
+        "Dạng chuẩn cao nhất được đề cập trong lý thuyết là:",
+        "Khi nào nên dừng chuẩn hóa ở 3NF hoặc BCNF?",
+        "Cho phụ thuộc MaSV → MaLop → TenLop. Để đạt 3NF cần làm gì?",
+        "Nếu bảng có phụ thuộc đa trị, cần đạt ít nhất dạng chuẩn nào để loại bỏ?",
+        "Phi chuẩn hóa (Denormalization) là gì?",
+        "Phụ thuộc hàm (Functional Dependency) mô tả:",
+        "Một bảng đạt 2NF nhưng không đạt 3NF khi có:",
+        "Chuẩn hóa giúp hệ thống tránh lỗi gì?",
+        "Trong thực tế, chuẩn hóa đến mức nào là tối ưu?",
+        "Phụ thuộc hàm X → Y hợp lệ khi:",
+        "Khi nào nên phi chuẩn hóa một bảng?",
+        "Vì sao chuẩn hóa là bước bắt buộc trong thiết kế cơ sở dữ liệu?"
+      ]
+    },
+    {
+      "file": "quiz_214.json",
+      "question_count": 20,
+      "questions": [
+        "Subquery trong SQL là gì?",
+        "Subquery có thể đặt ở những vị trí nào trong SQL?",
+        "Hàm COUNT() dùng để:",
+        "Lệnh nào tạo view trong SQL?",
+        "Khác biệt giữa GROUP BY và HAVING là gì?",
+        "Câu lệnh nào lấy lớp có điểm trung bình ≥ 8?",
+        "Truy vấn nào trả về sinh viên có điểm cao hơn điểm trung bình toàn bộ?",
+        "View được gọi là bảng ảo vì:",
+        "Câu lệnh nào xóa một view?",
+        "Truy vấn tương quan khác với truy vấn con thông thường ở điểm nào?",
+        "Lệnh nào tạo view chỉ hiển thị sinh viên và điểm của họ?",
+        "Hàm nào tính giá trị trung bình?",
+        "Làm sao để tối ưu hiệu năng khi dùng subquery phức tạp?",
+        "Tại sao nên dùng VIEW trong hệ thống lớn?",
+        "Khi nào nên dùng HAVING thay vì WHERE?",
+        "Nếu cần thống kê điểm cao nhất của mỗi môn, ta dùng:",
+        "Subquery có thể trả về nhiều dòng khi nào?",
+        "Câu nào sau đây đúng về việc cập nhật view?",
+        "View nào giúp ẩn dữ liệu nhạy cảm của nhân viên?",
+        "Ưu điểm lớn nhất của việc dùng VIEW trong thiết kế hệ thống là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_200_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_201_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_202_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_203_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_204_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_205_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_206_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_207_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_208_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_209_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_210_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_211_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_212_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_213_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_214_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

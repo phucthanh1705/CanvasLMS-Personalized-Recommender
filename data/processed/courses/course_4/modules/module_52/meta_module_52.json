@@ -1,0 +1,153 @@
+{
+  "id": "module_52",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-javascript",
+      "title": "lesson_bai-01-tong-quan-ve-javascript"
+    },
+    {
+      "id": "lesson_bai-02-javascript-nang-cao",
+      "title": "lesson_bai-02-javascript-nang-cao"
+    },
+    {
+      "id": "lesson_bai-04-angular",
+      "title": "lesson_bai-04-angular"
+    },
+    {
+      "id": "lesson_bai-05-react",
+      "title": "lesson_bai-05-react"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_127.json",
+      "question_count": 20,
+      "questions": [
+        "Ngôn ngữ JavaScript chủ yếu được dùng để làm gì?",
+        "Thẻ nào dùng để chèn mã JavaScript vào HTML?",
+        "Khai báo nào đúng với ES6?",
+        "Toán tử === trong JavaScript dùng để:",
+        "Giá trị của typeof null là gì?",
+        "Đoạn mã sau in ra gì? console.log(2 + '2');",
+        "Lệnh nào dùng để dừng vòng lặp hiện tại và sang vòng mới?",
+        "Kết quả của ['a','b','c'].length là gì?",
+        "Phương thức nào của mảng tạo mảng mới từ các phần tử thỏa điều kiện?",
+        "Kết quả của parseInt('10.5') là:",
+        "Đoạn code nào khai báo hàm hợp lệ?",
+        "Cú pháp arrow function nào đúng?",
+        "Khi không tìm thấy phần tử, indexOf() trả về:",
+        "Phương thức nào nối các phần tử mảng thành chuỗi?",
+        "Vòng lặp nào duyệt qua giá trị của mảng?",
+        "Kết quả của 'Java' + 'Script' là:",
+        "Hàm console.log(typeof []) in ra:",
+        "Khi khai báo const arr = [1,2,3]; arr.push(4); điều gì xảy ra?",
+        "Phương thức reduce() dùng để:",
+        "Trong JavaScript, từ khóa nào khai báo hằng số?"
+      ]
+    },
+    {
+      "file": "quiz_128.json",
+      "question_count": 20,
+      "questions": [
+        "DOM trong JavaScript dùng để làm gì?",
+        "Phương thức nào thêm phần tử mới vào DOM?",
+        "Đoạn mã nào thêm sự kiện click hợp lệ?",
+        "Trong bất đồng bộ, hàm nào dùng để hoãn thực thi?",
+        "Callback trong JavaScript là gì?",
+        "Promise có mấy trạng thái chính?",
+        "Async/Await được giới thiệu từ phiên bản nào?",
+        "Đoạn code nào thực hiện yêu cầu HTTP GET hợp lệ?",
+        "Phương thức nào chuyển đổi phản hồi Fetch thành đối tượng JSON?",
+        "Cookies được lưu trữ ở đâu?",
+        "Sự khác biệt giữa sessionStorage và localStorage là gì?",
+        "Đoạn code nào lưu dữ liệu vào localStorage?",
+        "Phương thức nào lấy phần tử đầu tiên khớp với selector CSS?",
+        "Từ khóa nào trong Async/Await giúp chờ kết quả Promise?",
+        "Lệnh nào xóa tất cả dữ liệu trong localStorage?",
+        "Phương thức nào của Fetch dùng để gửi dữ liệu POST?",
+        "Trong Promise, phương thức nào xử lý lỗi?",
+        "Thuộc tính nào của phần tử HTML thay đổi màu nền bằng JS?",
+        "Khi gửi form bằng Fetch, đối tượng nào thường dùng để chứa dữ liệu?",
+        "Đoạn code nào đúng để thêm text vào thẻ p?"
+      ]
+    },
+    {
+      "file": "quiz_129.json",
+      "question_count": 20,
+      "questions": [
+        "Angular được viết chủ yếu bằng ngôn ngữ nào?",
+        "Công cụ CLI dùng để khởi tạo ứng dụng Angular là:",
+        "Lệnh tạo mới project Angular là:",
+        "Thành phần nào chịu trách nhiệm hiển thị trong Angular?",
+        "Khai báo decorator nào để định nghĩa một Component?",
+        "Thuộc tính nào định nghĩa template HTML của Component?",
+        "Cú pháp nào thể hiện Two-way Data Binding?",
+        "Module nào cần import để sử dụng HttpClient?",
+        "Để điều hướng giữa các trang trong Angular, cần sử dụng:",
+        "Cú pháp khai báo route cơ bản là:",
+        "Lazy Loading trong Angular giúp:",
+        "Câu lệnh chạy ứng dụng Angular ở chế độ dev:",
+        "Angular Universal được dùng để:",
+        "Trong Angular, Service được sử dụng để:",
+        "Thành phần nào xác định tất cả route của ứng dụng?",
+        "Để thêm thẻ meta SEO trong Angular, sử dụng Service nào?",
+        "Lệnh nào tạo component mới trong Angular CLI?",
+        "Cấu trúc chính của ứng dụng Angular gồm:",
+        "Angular được sử dụng chủ yếu để xây dựng loại ứng dụng nào?",
+        "Khi sử dụng routerLink='/about', phần tử nào hiển thị nội dung?"
+      ]
+    },
+    {
+      "file": "quiz_130.json",
+      "question_count": 20,
+      "questions": [
+        "React được phát triển bởi công ty nào?",
+        "Câu lệnh nào dùng để khởi tạo ứng dụng React?",
+        "JSX là gì?",
+        "Virtual DOM trong React có vai trò gì?",
+        "Props trong React được dùng để:",
+        "State trong React dùng để:",
+        "Khi state thay đổi, React sẽ:",
+        "Hook useState trả về:",
+        "Hook useEffect được dùng để:",
+        "Để gắn sự kiện click trong React, dùng cú pháp:",
+        "Component React phải bắt đầu bằng:",
+        "Cách truyền props vào component đúng là:",
+        "Phương thức map() trong React thường dùng để:",
+        "React sử dụng hướng tiếp cận nào cho dữ liệu?",
+        "useEffect có thể mô phỏng lifecycle nào?",
+        "React khác Angular ở điểm nào?",
+        "Phương thức nào trong React render ra HTML?",
+        "Để khởi chạy ứng dụng React sau khi cài đặt, dùng lệnh:",
+        "React hook không hợp lệ là:",
+        "React phù hợp nhất cho loại ứng dụng nào?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_127_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_128_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_129_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_130_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

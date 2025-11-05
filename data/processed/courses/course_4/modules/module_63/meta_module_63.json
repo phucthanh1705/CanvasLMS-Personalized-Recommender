@@ -1,0 +1,297 @@
+{
+  "id": "module_63",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-tong-quan-ve-he-dieu-hanh",
+      "title": "lesson_bai-1-tong-quan-ve-he-dieu-hanh"
+    },
+    {
+      "id": "lesson_bai-2-cau-truc-he-dieu-hanh",
+      "title": "lesson_bai-2-cau-truc-he-dieu-hanh"
+    },
+    {
+      "id": "lesson_bai-3-tien-trinh-va-luong",
+      "title": "lesson_bai-3-tien-trinh-va-luong"
+    },
+    {
+      "id": "lesson_bai-4-dieu-phoi-cpu",
+      "title": "lesson_bai-4-dieu-phoi-cpu"
+    },
+    {
+      "id": "lesson_bai-5-dong-bo-hoa-tien-trinh",
+      "title": "lesson_bai-5-dong-bo-hoa-tien-trinh"
+    },
+    {
+      "id": "lesson_bai-6-tac-nghen-deadlock",
+      "title": "lesson_bai-6-tac-nghen-deadlock"
+    },
+    {
+      "id": "lesson_bai-7-quan-lu-bo-nho",
+      "title": "lesson_bai-7-quan-lu-bo-nho"
+    },
+    {
+      "id": "lesson_bai-8-quan-lu-bo-nho-ao-virtual-memory",
+      "title": "lesson_bai-8-quan-lu-bo-nho-ao-virtual-memory"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_224.json",
+      "question_count": 20,
+      "questions": [
+        "Hệ điều hành là gì?",
+        "Trong hai chế độ hoạt động của CPU, chế độ nào có quyền cao nhất?",
+        "Chức năng chính của hệ điều hành là gì?",
+        "Chia sẻ thời gian trong hệ điều hành có ý nghĩa gì?",
+        "Khi một tiến trình chiếm CPU quá lâu, hệ điều hành sẽ làm gì?",
+        "Giả sử một đoạn mã chạy ở user mode cố gắng truy cập vùng nhớ kernel. Điều gì xảy ra?",
+        "Hãy chọn mô tả đúng về context switch:",
+        "Vai trò của driver trong hệ điều hành là gì?",
+        "Ví dụ nào dưới đây là hệ điều hành?",
+        "Tại sao hệ điều hành được coi là 'bộ điều phối tài nguyên'?",
+        "Trong hệ thống đa chương, tại sao phải có cơ chế quản lý bộ nhớ?",
+        "Một tiến trình thực thi hàm vô hạn mà không yield CPU, điều gì xảy ra trong hệ chia sẻ thời gian?",
+        "Đâu là yếu tố không thuộc cấu trúc phần cứng trong OS?",
+        "Hệ điều hành thực hiện quản lý tiến trình thông qua:",
+        "Tại sao kernel phải chạy trong không gian riêng biệt?",
+        "Nếu OS không quản lý bộ đếm thời gian, hệ quả là gì?",
+        "Trong OS, cơ chế ngắt (interrupt) giúp:",
+        "Trong hệ thống đa nhiệm, điều gì giúp tránh deadlock ở mức CPU scheduling?",
+        "So sánh OS người dùng đơn và OS đa người dùng, điểm khác biệt lớn nhất là gì?",
+        "Tại sao hệ điều hành được coi là trái tim của hệ thống máy tính?"
+      ]
+    },
+    {
+      "file": "quiz_225.json",
+      "question_count": 20,
+      "questions": [
+        "Dịch vụ lõi của hệ điều hành KHÔNG bao gồm chức năng nào sau đây?",
+        "System call là gì?",
+        "Cấu trúc nào của hệ điều hành cho phép nạp module động khi hệ thống đang chạy?",
+        "Lợi ích chính của kiến trúc phân lớp là gì?",
+        "Nếu một chương trình cố gắng đọc file mà không có quyền, system call sẽ trả về:",
+        "Xét lệnh sau: int fd = open('data.txt', O_RDONLY);. Lệnh này hoạt động ở:",
+        "Vi hạt nhân (microkernel) có ưu điểm chính là gì?",
+        "Khi nào nên chọn hệ điều hành dạng mô-đun thay vì vi hạt nhân?",
+        "Hypervisor loại 1 khác loại 2 ở điểm nào?",
+        "Boot loader có nhiệm vụ gì trong quá trình khởi động?",
+        "Trong hệ vi hạt nhân, tại sao chi phí giao tiếp giữa tiến trình cao?",
+        "Giả sử system call fork() được gọi, điều gì xảy ra?",
+        "Trong cấu trúc mô-đun, việc nạp module mới cần điều kiện gì?",
+        "Khi BIOS hoàn tất POST, bước tiếp theo là gì?",
+        "Điều gì xảy ra nếu kernel không có cơ chế bảo vệ giữa module?",
+        "Hệ thống nào sau đây sử dụng kiến trúc vi hạt nhân?",
+        "Trong quá trình boot, tiến trình đầu tiên được kernel khởi tạo là:",
+        "Lý do chính để sử dụng máy ảo trong phát triển phần mềm là gì?",
+        "So sánh cấu trúc vi hạt nhân và mô-đun, mô hình nào phù hợp cho hệ thống nhúng?",
+        "Tại sao nói 'system call là ranh giới giữa người dùng và hệ thống'?"
+      ]
+    },
+    {
+      "file": "quiz_226.json",
+      "question_count": 20,
+      "questions": [
+        "Tiến trình là gì?",
+        "Trạng thái 'Ready' của tiến trình thể hiện điều gì?",
+        "Cấu trúc nào lưu trữ thông tin trạng thái tiến trình?",
+        "Khi tiến trình đang chạy cần thực hiện I/O, nó sẽ chuyển sang trạng thái nào?",
+        "Nếu hai tiến trình cùng truy cập một vùng nhớ chung mà không có cơ chế đồng bộ, điều gì có thể xảy ra?",
+        "Giả sử tiến trình cha gọi fork() một lần. Có bao nhiêu tiến trình hoạt động sau khi gọi?",
+        "Điểm khác biệt giữa luồng và tiến trình là gì?",
+        "Trong Windows, hàm nào sau đây được dùng để tạo luồng mới?",
+        "Cơ chế giao tiếp nào của IPC có tốc độ nhanh nhất?",
+        "Một chương trình đa luồng có thể có lợi khi nào?",
+        "Giả sử hai luồng cùng tăng biến toàn cục 'counter++' mà không có khóa, kết quả có thể:",
+        "Luồng mức người dùng có hạn chế gì?",
+        "Trong hệ thống client–server, mô hình socket giúp:",
+        "Hàm system call nào thường được dùng để tạo tiến trình con trong Unix?",
+        "Vì sao lập trình đa luồng cần cơ chế đồng bộ?",
+        "Trong bảng PCB, mục nào không có?",
+        "Nếu tiến trình con không gọi exit() sau khi thực thi, hệ điều hành sẽ:",
+        "Trong môi trường đa luồng, tài nguyên nào thường phải khóa (mutex)?",
+        "Luồng có thể thay thế hoàn toàn tiến trình không? Tại sao?",
+        "Tại sao luồng được xem là nền tảng cho lập trình song song hiện đại?"
+      ]
+    },
+    {
+      "file": "quiz_227.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của điều phối CPU là gì?",
+        "Giải thuật FCFS có nhược điểm chính là gì?",
+        "Giải thuật nào có thời gian chờ trung bình thấp nhất về lý thuyết?",
+        "Round Robin phù hợp nhất cho hệ thống nào?",
+        "Với quantum = 5ms, P1(10), P2(4), P3(6), trong RR, tiến trình nào được hoàn thành đầu tiên?",
+        "Nếu tiến trình có ưu tiên cao bị CPU lấy liên tục, hiện tượng gì xảy ra?",
+        "Trong SJF, nếu không biết trước thời gian CPU, ta thường dùng cách nào để ước lượng?",
+        "Giải thuật nào có thể gây starvation nhưng được khắc phục bằng kỹ thuật aging?",
+        "Context switch xảy ra khi nào?",
+        "Nếu có ba tiến trình P1=5ms, P2=10ms, P3=15ms chạy theo FCFS, thời gian chờ trung bình là:",
+        "Giả sử trong hệ điều hành có 2 CPU, scheduler chỉ lập lịch trên 1 CPU duy nhất. Hậu quả là:",
+        "Kỹ thuật nào được dùng trong hệ đa lõi để giảm chi phí di chuyển tiến trình giữa CPU?",
+        "Trong MLFQ, nếu một tiến trình dùng CPU quá lâu, hệ thống sẽ:",
+        "Giải thuật điều phối nào sử dụng nhiều hàng đợi với độ ưu tiên khác nhau?",
+        "Khi nào nên chọn Round Robin thay vì FCFS?",
+        "Để cải thiện hiệu năng của RR, cần điều chỉnh điều gì?",
+        "Nếu quantum quá nhỏ trong RR, hệ quả là:",
+        "Trong SJF không ưu tiên (non-preemptive), nếu tiến trình mới đến ngắn hơn tiến trình đang chạy, CPU sẽ:",
+        "Tại sao không thể có một giải thuật điều phối tối ưu cho mọi hệ thống?",
+        "Giải thuật nào cân bằng tốt giữa công bằng và hiệu năng, thường dùng trong OS hiện đại?"
+      ]
+    },
+    {
+      "file": "quiz_228.json",
+      "question_count": 20,
+      "questions": [
+        "Đoạn găng (critical section) là gì?",
+        "Mục tiêu chính của đồng bộ hóa là gì?",
+        "Giải pháp Peterson dùng cho bao nhiêu tiến trình?",
+        "Tính chất 'Mutual Exclusion' có nghĩa là:",
+        "Nếu không có cơ chế đồng bộ, hai tiến trình cùng ghi vào biến X, kết quả là:",
+        "Trong đoạn mã sau: wait(mutex); critical section; signal(mutex); Nếu quên signal(mutex), hậu quả là:",
+        "Semaphore với giá trị 1 được gọi là gì?",
+        "Trong bài toán Producer–Consumer, semaphore nào đảm bảo giới hạn buffer?",
+        "Vì sao giải pháp cấm ngắt chỉ dùng được trong hệ đơn xử lý?",
+        "Trong bài toán reader–writer, điều gì xảy ra nếu không ưu tiên writer?",
+        "Trong đoạn mã semaphore: wait(S); wait(S); critical section; signal(S); signal(S); Kết quả là:",
+        "Monitor khác semaphore ở điểm nào?",
+        "Khi hai tiến trình cùng gọi wait() trên semaphore có giá trị 0, chuyện gì xảy ra?",
+        "Condition variable trong monitor được sử dụng để:",
+        "Trong bài toán triết gia ăn tối, cách phổ biến để tránh deadlock là:",
+        "Nếu semaphore được khởi tạo với giá trị âm, điều gì có thể xảy ra?",
+        "Phát biểu nào đúng về message passing?",
+        "Nếu hai tiến trình cùng signal() semaphore nhiều lần, giá trị semaphore sẽ:",
+        "Tại sao semaphore dễ gây lỗi lập trình hơn monitor?",
+        "Giải pháp đồng bộ hiệu quả nhất cho ứng dụng đa lõi hiện đại là gì?"
+      ]
+    },
+    {
+      "file": "quiz_229.json",
+      "question_count": 20,
+      "questions": [
+        "Tắc nghẽn (Deadlock) là gì?",
+        "Điều kiện nào sau đây KHÔNG thuộc 4 điều kiện Coffman?",
+        "Nếu phá vỡ điều kiện 'Circular Wait', hệ thống sẽ:",
+        "Giải pháp 'Hold and Wait' được khắc phục bằng cách nào?",
+        "Trong hệ thống có 2 tài nguyên và 2 tiến trình, nếu mỗi tiến trình giữ 1 tài nguyên và cần thêm 1 tài nguyên khác, điều gì xảy ra?",
+        "Giả sử có 2 tiến trình P1, P2 và 2 mutex m1, m2. P1 lock(m1) rồi lock(m2); P2 lock(m2) rồi lock(m1); Điều gì có thể xảy ra?",
+        "Trạng thái an toàn (Safe State) là gì?",
+        "Giải thuật ngân hàng được dùng để:",
+        "Trong Resource Allocation Graph, chu trình thể hiện điều gì?",
+        "Nếu hệ thống đang ở trạng thái an toàn, điều đó có nghĩa là:",
+        "Trong Banker’s Algorithm, nếu Available < Need của một tiến trình, điều gì xảy ra?",
+        "Trong hệ thống Java đa luồng, nếu dùng synchronized trong 2 phương thức khác nhau cùng đối tượng, có thể dẫn đến:",
+        "Phát hiện deadlock trong hệ có nhiều tài nguyên cùng loại cần dựa vào:",
+        "Để tránh deadlock, thứ tự cấp phát tài nguyên nên được:",
+        "Nếu trong C++ hai luồng cùng gọi std::lock(m1, m2) thay vì lock từng cái riêng lẻ, kết quả là:",
+        "Khi phục hồi từ deadlock bằng cách kết thúc tiến trình, OS nên chọn tiến trình nào?",
+        "Trong hệ thống đa luồng, cách hiệu quả để tránh deadlock khi lock nhiều tài nguyên là:",
+        "Giải pháp phục hồi deadlock nào tốn kém nhất?",
+        "Tại sao không nên dùng phương pháp ngăn chặn deadlock trong hệ thống lớn?",
+        "Trong hệ thống hiện đại, chiến lược xử lý deadlock được dùng phổ biến là gì?"
+      ]
+    },
+    {
+      "file": "quiz_230.json",
+      "question_count": 20,
+      "questions": [
+        "Chức năng chính của quản lý bộ nhớ là gì?",
+        "Địa chỉ logic và địa chỉ vật lý khác nhau ở điểm nào?",
+        "Cấu phần nào chịu trách nhiệm ánh xạ địa chỉ?",
+        "Phân mảnh ngoài là gì?",
+        "Một tiến trình cần 120KB, vùng trống là [100, 200, 300]. Theo Best Fit, hệ thống chọn vùng nào?",
+        "Giả sử Base = 1000, địa chỉ logic = 200, địa chỉ vật lý là:",
+        "Phân mảnh trong thường gặp trong kỹ thuật nào?",
+        "Nếu kích thước trang là 4KB, frame 3, offset 512 → địa chỉ vật lý là:",
+        "Kỹ thuật nào giúp loại bỏ hoàn toàn phân mảnh ngoài?",
+        "Nếu bảng trang có 1024 entry, mỗi entry 4 bytes, kích thước bảng trang là:",
+        "Nếu chương trình truy cập page không có trong RAM, điều gì xảy ra?",
+        "Phân đoạn cho phép bảo vệ tốt hơn vì:",
+        "Trong mô hình phân đoạn kết hợp phân trang, lợi ích là:",
+        "Swapping là gì?",
+        "Nếu kích thước trang là 1KB, địa chỉ logic 13-bit, offset chiếm 10 bit, số trang tối đa là:",
+        "Nhược điểm lớn nhất của phân trang là gì?",
+        "Trong phân đoạn, nếu offset vượt quá limit, hệ điều hành sẽ:",
+        "Giả sử segment 2 có base=2000, limit=500, offset=600 → hệ thống sẽ:",
+        "Phương pháp nào phù hợp nhất cho hệ thống đa nhiệm hiện đại?",
+        "Tại sao hệ điều hành hiện đại dùng cơ chế ánh xạ địa chỉ?"
+      ]
+    },
+    {
+      "file": "quiz_231.json",
+      "question_count": 20,
+      "questions": [
+        "Bộ nhớ ảo là gì?",
+        "Page Fault xảy ra khi nào?",
+        "Giải thuật thay thế trang nào lý tưởng nhất?",
+        "Hiện tượng Belady xảy ra khi:",
+        "Nếu EAT = (1 - p) × 100ns + p × 10ms và p = 0.001, EAT ≈ ?",
+        "Nếu một tiến trình liên tục truy cập các trang nằm ngoài Working Set, hiện tượng gì xảy ra?",
+        "Giải thuật LRU dựa trên giả định nào?",
+        "Với chuỗi trang [1,2,3,4,1,2,5,1,2,3,4,5] và 3 frame, số lỗi FIFO là:",
+        "Thanh ghi nào lưu địa chỉ trang hiện tại?",
+        "Nếu Tm = 100ns, Td = 8ms, p = 0.0005 → EAT = ?",
+        "Giả sử trong hệ điều hành, bit tham chiếu (reference bit) của các trang đều bằng 0, Clock algorithm sẽ:",
+        "Tại sao Optimal không thể áp dụng thực tế?",
+        "Nếu Working Set của tiến trình nhỏ hơn RAM, điều gì xảy ra?",
+        "Khái niệm 'Frame' trong bộ nhớ ảo tương ứng với:",
+        "Khi p = 0.01, Tm = 200ns, Td = 8ms → EAT = ?",
+        "Working Set được định nghĩa là gì?",
+        "Nếu OS không cập nhật bit tham chiếu, LRU giả lập bằng CLOCK sẽ:",
+        "Để tránh thrashing, OS cần:",
+        "So sánh giữa paging và swapping:",
+        "Tại sao quản lý bộ nhớ ảo giúp tăng hiệu quả hệ thống?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_224_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_225_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_226_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_227_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_228_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_229_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_230_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_231_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

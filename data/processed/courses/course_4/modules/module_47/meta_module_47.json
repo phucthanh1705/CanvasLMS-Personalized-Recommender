@@ -1,0 +1,333 @@
+{
+  "id": "module_47",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-cong-nghe-phan-mem",
+      "title": "lesson_bai-01-tong-quan-ve-cong-nghe-phan-mem"
+    },
+    {
+      "id": "lesson_bai-02-phan-tich-and-dac-ta-yeu-cau-phan-mem-chuyen-sau",
+      "title": "lesson_bai-02-phan-tich-and-dac-ta-yeu-cau-phan-mem-chuyen-sau"
+    },
+    {
+      "id": "lesson_bai-03-mo-hinh-hoa-phan-mem-uml-and-phan-tich-he-thong",
+      "title": "lesson_bai-03-mo-hinh-hoa-phan-mem-uml-and-phan-tich-he-thong"
+    },
+    {
+      "id": "lesson_bai-04-thiet-ke-phan-mem",
+      "title": "lesson_bai-04-thiet-ke-phan-mem"
+    },
+    {
+      "id": "lesson_bai-05-thiet-ke-va-to-chuc-du-lieu",
+      "title": "lesson_bai-05-thiet-ke-va-to-chuc-du-lieu"
+    },
+    {
+      "id": "lesson_bai-06-thiet-ke-giao-dien-xu-lu-va-thuat-toan",
+      "title": "lesson_bai-06-thiet-ke-giao-dien-xu-lu-va-thuat-toan"
+    },
+    {
+      "id": "lesson_bai-07-repository-design-pattern",
+      "title": "lesson_bai-07-repository-design-pattern"
+    },
+    {
+      "id": "lesson_bai-08-kiem-thu-chat-luong-phan-mem",
+      "title": "lesson_bai-08-kiem-thu-chat-luong-phan-mem"
+    },
+    {
+      "id": "lesson_bai-09-bao-tri-va-phat-trien-phan-mem",
+      "title": "lesson_bai-09-bao-tri-va-phat-trien-phan-mem"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_86.json",
+      "question_count": 20,
+      "questions": [
+        "Đâu là đặc điểm chính của phần mềm so với phần cứng?",
+        "Tiêu chuẩn ISO/IEC 9126 quy định gì?",
+        "Trong mô hình Thác nước, giai đoạn nào bắt đầu sau khi kết thúc giai đoạn trước?",
+        "Điểm khác biệt lớn giữa mô hình Xoắn ốc và Lặp là gì?",
+        "Khi yêu cầu thay đổi thường xuyên, mô hình nào phù hợp nhất?",
+        "Mô hình chữ V nhấn mạnh điều gì?",
+        "Tài liệu SRS dùng để:",
+        "Trong mô hình Scrum, vai trò của Product Owner là gì?",
+        "Sprint trong Agile thường kéo dài bao lâu?",
+        "Yếu tố nào KHÔNG thuộc chất lượng phần mềm?",
+        "Giai đoạn nào trong SDLC chịu trách nhiệm mô hình hóa và thiết kế hệ thống?",
+        "Trong mô hình Agile, cụm từ 'Continuous Feedback' nghĩa là:",
+        "Khi dự án yêu cầu độ an toàn cao, mô hình phù hợp nhất là:",
+        "Đâu là giai đoạn cuối của vòng đời phần mềm?",
+        "Trong Agile, vai trò Scrum Master tương tự với:",
+        "Lợi ích của mô hình lặp là gì?",
+        "Mô hình phát triển nào nhấn mạnh sự hợp tác chặt chẽ giữa khách hàng và nhóm phát triển?",
+        "Điểm yếu của mô hình Thác nước là:",
+        "Một vòng đời phần mềm tốt phải đảm bảo điều gì?",
+        "Vai trò chính của kỹ sư phần mềm là:"
+      ]
+    },
+    {
+      "file": "quiz_87.json",
+      "question_count": 20,
+      "questions": [
+        "Trong IEEE 830, phần nào KHÔNG bắt buộc xuất hiện trong tài liệu SRS?",
+        "Use Case nào dưới đây thể hiện mối quan hệ 'Include' đúng chuẩn UML?",
+        "Khi hai yêu cầu mâu thuẫn nhau (một bộ phận yêu cầu hiệu năng cao, bộ phận khác yêu cầu mã hóa toàn bộ dữ liệu), kỹ thuật nào phù hợp nhất?",
+        "Điểm khác biệt giữa Business Requirement và Functional Requirement là gì?",
+        "Trong RTM, một test case có thể truy vết tới:",
+        "Khi khách hàng yêu cầu 'Hệ thống có thể xử lý 10.000 yêu cầu/phút với độ trễ < 2s', yêu cầu này là loại nào?",
+        "Để giảm rủi ro yêu cầu mơ hồ, kỹ sư phân tích nên:",
+        "Trong mô hình Agile, tài liệu nào tương đương với đặc tả yêu cầu truyền thống?",
+        "Khi yêu cầu thay đổi liên tục, cách quản lý traceability hiệu quả nhất là:",
+        "Ma trận MoSCoW được dùng để:",
+        "Nếu một yêu cầu có rủi ro cao về bảo mật, nhóm BA nên làm gì trước khi đóng băng SRS?",
+        "Mối quan hệ đúng giữa Actor và Use Case là gì?",
+        "Trong SRS, phần 'Giới thiệu' có vai trò gì?",
+        "Tình huống: khách hàng nói 'Phần mềm phải dễ dùng'. Hành động tốt nhất của BA là gì?",
+        "Trong mô hình Use Case, 'Extend' dùng để:",
+        "Khi hệ thống có yêu cầu 'Khả năng chịu lỗi 99.95%', nhóm BA nên làm gì?",
+        "Yếu tố nào KHÔNG thuộc nội dung của giai đoạn thẩm định yêu cầu?",
+        "Khi khách hàng yêu cầu tuân thủ Nghị định 13/2023/NĐ-CP (bảo vệ dữ liệu cá nhân), nhóm BA nên:",
+        "Khi kiểm thử chấp thuận (UAT) thất bại, BA cần xem lại phần nào trong tài liệu?",
+        "Phát biểu nào đúng về Requirement Traceability Matrix (RTM)?"
+      ]
+    },
+    {
+      "file": "quiz_88.json",
+      "question_count": 20,
+      "questions": [
+        "Trong UML, quan hệ 'include' giữa hai Use Case thể hiện điều gì?",
+        "Trong Sequence Diagram, Activation Bar biểu thị:",
+        "Một Class Diagram có nhiều lớp với cùng thuộc tính nhưng khác hành vi, giải pháp tốt nhất là:",
+        "Khi mô hình hóa quy trình có nhiều actor thực hiện song song, biểu đồ phù hợp nhất là:",
+        "Trong State Machine, sự kiện nào sau đây có thể gây chuyển trạng thái?",
+        "Khi cần mô tả logic điều kiện phức tạp và luồng rẽ nhánh, nên dùng:",
+        "Mối quan hệ 'aggregation' thể hiện:",
+        "Khi mô hình hóa hệ thống ngân hàng, tài khoản tiết kiệm và tài khoản thanh toán kế thừa từ lớp nào?",
+        "Trong Sequence Diagram, thông điệp đồng bộ khác gì so với bất đồng bộ?",
+        "Biểu đồ nào phù hợp nhất để kiểm tra logic nghiệp vụ của Use Case?",
+        "Trong Use Case Diagram, actor có thể là:",
+        "Khi mô hình hóa hệ thống có trạng thái phức tạp, biểu đồ nào thể hiện tốt nhất sự thay đổi theo thời gian?",
+        "Quan hệ composition trong UML thể hiện:",
+        "Sequence Diagram hữu ích nhất trong việc:",
+        "Một Use Case có thể bao gồm nhiều:",
+        "Trong mô hình hóa hướng đối tượng, nguyên tắc SRP (Single Responsibility Principle) có ý nghĩa:",
+        "Khi chuyển từ Use Case sang thiết kế OOP, biểu đồ nào giúp xác định lớp và phương thức chính?",
+        "Trong State Machine, 'guard condition' được dùng để:",
+        "Khi có nhiều lớp trao đổi message qua interface, để đảm bảo tách biệt phụ thuộc, ta dùng:",
+        "Phát biểu nào đúng về mục tiêu của thiết kế phần mềm?"
+      ]
+    },
+    {
+      "file": "quiz_89.json",
+      "question_count": 20,
+      "questions": [
+        "Trong mô hình 3 tầng, tầng Business Logic có vai trò gì?",
+        "Nguyên tắc 'Open/Closed' trong SOLID có nghĩa là:",
+        "Thiết kế nào phù hợp nhất cho hệ thống thương mại điện tử cần mở rộng module độc lập?",
+        "Mẫu thiết kế Repository giúp giải quyết vấn đề gì?",
+        "Nguyên tắc 'Dependency Inversion' khuyến nghị điều gì?",
+        "Khi module có quá nhiều chức năng khác nhau, vi phạm nguyên tắc nào?",
+        "Trong MVC, Controller chịu trách nhiệm:",
+        "Pattern nào phù hợp nhất khi cần hoán đổi thuật toán tại runtime?",
+        "Ưu điểm chính của Microservices là gì?",
+        "Khi một lớp có quá nhiều phụ thuộc vào lớp khác, vi phạm nguyên tắc nào?",
+        "Pattern nào giúp tạo đối tượng mà không cần biết lớp cụ thể?",
+        "Trong UML Class Diagram, quan hệ composition có ý nghĩa:",
+        "Nguyên tắc 'DRY' có nghĩa là:",
+        "Pattern nào phù hợp nhất khi nhiều object cần được cập nhật khi object chính thay đổi?",
+        "Khi cần cung cấp giao diện đơn giản cho hệ thống phức tạp, nên dùng:",
+        "Trong SOLID, nguyên tắc Liskov Substitution được hiểu là:",
+        "Mẫu thiết kế nào thường dùng trong hệ thống thông báo real-time (event-driven)?",
+        "Trong kiến trúc MVC, mối quan hệ giữa Controller và Model là:",
+        "Design Pattern 'Adapter' có mục tiêu:",
+        "Mục tiêu tổng quát của thiết kế phần mềm là:"
+      ]
+    },
+    {
+      "file": "quiz_90.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của thiết kế dữ liệu là gì?",
+        "Mối quan hệ giữa SinhVien và DangKy (1–N) được thể hiện trong SQL bằng:",
+        "Trong 3NF, điều kiện nào sau đây đúng?",
+        "Bảng có thuộc tính lặp hoặc mảng trong một cột vi phạm chuẩn nào?",
+        "Khi một thuộc tính phụ thuộc vào một phần của khóa chính, vi phạm:",
+        "Mối quan hệ N–N giữa hai bảng được triển khai bằng:",
+        "Phát biểu nào đúng về khóa chính (Primary Key)?",
+        "Khi ánh xạ UML sang CSDL, quan hệ kế thừa thường được xử lý bằng:",
+        "Khóa ngoại (Foreign Key) có tác dụng:",
+        "Trong ERD, ký hiệu kim cương thể hiện:",
+        "Chuẩn hóa giúp:",
+        "Cột nào nên tạo chỉ mục (index)?",
+        "Khi dữ liệu quá lớn, cách tối ưu phù hợp là:",
+        "Trong quan hệ 1–1, khóa chính của bảng A thường:",
+        "Tại sao không nên tạo quá nhiều chỉ mục (index)?",
+        "Phụ thuộc hàm (Functional Dependency) mô tả:",
+        "Thuộc tính định danh (identifier) phải đảm bảo:",
+        "Trong mô hình hóa dữ liệu hướng đối tượng, 'Association Class' tương ứng với:",
+        "Trong thiết kế CSDL, tính toàn vẹn thực thể (Entity Integrity) đảm bảo rằng:",
+        "Khi ánh xạ UML sang CSDL, quan hệ nhiều–nhiều (N–N) giữa Class thường biểu diễn bằng:"
+      ]
+    },
+    {
+      "file": "quiz_91.json",
+      "question_count": 20,
+      "questions": [
+        "Nguyên tắc nào KHÔNG thuộc 10 Heuristic của Nielsen?",
+        "Trong UX Flow, bước nào giúp kiểm tra tính khả dụng của giao diện?",
+        "Mục tiêu chính của thiết kế xử lý (Process Design) là gì?",
+        "Thuật toán tốt cần đảm bảo điều gì?",
+        "Trong thiết kế UI, nguyên tắc 'Consistency' nghĩa là:",
+        "Activity Diagram được dùng để mô tả:",
+        "Độ phức tạp thời gian của thuật toán tìm kiếm nhị phân là:",
+        "Nguyên tắc 'Feedback' trong thiết kế UI có nghĩa là:",
+        "Trong thiết kế thuật toán, khái niệm 'Scalability' chỉ:",
+        "Nguyên nhân phổ biến gây lỗi UI:",
+        "Trong Flowchart, hình thoi biểu thị:",
+        "Trong UI, kỹ thuật nào giúp giảm thao tác người dùng?",
+        "Khi một thuật toán có độ phức tạp O(n²), nghĩa là:",
+        "Trong UI, Accessibility nghĩa là:",
+        "UX khác UI ở điểm nào?",
+        "Trong QuickSort, phần tử chọn làm pivot có vai trò:",
+        "Công cụ nào thường được dùng để thiết kế giao diện nguyên mẫu (Prototype)?",
+        "Phản hồi người dùng trong quá trình thiết kế UX được gọi là:",
+        "Khi cần biểu diễn mối quan hệ điều kiện–hành động phức tạp, nên dùng:",
+        "Thiết kế giao diện, xử lý và thuật toán có quan hệ thế nào?"
+      ]
+    },
+    {
+      "file": "quiz_92.json",
+      "question_count": 20,
+      "questions": [
+        "Repository Pattern có mục tiêu chính là gì?",
+        "Trong Repository Pattern, tầng nào trực tiếp truy cập CSDL?",
+        "Ưu điểm chính của Repository Pattern là:",
+        "Interface trong Repository dùng để:",
+        "Phát biểu nào đúng về Service Layer?",
+        "Annotation nào trong Java dùng để đánh dấu lớp ánh xạ CSDL?",
+        "Trong Spring, Repository có thể được tự động quản lý bằng:",
+        "Nguyên tắc SOLID nào liên quan trực tiếp đến Repository?",
+        "Ví dụ nào đúng về Repository?",
+        "Repository không nên làm việc gì?",
+        "Trong ví dụ Java Spring, annotation @Repository có chức năng:",
+        "Repository Pattern giúp tăng khả năng gì của hệ thống?",
+        "Tiêu chí mô-đun hóa quan trọng nhất trong repository là:",
+        "Kỹ thuật nào giúp test Repository không cần kết nối DB thật?",
+        "Câu nào mô tả đúng về mô hình Repository?",
+        "Tiêu chí đánh giá lại code Repository bao gồm:",
+        "Trong đánh giá chất lượng, bước 'Design Review' nhằm:",
+        "Trong kiểm thử, Repository nên được test ở cấp độ nào?",
+        "Mô hình Repository thường được kết hợp với kiến trúc nào?",
+        "Khi mở rộng Repository, nên thực hiện cách nào?"
+      ]
+    },
+    {
+      "file": "quiz_93.json",
+      "question_count": 20,
+      "questions": [
+        "Kiểm thử phần mềm có mục tiêu chính là gì?",
+        "Trong mô hình chữ V, kiểm thử được thực hiện song song với:",
+        "Phương pháp kiểm thử hộp đen tập trung vào:",
+        "Công cụ nào được dùng phổ biến cho Unit Test trong Java?",
+        "White Box Testing giúp kiểm tra:",
+        "Kỹ thuật Boundary Value Analysis thuộc loại kiểm thử nào?",
+        "Trong kiểm thử hệ thống, mục tiêu chính là:",
+        "Acceptance Testing được thực hiện bởi ai?",
+        "Phương pháp Grey Box Testing kết hợp giữa:",
+        "Regression Testing được thực hiện khi nào?",
+        "Test Case tốt phải có:",
+        "Công cụ nào được dùng để kiểm thử tự động UI?",
+        "Trong kiểm thử beta, phần mềm được phát hành cho:",
+        "Mô hình chữ V có ưu điểm nào sau đây?",
+        "Unit Test nên được viết bởi:",
+        "Mục tiêu của Functional Test là:",
+        "Phương pháp kiểm thử nào dùng để đánh giá hiệu năng hệ thống?",
+        "Trong kiểm thử hộp trắng, chỉ số Coverage dùng để đo:",
+        "Công cụ Postman thường được dùng cho:",
+        "Kết quả cuối cùng của kiểm thử phần mềm là:"
+      ]
+    },
+    {
+      "file": "quiz_94.json",
+      "question_count": 20,
+      "questions": [
+        "Theo chuẩn IEEE, bảo trì phần mềm chiếm khoảng bao nhiêu phần trăm chi phí vòng đời?",
+        "Mục tiêu chính của bảo trì phần mềm là gì?",
+        "Loại bảo trì nào nhằm sửa lỗi trong quá trình sử dụng?",
+        "Loại bảo trì nào tập trung cải thiện hiệu năng và giao diện?",
+        "Khi phần mềm được cập nhật để tương thích công nghệ mới, đó là:",
+        "Bước đầu tiên trong quy trình bảo trì phần mềm là:",
+        "Kiểm thử hồi quy (Regression Test) được thực hiện ở bước nào?",
+        "Công cụ nào được dùng phổ biến để giám sát hệ thống sau bảo trì?",
+        "Trong DevOps, hoạt động bảo trì được thực hiện thông qua:",
+        "Trong mô hình Waterfall, bảo trì diễn ra ở giai đoạn nào?",
+        "Mục tiêu của Preventive Maintenance là gì?",
+        "Bước 'Đánh giá tác động' trong bảo trì nhằm:",
+        "Khi người dùng báo lỗi sản phẩm, đó là giai đoạn nào của bảo trì?",
+        "Trong kế hoạch bảo trì, yếu tố nào KHÔNG cần thiết?",
+        "Trong Agile, các nhiệm vụ bảo trì thường được đưa vào:",
+        "Đâu là thách thức lớn nhất của bảo trì phần mềm lâu năm?",
+        "Phần mềm càng lâu đời thì:",
+        "Trong Agile, việc bảo trì thường diễn ra:",
+        "Công cụ nào giúp quản lý backlog và công việc bảo trì?",
+        "Bảo trì tốt giúp mang lại lợi ích gì lâu dài?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_86_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_87_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_88_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_89_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_90_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_91_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_92_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_93_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_94_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

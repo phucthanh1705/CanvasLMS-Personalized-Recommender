@@ -1,0 +1,327 @@
+{
+  "id": "module_69",
+  "lessons": [
+    {
+      "id": "lesson_bai-1-phan-tich-va-thiet-ke-mo-hinh-du-lieu",
+      "title": "lesson_bai-1-phan-tich-va-thiet-ke-mo-hinh-du-lieu"
+    },
+    {
+      "id": "lesson_bai-10-mot-so-kien-thuc-nang-cao",
+      "title": "lesson_bai-10-mot-so-kien-thuc-nang-cao"
+    },
+    {
+      "id": "lesson_bai-2-cac-nguyen-tac-khi-xay-dung-mo-hinh-thuc-the-ket-hop",
+      "title": "lesson_bai-2-cac-nguyen-tac-khi-xay-dung-mo-hinh-thuc-the-ket-hop"
+    },
+    {
+      "id": "lesson_bai-3-mo-hinh-quan-he",
+      "title": "lesson_bai-3-mo-hinh-quan-he"
+    },
+    {
+      "id": "lesson_bai-4-ung-dung-xay-dung-mo-hinh-quan-niem",
+      "title": "lesson_bai-4-ung-dung-xay-dung-mo-hinh-quan-niem"
+    },
+    {
+      "id": "lesson_bai-5-chi-muc-index",
+      "title": "lesson_bai-5-chi-muc-index"
+    },
+    {
+      "id": "lesson_bai-6-khung-nhin-view",
+      "title": "lesson_bai-6-khung-nhin-view"
+    },
+    {
+      "id": "lesson_bai-7-thu-tuc-procedure",
+      "title": "lesson_bai-7-thu-tuc-procedure"
+    },
+    {
+      "id": "lesson_bai-8-ham-function",
+      "title": "lesson_bai-8-ham-function"
+    },
+    {
+      "id": "lesson_bai-9-bay-loi-trigger",
+      "title": "lesson_bai-9-bay-loi-trigger"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_276.json",
+      "question_count": 20,
+      "questions": [
+        "Mức nào mô tả <i>những gì</i> hệ thống lưu trữ bằng thực thể, thuộc tính, kết hợp?",
+        "Trong ER, thuộc tính nhiều trị của thực thể được ánh xạ sang quan hệ như thế nào?",
+        "Ràng buộc nào mô tả việc mọi thực thể của lớp cha phải thuộc ít nhất một lớp con?",
+        "Khi quan hệ giữa A và B là 1–N, FK nên đặt ở đâu?",
+        "Quan hệ N–M giữa SinhVien và MonHoc với thuộc tính Diem nên ánh xạ ra sao?",
+        "Weak Entity là gì?",
+        "Thuộc tính nào nên đặt ở mối kết hợp thay vì thực thể?",
+        "Một lớp cha NhânVien, lớp con LapTrinhVien và KiemThu với ràng buộc Disjoint, Total. Chiến lược Class Table: chọn phát biểu đúng.",
+        "Ràng buộc participation 'total' với 1–N từ Khoa(1) sang SinhVien(N) ngụ ý điều gì với FK MaKhoa ở SinhVien?",
+        "Khi chuyển một kết hợp bậc-3 A–B–C sang quan hệ, khóa chính hợp lý là gì?",
+        "Chọn CHECK phù hợp cho thuộc tính Diem thang 10.",
+        "Khóa ứng viên là:",
+        "Trong ISA Overlapping, hệ quả khi ánh xạ kiểu Single Table Inheritance là gì?",
+        "Thực thể yếu ChiTietHD phụ thuộc HoaDon. PK phù hợp cho bảng ChiTietHD là gì?",
+        "Bạn có ER: KhachHang–<i>Đặt</i>–Phong với bội số KhachHang 1–N Đặt, Phong 1–N Đặt, thuộc tính Đặt.NgayNhan, NgayTra. Lược đồ quan hệ tối ưu là:",
+        "Thuộc tính dẫn xuất (Derived) là:",
+        "Khi 1–1 và participation của cả hai phía là total, ánh xạ nào hợp lý nhất?",
+        "Aggregation dùng khi nào?",
+        "Chọn ràng buộc đúng để đảm bảo mỗi SinhVien thuộc đúng một Khoa duy nhất và bắt buộc có Khoa.",
+        "Tiêu chí chọn chiến lược ánh xạ kế thừa (Single-table, Class-table, Concrete) nên dựa vào yếu tố nào sau đây là <b>quan trọng nhất</b>?"
+      ]
+    },
+    {
+      "file": "quiz_277.json",
+      "question_count": 20,
+      "questions": [
+        "Khi nào nên xác định một loại thực thể trong mô hình ER?",
+        "Thực thể chỉ có một thuộc tính thường là dấu hiệu của:",
+        "Thực thể yếu khác thực thể mạnh ở điểm nào?",
+        "Khi nào nên dùng kết hợp thay vì thuộc tính?",
+        "Quan hệ giữa SinhVien và LopHoc là 1–N. Cách biểu diễn phù hợp?",
+        "Mối kết hợp nên được rút gọn khi nào?",
+        "Ràng buộc bội số giúp xác định điều gì trong mô hình?",
+        "Mối kết hợp bậc cao (ternary) được sử dụng khi:",
+        "Trong quy trình thiết kế ER, xác định thực thể nên diễn ra ở bước nào?",
+        "Khóa chính của thực thể yếu bao gồm:",
+        "Khi ràng buộc 1–1 total giữa hai thực thể, phương án tối ưu là:",
+        "Mỗi thực thể cần có bao nhiêu thuộc tính tối thiểu để được coi là hợp lệ?",
+        "Trong mô hình mượn sách, mối quan hệ Muon giữa DocGia và Sach là:",
+        "Nếu một thực thể có thể tồn tại độc lập nhưng được tham chiếu bởi nhiều thực thể khác, nó là:",
+        "Một kết hợp có thuộc tính riêng biệt nên được biểu diễn bằng:",
+        "Phương pháp nào giúp kiểm tra mô hình ER hợp lệ?",
+        "Bước cuối trong quy trình xây dựng mô hình ER là gì?",
+        "Một thực thể có thuộc tính NgaySinh, SoDienThoai, MaKH. Thuộc tính nào có thể đa trị?",
+        "Vì sao không nên tạo quá nhiều kết hợp trong mô hình ER?",
+        "Điều gì giúp mô hình ER đạt độ chính xác và linh hoạt cao nhất?"
+      ]
+    },
+    {
+      "file": "quiz_282.json",
+      "question_count": 20,
+      "questions": [
+        "Mô hình quan hệ được biểu diễn bằng cấu trúc nào?",
+        "Trong mô hình quan hệ, hàng trong bảng gọi là gì?",
+        "Ràng buộc nào đảm bảo mỗi hàng trong bảng là duy nhất?",
+        "Khóa ngoại (FOREIGN KEY) có chức năng gì?",
+        "Khi chuyển quan hệ N–M từ mô hình ER sang mô hình quan hệ, ta cần:",
+        "Ai là người đề xuất mô hình quan hệ?",
+        "Giá trị trong mỗi ô của mô hình quan hệ phải là:",
+        "Quan hệ giữa SinhVien và MônHoc là N–M. Bảng trung gian nên có:",
+        "Trong mô hình quan hệ, miền giá trị (Domain) là:",
+        "Toàn vẹn thực thể yêu cầu điều gì?",
+        "Nếu thuộc tính Diem trong bảng ĐăngKý có miền [0–10], ràng buộc nên là:",
+        "Tại sao mô hình quan hệ dễ chuẩn hóa?",
+        "Khi có quan hệ 1–N giữa Khoa và SinhVien, FK đặt ở đâu?",
+        "Trong CSDL, mỗi bảng có thể có bao nhiêu khóa chính?",
+        "Khi ánh xạ thực thể yếu, khóa chính của bảng yếu gồm:",
+        "Tính chất nào KHÔNG đúng của mô hình quan hệ?",
+        "Một hệ thống có các bảng KhachHang, DonHang, SanPham. Cần lưu chi tiết sản phẩm trong từng đơn hàng. Giải pháp nào đúng?",
+        "Nguyên tắc nào đảm bảo dữ liệu không dư thừa trong mô hình quan hệ?",
+        "Với quan hệ 1–1 total giữa NhânVien và ThẻNV, nên:",
+        "Tiêu chí quan trọng nhất khi chuyển từ mô hình ER sang mô hình quan hệ là gì?"
+      ]
+    },
+    {
+      "file": "quiz_283.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của mô hình quan niệm là gì?",
+        "Quan hệ giữa SinhVien và MonHoc là loại nào?",
+        "Thực thể DangKy trong ví dụ được xem là gì?",
+        "Mối quan hệ giữa Khoa và SinhVien là:",
+        "GiangVien – MonHoc là quan hệ:",
+        "Khi chuyển mô hình quan niệm sang mô hình logic, bước đầu tiên là:",
+        "ChiTietHD trong mô hình bán hàng là:",
+        "Nếu mỗi SinhVien chỉ thuộc một Khoa, MaKhoa nên đặt ở đâu?",
+        "Thuộc tính NgaySinh của SinhVien là loại:",
+        "Điều kiện của chuẩn 1NF là:",
+        "Khi thuộc tính có nhiều giá trị, ví dụ SĐT, giải pháp đúng là:",
+        "Mối kết hợp có thuộc tính riêng được gọi là:",
+        "Tại sao cần chuẩn hóa mô hình quan niệm?",
+        "KhachHang – HoaDon trong mô hình bán hàng là quan hệ:",
+        "Khoa – MonHoc có bội số như thế nào?",
+        "DiemQT và DiemThi trong DangKy là:",
+        "Mục tiêu của chuẩn 2NF là:",
+        "Mối kết hợp N–M giữa GiangVien và MonHoc cần bảng trung gian có:",
+        "Mô hình quan niệm tốt cần đảm bảo:",
+        "Vai trò quan trọng nhất của mô hình quan niệm là:"
+      ]
+    },
+    {
+      "file": "quiz_284.json",
+      "question_count": 0,
+      "questions": []
+    },
+    {
+      "file": "quiz_285.json",
+      "question_count": 0,
+      "questions": []
+    },
+    {
+      "file": "quiz_286.json",
+      "question_count": 20,
+      "questions": [
+        "Procedure trong SQL là gì?",
+        "Lợi ích chính của Procedure là gì?",
+        "Câu lệnh dùng để tạo Procedure là:",
+        "Câu lệnh dùng để gọi Procedure là:",
+        "Lệnh nào tạo thủ tục liệt kê sinh viên có điểm trên 8?",
+        "Tham số OUTPUT trong Procedure dùng để:",
+        "Thủ tục nào in ra số lượng sinh viên?",
+        "Câu lệnh sửa Procedure là:",
+        "Câu lệnh xóa Procedure là:",
+        "Procedure khác Function ở điểm nào?",
+        "Câu lệnh gọi Procedure có tham số là:",
+        "Procedure giúp tăng bảo mật bằng cách nào?",
+        "Tại sao Procedure tăng hiệu năng hệ thống?",
+        "Procedure có thể thực hiện những thao tác nào?",
+        "Cách khai báo tham số mặc định trong Procedure?",
+        "Procedure nào không thể cập nhật dữ liệu?",
+        "Cách gọi Procedure trả về tham số OUTPUT?",
+        "Thủ tục có thể dùng trong tình huống nào sau đây?",
+        "Vì sao Procedure khó bảo trì trong hệ thống lớn?",
+        "Vai trò lớn nhất của Procedure trong thiết kế CSDL là gì?"
+      ]
+    },
+    {
+      "file": "quiz_287.json",
+      "question_count": 20,
+      "questions": [
+        "Hàm (Function) trong SQL là gì?",
+        "Hàm nào trả về giá trị đơn?",
+        "Câu lệnh tạo hàm đúng là:",
+        "Hàm nào trả về bảng nhiều dòng?",
+        "Lệnh nào gọi hàm fn_TinhTuoi('2000-01-01')?",
+        "Hàm khác Procedure ở điểm nào?",
+        "Hàm fn_SV_DiemCao(@DiemMin) trả về gì?",
+        "Câu lệnh xóa hàm là:",
+        "Hàm nào cho phép nhiều câu lệnh xử lý?",
+        "Ví dụ về hàm trả về tuổi của sinh viên:",
+        "Có thể gọi Function ở đâu?",
+        "Tại sao Function giúp tăng khả năng bảo trì?",
+        "Hàm hệ thống GETDATE() có tác dụng gì?",
+        "Lệnh sửa hàm đúng là:",
+        "Function có thể thực hiện INSERT không?",
+        "Hàm nào dùng để kiểm tra giá trị NULL?",
+        "Trong Function, từ khóa RETURN dùng để:",
+        "Lý do chính để dùng hàm bảng (Table Function) là gì?",
+        "Hàm nào sau đây có thể dùng trong biểu thức SELECT?",
+        "Ưu điểm lớn nhất của Function trong thiết kế hệ thống là gì?"
+      ]
+    },
+    {
+      "file": "quiz_288.json",
+      "question_count": 20,
+      "questions": [
+        "Trigger là gì?",
+        "Trigger có thể được kích hoạt bởi sự kiện nào?",
+        "Trigger được thực thi tự động khi nào?",
+        "AFTER Trigger hoạt động khi nào?",
+        "Lệnh nào tạo Trigger ghi log sau khi thêm sinh viên?",
+        "INSTEAD OF Trigger dùng để làm gì?",
+        "Bảng ảo 'inserted' trong Trigger chứa gì?",
+        "Bảng ảo 'deleted' chứa dữ liệu nào?",
+        "Câu lệnh xóa Trigger là:",
+        "Trigger khác Procedure ở điểm nào?",
+        "Trigger nào dùng để ngăn xóa dữ liệu?",
+        "Câu lệnh sửa Trigger là:",
+        "Trigger có thể gây vòng lặp vô hạn khi nào?",
+        "Trigger nào kiểm tra dữ liệu trước khi ghi?",
+        "Lý do nên dùng Trigger ghi log thay đổi dữ liệu là gì?",
+        "Câu nào đúng về hiệu năng của Trigger?",
+        "Trigger nào chạy thay cho thao tác gốc?",
+        "Trigger có thể được dùng trong tình huống nào sau đây?",
+        "Khi nào không nên sử dụng Trigger?",
+        "Ưu điểm lớn nhất của Trigger là gì?"
+      ]
+    },
+    {
+      "file": "quiz_289.json",
+      "question_count": 20,
+      "questions": [
+        "Cursor dùng để làm gì trong SQL?",
+        "Cursor gồm các bước chính nào?",
+        "Lệnh đóng Cursor là:",
+        "Nhược điểm lớn nhất của Cursor là gì?",
+        "Lệnh nào mã hóa chuỗi 'Hello World' bằng mật khẩu 'KeyDemo'?",
+        "Transparent Data Encryption (TDE) dùng để:",
+        "Câu lệnh cấp quyền cho người dùng là:",
+        "Câu lệnh thu hồi quyền là:",
+        "Always Encrypted bảo vệ dữ liệu bằng cách nào?",
+        "Câu lệnh tạo Role quản lý sinh viên là:",
+        "Tại sao cần dùng phân quyền trong CSDL?",
+        "Lệnh nào thêm người dùng vào vai trò?",
+        "Mã hóa dữ liệu giúp đạt mục tiêu nào?",
+        "Công cụ nào dùng để theo dõi truy vấn chậm?",
+        "Câu lệnh mã hóa toàn bộ cơ sở dữ liệu thuộc loại:",
+        "Câu lệnh DENY có tác dụng gì?",
+        "Làm thế nào để tối ưu hiệu năng CSDL?",
+        "Khi nào nên dùng Cursor?",
+        "Role trong SQL có tác dụng gì?",
+        "Điểm quan trọng nhất của quản trị CSDL nâng cao là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_276_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_277_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_282_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_283_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_284_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_285_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_286_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_287_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_288_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_289_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

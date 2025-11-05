@@ -1,0 +1,966 @@
+{
+  "id": "module_58",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-cau-truc-du-lieu-and-giai-thuat",
+      "title": "lesson_bai-01-tong-quan-ve-cau-truc-du-lieu-and-giai-thuat"
+    },
+    {
+      "id": "lesson_bai-02-danh-sach-phan-1",
+      "title": "lesson_bai-02-danh-sach-phan-1"
+    },
+    {
+      "id": "lesson_bai-03-danh-sach-phan-2",
+      "title": "lesson_bai-03-danh-sach-phan-2"
+    },
+    {
+      "id": "lesson_bai-04-stack-and-queue",
+      "title": "lesson_bai-04-stack-and-queue"
+    },
+    {
+      "id": "lesson_bai-05-cay-nhi-phan",
+      "title": "lesson_bai-05-cay-nhi-phan"
+    },
+    {
+      "id": "lesson_bai-06-cay-nhi-phan-tim-kiem-can-bang-avl-tree",
+      "title": "lesson_bai-06-cay-nhi-phan-tim-kiem-can-bang-avl-tree"
+    },
+    {
+      "id": "lesson_bai-07-do-thi-va-bieu-dien-do-thi",
+      "title": "lesson_bai-07-do-thi-va-bieu-dien-do-thi"
+    },
+    {
+      "id": "lesson_bai-08-duong-di-and-chu-trinh",
+      "title": "lesson_bai-08-duong-di-and-chu-trinh"
+    },
+    {
+      "id": "lesson_bai-09-duyet-do-thi-bfs-and-dfs",
+      "title": "lesson_bai-09-duyet-do-thi-bfs-and-dfs"
+    },
+    {
+      "id": "lesson_bai-10-cay-bao-trum-and-cay-bao-trum-nho-nhat",
+      "title": "lesson_bai-10-cay-bao-trum-and-cay-bao-trum-nho-nhat"
+    },
+    {
+      "id": "lesson_bai-11-duong-di-ngan-nhat",
+      "title": "lesson_bai-11-duong-di-ngan-nhat"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_167.json",
+      "question_count": 20,
+      "questions": [
+        "Theo Niklaus Wirth, một chương trình máy tính được cấu thành từ hai yếu tố chính nào?",
+        "Tiêu chuẩn nào KHÔNG thuộc nhóm tiêu chí đánh giá một cấu trúc dữ liệu?",
+        "Trừu tượng hóa dữ liệu (Data Abstraction) chủ yếu giúp lập trình viên đạt được điều gì?",
+        "Một kiểu dữ liệu trừu tượng (ADT) bao gồm những thành phần nào?",
+        "Ví dụ nào sau đây minh họa rõ nhất cho trừu tượng hóa dữ liệu?",
+        "Trong ngôn ngữ C, kiểu dữ liệu nào KHÔNG thuộc nhóm kiểu cơ bản?",
+        "Đặc trưng nào của giải thuật đảm bảo rằng thuật toán sẽ kết thúc sau một số hữu hạn bước?",
+        "Khi so sánh các giải thuật, độ phức tạp thường được xem xét chủ yếu theo yếu tố nào?",
+        "Giải thuật có độ phức tạp O(n²) sẽ thực hiện khoảng bao nhiêu phép tính khi kích thước dữ liệu gấp đôi?",
+        "Cấu trúc dữ liệu nào phù hợp khi cần lưu trữ dữ liệu thường xuyên thêm và xóa?",
+        "Trong ngôn ngữ C, câu lệnh 'for(i=0;i<n;i++)' thể hiện loại cấu trúc điều khiển nào?",
+        "Độ phức tạp O(log n) thường xuất hiện trong loại thuật toán nào sau đây?",
+        "Điểm khác biệt giữa giải thuật và chương trình là gì?",
+        "Trong các độ phức tạp sau, thuật toán nào được xem là kém hiệu quả nhất khi n lớn?",
+        "Khi phân tích độ phức tạp, quy tắc cộng được áp dụng trong trường hợp nào?",
+        "Trong quy tắc nhân về độ phức tạp, thời gian thực hiện được tính bằng:",
+        "Trong mã giả, cấu trúc 'WHILE a ≠ b DO ... ENDWHILE' biểu diễn điều gì?",
+        "Đặc trưng nào của giải thuật đảm bảo tính chính xác đầu ra với mọi bộ dữ liệu hợp lệ?",
+        "Trong đánh giá giải thuật, ký hiệu O(f(n)) biểu thị điều gì?",
+        "Trong cấu trúc điều khiển, lệnh 'switch...case' thường được dùng khi nào?"
+      ]
+    },
+    {
+      "file": "quiz_168.json",
+      "question_count": 20,
+      "questions": [
+        "Đặc điểm nổi bật nhất giúp danh sách liên kết vượt trội hơn danh sách kề là gì?",
+        "Trong danh sách kề, thao tác chèn phần tử ở vị trí giữa mảng có độ phức tạp trung bình là:",
+        "Danh sách liên kết được quản lý thông qua con trỏ nào?",
+        "Trong DSLK đơn, mỗi node chứa bao nhiêu phần chính?",
+        "Khi thêm node vào đầu danh sách, bước đầu tiên cần thực hiện là:",
+        "Điều gì xảy ra nếu quên gán pNext = NULL khi tạo node mới?",
+        "Độ phức tạp của thao tác chèn phần tử vào đầu DSLK là:",
+        "Cấu trúc DSLK kép có đặc điểm:",
+        "Trong C, cấp phát bộ nhớ cho DSLK thường dùng hàm nào?",
+        "Điểm khác biệt cơ bản giữa DSLK và mảng là:",
+        "Khi xóa một node trong DSLK, bước cần đảm bảo là:",
+        "Khi nào DSLK phù hợp hơn mảng?",
+        "Trong DSLK, để duyệt toàn bộ danh sách ta thường dùng:",
+        "Hàm 'IsEmpty(pHead)' trả về true khi nào?",
+        "Trong DSLK vòng, node cuối cùng trỏ đến đâu?",
+        "Để tạo một node lưu số nguyên trong C, lệnh đúng là:",
+        "Khi duyệt DSLK, con trỏ nào được dùng để di chuyển qua các node?",
+        "Thao tác nào sau đây không hợp lệ trong DSLK đơn?",
+        "Hàm 'InsertLast' thực hiện thao tác gì?",
+        "Nếu DSLK có n node, độ phức tạp khi duyệt toàn bộ danh sách là:"
+      ]
+    },
+    {
+      "file": "quiz_169.json",
+      "question_count": 20,
+      "questions": [
+        "Khi chèn node pNew vào sau node p trong DSLK, bước đầu tiên cần thực hiện là gì?",
+        "Trong thao tác chèn pNew vào trước node p, lý do phải hoán vị giá trị info giữa p và pNew là:",
+        "Nếu DSLK rỗng, hàm ChenXSauMax(PtrNode &pHead, int x) nên trả về:",
+        "Trong quá trình xóa node p, nếu node p là node cuối cùng thì cần thực hiện bước nào?",
+        "Trong giải thuật xóa node p, bước hoán vị giá trị giữa p và pSau1 nhằm mục đích:",
+        "Nếu danh sách chỉ có một phần tử và ta gọi hàm RemoveP, điều gì xảy ra?",
+        "Trong Selection Sort cho DSLK, biến pMin dùng để:",
+        "Tại sao Selection Sort trong DSLK thường chậm hơn trên mảng?",
+        "Trong Interchange Sort, hai node được đổi chỗ bằng cách nào?",
+        "Khi thực hiện hoán vị trong DSLK, nếu hoán vị sai con trỏ pNext, hậu quả là:",
+        "Giải thuật Selection Sort dừng khi điều kiện nào xảy ra?",
+        "Trong hàm XoaX, trường hợp nào cần duyệt hết danh sách?",
+        "Độ phức tạp của Selection Sort trên DSLK có n phần tử là:",
+        "Để sắp xếp DSLK theo Interchange Sort, cần lặp mấy vòng lặp lồng nhau?",
+        "Nếu pHead bị NULL trong SelectionSort, nên xử lý thế nào?",
+        "Trong thao tác chèn trước node p, hoán vị giá trị giữa p và pNew giúp tránh điều gì?",
+        "Trong DSLK, để tìm node có giá trị nhỏ nhất từ node p đến cuối, cần:",
+        "Nếu trong DSLK có hai node cùng giá trị nhỏ nhất, Selection Sort sẽ:",
+        "Khi xóa node p trong DSLK, tại sao cần lưu pSau2 trước khi xóa pSau1?",
+        "Nếu trong DSLK gọi delete p nhưng quên gán NULL cho con trỏ, điều gì có thể xảy ra?"
+      ]
+    },
+    {
+      "file": "quiz_170.json",
+      "question_count": 20,
+      "questions": [
+        "Đặc trưng cơ bản của Stack là gì?",
+        "Trong Stack, thao tác nào dùng để xem giá trị phần tử đỉnh mà không xóa?",
+        "Khi Stack đầy, thao tác Push sẽ:",
+        "Trong Queue, phần tử nào được lấy ra đầu tiên?",
+        "Queue hoạt động theo cơ chế nào?",
+        "Thao tác thêm phần tử vào cuối hàng đợi gọi là:",
+        "Thao tác nào trong Stack có độ phức tạp trung bình O(1)?",
+        "Trong thuật toán chuyển Infix sang Postfix, Stack được dùng để:",
+        "Trong thuật toán tính giá trị biểu thức Postfix, Stack được dùng để:",
+        "Trong Queue dùng mảng vòng, khi rear = MAX thì cần:",
+        "Trong cấu trúc Queue, thao tác DeQueue thực hiện trên:",
+        "Khi Queue rỗng, DeQueue nên trả về:",
+        "Ứng dụng nào dưới đây KHÔNG dùng Stack?",
+        "Trong Stack dùng DSLK, phần tử mới được thêm ở:",
+        "Trong Queue dùng DSLK, phần tử mới được thêm ở:",
+        "Giải thuật QuickSort khử đệ quy dùng Stack để:",
+        "Trong Stack, khi gọi Pop trên Stack rỗng sẽ gây:",
+        "Trong Queue, điều kiện nào xác định rỗng?",
+        "Độ phức tạp của Push và Pop trong Stack dùng DSLK là:",
+        "Nếu quên giải phóng bộ nhớ khi Pop trong Stack DSLK, hậu quả là:"
+      ]
+    },
+    {
+      "file": "quiz_171.json",
+      "question_count": 20,
+      "questions": [
+        "Mỗi node trong cây nhị phân có tối đa bao nhiêu nút con?",
+        "Node gốc của cây có đặc điểm gì?",
+        "Trong BST, node có giá trị nhỏ nhất nằm ở đâu?",
+        "Nếu chèn các giá trị tăng dần vào BST, cấu trúc cây sẽ:",
+        "Hàm InsertNode cần trả về -1 khi nào?",
+        "Thứ tự duyệt LNR dùng để:",
+        "Trong hàm Remove, khi node có 2 con, ta cần:",
+        "Độ phức tạp trung bình của thao tác tìm kiếm trong BST là:",
+        "Trong trường hợp xấu nhất, cây BST bị suy biến có độ phức tạp tìm kiếm là:",
+        "Khi duyệt cây bằng NLR, node nào được xử lý đầu tiên?",
+        "Nếu cây rỗng, khi gọi hàm NLR, kết quả là:",
+        "Để tìm node có giá trị lớn nhất trong BST, ta cần:",
+        "Tại sao cây BST giúp tăng hiệu quả so với mảng tuyến tính?",
+        "Nếu hai node có cùng giá trị trong BST, hàm InsertNode nên:",
+        "Trong duyệt PostOrder (LRN), node gốc được xử lý:",
+        "Tại sao việc cân bằng cây (AVL, Red-Black) là cần thiết?",
+        "Nếu xóa node có 1 con trong BST, thao tác đúng là:",
+        "Khi in các node theo từng mức (Level Order), cần dùng cấu trúc dữ liệu nào?",
+        "Nếu hàm tìm kiếm trả về NULL, điều đó có nghĩa là:",
+        "Giả sử BST có n node, độ cao tốt nhất là:"
+      ]
+    },
+    {
+      "file": "quiz_172.json",
+      "question_count": 20,
+      "questions": [
+        "Ai là người phát minh ra cây AVL?",
+        "Điều kiện cân bằng của cây AVL là gì?",
+        "Công thức tính chỉ số cân bằng (bF) của một node là:",
+        "Trường hợp 'Lệch trái – trái (LL)' được xử lý bằng phép quay nào?",
+        "Trường hợp 'Lệch phải – phải (RR)' được xử lý bằng phép quay nào?",
+        "Phép quay kép trái (doubleLeftRotate) bao gồm các bước:",
+        "Khi chèn phần tử vào cây AVL, điều kiện cần quay xảy ra khi:",
+        "Chiều cao của cây AVL so với số node n gần bằng:",
+        "Nếu chèn dãy 1,2,3,4,5 vào BST, cây sẽ nghiêng; nhưng với AVL, sau mỗi chèn:",
+        "Hàm updateHeight trong AVL dùng để:",
+        "Khi xóa node có 2 con trong AVL, node thay thế được chọn là:",
+        "Sau khi xóa node, cần:",
+        "Độ phức tạp tìm kiếm trong AVL là:",
+        "Nếu cây bị lệch phải–trái (RL), cần dùng phép quay nào?",
+        "Khi xóa node làm cây lệch trái (LH), điều kiện phục hồi cân bằng là:",
+        "AVL Tree khác BST thường ở điểm nào?",
+        "Nếu không cập nhật chiều cao sau khi chèn, cây AVL sẽ:",
+        "Khi tìm phần tử nhỏ nhất trong cây AVL, ta cần:",
+        "Ứng dụng phổ biến của cây AVL trong thực tế là:",
+        "Cây AVL có ưu điểm hơn BST ở chỗ:"
+      ]
+    },
+    {
+      "file": "quiz_173.json",
+      "question_count": 20,
+      "questions": [
+        "Một đồ thị G = (V,E) gồm hai tập hợp nào?",
+        "Trong đồ thị vô hướng, cạnh uu gọi là gì?",
+        "Tổng bậc của tất cả các đỉnh trong đồ thị vô hướng bằng:",
+        "Trong đồ thị có hướng, deg⁺(v) là gì?",
+        "Một đồ thị có mọi cặp đỉnh đều nối với nhau gọi là:",
+        "Trong đồ thị có trọng số, trọng lượng của cạnh được ký hiệu là:",
+        "Đường đi đơn là gì?",
+        "Đồ thị liên thông mạnh là:",
+        "Khi nào hai đỉnh được gọi là liên thông?",
+        "Ma trận kề của đồ thị G cấp bao nhiêu?",
+        "Phần tử A[i][j] = 1 trong ma trận kề nghĩa là:",
+        "Ưu điểm của danh sách kề so với ma trận kề là:",
+        "Trong ma trận trọng số, nếu A[i][j] = 0, điều đó nghĩa là:",
+        "Danh sách cạnh gồm những thông tin gì?",
+        "Cấu trúc nào phù hợp nhất để biểu diễn đồ thị cho thuật toán BFS?",
+        "Độ phức tạp lưu trữ của ma trận kề là:",
+        "Trong C, khi biểu diễn đồ thị có hướng bằng ma trận kề, nếu chỉ có cạnh (u,v), phần tử A[v][u] sẽ bằng:",
+        "Nếu đồ thị có 5 đỉnh và 2 cạnh, ma trận kề có bao nhiêu phần tử bằng 1?",
+        "Trong đồ thị vô hướng, nếu tổng bậc của các đỉnh là 16 thì số cạnh là:",
+        "Khi đọc đồ thị từ file text, cấu trúc dữ liệu nào dễ cài đặt nhất?"
+      ]
+    },
+    {
+      "file": "quiz_174.json",
+      "question_count": 20,
+      "questions": [
+        "Đường đi Euler là gì?",
+        "Điều kiện để tồn tại chu trình Euler trong đồ thị vô hướng?",
+        "Điều kiện để tồn tại đường đi Euler trong đồ thị vô hướng?",
+        "Trong đồ thị có hướng, đỉnh có bậc ngoài > bậc trong 1 đơn vị là gì?",
+        "Thuật toán Fleury dùng để tìm gì?",
+        "Trong thuật toán Fleury, tại sao không đi qua cầu khi còn lựa chọn khác?",
+        "Chu trình Hamilton là gì?",
+        "Định lý Dirac nêu điều kiện gì cho đồ thị Hamilton?",
+        "Thuật toán Hamilton sử dụng kỹ thuật nào để tìm chu trình?",
+        "Chu trình Euler và Hamilton khác nhau ở điểm nào?",
+        "Thuật toán Fleury hoạt động trên cấu trúc dữ liệu nào?",
+        "Khi nào đồ thị được gọi là nửa Euler?",
+        "Trong chu trình Hamilton, số cạnh bằng:",
+        "Độ phức tạp tìm chu trình Hamilton bằng quay lui là:",
+        "Trong đồ thị có hướng, nếu mọi đỉnh có deg⁺(v)=deg⁻(v), kết luận:",
+        "Định lý Ore mở rộng điều kiện Dirac như thế nào?",
+        "Khi đồ thị có 2 đỉnh bậc lẻ, điều gì chắc chắn đúng?",
+        "Khi đỉnh bắt đầu và kết thúc trùng nhau trong đồ thị Euler, đó là:",
+        "Giải thuật Hamilton cần mảng đánh dấu visited để:",
+        "Trong bài toán Königsberg, kết luận cuối cùng là:"
+      ]
+    },
+    {
+      "file": "quiz_175.json",
+      "question_count": 20,
+      "questions": [
+        "Duyệt đồ thị là gì?",
+        "Cấu trúc dữ liệu được dùng cho BFS là gì?",
+        "Cấu trúc dữ liệu được dùng cho DFS là gì?",
+        "Độ phức tạp thời gian của BFS và DFS là:",
+        "BFS thích hợp nhất để làm gì?",
+        "DFS có thể dùng để phát hiện điều gì trong đồ thị?",
+        "Trong BFS, đỉnh nào được xét đầu tiên?",
+        "DFS khác BFS ở điểm nào?",
+        "Trong BFS, khi thêm đỉnh kề vào danh sách, ta thực hiện bằng:",
+        "Trong DFS, khi lấy đỉnh ra để duyệt, ta thực hiện bằng:",
+        "Tìm thành phần liên thông dùng BFS cần lặp lại bao nhiêu lần?",
+        "BFS có ưu điểm gì so với DFS?",
+        "DFS có ưu điểm gì hơn BFS?",
+        "Khi nào nên dùng DFS thay vì BFS?",
+        "Khi đồ thị rỗng, BFS hoặc DFS sẽ:",
+        "Thuật toán nào dùng trong việc tìm thành phần liên thông?",
+        "Trong BFS, để lưu cha của đỉnh hiện tại ta dùng mảng nào?",
+        "Tìm đường đi giữa hai đỉnh trong đồ thị vô hướng dùng BFS dựa trên thuộc tính nào?",
+        "Độ phức tạp không gian của BFS và DFS là:",
+        "Ứng dụng của DFS trong xử lý đồ thị là gì?"
+      ]
+    },
+    {
+      "file": "quiz_176.json",
+      "question_count": 20,
+      "questions": [
+        "Cây bao trùm là gì?",
+        "Cây bao trùm của đồ thị có n đỉnh luôn có bao nhiêu cạnh?",
+        "Khi nào đồ thị có cây bao trùm?",
+        "Cây bao trùm nhỏ nhất (MST) là gì?",
+        "Thuật toán Kruskal chọn cạnh dựa trên tiêu chí nào?",
+        "Khi thêm cạnh vào Kruskal, điều kiện cần kiểm tra là gì?",
+        "Trong Kruskal, cấu trúc dữ liệu nào được dùng để kiểm tra chu trình?",
+        "Prim bắt đầu từ đâu?",
+        "Điều kiện dừng của Prim là gì?",
+        "Độ phức tạp trung bình của Kruskal khi dùng Union-Find là:",
+        "Prim có thể dùng cấu trúc nào để tối ưu chọn cạnh nhỏ nhất?",
+        "Khi nào Kruskal hiệu quả hơn Prim?",
+        "Khi nào Prim hiệu quả hơn Kruskal?",
+        "Nếu đồ thị có n đỉnh và không liên thông, ta có:",
+        "Độ phức tạp của Prim khi dùng ma trận kề là:",
+        "Phát biểu đúng về cây bao trùm:",
+        "Thuật toán nào dựa trên nguyên lý Greedy?",
+        "Trong đồ thị có trọng số âm, Kruskal có hoạt động đúng không?",
+        "Ứng dụng thực tế của MST là:",
+        "Tổng số cạnh của cây bao trùm nhỏ nhất với n=7 là:"
+      ]
+    },
+    {
+      "file": "quiz_177.json",
+      "question_count": 20,
+      "questions": [
+        "Thuật toán Dijkstra áp dụng cho loại đồ thị nào?",
+        "Trong Dijkstra, bước chọn đỉnh nào quan trọng nhất?",
+        "Nếu đồ thị có cạnh âm, thuật toán nào vẫn hoạt động đúng?",
+        "Độ phức tạp của Dijkstra khi dùng hàng đợi ưu tiên là:",
+        "Bellman–Ford thực hiện bao nhiêu lần lặp chính?",
+        "Khi nào Bellman–Ford phát hiện chu trình âm?",
+        "Thuật toán Floyd–Warshall giải bài toán:",
+        "Kỹ thuật chính của Floyd–Warshall là:",
+        "Công thức cập nhật của Floyd–Warshall là:",
+        "Dijkstra và Prim giống nhau ở điểm nào?",
+        "Thuật toán nào có thể phát hiện chu trình âm?",
+        "Độ phức tạp của Floyd–Warshall là:",
+        "Trong Dijkstra, giá trị D[v] đại diện cho:",
+        "Bellman–Ford có thể áp dụng cho đồ thị:",
+        "Trong Floyd–Warshall, biến k có vai trò gì?",
+        "Thuật toán nào nhanh nhất trên đồ thị thưa với trọng số dương?",
+        "Thuật toán nào đảm bảo kết quả đúng ngay cả khi đồ thị có cạnh âm?",
+        "Khi nào Floyd–Warshall không hoạt động đúng?",
+        "Độ phức tạp thời gian của Bellman–Ford phụ thuộc vào:",
+        "Ứng dụng thực tế của Floyd–Warshall là:"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_167_submissions.json",
+      "count": 23,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 46,
+          "quiz_id": 167,
+          "submission_id": 283,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 167,
+          "submission_id": 330,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 167,
+          "submission_id": 425,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 167,
+          "submission_id": 192,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 167,
+          "submission_id": 215,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_168_submissions.json",
+      "count": 23,
+      "average_score": 16.91,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 168,
+          "submission_id": 208,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 168,
+          "submission_id": 280,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 168,
+          "submission_id": 195,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 168,
+          "submission_id": 325,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 51,
+          "quiz_id": 168,
+          "submission_id": 342,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_169_submissions.json",
+      "count": 21,
+      "average_score": 16.62,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 169,
+          "submission_id": 322,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 169,
+          "submission_id": 360,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 169,
+          "submission_id": 423,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 169,
+          "submission_id": 198,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 169,
+          "submission_id": 207,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_170_submissions.json",
+      "count": 23,
+      "average_score": 16.74,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 170,
+          "submission_id": 210,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 170,
+          "submission_id": 362,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 170,
+          "submission_id": 424,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 170,
+          "submission_id": 614,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 170,
+          "submission_id": 199,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_171_submissions.json",
+      "count": 22,
+      "average_score": 17.27,
+      "top_5_students": [
+        {
+          "user_id": 52,
+          "quiz_id": 171,
+          "submission_id": 364,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 171,
+          "submission_id": 197,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 171,
+          "submission_id": 277,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 49,
+          "quiz_id": 171,
+          "submission_id": 328,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 171,
+          "submission_id": 386,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 20,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_172_submissions.json",
+      "count": 22,
+      "average_score": 17.18,
+      "top_5_students": [
+        {
+          "user_id": 40,
+          "quiz_id": 172,
+          "submission_id": 209,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 172,
+          "submission_id": 191,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 47,
+          "quiz_id": 172,
+          "submission_id": 298,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 172,
+          "submission_id": 363,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 46,
+          "quiz_id": 172,
+          "submission_id": 276,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_173_submissions.json",
+      "count": 23,
+      "average_score": 16.91,
+      "top_5_students": [
+        {
+          "user_id": 64,
+          "quiz_id": 173,
+          "submission_id": 599,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 173,
+          "submission_id": 623,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 173,
+          "submission_id": 428,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 173,
+          "submission_id": 196,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 173,
+          "submission_id": 205,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_174_submissions.json",
+      "count": 21,
+      "average_score": 17.0,
+      "top_5_students": [
+        {
+          "user_id": 46,
+          "quiz_id": 174,
+          "submission_id": 274,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 174,
+          "submission_id": 212,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 174,
+          "submission_id": 388,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 56,
+          "quiz_id": 174,
+          "submission_id": 427,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 174,
+          "submission_id": 189,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_175_submissions.json",
+      "count": 22,
+      "average_score": 17.05,
+      "top_5_students": [
+        {
+          "user_id": 46,
+          "quiz_id": 175,
+          "submission_id": 275,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 175,
+          "submission_id": 358,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 12,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 175,
+          "submission_id": 497,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 19,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 175,
+          "submission_id": 597,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 65,
+          "quiz_id": 175,
+          "submission_id": 618,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_176_submissions.json",
+      "count": 21,
+      "average_score": 17.14,
+      "top_5_students": [
+        {
+          "user_id": 49,
+          "quiz_id": 176,
+          "submission_id": 329,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 54,
+          "quiz_id": 176,
+          "submission_id": 379,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 176,
+          "submission_id": 501,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 21,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 64,
+          "quiz_id": 176,
+          "submission_id": 600,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 176,
+          "submission_id": 194,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_177_submissions.json",
+      "count": 23,
+      "average_score": 17.48,
+      "top_5_students": [
+        {
+          "user_id": 56,
+          "quiz_id": 177,
+          "submission_id": 426,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 39,
+          "quiz_id": 177,
+          "submission_id": 190,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 40,
+          "quiz_id": 177,
+          "submission_id": 206,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 52,
+          "quiz_id": 177,
+          "submission_id": 365,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 59,
+          "quiz_id": 177,
+          "submission_id": 494,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 16,
+          "attempt": 1,
+          "workflow_state": "complete"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "module_50",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-tong-quan-ve-phan-mem-ma-nguon-mo",
+      "title": "lesson_bai-01-tong-quan-ve-phan-mem-ma-nguon-mo"
+    },
+    {
+      "id": "lesson_bai-02-ngon-ngu-lap-trinh-php",
+      "title": "lesson_bai-02-ngon-ngu-lap-trinh-php"
+    },
+    {
+      "id": "lesson_bai-03-he-quan-tri-co-so-du-lieu-mysql",
+      "title": "lesson_bai-03-he-quan-tri-co-so-du-lieu-mysql"
+    },
+    {
+      "id": "lesson_bai-04-he-quan-tri-noi-dung-joomla",
+      "title": "lesson_bai-04-he-quan-tri-noi-dung-joomla"
+    },
+    {
+      "id": "lesson_bai-05-cai-dat-va-su-dung-open-cart",
+      "title": "lesson_bai-05-cai-dat-va-su-dung-open-cart"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_112.json",
+      "question_count": 20,
+      "questions": [
+        "Phần mềm mã nguồn mở là gì?",
+        "Người sáng lập dự án GNU và khởi xướng phong trào Free Software là ai?",
+        "Giấy phép nào yêu cầu mọi bản phái sinh cũng phải được phát hành dưới cùng giấy phép?",
+        "MIT License cho phép gì?",
+        "Triết lý 'Free Software' của FSF nhấn mạnh điều gì?",
+        "Khác biệt lớn nhất giữa OSS và phần mềm thương mại là gì?",
+        "Phần mềm nào sau đây là ví dụ điển hình của mã nguồn mở?",
+        "Apache License 2.0 khác GPL ở điểm nào?",
+        "Thuật ngữ 'Open Source' được OSI định nghĩa vào năm nào?",
+        "Mô hình phát triển mã nguồn mở dựa trên nguyên tắc nào?",
+        "Cụm từ 'Copyleft' nghĩa là gì?",
+        "GPL và LGPL khác nhau ở điểm nào?",
+        "Trong OSS, 'Meritocracy' có nghĩa là:",
+        "Đâu KHÔNG phải là tiêu chí của OSS theo OSI?",
+        "Ví dụ nào thể hiện ứng dụng OSS trong chính phủ?",
+        "Phân tích: Nếu bạn phát triển phần mềm dựa trên GPL và phân phối, bạn phải:",
+        "Dự án Canvas LMS thuộc loại giấy phép nào?",
+        "Khi sử dụng mã nguồn MIT trong sản phẩm thương mại, yêu cầu tối thiểu là gì?",
+        "Tác động xã hội lớn nhất của mã nguồn mở là gì?",
+        "Hệ điều hành nào KHÔNG phải mã nguồn mở?"
+      ]
+    },
+    {
+      "file": "quiz_113.json",
+      "question_count": 20,
+      "questions": [
+        "PHP được viết tắt từ cụm nào?",
+        "Dấu hiệu bắt đầu một biến trong PHP là gì?",
+        "Phân tích code:<pre><code>$x = 5; $y = '5'; if ($x == $y) echo 'A'; if ($x === $y) echo 'B';</code></pre>Kết quả là:",
+        "Trong PHP, hàm nào dùng để in ra màn hình?",
+        "Phân tích code:<pre><code>$arr = [1,2,3]; echo count($arr);</code></pre>Output là:",
+        "Hàm nào chuyển ký tự đặc biệt thành HTML entity?",
+        "Phân biệt == và === trong PHP:",
+        "Phân tích code:<pre><code>function test(&$x){$x+=10;} $a=5; test($a); echo $a;</code></pre>Output là:",
+        "Lệnh nào dùng để dừng vòng lặp hiện tại và tiếp tục vòng sau?",
+        "Trong PHP, $_POST và $_GET là:",
+        "Phân tích code:<pre><code>class A{function hi(){echo 'A';}} $x=new A(); $x->hi();</code></pre>Kết quả là:",
+        "Trong PHP, từ khóa nào định nghĩa lớp?",
+        "PDO trong PHP dùng để:",
+        "Phân tích code:<pre><code>$conn = new mysqli('localhost','root','','qlsv'); if($conn->connect_error) echo 'Lỗi'; else echo 'OK';</code></pre>Output là:",
+        "Hàm isset() có chức năng gì?",
+        "Phân tích lỗi: <code>echo $ten;</code> khi biến chưa được khai báo.",
+        "Câu lệnh nào dùng để kết thúc script PHP?",
+        "Phân tích code:<pre><code>for($i=1;$i<3;$i++){if($i==2) break; echo $i;}</code></pre>Output là:",
+        "Phân tích: Tại sao nên dùng Prepared Statement trong MySQLi?",
+        "Trong PHP 8, thuộc tính được khai báo bằng cú pháp nào trong constructor?"
+      ]
+    },
+    {
+      "file": "quiz_114.json",
+      "question_count": 20,
+      "questions": [
+        "MySQL là hệ quản trị cơ sở dữ liệu loại nào?",
+        "Câu lệnh nào dùng để tạo cơ sở dữ liệu mới?",
+        "Phân tích code:<pre><code>CREATE TABLE sv (id INT, name VARCHAR(20));</code></pre>Điều gì sai?",
+        "Câu lệnh nào dùng để chọn tất cả dữ liệu?",
+        "Phân biệt DDL và DML:",
+        "Phân tích truy vấn:<pre><code>SELECT COUNT(*), Lop FROM SinhVien GROUP BY Lop;</code></pre>Kết quả trả về:",
+        "Lệnh nào thêm cột mới vào bảng?",
+        "Phân tích truy vấn:<pre><code>SELECT * FROM sinhvien WHERE DiemTB BETWEEN 7 AND 9;</code></pre>",
+        "Để thiết lập liên kết giữa 2 bảng, dùng ràng buộc nào?",
+        "Lệnh nào xóa toàn bộ bảng?",
+        "Phân tích code:<pre><code>DELETE FROM sinhvien WHERE DiemTB < 5;</code></pre>Chức năng của câu lệnh trên là gì?",
+        "Câu lệnh nào dùng để cấp quyền cho người dùng?",
+        "Phân biệt INNER JOIN và LEFT JOIN:",
+        "Phân tích truy vấn:<pre><code>SELECT AVG(DiemTB) FROM SinhVien WHERE Lop='CNTT1';</code></pre>",
+        "Câu lệnh nào dùng để khôi phục database từ file backup?",
+        "Lệnh COMMIT có tác dụng gì?",
+        "Để tránh SQL Injection, nên sử dụng gì?",
+        "Câu lệnh nào hiển thị danh sách các bảng trong database?",
+        "Phân tích: Lệnh nào tạo bản sao lưu dữ liệu MySQL?",
+        "Ràng buộc CHECK có tác dụng gì?"
+      ]
+    },
+    {
+      "file": "quiz_115.json",
+      "question_count": 20,
+      "questions": [
+        "Joomla được viết bằng ngôn ngữ nào?",
+        "Joomla sử dụng hệ quản trị cơ sở dữ liệu nào mặc định?",
+        "Joomla là loại hệ thống gì?",
+        "Cấu trúc MVC trong Joomla gồm những phần nào?",
+        "Thư mục nào chứa các file quản trị (backend) của Joomla?",
+        "Component trong Joomla có chức năng gì?",
+        "Plugin trong Joomla dùng để:",
+        "Phân tích code:<pre><code>index.php → Router → Controller → Model → View</code></pre>Cấu trúc này mô tả:",
+        "Tập tin cấu hình chính của Joomla là:",
+        "Menu hiển thị trên website Joomla được quản lý bởi thành phần nào?",
+        "Phân tích lỗi: Nếu xóa thư mục /templates, điều gì xảy ra?",
+        "Trong Joomla, vai trò 'Super User' có quyền gì?",
+        "Phân biệt giữa Component và Module:",
+        "Để cài đặt template mới trong Joomla, thực hiện ở đâu?",
+        "Extension trong Joomla KHÔNG bao gồm loại nào sau đây?",
+        "Joomla sử dụng mô hình phân quyền nào?",
+        "Phân tích cấu trúc URL: <code>index.php?option=com_content&view=article&id=5</code>",
+        "Để sao lưu Joomla an toàn, nên dùng extension nào?",
+        "Phân tích: Khi người dùng frontend đăng nhập thất bại nhiều lần, giải pháp bảo mật nào nên áp dụng?",
+        "Câu lệnh SQL nào tạo người dùng quản trị Joomla trong MySQL?"
+      ]
+    },
+    {
+      "file": "quiz_116.json",
+      "question_count": 20,
+      "questions": [
+        "OpenCart được viết bằng ngôn ngữ nào?",
+        "OpenCart sử dụng mô hình kiến trúc nào?",
+        "Thư mục nào chứa giao diện người dùng (frontend)?",
+        "Tệp cấu hình của trang quản trị OpenCart là gì?",
+        "Sau khi cài đặt xong, cần xóa thư mục nào để tránh lỗi bảo mật?",
+        "Phân biệt Component trong Joomla và Module trong OpenCart:",
+        "Đường dẫn truy cập trang quản trị mặc định của OpenCart là:",
+        "Cổng thanh toán nào được hỗ trợ mặc định trong OpenCart?",
+        "Phân tích code: Khi truy cập <code>index.php?route=product/category&path=20</code>, OpenCart sẽ làm gì?",
+        "Để thêm module mới, truy cập mục nào?",
+        "Tính năng nào KHÔNG thuộc nhóm 'Sales' trong admin OpenCart?",
+        "SEO Friendly URL trong OpenCart có tác dụng gì?",
+        "Phân tích: Khi quên mật khẩu admin, có thể khôi phục bằng cách nào?",
+        "OpenCart hỗ trợ định dạng template nào?",
+        "Để tạo backup dữ liệu, vào mục nào?",
+        "Phân quyền người dùng trong OpenCart được thực hiện ở đâu?",
+        "Lý do cần phân quyền rõ ràng giữa Administrator và Manager là:",
+        "Lệnh nào dùng để sao lưu dữ liệu MySQL của OpenCart?",
+        "Extension nào được dùng để tối ưu SEO trong OpenCart?",
+        "Để bật chế độ hiển thị lỗi cho lập trình viên, cần sửa file nào?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_112_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_113_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_114_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_115_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_116_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

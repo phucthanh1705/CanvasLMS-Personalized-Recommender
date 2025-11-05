@@ -1,0 +1,189 @@
+{
+  "id": "module_53",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-thiet-ke-ui-slash-ux",
+      "title": "lesson_bai-01-thiet-ke-ui-slash-ux"
+    },
+    {
+      "id": "lesson_bai-02-cong-cu-chrome-devtools",
+      "title": "lesson_bai-02-cong-cu-chrome-devtools"
+    },
+    {
+      "id": "lesson_bai-03-quan-lu-phien-ban-voi-git",
+      "title": "lesson_bai-03-quan-lu-phien-ban-voi-git"
+    },
+    {
+      "id": "lesson_bai-04-cong-cu-quan-lu-du-an-phan-mem",
+      "title": "lesson_bai-04-cong-cu-quan-lu-du-an-phan-mem"
+    },
+    {
+      "id": "lesson_bai-05-trien-khai-ung-dung-dien-toan-dam-may",
+      "title": "lesson_bai-05-trien-khai-ung-dung-dien-toan-dam-may"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_131.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của Wireframing là gì?",
+        "Công cụ Balsamiq yêu cầu phần mềm nào để chạy được trên desktop?",
+        "Vai trò của UI Library trong Balsamiq là gì?",
+        "Phát biểu nào sau đây đúng về Prototype?",
+        "Thành phần nào của giao diện Balsamiq cho phép thay đổi kích thước và màu sắc của phần tử?",
+        "Khi nào nên dùng Mockup thay cho Wireframe?",
+        "Tại sao Wireframe giúp tiết kiệm chi phí phát triển?",
+        "Phần tử nào KHÔNG thuộc nhóm Layout trong Balsamiq?",
+        "Wireframe phù hợp nhất với đối tượng nào trong nhóm phát triển phần mềm?",
+        "Mockup khác Wireframe ở điểm nào sau đây?",
+        "Khi nào nên xuất wireframe ra PDF?",
+        "Danh mục nào trong UI Library chứa biểu tượng hệ điều hành iOS?",
+        "Điểm khác biệt chính giữa Prototype và Mockup là gì?",
+        "Danh mục nào trong UI Library dùng để tạo ghi chú, chú thích trên wireframe?",
+        "Khi thiết kế form đăng ký, nhóm phần tử phù hợp nhất là?",
+        "Một prototype tốt cần đảm bảo điều gì?",
+        "Wireframing giúp nhóm phát triển phần mềm đạt được điều gì?",
+        "Công cụ nào sau đây KHÔNG dùng cho wireframing?",
+        "Tác dụng của khu vực Navigator trong Balsamiq là gì?",
+        "Sau khi hoàn thiện prototype, bước tiếp theo trong quy trình thiết kế UI/UX là gì?"
+      ]
+    },
+    {
+      "file": "quiz_132.json",
+      "question_count": 20,
+      "questions": [
+        "Phím tắt phổ biến nhất để mở Chrome DevTools là gì?",
+        "Tab nào cho phép xem và chỉnh sửa trực tiếp cấu trúc HTML và CSS?",
+        "Tab nào được sử dụng để xem log và thực thi câu lệnh JavaScript?",
+        "Mã trạng thái HTTP 404 thể hiện điều gì?",
+        "Trong tab Network, cột 'Waterfall' thể hiện điều gì?",
+        "Khi bạn gõ lệnh console.log('Hi'); trong tab Console, kết quả sẽ là:",
+        "Phím tắt nào giúp chọn nhanh phần tử HTML trực tiếp trên trang?",
+        "Trong tab Sources, bạn có thể:",
+        "Đâu là mã lỗi JavaScript thường gặp trong Console?",
+        "Khi cần xem dữ liệu lưu trữ cục bộ của trang web, bạn nên mở tab nào?",
+        "Đâu là công cụ trong DevTools giúp đo lường hiệu suất và tốc độ render của trang web?",
+        "Khi gõ $0 trong Console, bạn nhận được điều gì?",
+        "Trong Network, bộ lọc 'XHR' giúp hiển thị:",
+        "Tab nào giúp theo dõi chứng chỉ HTTPS và lỗi Mixed Content?",
+        "Khi bạn bật chế độ 'Disable Cache' trong Network, tác dụng là:",
+        "Mã JavaScript nào in ra tên tất cả cookies của trang?",
+        "Phím tắt nào mở nhanh file mã nguồn trong Sources?",
+        "Khi Network hiển thị mã phản hồi 500, điều đó nghĩa là:",
+        "Tab nào cho phép kiểm tra và chỉnh sửa Local Storage?",
+        "Một lập trình viên cần kiểm tra tốc độ tải ảnh, tab phù hợp nhất là:"
+      ]
+    },
+    {
+      "file": "quiz_133.json",
+      "question_count": 20,
+      "questions": [
+        "Git được tạo ra bởi ai và vào năm nào?",
+        "Lệnh nào dùng để khởi tạo kho Git mới?",
+        "Mục đích của lệnh `git add` là gì?",
+        "Cấu trúc chính của một commit gồm:",
+        "Lệnh nào được dùng để xem toàn bộ lịch sử commit?",
+        "Trong Git, Staging Area có vai trò gì?",
+        "Lệnh `git status` có tác dụng:",
+        "Khi cần hoàn tác commit gần nhất, ta dùng:",
+        "Lệnh nào dùng để tạo nhánh mới?",
+        "Khi chuyển sang nhánh khác, bạn dùng lệnh:",
+        "Mã SHA-1 trong Git dùng để:",
+        "Khi gõ `git diff`, bạn sẽ thấy:",
+        "Git khác SVN ở điểm nào?",
+        "Lệnh `git remote add origin` có chức năng:",
+        "Trước khi merge, lập trình viên nên làm gì để tránh xung đột?",
+        "Nếu hai người commit thay đổi cùng dòng mã, Git sẽ:",
+        "Lệnh `git clone` có tác dụng:",
+        "Câu lệnh nào đẩy commit từ nhánh main lên GitHub lần đầu?",
+        "Khi muốn xem thông tin người dùng Git hiện tại, dùng lệnh:",
+        "Trong nhóm làm việc, Git giúp:"
+      ]
+    },
+    {
+      "file": "quiz_134.json",
+      "question_count": 20,
+      "questions": [
+        "Mục tiêu chính của công cụ quản lý dự án phần mềm là gì?",
+        "Jira hỗ trợ mô hình phát triển phần mềm nào phổ biến nhất?",
+        "Trong Jira, một 'Issue' có thể đại diện cho những loại công việc nào?",
+        "Vai trò của Product Owner trong Scrum là gì?",
+        "Công cụ nào trong Jira giúp hiển thị khối lượng công việc còn lại theo thời gian sprint?",
+        "Trong workflow cơ bản của Jira, trạng thái thông thường của issue là:",
+        "Redmine mạnh ở điểm nào so với Jira?",
+        "Trong Jira, biểu đồ Velocity Chart thể hiện điều gì?",
+        "Công cụ nào phù hợp nhất cho nhóm startup nhỏ muốn quản lý công việc nhanh gọn?",
+        "Trong Jira, 'Epic' được hiểu là:",
+        "Vai trò của Scrum Master là gì?",
+        "Chức năng chính của Dashboard trong Jira là gì?",
+        "Trong Redmine, biểu đồ nào giúp thể hiện tiến độ dự án theo thời gian?",
+        "Trong Scrum, mỗi vòng phát triển được gọi là gì?",
+        "Trello sử dụng mô hình nào để hiển thị công việc?",
+        "Lợi ích chính của việc dùng Jira trong nhóm Agile là gì?",
+        "Nếu hai thành viên cùng chỉnh sửa issue một lúc, Jira xử lý như thế nào?",
+        "Công cụ nào trong Jira giúp theo dõi tình trạng issue qua các trạng thái trực quan?",
+        "Trong Jira, người dùng có thể gán issue cho ai?",
+        "Trong quy trình Agile, sau mỗi Sprint cần thực hiện gì?"
+      ]
+    },
+    {
+      "file": "quiz_135.json",
+      "question_count": 20,
+      "questions": [
+        "Điện toán đám mây (Cloud Computing) là gì?",
+        "Đặc điểm 'Pay-as-you-go' trong Cloud có nghĩa là:",
+        "Mô hình dịch vụ nào cung cấp cơ sở hạ tầng ảo (VM, Network, Storage)?",
+        "Ví dụ nào sau đây là dịch vụ PaaS?",
+        "Dịch vụ nào dùng để lưu trữ tệp lớn (ảnh, video) trên Azure?",
+        "Trong Azure, Resource Group có vai trò gì?",
+        "Lệnh nào dùng để đăng nhập Azure CLI?",
+        "Azure SQL Database thuộc mô hình dịch vụ nào?",
+        "Người dùng có thể truy cập ứng dụng Azure App Service qua:",
+        "Azure AD cung cấp tính năng nào sau đây?",
+        "Azure Resource ID dùng để:",
+        "Mô hình bảo mật RBAC trong Azure giúp:",
+        "Trong Azure Portal, App Service Plan quy định:",
+        "Dịch vụ nào của Azure giúp triển khai container?",
+        "Tài khoản thanh toán của Azure được gọi là:",
+        "Khi triển khai website WordPress trên Azure, cần kết hợp thêm dịch vụ nào?",
+        "Azure Storage Explorer được dùng để:",
+        "Tính năng nào giúp ứng dụng Azure tự động mở rộng theo tải?",
+        "Khi chọn khu vực (Region) cho tài nguyên Azure, yếu tố cần xem xét là:",
+        "Ưu điểm lớn nhất của mô hình Cloud Computing là gì?"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_131_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_132_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_133_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_134_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_135_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}

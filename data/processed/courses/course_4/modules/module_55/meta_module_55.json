@@ -1,0 +1,225 @@
+{
+  "id": "module_55",
+  "lessons": [
+    {
+      "id": "lesson_bai-01-chuan-bi-moi-truong-phat-trien-ung-dung-voi-spring-boot",
+      "title": "lesson_bai-01-chuan-bi-moi-truong-phat-trien-ung-dung-voi-spring-boot"
+    },
+    {
+      "id": "lesson_bai-02-tao-co-so-du-lieu-cho-website-ban-hang",
+      "title": "lesson_bai-02-tao-co-so-du-lieu-cho-website-ban-hang"
+    },
+    {
+      "id": "lesson_bai-03-xay-dung-chuc-nang-hien-thi-them-sua-xoa-san-pham",
+      "title": "lesson_bai-03-xay-dung-chuc-nang-hien-thi-them-sua-xoa-san-pham"
+    },
+    {
+      "id": "lesson_bai-04-xay-dung-chuc-nang-gio-hang-va-dat-hang",
+      "title": "lesson_bai-04-xay-dung-chuc-nang-gio-hang-va-dat-hang"
+    },
+    {
+      "id": "lesson_bai-05-xay-dung-chuc-nang-xac-thuc-va-phan-quyen-nguoi-dung",
+      "title": "lesson_bai-05-xay-dung-chuc-nang-xac-thuc-va-phan-quyen-nguoi-dung"
+    },
+    {
+      "id": "lesson_bai-06-restful-api-trong-j2ee-spring-boot-+-json-+-postman",
+      "title": "lesson_bai-06-restful-api-trong-j2ee-spring-boot-+-json-+-postman"
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "quiz_147.json",
+      "question_count": 20,
+      "questions": [
+        "Spring Boot sử dụng annotation nào để đánh dấu điểm khởi động của ứng dụng?",
+        "Lớp main của Spring Boot phải chứa phương thức nào?",
+        "Annotation nào kết hợp cả @Configuration, @EnableAutoConfiguration và @ComponentScan?",
+        "Lệnh Maven nào dùng để chạy ứng dụng Spring Boot?",
+        "Tệp nào chứa cấu hình ứng dụng Spring Boot?",
+        "Trong Spring Boot, thư mục 'templates/' thường chứa gì?",
+        "Annotation nào dùng để inject dependency vào class?",
+        "Khi chạy ứng dụng Spring Boot, server nhúng mặc định là:",
+        "Câu lệnh nào biên dịch và đóng gói project thành file .jar?",
+        "Annotation nào trả về dữ liệu JSON thay vì view?",
+        "Trong Spring Boot, phương thức getMessage() trong Model được dùng để:",
+        "Nếu thiếu dependency 'spring-boot-starter-web' trong pom.xml, điều gì xảy ra?",
+        "Tệp pom.xml có vai trò gì trong Spring Boot?",
+        "Annotation nào định nghĩa route GET trong Controller?",
+        "Khi chạy ứng dụng Spring Boot, port mặc định là:",
+        "Trong Controller, khi return 'index', framework sẽ:",
+        "Annotation nào giúp Spring Boot tự động quét các package chứa component?",
+        "Nếu bạn muốn chạy ứng dụng dưới dạng file jar, cần:",
+        "Annotation @SpringBootApplication kết hợp bao nhiêu annotation khác nhau?",
+        "Kết luận nào đúng nhất về Spring Boot:"
+      ]
+    },
+    {
+      "file": "quiz_148.json",
+      "question_count": 20,
+      "questions": [
+        "Spring Data JPA sử dụng ORM framework nào mặc định?",
+        "Annotation nào dùng để đánh dấu một lớp là entity trong JPA?",
+        "Công cụ nào được Spring Boot dùng mặc định để quản lý schema database?",
+        "Trong application.properties, thuộc tính nào xác định URL kết nối MySQL?",
+        "Giá trị 'spring.jpa.hibernate.ddl-auto=update' có nghĩa là gì?",
+        "Annotation nào dùng để chỉ định khóa chính của entity?",
+        "Phương thức nào trong JpaRepository được dùng để lấy toàn bộ bản ghi?",
+        "Khi muốn ánh xạ khóa ngoại giữa Product và Category, ta dùng annotation nào?",
+        "Câu lệnh SQL tương ứng với phương thức save() trong JpaRepository là gì?",
+        "Annotation nào cho phép ánh xạ quan hệ 1-N giữa Category và Product?",
+        "Khi không khai báo @Table, tên bảng trong DB mặc định là gì?",
+        "Phương thức deleteById(5L) trong JpaRepository sẽ thực hiện:",
+        "Khi thuộc tính spring.jpa.show-sql=true, hệ thống sẽ:",
+        "Annotation nào dùng để tự động tạo giá trị khóa chính?",
+        "Nếu Category có nhiều Product, quan hệ giữa chúng là:",
+        "Phương thức findByCategoryName trong repository sẽ tự động:",
+        "Khi thuộc tính 'ddl-auto' = create-drop, điều gì xảy ra?",
+        "Annotation nào dùng để xác định cột ánh xạ với trường cụ thể trong DB?",
+        "Thành phần nào chịu trách nhiệm giao tiếp giữa Entity và DB?",
+        "Kết luận đúng nhất về Spring Data JPA:"
+      ]
+    },
+    {
+      "file": "quiz_149.json",
+      "question_count": 20,
+      "questions": [
+        "Annotation nào được dùng để ánh xạ request tới Controller trong Spring MVC?",
+        "Phương thức nào dùng để xử lý request GET trong Spring Boot?",
+        "Trong CRUD, chức năng 'Update' tương ứng với HTTP method nào?",
+        "Annotation nào giúp Spring tự động inject dependency vào Controller?",
+        "Thymeleaf nhận dữ liệu từ Controller thông qua đối tượng nào?",
+        "Thẻ th:text trong Thymeleaf có công dụng gì?",
+        "Khi người dùng gửi form POST /products/save, phương thức nào trong Controller sẽ xử lý?",
+        "Trong phương thức edit(@PathVariable Long id), annotation @PathVariable dùng để:",
+        "Phương thức nào trong JpaRepository dùng để xóa bản ghi?",
+        "Trong Thymeleaf, thuộc tính th:object được dùng để:",
+        "Khi form có trường <input type='hidden' th:field='*{id}'> nghĩa là:",
+        "Phương thức nào trong Service được gọi để lưu sản phẩm mới?",
+        "Annotation nào định nghĩa route gốc cho toàn bộ Controller?",
+        "Khi người dùng truy cập /products/edit/1, view nào được render?",
+        "Trong MVC, Controller nên xử lý gì?",
+        "Tại sao nên tách Service layer trong ứng dụng Spring Boot?",
+        "Nếu người dùng nhập sai dữ liệu, xử lý hợp lệ thường được thực hiện bằng:",
+        "Phương thức 'redirect:/products' trong Controller có ý nghĩa gì?",
+        "Khi ProductService.save() gọi repo.save(), Hibernate thực hiện:",
+        "Kết luận đúng nhất về CRUD trong Spring Boot:"
+      ]
+    },
+    {
+      "file": "quiz_150.json",
+      "question_count": 20,
+      "questions": [
+        "Annotation nào dùng để ánh xạ class thành bảng 'orders' trong cơ sở dữ liệu?",
+        "Phương thức nào của HttpSession dùng để lưu giỏ hàng?",
+        "Annotation nào định nghĩa quan hệ 1-N giữa Order và OrderDetail?",
+        "Trong quá trình checkout, khi gọi orderRepo.save(order), Hibernate sẽ:",
+        "Nếu giỏ hàng được lưu trong session, nó sẽ bị mất khi nào?",
+        "Trong entity OrderDetail, khóa ngoại tới Order được ánh xạ bằng:",
+        "Phương thức nào trong Controller được dùng để thêm sản phẩm vào giỏ hàng?",
+        "Câu lệnh nào tính tổng giá trị giỏ hàng?",
+        "Khi checkout thành công, nên làm gì với session cart?",
+        "Annotation @GeneratedValue(strategy=GenerationType.IDENTITY) có tác dụng:",
+        "Nếu hai sản phẩm giống nhau được thêm vào giỏ hàng, đoạn code nào xử lý đúng?",
+        "Trong Thymeleaf, th:each được dùng để:",
+        "Phương thức checkout nên có kiểu trả về gì?",
+        "Nếu Order có nhiều OrderDetail, JPA sẽ quản lý qua:",
+        "Trong quy trình giỏ hàng, lớp nào xử lý logic nghiệp vụ chính?",
+        "Khi OrderController lưu đơn hàng, phần tính tổng tiền thường được thực hiện ở đâu?",
+        "Thuộc tính CascadeType.ALL trong JPA có nghĩa là gì?",
+        "Session trong Spring Boot được quản lý bởi:",
+        "Phương thức nào trong OrderController chịu trách nhiệm xóa giỏ hàng sau khi thanh toán?",
+        "Kết luận đúng nhất về chức năng giỏ hàng và đặt hàng:"
+      ]
+    },
+    {
+      "file": "quiz_151.json",
+      "question_count": 20,
+      "questions": [
+        "Annotation nào bật tính năng bảo mật Spring Security trong ứng dụng?",
+        "Thành phần nào chịu trách nhiệm xác thực người dùng trong Spring Security?",
+        "Lớp nào dùng để mã hóa mật khẩu trong Spring Security?",
+        "Annotation nào cho phép chỉ người có vai trò ADMIN được truy cập phương thức?",
+        "Trong cấu hình HttpSecurity, phương thức nào định nghĩa các quyền truy cập?",
+        "Nếu không cấu hình gì thêm, Spring Security mặc định yêu cầu gì?",
+        "Trong UserDetailsService, phương thức nào được gọi khi người dùng đăng nhập?",
+        "Tại sao nên dùng BCrypt thay vì lưu mật khẩu dạng text?",
+        "Phương thức nào trong HttpSecurity định nghĩa trang login tùy chỉnh?",
+        "Khi người dùng truy cập /admin mà chưa đăng nhập, Spring Security sẽ:",
+        "Annotation nào dùng để bật kiểm tra quyền truy cập ở mức phương thức?",
+        "Phương thức nào trong PasswordEncoder kiểm tra mật khẩu nhập vào?",
+        "Trong SecurityFilterChain, logout(logout -> logout.permitAll()) nghĩa là gì?",
+        "CSRF là cơ chế bảo vệ chống lại tấn công nào?",
+        "Trong SecurityConfig, câu lệnh .anyRequest().authenticated() có nghĩa là:",
+        "Khi đăng ký tài khoản mới, thuộc tính nào cần được gán thêm?",
+        "Spring Security lưu thông tin người dùng sau khi đăng nhập ở đâu?",
+        "Phương thức nào giúp tắt CSRF (chỉ nên dùng cho REST API)?",
+        "Trong kiến trúc Spring Security, PasswordEncoder và UserDetailsService được kết nối qua:",
+        "Kết luận đúng nhất về Spring Security:"
+      ]
+    },
+    {
+      "file": "quiz_152.json",
+      "question_count": 20,
+      "questions": [
+        "Annotation nào dùng để định nghĩa REST API controller?",
+        "Phương thức HTTP nào được dùng để xóa tài nguyên?",
+        "Annotation nào dùng để ánh xạ đường dẫn động như /api/products/{id}?",
+        "Annotation nào dùng để nhận dữ liệu JSON từ request body?",
+        "Khi gọi API POST /api/products, mã phản hồi thành công nên là:",
+        "Lớp nào trong Spring được dùng để bao bọc phản hồi HTTP?",
+        "Annotation @ControllerAdvice được dùng để:",
+        "Nếu REST API trả về 404 Not Found nghĩa là:",
+        "Công cụ nào thường dùng để kiểm thử REST API?",
+        "Khi client gửi JSON, header Content-Type nên là:",
+        "Phương thức ResponseEntity.noContent() trả về mã trạng thái nào?",
+        "Annotation nào ánh xạ tất cả phương thức HTTP vào cùng một endpoint?",
+        "Khi gọi PUT /api/products/1, dữ liệu trong body thường chứa gì?",
+        "Để trả về lỗi hợp lệ khi dữ liệu không hợp lệ, nên dùng class nào?",
+        "Annotation @Valid dùng để:",
+        "Spring Boot dùng thư viện nào để tự động chuyển đổi object thành JSON?",
+        "Khi trả về ResponseEntity.badRequest().body(errors), mã HTTP tương ứng là:",
+        "Đặc điểm nào KHÔNG đúng về RESTful API?",
+        "Annotation nào xác định endpoint gốc cho tất cả phương thức trong controller?",
+        "Kết luận đúng nhất về RESTful API trong Spring Boot:"
+      ]
+    }
+  ],
+  "quiz_submissions": [
+    {
+      "file_cleaned": "submissions/cleaned_quiz_147_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_148_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_149_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_150_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_151_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    },
+    {
+      "file_cleaned": "submissions/cleaned_quiz_152_submissions.json",
+      "count": 0,
+      "average_score": 0,
+      "top_5_students": []
+    }
+  ]
+}
