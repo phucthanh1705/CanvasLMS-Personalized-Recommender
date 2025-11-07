@@ -3,7 +3,7 @@
 Build a hybrid EduKG from your processed Canvas data.
 Outputs structural knowledge graph files only:
   - nodes.csv
-  - edges.csv
+  - edges.csv (with source_label, target_label)
   - triples.csv
 
 Visualization is handled separately by kg_visualize.py
@@ -29,8 +29,15 @@ def add_node(nodes, node_id, label, name=None, **attrs):
     if node_id not in nodes:
         nodes[node_id] = {"id": node_id, "label": label, "name": name or node_id, **attrs}
 
-def add_edge(edges, src, rel, tgt, score=None, **attrs):
-    e = {"source": src, "relation": rel, "target": tgt}
+def add_edge(edges, src, src_label, rel, tgt, tgt_label, score=None, **attrs):
+    """Thêm edge có đủ thông tin label cho cả 2 đầu"""
+    e = {
+        "source": src,
+        "source_label": src_label,
+        "relation": rel,
+        "target": tgt,
+        "target_label": tgt_label
+    }
     if score is not None:
         e["score"] = score
     e.update(attrs)
@@ -50,7 +57,7 @@ def build_structural(course_dir):
         if not mod_dir.exists():
             continue
         add_node(nodes, mod, "Module", name=mod)
-        add_edge(edges, course_id, "includes", mod)
+        add_edge(edges, course_id, "Course", "includes", mod, "Module")
         triples.append((course_id, "includes", mod))
 
         # Lessons
@@ -59,7 +66,7 @@ def build_structural(course_dir):
             les_id = lp.stem
             title = lj.get("title") or les_id
             add_node(nodes, les_id, "Lesson", name=title)
-            add_edge(edges, mod, "has_lesson", les_id)
+            add_edge(edges, mod, "Module", "has_lesson", les_id, "Lesson")
             triples.append((mod, "has_lesson", les_id))
 
         # Quizzes
@@ -67,7 +74,7 @@ def build_structural(course_dir):
         for qp in sorted(quiz_dir.glob("quiz_*.json")):
             qid = qp.stem
             add_node(nodes, qid, "Quiz", name=qid)
-            add_edge(edges, mod, "has_quiz", qid)
+            add_edge(edges, mod, "Module", "has_quiz", qid, "Quiz")
             triples.append((mod, "has_quiz", qid))
 
             qlist = read_json(qp, [])
@@ -76,7 +83,7 @@ def build_structural(course_dir):
                 q_text = qobj.get("question_text") or q_item_id
                 if q_item_id != "question_":
                     add_node(nodes, q_item_id, "Question", name=q_text)
-                    add_edge(edges, qid, "has_question", q_item_id)
+                    add_edge(edges, qid, "Quiz", "has_question", q_item_id, "Question")
                     triples.append((qid, "has_question", q_item_id))
 
         # Submissions (scores)
@@ -94,14 +101,14 @@ def build_structural(course_dir):
                     continue
                 student = f"user_{uid}"
                 add_node(nodes, student, "Student", name=student)
-                add_edge(edges, student, "attempted", quiz_node)
+                add_edge(edges, student, "Student", "attempted", quiz_node, "Quiz")
                 triples.append((student, "attempted", quiz_node))
                 s = rec.get("score")
                 try:
                     s = float(s) if s is not None else None
                 except Exception:
                     s = None
-                add_edge(edges, student, "scored_on", quiz_node, score=s)
+                add_edge(edges, student, "Student", "scored_on", quiz_node, "Quiz", score=s)
                 if s is not None:
                     triples.append((student, "has_score", f"{quiz_node}:{s}"))
 
@@ -137,7 +144,8 @@ def write_nodes(nodes):
 def write_edges(edges):
     out = os.path.join(OUT_DIR, "edges.csv")
     with open(out, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["source", "relation", "target", "score"])
+        fieldnames = ["source", "source_label", "relation", "target", "target_label", "score"]
+        w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
         for e in edges:
             w.writerow(e)
