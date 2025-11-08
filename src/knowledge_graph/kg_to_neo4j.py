@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# đưa dữ liệu vào neo4j
 """
 Import Knowledge Graph (nodes & edges) into Neo4j
 Auto MERGE (avoid duplicates)

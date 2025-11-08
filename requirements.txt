@@ -4,7 +4,8 @@ pandas==2.2.3
 numpy==1.26.4             
 tqdm==4.66.5             
 
-py2neo==2021.2.4          
+py2neo==2021.2.4
+neo4j>=5.15.0
 networkx==3.3             
 pyvis==0.3.2              
 rdflib==7.0.0             

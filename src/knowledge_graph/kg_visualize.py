@@ -1,10 +1,11 @@
-# Hiển thị đồ thị bằng NetworkX, pyvis
 # -*- coding: utf-8 -*-
 """
-📊 Streamlit Dashboard – Canvas EduKG Explorer
-Khám phá đồ thị tri thức Canvas:
- - Hiển thị toàn bộ KG hoặc subgraph động quanh 1 node.
- - Tự động sinh đồ thị PyVis (zoom, kéo, hover, xem thông tin).
+📊 Streamlit Dashboard – Canvas EduKG Explorer (v2)
+Khám phá đồ thị tri thức Canvas (EduKG):
+ - Hiển thị toàn bộ hoặc subgraph động quanh 1 node
+ - Nhận diện tự động file triples trong data/triples hoặc data/processed/kg
+ - Tô màu, độ dày cạnh theo loại quan hệ (mastery_on, includes, has_lesson, ...)
+ - Tự động sinh đồ thị PyVis (zoom, kéo, hover, xem thông tin)
 """
 
 import os
@@ -16,10 +17,20 @@ import streamlit as st
 # =========================
 # 🔧 CONFIG
 # =========================
-KG_DIR = "data/triples"
-NODES_FILE = os.path.join(KG_DIR, "nodes.csv")
-EDGES_FILE = os.path.join(KG_DIR, "edges.csv")
+DEFAULT_DIRS = ["data/triples", "data/processed/kg"]
+NODES_FILE = None
+EDGES_FILE = None
 
+for path in DEFAULT_DIRS:
+    nodes = os.path.join(path, "nodes.csv")
+    edges = os.path.join(path, "edges.csv")
+    if os.path.exists(nodes) and os.path.exists(edges):
+        NODES_FILE, EDGES_FILE = nodes, edges
+        break
+
+if not NODES_FILE:
+    st.error("❌ Không tìm thấy file nodes.csv / edges.csv trong data/triples hoặc data/processed/kg.")
+    st.stop()
 
 # =========================
 # 🧩 LOAD GRAPH
@@ -27,22 +38,23 @@ EDGES_FILE = os.path.join(KG_DIR, "edges.csv")
 @st.cache_data
 def load_graph():
     """Đọc nodes.csv và edges.csv → tạo NetworkX Graph"""
-    if not os.path.exists(NODES_FILE) or not os.path.exists(EDGES_FILE):
-        st.error("❌ Không tìm thấy file nodes.csv hoặc edges.csv trong data/processed/kg/")
-        st.stop()
-
     nodes_df = pd.read_csv(NODES_FILE)
     edges_df = pd.read_csv(EDGES_FILE)
 
     G = nx.DiGraph()
     for _, row in nodes_df.iterrows():
-        G.add_node(row["id"], label=row["label"], name=row["name"])
-    for _, row in edges_df.iterrows():
-        G.add_edge(row["source"], row["target"],
-                   relation=row["relation"],
-                   score=row.get("score", ""))
-    return G, nodes_df
+        G.add_node(row["id"], label=row["label"], name=row.get("name", row["id"]))
 
+    for _, row in edges_df.iterrows():
+        G.add_edge(
+            row["source"],
+            row["target"],
+            relation=row["relation"],
+            score=row.get("score", None),
+            mastery=row.get("mastery", None),
+        )
+
+    return G, nodes_df
 
 # =========================
 # 🎯 EXTRACT SUBGRAPH
@@ -56,60 +68,78 @@ def extract_subgraph(G, center_node, depth=2):
     subG = G.subgraph(nodes_to_include).copy()
     return subG
 
-
 # =========================
 # 🌐 RENDER PYVIS GRAPH
 # =========================
 def render_pyvis_graph(G):
     """Render PyVis HTML và trả về nội dung nhúng Streamlit"""
     net = Network(
-        height="800px",
+        height="850px",
         width="100%",
         directed=True,
-        bgcolor="#181818",
+        bgcolor="#0e1117",
         font_color="white"
     )
 
-    net.repulsion(node_distance=250, spring_length=180, damping=0.85)
+    # Thông số vật lý (giảm lag)
+    net.repulsion(node_distance=200, spring_length=150, damping=0.85)
 
     color_map = {
         "Course": "#00BFFF",
-        "Module": "#1E90FF",
+        "Module": "#FFD700",
         "Lesson": "#FF7F7F",
         "Quiz": "#FFAA33",
-        "Question": "#FFD700",
+        "Question": "#C0FF33",
         "Student": "#7FFF00",
         "Assignment": "#FF69B4",
         "Submission": "#ADFF2F",
         "Teacher": "#BA55D3",
     }
 
+    rel_color = {
+        "mastery_on": "#00FF99",
+        "includes": "#999999",
+        "has_lesson": "#CCCCCC",
+        "has_quiz": "#FFA500",
+        "has_question": "#FF6347",
+        "attempted": "#66CDAA",
+        "scored_on": "#00CED1"
+    }
+
     for n, data in G.nodes(data=True):
         node_type = data.get("label", "")
         color = color_map.get(node_type, "#87CEFA")
-        size = 18 if node_type in ["Module", "Lesson", "Quiz"] else 10
+        size = 20 if node_type in ["Module", "Student", "Course"] else 10
         net.add_node(
             n,
             label=data.get("name", n),
             color=color,
-            title=f"🧩 {node_type}",
+            title=f"🧩 {node_type}<br>ID: {n}",
             size=size
         )
 
     for u, v, d in G.edges(data=True):
         rel = d.get("relation", "")
-        score = d.get("score", "")
-        title = f"{rel} | score={score}" if score else rel
-        net.add_edge(u, v, label=rel, title=title, color="#AAAAAA")
+        mastery = d.get("mastery", None)
+        score = d.get("score", None)
+
+        width = 1
+        title = f"{rel}"
+        if mastery:
+            title += f" | mastery={mastery}"
+        elif score:
+            title += f" | score={score}"
+
+        net.add_edge(u, v, label=rel, title=title, color=rel_color.get(rel, "#AAAAAA"), width=width)
 
     net.set_options("""
     {
       "nodes": {"shape": "dot", "font": {"size": 14, "face": "Tahoma"}},
-      "edges": {"color": {"color": "#999999"}, "smooth": false},
+      "edges": {"color": {"inherit": false}, "smooth": false},
       "physics": {
         "enabled": true,
         "solver": "forceAtlas2Based",
-        "forceAtlas2Based": {"gravitationalConstant": -60, "springLength": 180},
+        "forceAtlas2Based": {"gravitationalConstant": -80, "springLength": 200},
         "stabilization": {"iterations": 150}
       },
       "interaction": {
@@ -123,25 +153,24 @@ def render_pyvis_graph(G):
     html = net.generate_html()
     return net, html
 
-
 # =========================
 # 🚀 STREAMLIT UI
 # =========================
 st.set_page_config(page_title="Canvas EduKG Explorer", layout="wide")
 
-st.title("🎓 Canvas EduKG Explorer – Subgraph Dashboard")
+st.title("🎓 Canvas EduKG Explorer – Subgraph Dashboard (v2)")
 st.markdown("""
 Công cụ trực quan hóa **Knowledge Graph** được trích xuất từ Canvas LMS.
 - Chọn node trung tâm (ví dụ: `module_44`, `quiz_63`, `user_118788615`)
 - Chọn **độ sâu (depth)** để mở rộng vùng tri thức
-- Xem **đồ thị tương tác (PyVis)** hiển thị ngay bên dưới
+- Tô màu theo loại thực thể, độ dày theo `score/mastery`
 ---
 """)
 
 # Load đồ thị
 G, nodes_df = load_graph()
 
-# Sidebar: điều khiển
+# Sidebar điều khiển
 st.sidebar.header("⚙️ Cấu hình hiển thị")
 
 all_nodes = sorted(G.nodes())
@@ -158,9 +187,8 @@ if show_full:
     net, html = render_pyvis_graph(G)
     st.components.v1.html(html, height=850, scrolling=True)
 
-    # 💾 Nút lưu file HTML
     if st.button("💾 Xuất HTML ra file"):
-        export_path = os.path.join(KG_DIR, "export_global_kg.html")
+        export_path = os.path.join(os.path.dirname(NODES_FILE), "export_global_kg.html")
         net.save_graph(export_path)
         st.success(f"✅ Đã lưu file: {export_path}")
 
@@ -172,8 +200,7 @@ else:
         net, html = render_pyvis_graph(subG)
         st.components.v1.html(html, height=850, scrolling=True)
 
-        # 💾 Nút lưu file HTML
         if st.button("💾 Xuất HTML ra file"):
-            export_path = os.path.join(KG_DIR, f"export_subgraph_{center_node}.html")
+            export_path = os.path.join(os.path.dirname(NODES_FILE), f"export_subgraph_{center_node}.html")
             net.save_graph(export_path)
             st.success(f"✅ Đã lưu file: {export_path}")

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# Xây dựng KG
 """
 Build a hybrid EduKG from your processed Canvas data.
 Outputs structural knowledge graph files only:
