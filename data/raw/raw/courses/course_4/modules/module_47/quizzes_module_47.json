@@ -1,7 +1,7 @@
 [
   {
     "id": 176,
-    "title": "Quiz – TỔNG QUAN VỀ CÔNG NGHỆ PHẦN MỀM (MỨC NÂNG CAO)",
+    "title": "Quiz – TỔNG QUAN VỀ CÔNG NGHỆ PHẦN MỀM",
     "position": 2,
     "indent": 0,
     "quiz_lti": false,
@@ -11,7 +11,7 @@
     "content_id": 86,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/86",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 178,
@@ -25,11 +25,11 @@
     "content_id": 87,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/87",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 180,
-    "title": "Quiz – MÔ HÌNH HÓA PHẦN MỀM (UML CHUYÊN SÂU)",
+    "title": "Quiz - MÔ HÌNH HÓA PHẦN MỀM (UML & PHÂN TÍCH HỆ THỐNG)",
     "position": 6,
     "indent": 0,
     "quiz_lti": false,
@@ -39,11 +39,11 @@
     "content_id": 88,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/88",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 182,
-    "title": "Quiz – THIẾT KẾ PHẦN MỀM (CHUYÊN SÂU)",
+    "title": "Quiz – THIẾT KẾ PHẦN MỀM",
     "position": 8,
     "indent": 0,
     "quiz_lti": false,
@@ -53,11 +53,11 @@
     "content_id": 89,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/89",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 184,
-    "title": "Quiz – THIẾT KẾ VÀ TỔ CHỨC DỮ LIỆU (CHUYÊN SÂU)",
+    "title": "Quiz – THIẾT KẾ VÀ TỔ CHỨC DỮ LIỆU",
     "position": 10,
     "indent": 0,
     "quiz_lti": false,
@@ -67,11 +67,11 @@
     "content_id": 90,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/90",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 186,
-    "title": "Quiz – THIẾT KẾ GIAO DIỆN, XỬ LÝ VÀ THUẬT TOÁN (CHUYÊN SÂU)",
+    "title": "Quiz – THIẾT KẾ GIAO DIỆN, XỬ LÝ VÀ THUẬT TOÁN",
     "position": 12,
     "indent": 0,
     "quiz_lti": false,
@@ -81,11 +81,11 @@
     "content_id": 91,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/91",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 188,
-    "title": "Quiz – REPOSITORY DESIGN PATTERN (CHUYÊN SÂU)",
+    "title": "Quiz – REPOSITORY DESIGN PATTERN",
     "position": 14,
     "indent": 0,
     "quiz_lti": false,
@@ -95,11 +95,11 @@
     "content_id": 92,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/92",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 190,
-    "title": "Quiz – KIỂM THỬ CHẤT LƯỢNG PHẦN MỀM (CHUYÊN SÂU)",
+    "title": "Quiz - KIỂM THỬ CHẤT LƯỢNG PHẦN MỀM",
     "position": 16,
     "indent": 0,
     "quiz_lti": false,
@@ -109,11 +109,11 @@
     "content_id": 93,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/93",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 192,
-    "title": "Quiz – BẢO TRÌ VÀ PHÁT TRIỂN PHẦN MỀM (CHUYÊN SÂU)",
+    "title": "Quiz – BẢO TRÌ VÀ PHÁT TRIỂN PHẦN MỀM",
     "position": 18,
     "indent": 0,
     "quiz_lti": false,
@@ -123,6 +123,6 @@
     "content_id": 94,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/94",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   }
 ]

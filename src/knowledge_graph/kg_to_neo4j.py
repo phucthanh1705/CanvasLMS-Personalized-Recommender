@@ -18,10 +18,10 @@ ENV_PATH = os.path.join(BASE_DIR, "config", "secrets.env")
 
 load_dotenv(ENV_PATH)
 
-NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
-NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASS = os.getenv("NEO4J_PASS", "123456")
-DB_NAME = os.getenv("NEO4J_DB", "canvaskg")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USER = os.getenv("NEO4J_USER")
+NEO4J_PASS = os.getenv("NEO4J_PASS")
+DB_NAME = os.getenv("NEO4J_DB")
 
 graph = Graph(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS), name=DB_NAME)
 print(f"🔗 Connected to Neo4j database: {DB_NAME}")

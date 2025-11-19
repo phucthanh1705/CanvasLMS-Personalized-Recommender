@@ -187,8 +187,8 @@
   "quiz_submissions": [
     {
       "file_cleaned": "submissions/cleaned_quiz_161_submissions.json",
-      "count": 25,
-      "average_score": 16.84,
+      "count": 28,
+      "average_score": 16.93,
       "top_5_students": [
         {
           "user_id": 39,
@@ -231,10 +231,10 @@
           "workflow_state": "complete"
         },
         {
-          "user_id": 49,
+          "user_id": 71,
           "quiz_id": 161,
-          "submission_id": 316,
-          "score": 18.0,
+          "submission_id": 2014,
+          "score": 19.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
           "attempt": 2,
@@ -250,8 +250,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_163_submissions.json",
-      "count": 24,
-      "average_score": 16.83,
+      "count": 27,
+      "average_score": 17.0,
       "top_5_students": [
         {
           "user_id": 49,
@@ -294,10 +294,10 @@
           "workflow_state": "complete"
         },
         {
-          "user_id": 39,
+          "user_id": 70,
           "quiz_id": 163,
-          "submission_id": 185,
-          "score": 18.0,
+          "submission_id": 1904,
+          "score": 19.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
           "attempt": 1,
@@ -307,8 +307,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_164_submissions.json",
-      "count": 25,
-      "average_score": 16.96,
+      "count": 28,
+      "average_score": 17.04,
       "top_5_students": [
         {
           "user_id": 39,
@@ -364,8 +364,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_165_submissions.json",
-      "count": 25,
-      "average_score": 17.08,
+      "count": 28,
+      "average_score": 17.18,
       "top_5_students": [
         {
           "user_id": 56,
@@ -421,8 +421,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_166_submissions.json",
-      "count": 23,
-      "average_score": 17.22,
+      "count": 26,
+      "average_score": 17.35,
       "top_5_students": [
         {
           "user_id": 54,
@@ -431,6 +431,16 @@
           "score": 20.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 71,
+          "quiz_id": 166,
+          "submission_id": 2013,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 12,
           "attempt": 1,
           "workflow_state": "complete"
         },
@@ -458,16 +468,6 @@
           "user_id": 46,
           "quiz_id": 166,
           "submission_id": 272,
-          "score": 19.0,
-          "quiz_points_possible": 20.0,
-          "time_spent": 13,
-          "attempt": 1,
-          "workflow_state": "complete"
-        },
-        {
-          "user_id": 55,
-          "quiz_id": 166,
-          "submission_id": 401,
           "score": 19.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,

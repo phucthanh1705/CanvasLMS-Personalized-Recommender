@@ -1,6 +1,86 @@
 {
-  "quiz_submissions": [],
-  "users": [],
+  "quiz_submissions": [
+    {
+      "id": 1931,
+      "quiz_id": 192,
+      "quiz_version": 3,
+      "user_id": 70,
+      "submission_id": 6879,
+      "score": 18.0,
+      "kept_score": 18.0,
+      "started_at": "2025-11-18T10:29:40Z",
+      "end_at": null,
+      "finished_at": "2025-11-18T10:29:53Z",
+      "attempt": 1,
+      "workflow_state": "complete",
+      "fudge_points": null,
+      "quiz_points_possible": 20.0,
+      "extra_attempts": null,
+      "extra_time": null,
+      "manually_unlocked": null,
+      "validation_token": "db91720ec4bbdd4988d419ea5c6d9347f6851c41ab0fa8a129b6eed9f3550b5f",
+      "score_before_regrade": null,
+      "has_seen_results": false,
+      "time_spent": 13,
+      "attempts_left": 0,
+      "overdue_and_needs_submission": false,
+      "excused?": false,
+      "html_url": "http://localhost:3000/courses/4/quizzes/192/submissions/1931",
+      "result_url": "http://localhost:3000/courses/4/quizzes/192/history?quiz_submission_id=1931&version=1"
+    },
+    {
+      "id": 2075,
+      "quiz_id": 192,
+      "quiz_version": 3,
+      "user_id": 71,
+      "submission_id": 6807,
+      "score": 19.0,
+      "kept_score": 19.0,
+      "started_at": "2025-11-18T15:30:14Z",
+      "end_at": null,
+      "finished_at": "2025-11-18T15:30:26Z",
+      "attempt": 1,
+      "workflow_state": "complete",
+      "fudge_points": null,
+      "quiz_points_possible": 20.0,
+      "extra_attempts": null,
+      "extra_time": null,
+      "manually_unlocked": null,
+      "validation_token": "f7a813f3f299ebd00b33154a8e15dc7507c37a684b9cbafc276377f4dacaa9cd",
+      "score_before_regrade": null,
+      "has_seen_results": false,
+      "time_spent": 13,
+      "attempts_left": 0,
+      "overdue_and_needs_submission": false,
+      "excused?": false,
+      "html_url": "http://localhost:3000/courses/4/quizzes/192/submissions/2075",
+      "result_url": "http://localhost:3000/courses/4/quizzes/192/history?quiz_submission_id=2075&version=1"
+    }
+  ],
+  "users": [
+    {
+      "id": 70,
+      "name": "Student 32",
+      "created_at": "2025-11-17T23:04:06-07:00",
+      "sortable_name": "32, Student",
+      "short_name": "Student32",
+      "sis_user_id": "s32",
+      "integration_id": null,
+      "sis_import_id": 77,
+      "login_id": "student32"
+    },
+    {
+      "id": 71,
+      "name": "Student 33",
+      "created_at": "2025-11-17T23:04:07-07:00",
+      "sortable_name": "33, Student",
+      "short_name": "Student33",
+      "sis_user_id": "s33",
+      "integration_id": null,
+      "sis_import_id": 77,
+      "login_id": "student33"
+    }
+  ],
   "meta": {
     "primaryCollection": "quiz_submissions"
   }

@@ -247,8 +247,8 @@
   "quiz_submissions": [
     {
       "file_cleaned": "submissions/cleaned_quiz_153_submissions.json",
-      "count": 28,
-      "average_score": 16.25,
+      "count": 31,
+      "average_score": 16.39,
       "top_5_students": [
         {
           "user_id": 54,
@@ -281,6 +281,16 @@
           "workflow_state": "complete"
         },
         {
+          "user_id": 71,
+          "quiz_id": 153,
+          "submission_id": 1985,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 14,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
           "user_id": 39,
           "quiz_id": 153,
           "submission_id": 62,
@@ -289,23 +299,13 @@
           "time_spent": 13,
           "attempt": 14,
           "workflow_state": "complete"
-        },
-        {
-          "user_id": 40,
-          "quiz_id": 153,
-          "submission_id": 73,
-          "score": 18.0,
-          "quiz_points_possible": 20.0,
-          "time_spent": 13,
-          "attempt": 4,
-          "workflow_state": "complete"
         }
       ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_154_submissions.json",
-      "count": 27,
-      "average_score": 16.63,
+      "count": 30,
+      "average_score": 16.8,
       "top_5_students": [
         {
           "user_id": 40,
@@ -348,21 +348,21 @@
           "workflow_state": "complete"
         },
         {
-          "user_id": 39,
+          "user_id": 70,
           "quiz_id": 154,
-          "submission_id": 66,
-          "score": 18.0,
+          "submission_id": 1888,
+          "score": 19.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
-          "attempt": 4,
+          "attempt": 1,
           "workflow_state": "complete"
         }
       ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_155_submissions.json",
-      "count": 27,
-      "average_score": 16.11,
+      "count": 30,
+      "average_score": 16.27,
       "top_5_students": [
         {
           "user_id": 54,
@@ -418,8 +418,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_156_submissions.json",
-      "count": 28,
-      "average_score": 16.61,
+      "count": 31,
+      "average_score": 16.71,
       "top_5_students": [
         {
           "user_id": 65,
@@ -475,8 +475,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_157_submissions.json",
-      "count": 29,
-      "average_score": 16.28,
+      "count": 32,
+      "average_score": 16.44,
       "top_5_students": [
         {
           "user_id": 40,
@@ -532,8 +532,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_158_submissions.json",
-      "count": 28,
-      "average_score": 16.61,
+      "count": 31,
+      "average_score": 16.74,
       "top_5_students": [
         {
           "user_id": 40,
@@ -543,6 +543,16 @@
           "quiz_points_possible": 20.0,
           "time_spent": 13,
           "attempt": 4,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 70,
+          "quiz_id": 158,
+          "submission_id": 1884,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
           "workflow_state": "complete"
         },
         {
@@ -574,23 +584,13 @@
           "time_spent": 13,
           "attempt": 1,
           "workflow_state": "complete"
-        },
-        {
-          "user_id": 39,
-          "quiz_id": 158,
-          "submission_id": 64,
-          "score": 18.0,
-          "quiz_points_possible": 20.0,
-          "time_spent": 13,
-          "attempt": 5,
-          "workflow_state": "complete"
         }
       ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_159_submissions.json",
-      "count": 28,
-      "average_score": 16.46,
+      "count": 31,
+      "average_score": 16.61,
       "top_5_students": [
         {
           "user_id": 46,
@@ -646,8 +646,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_160_submissions.json",
-      "count": 27,
-      "average_score": 16.63,
+      "count": 30,
+      "average_score": 16.73,
       "top_5_students": [
         {
           "user_id": 52,
@@ -690,13 +690,13 @@
           "workflow_state": "complete"
         },
         {
-          "user_id": 39,
+          "user_id": 71,
           "quiz_id": 160,
-          "submission_id": 65,
-          "score": 18.0,
+          "submission_id": 1990,
+          "score": 19.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
-          "attempt": 4,
+          "attempt": 1,
           "workflow_state": "complete"
         }
       ]

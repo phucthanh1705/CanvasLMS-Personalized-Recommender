@@ -1,7 +1,7 @@
 [
   {
     "id": 404,
-    "title": "Bài tập – Các giai đoạn thiết kế CSDL (phân cấp độ khó)",
+    "title": "Quiz - CÁC GIAI ĐOẠN TRONG QUÁ TRÌNH THIẾT KẾ MỘT CSDL",
     "position": 2,
     "indent": 0,
     "quiz_lti": false,
@@ -11,11 +11,11 @@
     "content_id": 200,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/200",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 406,
-    "title": "Quiz – Các giai đoạn thiết kế cơ sở dữ liệu",
+    "title": "Quiz - NỘI DUNG CƠ BẢN CỦA CÁC GIAI ĐOẠN THIẾT KẾ MỘT CSDL",
     "position": 4,
     "indent": 0,
     "quiz_lti": false,
@@ -25,11 +25,11 @@
     "content_id": 201,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/201",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 408,
-    "title": "Quiz – Mô hình quan hệ và phụ thuộc dữ liệu",
+    "title": "Quiz - MÔ HÌNH QUAN HỆ VÀ PHỤ THUỘC DỮ LIỆU",
     "position": 6,
     "indent": 0,
     "quiz_lti": false,
@@ -39,11 +39,11 @@
     "content_id": 202,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/202",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 410,
-    "title": "Quiz – Chuẩn hóa dữ liệu và các dạng chuẩn",
+    "title": "Quiz - CHUẨN HÓA DỮ LIỆU VÀ CÁC DẠNG CHUẨN",
     "position": 8,
     "indent": 0,
     "quiz_lti": false,
@@ -53,11 +53,11 @@
     "content_id": 203,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/203",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 412,
-    "title": "Quiz – Thiết kế lược đồ cơ sở dữ liệu",
+    "title": "Quiz - THIẾT KẾ LƯỢC ĐỒ CƠ SỞ DỮ LIỆU",
     "position": 10,
     "indent": 0,
     "quiz_lti": false,
@@ -67,11 +67,11 @@
     "content_id": 204,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/204",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 414,
-    "title": "Quiz – Ngôn ngữ định nghĩa và thao tác dữ liệu SQL",
+    "title": "Quiz - NGÔN NGỮ ĐỊNH NGHĨA VÀ THAO TÁC DỮ LIỆU SQL",
     "position": 12,
     "indent": 0,
     "quiz_lti": false,
@@ -81,11 +81,11 @@
     "content_id": 205,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/205",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 416,
-    "title": "Quiz – Câu lệnh truy vấn nâng cao trong SQL",
+    "title": "Quiz - CÂU LỆNH TRUY VẤN NÂNG CAO TRONG SQL",
     "position": 14,
     "indent": 0,
     "quiz_lti": false,
@@ -95,11 +95,11 @@
     "content_id": 206,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/206",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 418,
-    "title": "Quiz – Hàm và biểu thức trong SQL",
+    "title": "Quiz - HÀM VÀ BIỂU THỨC TRONG SQL",
     "position": 16,
     "indent": 0,
     "quiz_lti": false,
@@ -109,11 +109,11 @@
     "content_id": 207,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/207",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 420,
-    "title": "Quiz – Ràng buộc toàn vẹn và khóa trong cơ sở dữ liệu",
+    "title": "Quiz - RÀNG BUỘC TOÀN VẸN VÀ KHÓA TRONG CƠ SỞ DỮ LIỆU",
     "position": 18,
     "indent": 0,
     "quiz_lti": false,
@@ -123,11 +123,11 @@
     "content_id": 208,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/208",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 422,
-    "title": "Quiz – Giao dịch và điều khiển tương tranh trong CSDL",
+    "title": "Quiz - GIAO DỊCH VÀ ĐIỀU KHIỂN TƯƠNG TRANH TRONG CSDL",
     "position": 20,
     "indent": 0,
     "quiz_lti": false,
@@ -137,11 +137,11 @@
     "content_id": 209,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/209",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 424,
-    "title": "Quiz – Phục hồi và sao lưu dữ liệu trong CSDL",
+    "title": "Quiz - PHỤC HỒI VÀ SAO LƯU DỮ LIỆU TRONG CƠ SỞ DỮ LIỆU",
     "position": 22,
     "indent": 0,
     "quiz_lti": false,
@@ -151,11 +151,11 @@
     "content_id": 210,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/210",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 426,
-    "title": "Quiz – An toàn và bảo mật trong cơ sở dữ liệu",
+    "title": "Quiz - AN TOÀN VÀ BẢO MẬT TRONG CƠ SỞ DỮ LIỆU",
     "position": 24,
     "indent": 0,
     "quiz_lti": false,
@@ -165,11 +165,11 @@
     "content_id": 211,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/211",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 428,
-    "title": "Quiz – Tối ưu hóa hiệu năng truy vấn trong CSDL",
+    "title": "Quiz - TỐI ƯU HÓA HIỆU NĂNG TRUY VẤN TRONG CSDL",
     "position": 26,
     "indent": 0,
     "quiz_lti": false,
@@ -179,11 +179,11 @@
     "content_id": 212,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/212",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 430,
-    "title": "Quiz – Chuẩn hóa dữ liệu trong CSDL",
+    "title": "Quiz - CHUẨN HÓA DỮ LIỆU TRONG CƠ SỞ DỮ LIỆU",
     "position": 28,
     "indent": 0,
     "quiz_lti": false,
@@ -193,11 +193,11 @@
     "content_id": 213,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/213",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 432,
-    "title": "Quiz – Truy vấn con, hàm tập hợp và View trong CSDL",
+    "title": "Quiz - TRUY VẤN CON, HÀM TẬP HỢP VÀ VIEW TRONG CƠ SỞ DỮ LIỆU",
     "position": 30,
     "indent": 0,
     "quiz_lti": false,
@@ -207,6 +207,6 @@
     "content_id": 214,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/214",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   }
 ]

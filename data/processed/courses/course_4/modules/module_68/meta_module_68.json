@@ -187,39 +187,105 @@
   "quiz_submissions": [
     {
       "file_cleaned": "submissions/cleaned_quiz_270_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 18.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 270,
+          "submission_id": 2101,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_271_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 20.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 271,
+          "submission_id": 2100,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_272_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 19.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 272,
+          "submission_id": 2105,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_273_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 18.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 273,
+          "submission_id": 2103,
+          "score": 18.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_274_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 19.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 274,
+          "submission_id": 2102,
+          "score": 19.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_275_submissions.json",
-      "count": 0,
-      "average_score": 0,
-      "top_5_students": []
+      "count": 1,
+      "average_score": 20.0,
+      "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 275,
+          "submission_id": 2104,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 2,
+          "workflow_state": "complete"
+        }
+      ]
     }
   ]
 }

@@ -277,8 +277,8 @@
   "quiz_submissions": [
     {
       "file_cleaned": "submissions/cleaned_quiz_100_submissions.json",
-      "count": 23,
-      "average_score": 17.04,
+      "count": 24,
+      "average_score": 17.08,
       "top_5_students": [
         {
           "user_id": 39,
@@ -334,8 +334,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_101_submissions.json",
-      "count": 22,
-      "average_score": 17.09,
+      "count": 23,
+      "average_score": 17.13,
       "top_5_students": [
         {
           "user_id": 44,
@@ -391,8 +391,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_102_submissions.json",
-      "count": 24,
-      "average_score": 17.25,
+      "count": 25,
+      "average_score": 17.32,
       "top_5_students": [
         {
           "user_id": 52,
@@ -448,8 +448,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_103_submissions.json",
-      "count": 23,
-      "average_score": 16.87,
+      "count": 24,
+      "average_score": 16.92,
       "top_5_students": [
         {
           "user_id": 45,
@@ -505,13 +505,23 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_95_submissions.json",
-      "count": 23,
-      "average_score": 17.3,
+      "count": 24,
+      "average_score": 17.42,
       "top_5_students": [
         {
           "user_id": 57,
           "quiz_id": 95,
           "submission_id": 1421,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
+        {
+          "user_id": 71,
+          "quiz_id": 95,
+          "submission_id": 2039,
           "score": 20.0,
           "quiz_points_possible": 20.0,
           "time_spent": 13,
@@ -547,23 +557,13 @@
           "time_spent": 13,
           "attempt": 1,
           "workflow_state": "complete"
-        },
-        {
-          "user_id": 44,
-          "quiz_id": 95,
-          "submission_id": 878,
-          "score": 18.0,
-          "quiz_points_possible": 20.0,
-          "time_spent": 15,
-          "attempt": 1,
-          "workflow_state": "complete"
         }
       ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_96_submissions.json",
-      "count": 23,
-      "average_score": 16.96,
+      "count": 24,
+      "average_score": 17.0,
       "top_5_students": [
         {
           "user_id": 57,
@@ -619,8 +619,8 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_97_submissions.json",
-      "count": 23,
-      "average_score": 17.13,
+      "count": 24,
+      "average_score": 17.21,
       "top_5_students": [
         {
           "user_id": 60,
@@ -676,9 +676,19 @@
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_98_submissions.json",
-      "count": 23,
-      "average_score": 17.48,
+      "count": 24,
+      "average_score": 17.58,
       "top_5_students": [
+        {
+          "user_id": 71,
+          "quiz_id": 98,
+          "submission_id": 2042,
+          "score": 20.0,
+          "quiz_points_possible": 20.0,
+          "time_spent": 13,
+          "attempt": 1,
+          "workflow_state": "complete"
+        },
         {
           "user_id": 44,
           "quiz_id": 98,
@@ -718,23 +728,13 @@
           "time_spent": 13,
           "attempt": 1,
           "workflow_state": "complete"
-        },
-        {
-          "user_id": 54,
-          "quiz_id": 98,
-          "submission_id": 1278,
-          "score": 19.0,
-          "quiz_points_possible": 20.0,
-          "time_spent": 14,
-          "attempt": 1,
-          "workflow_state": "complete"
         }
       ]
     },
     {
       "file_cleaned": "submissions/cleaned_quiz_99_submissions.json",
-      "count": 23,
-      "average_score": 17.09,
+      "count": 24,
+      "average_score": 17.12,
       "top_5_students": [
         {
           "user_id": 49,

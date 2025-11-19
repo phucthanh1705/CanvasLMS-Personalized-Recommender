@@ -1,7 +1,7 @@
 [
   {
     "id": 452,
-    "title": "Quiz – Tổng quan về Hệ điều hành",
+    "title": "Quiz - TỔNG QUAN VỀ HỆ ĐIỀU HÀNH",
     "position": 2,
     "indent": 0,
     "quiz_lti": false,
@@ -11,11 +11,11 @@
     "content_id": 224,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/224",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 454,
-    "title": "Quiz – Cấu trúc hệ điều hành",
+    "title": "Quiz - CẤU TRÚC HỆ ĐIỀU HÀNH",
     "position": 4,
     "indent": 0,
     "quiz_lti": false,
@@ -25,11 +25,11 @@
     "content_id": 225,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/225",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 456,
-    "title": "Quiz – Tiến trình và Luồng",
+    "title": "Quiz - TIẾN TRÌNH VÀ LUỒNG",
     "position": 6,
     "indent": 0,
     "quiz_lti": false,
@@ -39,11 +39,11 @@
     "content_id": 226,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/226",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 458,
-    "title": "Quiz – Điều phối CPU",
+    "title": "Quiz - ĐIỀU PHỐI CPU",
     "position": 8,
     "indent": 0,
     "quiz_lti": false,
@@ -53,11 +53,11 @@
     "content_id": 227,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/227",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 460,
-    "title": "Quiz – Đồng bộ hóa tiến trình",
+    "title": "Quiz - ĐỒNG BỘ HÓA TIẾN TRÌNH",
     "position": 10,
     "indent": 0,
     "quiz_lti": false,
@@ -67,11 +67,11 @@
     "content_id": 228,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/228",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 462,
-    "title": "Quiz – Tắc nghẽn (Deadlock)",
+    "title": "Quiz – TẮC NGHẼN (DEADLOCK)",
     "position": 12,
     "indent": 0,
     "quiz_lti": false,
@@ -81,11 +81,11 @@
     "content_id": 229,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/229",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 464,
-    "title": "Quiz – Quản lý bộ nhớ",
+    "title": "Quiz – QUẢN LÝ BỘ NHỚ",
     "position": 14,
     "indent": 0,
     "quiz_lti": false,
@@ -95,11 +95,11 @@
     "content_id": 230,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/230",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   },
   {
     "id": 466,
-    "title": "Quiz – Quản lý bộ nhớ ảo",
+    "title": "Quiz - QUẢN LÝ BỘ NHỚ ẢO (VIRTUAL MEMORY)",
     "position": 16,
     "indent": 0,
     "quiz_lti": false,
@@ -109,6 +109,6 @@
     "content_id": 231,
     "url": "http://localhost:3000/api/v1/courses/4/quizzes/231",
     "published": true,
-    "unpublishable": true
+    "unpublishable": false
   }
 ]

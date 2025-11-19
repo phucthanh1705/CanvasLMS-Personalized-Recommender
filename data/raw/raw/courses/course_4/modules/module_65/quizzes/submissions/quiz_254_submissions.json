@@ -1,6 +1,47 @@
 {
-  "quiz_submissions": [],
-  "users": [],
+  "quiz_submissions": [
+    {
+      "id": 2033,
+      "quiz_id": 254,
+      "quiz_version": 4,
+      "user_id": 71,
+      "submission_id": 6995,
+      "score": 18.0,
+      "kept_score": 18.0,
+      "started_at": "2025-11-18T12:42:10Z",
+      "end_at": null,
+      "finished_at": "2025-11-18T12:42:23Z",
+      "attempt": 1,
+      "workflow_state": "complete",
+      "fudge_points": null,
+      "quiz_points_possible": 20.0,
+      "extra_attempts": null,
+      "extra_time": null,
+      "manually_unlocked": null,
+      "validation_token": "1e99ef9adbfc7df742c36a436f1bd7de1487585316a595b46211af9268caef94",
+      "score_before_regrade": null,
+      "has_seen_results": false,
+      "time_spent": 13,
+      "attempts_left": 0,
+      "overdue_and_needs_submission": false,
+      "excused?": false,
+      "html_url": "http://localhost:3000/courses/4/quizzes/254/submissions/2033",
+      "result_url": "http://localhost:3000/courses/4/quizzes/254/history?quiz_submission_id=2033&version=1"
+    }
+  ],
+  "users": [
+    {
+      "id": 71,
+      "name": "Student 33",
+      "created_at": "2025-11-17T23:04:07-07:00",
+      "sortable_name": "33, Student",
+      "short_name": "Student33",
+      "sis_user_id": "s33",
+      "integration_id": null,
+      "sis_import_id": 77,
+      "login_id": "student33"
+    }
+  ],
   "meta": {
     "primaryCollection": "quiz_submissions"
   }
