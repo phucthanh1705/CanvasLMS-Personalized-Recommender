@@ -1,4 +1,3 @@
-# Hàm đọc/ghi file, log, json
 import json, re
 from bs4 import BeautifulSoup
 from pathlib import Path

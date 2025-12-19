@@ -1,11 +1,3 @@
-# Sinh node sinh viên + quan hệ năng lực
-"""
-Import mastery theo Module vào Neo4j (KG thuần)
-Đầu vào: data/processed/student_competency_by_module.csv
-Tạo/ cập nhật:
- (Student {id:'user_39'})-[:mastery_on {mastery, quizzes, total_points}]->(Module {name:'module_44'})
-"""
-
 import os
 import pandas as pd
 from neo4j import GraphDatabase
@@ -16,7 +8,6 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 ENV_PATH = os.path.join(BASE_DIR, "config", "secrets.env")
 load_dotenv(ENV_PATH)
 
-# Đọc cấu hình từ ENV nếu có, nếu không dùng mặc định localhost
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASS")
@@ -32,18 +23,12 @@ SET   r.mastery = $mastery,
 """
 
 def main():
-    print(f"NEO4J_URI:  {NEO4J_URI}")
-    print(f"NEO4J_USER:  {NEO4J_USER}")
-    print(f"NEO4J_PASSWORD:  {NEO4J_PASSWORD}")
     if not os.path.exists(CSV_FILE):
-        print(f"❌ Không tìm thấy file: {CSV_FILE}")
         return
     df = pd.read_csv(CSV_FILE)
     if df.empty:
-        print("❌ Bảng mastery rỗng.")
         return
 
-    # Chuẩn hoá kiểu dữ liệu
     for col in ["total_score","total_points","module_mastery"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
@@ -52,7 +37,6 @@ def main():
     df["total_points"] = pd.to_numeric(df.get("total_points", 0), errors="coerce").fillna(0.0)
     df["module_mastery"] = pd.to_numeric(df.get("module_mastery", 0), errors="coerce").fillna(0.0).clip(0,1)
 
-    # Map user_id (số) → id trong graph ('user_<id>')
     df["student_id"] = "user_" + df["user_id"].astype(str)
 
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
@@ -69,7 +53,6 @@ def main():
             session.run(MERGE_CYPHER, **params)
             total += 1
     driver.close()
-    print(f"✅ Đã upsert {total} quan hệ mastery_on (Student→Module).")
 
 if __name__ == "__main__":
     main()

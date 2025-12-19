@@ -49,20 +49,13 @@ def safe_json_extract(text: str):
 
 def main():
     rows = []
-
-    # ================================
-    # TẠO LIST ĐỂ ĐẾM SỐ LƯỢNG BÀI HỌC
-    # ================================
     all_lessons = list(iter_lessons())
     total = len(all_lessons)
-
-    print(f"🔍 Tổng số bài học cần xử lý: {total}")
 
     start_all = time.time()
 
     for idx, (course_id, module_id, path) in enumerate(all_lessons, start=1):
 
-        # % tiến độ
         percent = (idx / total) * 100
 
         print(f"\n==============================")
@@ -76,7 +69,6 @@ def main():
         body = clean_html(data.get("body", ""))
 
         if not body:
-            print("⚠ Bài này không có nội dung, bỏ qua.")
             continue
 
         user_prompt = f"""
@@ -88,8 +80,6 @@ Nội dung bài học:
 \"\"\"{body}\"\"\"
 """
 
-        # gọi LLM
-        # Tùy độ dài bài mà chọn model tự động
         lesson_length = len(body)
 
         if lesson_length > 3000:
@@ -99,8 +89,6 @@ Nội dung bài học:
         else:
             selected_model = "mistral"
 
-        print(f"👉 Dùng model: {selected_model} (độ dài bài {lesson_length} ký tự)")
-
         raw = call_llm(
             system_prompt=SYSTEM_PROMPT,
             user_prompt=user_prompt,
@@ -108,21 +96,17 @@ Nội dung bài học:
         )
 
         if not raw or raw.strip() == "":
-            print(f"⚠ Model không trả về dữ liệu, bỏ qua bài học này.")
             continue
 
         try:
             parsed = safe_json_extract(raw)
         except Exception as e:
-            print("⚠ Không parse được JSON:", e)
-            print("⚠ Raw:", raw)
+            print("Không parse được JSON:", e)
+            print("Raw:", raw)
             continue
 
         for c in parsed:
-            # Nếu LLM trả về STRING thay vì OBJECT
             if isinstance(c, str):
-                print("⚠ LLM trả về string, tự động chuyển sang object:", c)
-
                 rows.append({
                     "course_id": course_id,
                     "module_id": module_id,
@@ -133,7 +117,6 @@ Nội dung bài học:
                 })
                 continue
 
-            # Output hợp lệ dạng object
             rows.append({
                 "course_id": course_id,
                 "module_id": module_id,
@@ -143,16 +126,13 @@ Nội dung bài học:
                 "domain": c.get("domain", "").strip(),
             })
 
-        end_item = time.time()
-        print(f"⏳ Thời gian xử lý bài học này: {end_item - start_item:.2f} giây")
 
     end_all = time.time()
     print(f"\n==============================")
-    print(f"🎉 Hoàn thành tất cả bài học!")
-    print(f"⏱ Tổng thời gian chạy: {end_all - start_all:.2f} giây")
+    print(f"Hoàn thành tất cả bài học!")
+    print(f"Tổng thời gian chạy: {end_all - start_all:.2f} giây")
     print("==============================\n")
 
-    # Ghi file CSV
     with OUT_FILE.open("w", newline="", encoding="utf-8") as f:
         wr = csv.DictWriter(
             f,

@@ -1,22 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-📊 Streamlit Dashboard – Canvas EduKG Explorer (v2)
-Khám phá đồ thị tri thức Canvas (EduKG):
- - Hiển thị toàn bộ hoặc subgraph động quanh 1 node
- - Nhận diện tự động file triples trong data/triples hoặc data/processed/kg
- - Tô màu, độ dày cạnh theo loại quan hệ (mastery_on, includes, has_lesson, ...)
- - Tự động sinh đồ thị PyVis (zoom, kéo, hover, xem thông tin)
-"""
-
 import os
 import pandas as pd
 import networkx as nx
 from pyvis.network import Network
 import streamlit as st
 
-# =========================
-# 🔧 CONFIG
-# =========================
 DEFAULT_DIRS = ["data/triples", "data/processed/kg"]
 NODES_FILE = None
 EDGES_FILE = None
@@ -32,9 +19,6 @@ if not NODES_FILE:
     st.error("❌ Không tìm thấy file nodes.csv / edges.csv trong data/triples hoặc data/processed/kg.")
     st.stop()
 
-# =========================
-# 🧩 LOAD GRAPH
-# =========================
 @st.cache_data
 def load_graph():
     """Đọc nodes.csv và edges.csv → tạo NetworkX Graph"""
@@ -56,9 +40,6 @@ def load_graph():
 
     return G, nodes_df
 
-# =========================
-# 🎯 EXTRACT SUBGRAPH
-# =========================
 def extract_subgraph(G, center_node, depth=2):
     """Trích xuất subgraph quanh 1 node theo bán kính depth"""
     if center_node not in G:
@@ -68,9 +49,6 @@ def extract_subgraph(G, center_node, depth=2):
     subG = G.subgraph(nodes_to_include).copy()
     return subG
 
-# =========================
-# 🌐 RENDER PYVIS GRAPH
-# =========================
 def render_pyvis_graph(G):
     """Render PyVis HTML và trả về nội dung nhúng Streamlit"""
     net = Network(
@@ -81,7 +59,6 @@ def render_pyvis_graph(G):
         font_color="white"
     )
 
-    # Thông số vật lý (giảm lag)
     net.repulsion(node_distance=200, spring_length=150, damping=0.85)
 
     color_map = {
@@ -153,9 +130,7 @@ def render_pyvis_graph(G):
     html = net.generate_html()
     return net, html
 
-# =========================
-# 🚀 STREAMLIT UI
-# =========================
+
 st.set_page_config(page_title="Canvas EduKG Explorer", layout="wide")
 
 st.title("🎓 Canvas EduKG Explorer – Subgraph Dashboard (v2)")
@@ -167,10 +142,8 @@ Công cụ trực quan hóa **Knowledge Graph** được trích xuất từ Canv
 ---
 """)
 
-# Load đồ thị
 G, nodes_df = load_graph()
 
-# Sidebar điều khiển
 st.sidebar.header("⚙️ Cấu hình hiển thị")
 
 all_nodes = sorted(G.nodes())
@@ -179,9 +152,7 @@ center_node = st.sidebar.selectbox("🔍 Chọn node trung tâm", options=all_no
 depth = st.sidebar.slider("🔢 Độ sâu liên kết", min_value=1, max_value=4, value=2, step=1)
 show_full = st.sidebar.checkbox("🌐 Hiển thị toàn bộ đồ thị (Global KG)", value=False)
 
-# =========================
-# 🖥️ MAIN PANEL
-# =========================
+
 if show_full:
     st.subheader("🌐 Toàn bộ Knowledge Graph (Global KG)")
     net, html = render_pyvis_graph(G)

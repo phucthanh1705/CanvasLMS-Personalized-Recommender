@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSchool – Kỹ năng & Gợi ý môn học</title>
+    <meta name="description" content="Dashboard theo dõi kỹ năng và gợi ý môn học cho sinh viên SmartSchool">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
+        }
+
+        /* ========== Header ========== */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 48px 32px;
+            border-radius: var(--radius-xl);
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .header::before,
+        .header::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .header::before {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -100px;
+        }
+
+        .header::after {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -50px;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(255,255,255,0.2);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-icon svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .header h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* ========== Section Header ========== */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(16,185,129,0.1));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* ========== Skills Grid ========== */
+        .skills-section {
+            margin-bottom: 48px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* ========== Chart Box ========== */
+        .chart-box {
+            background: var(--surface);
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .chart-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .chart-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .chart-emoji {
+            font-size: 28px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background);
+            border-radius: var(--radius-md);
+        }
+
+        .chart-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .chart-wrapper {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 16px;
+        }
+
+        .chart-wrapper canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .chart-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .chart-value {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .chart-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .chart-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .chart-legend {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .chart-percent {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* ========== Recommendation Box ========== */
+        .recommend-box {
+            background: var(--surface);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .recommend-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .recommend-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .recommend-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .recommend-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .btn-rec {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(37,99,235,0.4);
+        }
+
+        .btn-rec:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,99,235,0.5);
+        }
+
+        .btn-rec:active {
+            transform: translateY(0);
+        }
+
+        .btn-rec svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        #rec-result {
+            margin-top: 24px;
+        }
+
+        #rec-result:not(:empty) {
+            padding: 24px;
+            background: var(--background);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+
+        #rec-result p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ========== Animations ========== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .chart-box:nth-child(1) { animation-delay: 0.1s; }
+        .chart-box:nth-child(2) { animation-delay: 0.15s; }
+        .chart-box:nth-child(3) { animation-delay: 0.2s; }
+        .chart-box:nth-child(4) { animation-delay: 0.25s; }
+        .chart-box:nth-child(5) { animation-delay: 0.3s; }
+        .chart-box:nth-child(6) { animation-delay: 0.35s; }
+        .chart-box:nth-child(7) { animation-delay: 0.4s; }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 640px) {
+            .header {
+                padding: 32px 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .recommend-box {
+                padding: 24px;
+            }
+
+            .btn-rec {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <header class="header animate-in">
+        <div class="header-content">
+            <div class="header-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                </svg>
+            </div>
+            <h1>Xin chào, {{STUDENT_NAME}}</h1>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
+                Biểu đồ kỹ năng & Gợi ý môn học SmartSchool
+            </p>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="section-header">
+            <div class="section-icon">🎯</div>
+            <div>
+                <div class="section-title">Mức độ thành thạo kỹ năng</div>
+                <div class="section-subtitle">Theo dõi tiến độ học tập của bạn</div>
+            </div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Frontend (FE)</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartFE"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueFE">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#10b981"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentFE">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Backend (BE)</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartBE"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueBE">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#3b82f6"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentBE">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Network</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartNET"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueNET">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#8b5cf6"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentNET">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Mobile</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartMOBILE"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueMOBILE">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#f59e0b"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentMOBILE">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Data</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartDATA"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueDATA">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#06b6d4"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentDATA">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>AI Skills</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartAI"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueAI">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#ec4899"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentAI">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-box animate-in" style="opacity:0">
+                <div class="chart-header">
+                    <h3>Quản lý dự án (QLDA)</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chartQLDA"></canvas>
+                    <div class="chart-center">
+                        <div class="chart-value" id="valueQLDA">0%</div>
+                        <div class="chart-label">Hoàn thành</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div class="chart-legend">
+                        <div class="legend-dot" style="background:#14b8a6"></div>
+                        <span>Thành thạo</span>
+                    </div>
+                    <div class="chart-percent" id="percentQLDA">0%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Section -->
+    <div class="recommend-box animate-in" style="animation-delay:0.5s">
+        <div class="recommend-header">
+            <div class="recommend-icon">✨</div>
+            <div>
+                <div class="recommend-title">Mở khóa môn học tiếp theo</div>
+                <div class="recommend-subtitle">Phân tích bởi AI dựa trên kỹ năng của bạn</div>
+            </div>
+        </div>
+        
+        <button class="btn-rec" onclick="loadRec()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+            Mở khóa môn học mới
+        </button>
+
+        <div id="rec-result"></div>
+    </div>
+
+</div>
+
+<script>
+    const skillData = JSON.parse(`{{SKILL_DATA_JSON}}`);
+
+    const chartConfigs = [
+        { id: "chartFE", value: skillData.FE, color: "#10b981" },
+        { id: "chartBE", value: skillData.BE, color: "#3b82f6" },
+        { id: "chartNET", value: skillData.NET, color: "#8b5cf6" },
+        { id: "chartMOBILE", value: skillData.MOBILE, color: "#f59e0b" },
+        { id: "chartDATA", value: skillData.DATA, color: "#06b6d4" },
+        { id: "chartAI", value: skillData.AI, color: "#ec4899" },
+        { id: "chartQLDA", value: skillData.QLDA, color: "#14b8a6" }
+    ];
+
+    chartConfigs.forEach(cfg => {
+        const skillKey = cfg.id.replace('chart', '');
+        const valueEl = document.getElementById('value' + skillKey);
+        const percentEl = document.getElementById('percent' + skillKey);
+        if (valueEl) valueEl.textContent = cfg.value + '%';
+        if (valueEl) valueEl.style.color = cfg.color;
+        if (percentEl) percentEl.textContent = cfg.value + '%';
+
+        new Chart(document.getElementById(cfg.id), {
+            type: "doughnut",
+            data: {
+                labels: ["Thành thạo", "Còn thiếu"],
+                datasets: [{
+                    data: [cfg.value, 100 - cfg.value],
+                    backgroundColor: [cfg.color, "#e2e8f0"],
+                    borderWidth: 0,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                cutout: "75%",
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleFont: { size: 13, weight: '600' },
+                        bodyFont: { size: 12 },
+                        padding: 12,
+                        cornerRadius: 8,
+                        displayColors: false
+                    }
+                },
+                animation: {
+                    animateRotate: true,
+                    duration: 1000
+                }
+            }
+        });
+    });
+
+    function loadRec() {
+        const box = document.getElementById("rec-result");
+
+        box.innerHTML = '<p><span class="loading-spinner"></span> Đang xử lý...</p>';
+
+        fetch("/api/recommend/{{STUDENT_ID}}?course_id={{COURSE_ID}}")
+        .then(resp => resp.text())
+        .then(html => {
+            box.innerHTML = html;
+        })
+        .catch(err => {
+            box.innerHTML =
+                "<p style='color:#ef4444;'>❌ Lỗi khi gọi API: " + err + "</p>";
+        });
+    }
+</script>
+
+</body>
+</html>

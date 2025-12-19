@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Learning Profile</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .header-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header-icon svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 12px;
+    }
+
+    .student-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: #667eea;
+    }
+
+    .info-value {
+      color: #1a1a2e;
+      font-weight: 500;
+    }
+
+    .header-description {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+
+    .skills-section {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #e8e8ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    }
+
+    .chart-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 15px;
+    }
+
+    .skill-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 5px;
+    }
+
+    .skill-percent {
+      font-size: 12px;
+      color: #667eea;
+      font-weight: 500;
+    }
+
+    .modules-section {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .modules-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .modules-table th,
+    .modules-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #eef0f5;
+    }
+
+    .modules-table th {
+      background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+      font-weight: 600;
+      color: #1a1a2e;
+      font-size: 14px;
+    }
+
+    .modules-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .modules-table tr:hover td {
+      background: #f8f9ff;
+    }
+
+    .module-name {
+      font-weight: 500;
+      color: #1a1a2e;
+    }
+
+    .mastery-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mastery-progress {
+      flex: 1;
+      max-width: 150px;
+      height: 8px;
+      background: #e8e8ff;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .mastery-fill {
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .mastery-percent {
+      font-size: 14px;
+      font-weight: 600;
+      color: #667eea;
+      min-width: 45px;
+    }
+
+    .empty-modules {
+      text-align: center;
+      padding: 40px;
+      color: #888;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .student-info {
+        justify-content: center;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .modules-table {
+        font-size: 14px;
+      }
+
+      .modules-table th,
+      .modules-table td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#" onclick="history.back()" class="back-link">← Back to Student List</a>
+
+    <div class="header">
+      <div class="header-content">
+        <div class="header-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1 class="header-title">Student Learning Profile</h1>
+          <div class="student-info">
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">{{STUDENT_NAME}}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Student ID:</span>
+              <span class="info-value">{{STUDENT_ID}}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Course ID:</span>
+              <span class="info-value">{{COURSE_ID}}</span>
+            </div>
+          </div>
+          <p class="header-description">Overview of the student's skill mastery and completed learning modules.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2 class="section-title">Skill Mastery Overview</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-FE"></canvas>
+          </div>
+          <div class="skill-name">Frontend</div>
+          <div class="skill-percent" id="percent-FE">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-BE"></canvas>
+          </div>
+          <div class="skill-name">Backend</div>
+          <div class="skill-percent" id="percent-BE">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-NET"></canvas>
+          </div>
+          <div class="skill-name">Networking</div>
+          <div class="skill-percent" id="percent-NET">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-MOBILE"></canvas>
+          </div>
+          <div class="skill-name">Mobile</div>
+          <div class="skill-percent" id="percent-MOBILE">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-DATA"></canvas>
+          </div>
+          <div class="skill-name">Data Science</div>
+          <div class="skill-percent" id="percent-DATA">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-AI"></canvas>
+          </div>
+          <div class="skill-name">AI/ML</div>
+          <div class="skill-percent" id="percent-AI">0%</div>
+        </div>
+        <div class="skill-card">
+          <div class="chart-container">
+            <canvas id="chart-QLDA"></canvas>
+          </div>
+          <div class="skill-name">Project Management</div>
+          <div class="skill-percent" id="percent-QLDA">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules-section">
+      <h2 class="section-title">Completed Learning Modules</h2>
+      <table class="modules-table" id="modules-table">
+        <thead>
+          <tr>
+            <th>Module Name</th>
+            <th>Mastery</th>
+          </tr>
+        </thead>
+        <tbody id="modules-body">
+        </tbody>
+      </table>
+      <div class="empty-modules" id="empty-modules" style="display: none;">
+        No completed modules found for this student.
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const skillData = JSON.parse(`{{SKILL_DATA_JSON}}`);
+  const completedModules = JSON.parse(`{{COMPLETED_MODULES_JSON}}`);
+
+  const skillColors = {
+    FE: '#667eea',
+    BE: '#764ba2',
+    NET: '#f093fb',
+    MOBILE: '#f5576c',
+    DATA: '#4facfe',
+    AI: '#00f2fe',
+    QLDA: '#43e97b'
+  };
+
+  /* ===============================
+        RENDER COMPLETED MODULES
+  ================================ */
+  function renderModules() {
+    const tbody = document.getElementById('modules-body');
+    const emptyState = document.getElementById('empty-modules');
+
+    if (!completedModules || completedModules.length === 0) {
+      emptyState.style.display = 'block';
+      document.getElementById('modules-table').style.display = 'none';
+      return;
+    }
+
+    tbody.innerHTML = completedModules.map(module => `
+      <tr>
+        <td class="module-name">${module.name}</td>
+        <td>
+          <div class="mastery-bar">
+            <div class="mastery-progress">
+              <div class="mastery-fill" style="width: ${module.mastery || 0}%"></div>
+            </div>
+            <span class="mastery-percent">${module.mastery || 0}%</span>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  /* ===============================
+          CREATE CHART JS
+  ================================ */
+  function createDoughnutChart(canvasId, value, color) {
+    const canvas = document.getElementById(canvasId);
+
+    if (!canvas) {
+      console.warn("Canvas not found:", canvasId);
+      return;
+    }
+
+    const ctx = canvas.getContext("2d");
+
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+            data: [value, 100 - value],
+            backgroundColor: [color, "#e8e8ff"],
+            borderWidth: 0,
+            cutout: "75%"
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false }
+        }
+      }
+    });
+  }
+
+
+  function renderSkillCharts() {
+  Object.entries(skillData).forEach(([skill, value]) => {
+
+    if (!skill || skill === "None") {
+      console.warn("Skipping invalid skill:", skill);
+      return;
+    }
+
+    const percentValue = Math.round(value || 0);
+    const canvasId = `chart-${skill}`;
+    const percentId = `percent-${skill}`;
+
+    createDoughnutChart(canvasId, percentValue, skillColors[skill] || "#667eea");
+
+    const percentEl = document.getElementById(percentId);
+    if (percentEl) {
+      percentEl.textContent = `${percentValue}%`;
+    } else {
+      console.warn("Percent element not found:", percentId);
+    }
+  });
+}
+
+  /* ===============================
+         INIT AFTER DOM READY
+  ================================ */
+  document.addEventListener("DOMContentLoaded", function () {
+    renderSkillCharts();
+    renderModules();
+  });
+</script>
+</body>
+</html>

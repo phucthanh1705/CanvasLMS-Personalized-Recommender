@@ -1,23 +1,10 @@
-# Xây dựng KG
-"""
-Build a hybrid EduKG from your processed Canvas data.
-Outputs structural knowledge graph files only:
-  - nodes.csv
-  - edges.csv (with source_label, target_label)
-  - triples.csv
-
-Visualization is handled separately by kg_visualize.py
-"""
-
 import os, json, csv
 from pathlib import Path
 
-# ---------- CONFIG ----------
 ROOT_PROCESSED = os.environ.get("KG_PROCESSED_DIR", "data/processed")
 OUT_DIR = os.environ.get("KG_OUT_DIR", "data/triples")
 os.makedirs(OUT_DIR, exist_ok=True)
 
-# ---------- Helpers ----------
 def read_json(p, default=None):
     try:
         with open(p, "r", encoding="utf-8") as f:
@@ -43,7 +30,6 @@ def add_edge(edges, src, src_label, rel, tgt, tgt_label, score=None, **attrs):
     e.update(attrs)
     edges.append(e)
 
-# ---------- Build structural KG ----------
 def build_structural(course_dir):
     nodes, edges, triples = {}, [], []
 
@@ -51,7 +37,6 @@ def build_structural(course_dir):
     course_id = meta_course.get("course", course_dir.name)
     add_node(nodes, course_id, "Course", name=course_id)
 
-    # Course -> Module
     for mod in meta_course.get("modules", []):
         mod_dir = course_dir / "modules" / mod
         if not mod_dir.exists():
@@ -60,7 +45,6 @@ def build_structural(course_dir):
         add_edge(edges, course_id, "Course", "includes", mod, "Module")
         triples.append((course_id, "includes", mod))
 
-        # Lessons
         for lp in sorted((mod_dir / "lessons" / "contents").glob("lesson_*.json")):
             lj = read_json(lp, {})
             les_id = lp.stem
@@ -69,7 +53,6 @@ def build_structural(course_dir):
             add_edge(edges, mod, "Module", "has_lesson", les_id, "Lesson")
             triples.append((mod, "has_lesson", les_id))
 
-        # Quizzes
         quiz_dir = mod_dir / "quizzes"
         for qp in sorted(quiz_dir.glob("quiz_*.json")):
             qid = qp.stem
@@ -86,7 +69,6 @@ def build_structural(course_dir):
                     add_edge(edges, qid, "Quiz", "has_question", q_item_id, "Question")
                     triples.append((qid, "has_question", q_item_id))
 
-        # Submissions (scores)
         subs_dir = quiz_dir / "submissions"
         for sp in sorted(subs_dir.glob("cleaned_quiz_*_submissions.json")):
             arr = read_json(sp, [])
@@ -114,7 +96,6 @@ def build_structural(course_dir):
 
     return nodes, edges, triples
 
-# ---------- Merge semantic triples (optional from LLM) ----------
 def load_semantic_triples(llm_triples_dir):
     t = []
     p = Path(llm_triples_dir) / "edutriples.csv"
@@ -131,7 +112,6 @@ def load_semantic_triples(llm_triples_dir):
                 t.append((r["entity1"], r["relation"], r["entity2"]))
     return t
 
-# ---------- Writers ----------
 def write_nodes(nodes):
     out = os.path.join(OUT_DIR, "nodes.csv")
     with open(out, "w", encoding="utf-8", newline="") as f:
@@ -139,7 +119,6 @@ def write_nodes(nodes):
         w.writeheader()
         for n in nodes.values():
             w.writerow(n)
-    print(f"📁 nodes.csv written → {out}")
 
 def write_edges(edges):
     out = os.path.join(OUT_DIR, "edges.csv")
@@ -149,7 +128,6 @@ def write_edges(edges):
         w.writeheader()
         for e in edges:
             w.writerow(e)
-    print(f"📁 edges.csv written → {out}")
 
 def write_triples(triples):
     out = os.path.join(OUT_DIR, "triples.csv")
@@ -158,9 +136,7 @@ def write_triples(triples):
         w.writerow(["entity1", "relation", "entity2"])
         for a, b, c in triples:
             w.writerow([a, b, c])
-    print(f"📁 triples.csv written → {out}")
 
-# ---------- Entry ----------
 def main():
     courses_root = Path(ROOT_PROCESSED) / "courses"
     course_dir = next((p for p in courses_root.glob("course_*") if p.is_dir()), None)
@@ -173,12 +149,6 @@ def main():
     write_nodes(nodes)
     write_edges(edges)
     write_triples(triples)
-
-    print(f"\n✅ KG build complete!")
-    print(f"📦 Output directory: {OUT_DIR}")
-    print(f"   - nodes: {len(nodes)}")
-    print(f"   - edges: {len(edges)}")
-    print(f"   - triples: {len(triples)}")
 
 if __name__ == "__main__":
     main()

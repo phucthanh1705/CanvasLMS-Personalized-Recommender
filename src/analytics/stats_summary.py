@@ -1,1 +1,0 @@
-# Tổng hợp thống kê điểm, tiến độ học

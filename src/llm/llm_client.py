@@ -1,13 +1,9 @@
 import ollama
 
-DEFAULT_MODEL = "qwen2.5:3b-instruct"   # model bạn đang có
+DEFAULT_MODEL = "qwen2.5:3b-instruct"
 
 def call_llm(system_prompt: str, user_prompt: str, model=None):
-    """
-    Gọi Ollama local với hệ thống + người dùng.
-    """
 
-    # Nếu không truyền model → dùng DEFAULT_MODEL
     if model is None:
         model = DEFAULT_MODEL
 
@@ -23,5 +19,5 @@ def call_llm(system_prompt: str, user_prompt: str, model=None):
         return resp["message"]["content"]
 
     except Exception as e:
-        print("❌ Lỗi Ollama:", e)
+        print("Lỗi Ollama:", e)
         return ""

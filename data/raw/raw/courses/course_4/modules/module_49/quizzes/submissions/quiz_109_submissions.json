@@ -671,6 +671,34 @@
       "excused?": false,
       "html_url": "http://localhost:3000/courses/4/quizzes/109/submissions/1842",
       "result_url": "http://localhost:3000/courses/4/quizzes/109/history?quiz_submission_id=1842&version=1"
+    },
+    {
+      "id": 2157,
+      "quiz_id": 109,
+      "quiz_version": 5,
+      "user_id": 71,
+      "submission_id": 6864,
+      "score": 19.0,
+      "kept_score": 19.0,
+      "started_at": "2025-11-22T06:18:17Z",
+      "end_at": null,
+      "finished_at": "2025-11-22T06:18:30Z",
+      "attempt": 1,
+      "workflow_state": "complete",
+      "fudge_points": null,
+      "quiz_points_possible": 20.0,
+      "extra_attempts": null,
+      "extra_time": null,
+      "manually_unlocked": null,
+      "validation_token": "847ad4a134e3494d4e2ce0445d114edc037b1958c3e2b9b5b8b56a51491b317a",
+      "score_before_regrade": null,
+      "has_seen_results": false,
+      "time_spent": 12,
+      "attempts_left": -1,
+      "overdue_and_needs_submission": false,
+      "excused?": false,
+      "html_url": "http://localhost:3000/courses/4/quizzes/109/submissions/2157",
+      "result_url": "http://localhost:3000/courses/4/quizzes/109/history?quiz_submission_id=2157&version=1"
     }
   ],
   "users": [
@@ -937,6 +965,17 @@
       "integration_id": null,
       "sis_import_id": 46,
       "login_id": "student30"
+    },
+    {
+      "id": 71,
+      "name": "Student 33",
+      "created_at": "2025-11-17T23:04:07-07:00",
+      "sortable_name": "33, Student",
+      "short_name": "Student33",
+      "sis_user_id": "s33",
+      "integration_id": null,
+      "sis_import_id": 77,
+      "login_id": "student33"
     }
   ],
   "meta": {

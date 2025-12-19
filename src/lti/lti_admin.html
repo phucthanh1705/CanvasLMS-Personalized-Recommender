@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>SmartSchool – System Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: #f8fafc;
+      min-height: 100vh;
+      color: #1e293b;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #06b6d4 100%);
+      padding: 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .role-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .header p {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .nav-bar {
+      background: white;
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #f1f5f9;
+      color: #64748b;
+    }
+
+    .nav-btn:hover {
+      background: #e2e8f0;
+    }
+
+    .nav-btn.active {
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: white;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .screen {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.12);
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .stat-title {
+      font-size: 0.875rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .stat-icon.purple { background: linear-gradient(135deg, #ede9fe, #ddd6fe); color: #7c3aed; }
+    .stat-icon.blue { background: linear-gradient(135deg, #dbeafe, #bfdbfe); color: #3b82f6; }
+    .stat-icon.green { background: linear-gradient(135deg, #dcfce7, #bbf7d0); color: #22c55e; }
+    .stat-icon.red { background: linear-gradient(135deg, #fee2e2, #fecaca); color: #ef4444; }
+    .stat-icon.cyan { background: linear-gradient(135deg, #cffafe, #a5f3fc); color: #06b6d4; }
+    .stat-icon.amber { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #f59e0b; }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    /* ========== CHART CONTAINER - REFINED ========== */
+    .chart-container {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.02),
+        0 8px 32px rgba(124, 58, 237, 0.06);
+      border: 1px solid rgba(124, 58, 237, 0.08);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .chart-container:hover {
+      box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.02),
+        0 12px 40px rgba(124, 58, 237, 0.1);
+    }
+
+    .chart-header {
+      padding: 1.5rem 1.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chart-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1e293b;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chart-title::before {
+      content: '';
+      width: 4px;
+      height: 1.25rem;
+      background: linear-gradient(180deg, #7c3aed 0%, #3b82f6 100%);
+      border-radius: 2px;
+    }
+
+    .chart-body {
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .chart-mock {
+      position: relative;
+      height: 280px;
+      background: linear-gradient(
+        135deg,
+        hsl(252 100% 98%) 0%,
+        hsl(217 100% 98%) 50%,
+        hsl(186 100% 98%) 100%
+      );
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    /* Primary wave overlay */
+    .chart-mock::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(
+        90deg,
+        hsl(252 80% 92% / 0.4) 0%,
+        hsl(230 85% 90% / 0.35) 25%,
+        hsl(217 90% 92% / 0.4) 50%,
+        hsl(200 85% 90% / 0.35) 75%,
+        hsl(186 80% 92% / 0.4) 100%
+      );
+      clip-path: polygon(
+        0 85%,
+        8% 70%,
+        16% 78%,
+        24% 60%,
+        32% 68%,
+        40% 50%,
+        48% 58%,
+        56% 42%,
+        64% 52%,
+        72% 38%,
+        80% 48%,
+        88% 35%,
+        100% 55%,
+        100% 100%,
+        0 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Secondary wave for depth */
+    .chart-mock::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 35%;
+      background: linear-gradient(
+        90deg,
+        hsl(217 90% 94% / 0.5) 0%,
+        hsl(230 85% 92% / 0.45) 30%,
+        hsl(252 80% 94% / 0.5) 60%,
+        hsl(217 90% 92% / 0.45) 100%
+      );
+      clip-path: polygon(
+        0 90%,
+        12% 80%,
+        24% 88%,
+        36% 72%,
+        48% 82%,
+        60% 68%,
+        72% 78%,
+        84% 65%,
+        100% 80%,
+        100% 100%,
+        0 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .chart-canvas-wrapper {
+      position: relative;
+      z-index: 10;
+      padding: 1rem;
+      height: 100%;
+    }
+
+    .chart-mock canvas {
+      width: 100% !important;
+      height: 100% !important;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 0.75rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 
+        0 4px 16px rgba(124, 58, 237, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(124, 58, 237, 0.06);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .chart-container {
+        border-radius: 1rem;
+      }
+
+      .chart-header {
+        padding: 1.25rem 1.25rem 0.75rem;
+      }
+
+      .chart-title {
+        font-size: 1rem;
+      }
+
+      .chart-body {
+        padding: 0 1rem 1rem;
+      }
+
+      .chart-mock {
+        height: 220px;
+        border-radius: 0.75rem;
+      }
+
+      .chart-canvas-wrapper {
+        padding: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .chart-mock {
+        height: 180px;
+      }
+    }
+    /* ========== END CHART CONTAINER ========== */
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Activity Timeline */
+    .timeline-container {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .timeline-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 0.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .timeline-item:hover {
+      background: #f1f5f9;
+    }
+
+    .timeline-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .timeline-badge.info { background: #dbeafe; color: #1d4ed8; }
+    .timeline-badge.sync { background: #dcfce7; color: #15803d; }
+    .timeline-badge.lti { background: #ede9fe; color: #7c3aed; }
+    .timeline-badge.error { background: #fee2e2; color: #dc2626; }
+    .timeline-badge.success { background: #d1fae5; color: #059669; }
+    .timeline-badge.warning { background: #fef3c7; color: #d97706; }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-message {
+      font-size: 0.95rem;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .timeline-time {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+
+    /* LTI Status Cards */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 1.5rem;
+      background: linear-gradient(180deg, #7c3aed, #3b82f6);
+      border-radius: 2px;
+    }
+
+    .lti-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .lti-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .lti-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .lti-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .status-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .status-dot.active {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .status-dot.active::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .status-dot.inactive {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .status-dot.inactive::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+
+    .status-dot.pending {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    .status-dot.pending::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .lti-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .lti-info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+    }
+
+    .lti-info-label {
+      color: #64748b;
+    }
+
+    .lti-info-value {
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    /* Table */
+    .table-container {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      overflow-x: auto;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table th {
+      text-align: left;
+      padding: 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .table td {
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #334155;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table tr:hover td {
+      background: #f8fafc;
+    }
+
+    /* ========== SYNC BUTTON & STATUS AREA - REDESIGNED ========== */
+    .sync-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+      border-radius: 1.25rem;
+      box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.02),
+        0 8px 32px rgba(124, 58, 237, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(124, 58, 237, 0.1);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sync-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 50%, #06b6d4 100%);
+      opacity: 0.8;
+    }
+
+    .sync-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .sync-title-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .sync-icon-badge {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%);
+      border-radius: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+    }
+
+    .sync-title-text h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.25rem;
+    }
+
+    .sync-title-text p {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .sync-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #7c3aed 0%, #6366f1 50%, #3b82f6 100%);
+      background-size: 200% 200%;
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 
+        0 4px 16px rgba(124, 58, 237, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      animation: gradientShift 3s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .sync-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .sync-button:hover:not(:disabled)::before {
+      left: 100%;
+    }
+
+    .sync-button:hover:not(:disabled) {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 
+        0 12px 32px rgba(124, 58, 237, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .sync-button:active:not(:disabled) {
+      transform: translateY(-2px) scale(0.98);
+      box-shadow: 
+        0 6px 20px rgba(124, 58, 237, 0.35),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sync-button:disabled {
+      opacity: 0.9;
+      cursor: not-allowed;
+    }
+
+    .sync-button .sync-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+      font-size: 1.1rem;
+    }
+
+    .sync-button.syncing .sync-icon {
+      animation: spinSmooth 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes spinSmooth {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .sync-button.syncing {
+      animation: syncingPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes syncingPulse {
+      0%, 100% { box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3); }
+      50% { box-shadow: 0 4px 24px rgba(124, 58, 237, 0.5); }
+    }
+
+    /* Status Card */
+    .sync-status-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .sync-status-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+      min-width: 180px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sync-status-box::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #7c3aed 0%, #3b82f6 100%);
+      opacity: 0.6;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .sync-status-box.success {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-color: #86efac;
+    }
+
+    .sync-status-box.success::before {
+      background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+      opacity: 1;
+    }
+
+    .sync-status-box.error {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border-color: #fecaca;
+    }
+
+    .sync-status-box.error::before {
+      background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+      opacity: 1;
+    }
+
+    .sync-status-box.syncing {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: #93c5fd;
+      animation: statusPulse 2s ease-in-out infinite;
+    }
+
+    .sync-status-box.syncing::before {
+      background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+      opacity: 1;
+    }
+
+    @keyframes statusPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+      50% { box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15); }
+    }
+
+    .sync-status-box .status-icon {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .sync-status-box.syncing .status-icon {
+      animation: iconPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .sync-status-box .status-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+    }
+
+    .sync-status-box .status-label {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+    }
+
+    .sync-status-box .status-value {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.95rem;
+    }
+
+    /* Progress Bar Container */
+    .progress-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .progress-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .progress-percentage {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #7c3aed;
+      background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: linear-gradient(135deg, #e5e7eb 0%, #f3f4f6 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7c3aed 0%, #6366f1 35%, #3b82f6 70%, #06b6d4 100%);
+      background-size: 200% 100%;
+      border-radius: 20px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+      animation: progressGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes progressGlow {
+      0%, 100% { box-shadow: 0 0 12px rgba(124, 58, 237, 0.4); }
+      50% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.6); }
+    }
+
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 2s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .progress-fill.complete {
+      background: linear-gradient(90deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+      box-shadow: 0 0 16px rgba(34, 197, 94, 0.5);
+    }
+
+    .progress-fill.error {
+      background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sync-container {
+        padding: 1.5rem;
+      }
+
+      .sync-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .sync-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .sync-status-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== END SYNC BUTTON ========== */
+
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<script>
+  const dashboardData = JSON.parse(`{{DASHBOARD_DATA}}`);
+</script>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>SmartSchool – System Dashboard</h1>
+    <span class="role-badge">👤 Administrator</span>
+    <p>Monitor system activity and performance of the SmartSchool LTI service.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <button class="nav-btn active" onclick="showScreen('dashboard')">📊 Dashboard</button>
+    <button class="nav-btn" onclick="showScreen('lti')">🔗 LTI Integration Status</button>
+    <button class="nav-btn" onclick="showScreen('students')">👨‍🎓 Student List</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- SCREEN 1: Dashboard -->
+    <section id="dashboard" class="screen active">
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Total Requests (24h)</span>
+            <div class="stat-icon purple">📡</div>
+          </div>
+          <div class="stat-value" id="total_requests"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">LTI Launches Today</span>
+            <div class="stat-icon blue">🚀</div>
+          </div>
+          <div class="stat-value" id="launches_today"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Last Canvas Sync</span>
+            <div class="stat-icon green">🔄</div>
+          </div>
+          <div class="stat-value" id="last_sync"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">System Errors (24h)</span>
+            <div class="stat-icon red">⚠️</div>
+          </div>
+          <div class="stat-value" id="system_errors"></div>
+        </div>
+      </div>
+
+      <!-- Chart Container -->
+      <div class="chart-container">
+        <div class="chart-header">
+          <h3 class="chart-title">System Activity Overview</h3>
+        </div>
+        <div class="chart-body">
+          <div class="chart-mock">
+            <div class="chart-canvas-wrapper">
+              <canvas id="launchActivityChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-container">
+        <h3 class="timeline-title">Recent System Activity</h3>
+        <div class="timeline-list" id="system_activity_list"></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: LTI Integration Status -->
+    <section id="lti" class="screen">
+      <!-- Sync Data Container - Redesigned -->
+      <div class="sync-container">
+        <div class="sync-header">
+          <div class="sync-title-section">
+            <div class="sync-icon-badge">🔄</div>
+            <div class="sync-title-text">
+              <h3>Data Synchronization</h3>
+              <p>Sync student data from Canvas LMS</p>
+            </div>
+          </div>
+          <button class="sync-button" id="syncBtn" onclick="syncData()">
+            <span class="sync-icon">🔄</span>
+            <span class="sync-text">Sync Data</span>
+          </button>
+        </div>
+
+        <div class="sync-status-card">
+          <div class="sync-status-box" id="sync-status">
+            <span class="status-icon">⏳</span>
+            <div class="status-text">
+              <span class="status-label">Status</span>
+              <span class="status-value">Waiting...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="progress-header">
+            <span class="progress-label">Sync Progress</span>
+            <span class="progress-percentage" id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-title">Recent LTI Launches</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>User</th>
+              <th>Resource</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recent_launches"></tbody>
+        </table>
+      </div>
+
+      <!-- LTI Activity Timeline -->
+      <div class="timeline-container" style="margin-top: 1.5rem;">
+        <h3 class="timeline-title">LTI Integration Events</h3>
+        <div class="timeline-list" id="lti_events_list"></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: Student List -->
+  <section id="students" class="screen">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Total Students</span>
+            <div class="stat-icon purple">👥</div>
+          </div>
+          <div class="stat-value" id="total_students">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Active Students</span>
+            <div class="stat-icon green">✅</div>
+          </div>
+          <div class="stat-value" id="active_students">—</div>
+        </div>
+      </div>
+
+      <h2 class="section-title">All Students</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Student ID</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="studentListContainer">
+            <!-- Rows will be populated dynamically -->
+          </tbody>
+        </table>
+      </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    SmartSchool LTI Service v2.1.0 • Last updated: 2025-12-05
+  </footer>
+
+  <script>
+    function showScreen(screenId) {
+      document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+      });
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(screenId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+  <script>
+  function loadDashboardStats() {
+    document.getElementById("total_requests").textContent = dashboardData.total_requests_24h;
+    document.getElementById("launches_today").textContent = dashboardData.lti_launches_today;
+    document.getElementById("last_sync").textContent = dashboardData.last_canvas_sync;
+    document.getElementById("system_errors").textContent = dashboardData.system_errors_24h;
+  }
+  loadDashboardStats();
+  </script>
+
+  <script>
+  function renderSystemActivity() {
+    const list = document.getElementById("system_activity_list");
+    list.innerHTML = "";
+    dashboardData.lti_events.forEach(ev => {
+      list.innerHTML += `
+        <div class="timeline-item">
+          <span class="timeline-badge ${ev.type.toLowerCase()}">${ev.type}</span>
+          <div class="timeline-content">
+            <div class="timeline-message">${ev.message}</div>
+            <div class="timeline-time">${ev.time}</div>
+          </div>
+        </div>
+      `;
+    });
+  }
+  renderSystemActivity();
+  </script>
+
+  <script>
+  function renderPlatforms() {
+    const box = document.getElementById("platform_list");
+    box.innerHTML = "";
+    dashboardData.platforms.forEach(p => {
+      box.innerHTML += `
+        <div class="lti-card">
+          <div class="lti-card-header">
+            <span class="lti-card-title">${p.name}</span>
+            <span class="status-dot ${p.status.toLowerCase()}">${p.status}</span>
+          </div>
+          <div class="lti-info">
+            <div class="lti-info-row">
+              <span class="lti-info-label">Client ID:</span>
+              <span class="lti-info-value">${p.client_id}</span>
+            </div>
+            <div class="lti-info-row">
+              <span class="lti-info-label">Deployment ID:</span>
+              <span class="lti-info-value">${p.deployment_id}</span>
+            </div>
+            <div class="lti-info-row">
+              <span class="lti-info-label">Last Launch:</span>
+              <span class="lti-info-value">${p.last_launch}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+  renderPlatforms();
+  </script>
+
+  <script>
+  function renderRecentLaunches() {
+    const tbody = document.getElementById("recent_launches");
+    tbody.innerHTML = "";
+    dashboardData.recent_launches.forEach(r => {
+      tbody.innerHTML += `
+        <tr>
+          <td>${r.platform}</td>
+          <td>${r.user}</td>
+          <td>${r.resource}</td>
+          <td>${r.time}</td>
+          <td><span class="status-dot ${r.status.toLowerCase()}">${r.status}</span></td>
+        </tr>
+      `;
+    });
+  }
+  renderRecentLaunches();
+  </script>
+
+  <script>
+  function renderLTIEvents() {
+    const container = document.getElementById("lti_events_list");
+    container.innerHTML = "";
+    dashboardData.lti_events.forEach(ev => {
+      const badgeClass = ev.type.toLowerCase();
+      container.innerHTML += `
+        <div class="timeline-item">
+          <span class="timeline-badge ${badgeClass}">${ev.type}</span>
+          <div class="timeline-content">
+            <div class="timeline-message">${ev.message}</div>
+            <div class="timeline-time">${ev.time}</div>
+          </div>
+        </div>
+      `;
+    });
+  }
+  renderLTIEvents();
+  </script>
+
+  <script>
+  function renderLaunchActivityChart() {
+    const ctx = document.getElementById("launchActivityChart").getContext("2d");
+    const data = dashboardData.launches_by_hour;
+    const labels = Object.keys(data).map(h => h + ":00");
+    const values = Object.values(data);
+
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "LTI Launches per Hour",
+          data: values,
+          tension: 0.35,
+          fill: true,
+          borderWidth: 2,
+          borderColor: "#6366F1",
+          backgroundColor: "rgba(99, 102, 241, 0.15)"
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 1 }
+          }
+        }
+      }
+    });
+  }
+  renderLaunchActivityChart();
+  </script>
+
+  <script>
+function renderStudentList() {
+  const container = document.getElementById("studentListContainer");
+  const students = dashboardData.students || [];
+
+  container.innerHTML = "";
+  
+  students.forEach(s => {
+    const statusClass = s.status.toLowerCase() === 'active' ? 'active' : 
+                        s.status.toLowerCase() === 'inactive' ? 'inactive' : 'pending';
+    if(s.student_id.toLowerCase() === 'user_1'){
+      return;
+    }
+    container.innerHTML += `
+      <tr>
+        <td>${s.name}</td>
+        <td>${s.student_id}</td>
+        <td><span class="status-dot ${statusClass}">${s.status}</span></td>
+        <td><button class="nav-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;" onclick="viewStudentDetails('${s.student_id}')">View Details</button></td>
+      </tr>
+    `;
+  });
+  
+  document.getElementById("total_students").textContent = students.length;
+  document.getElementById("active_students").textContent = students.filter(s => s.status === 'Active').length;
+}
+
+function viewStudentDetails(studentId) {
+    const courseId = dashboardData.course_id;
+    const baseUrl = "http://127.0.0.1.nip.io:5000";
+    window.location.href = `${baseUrl}/lti/student_view?student_id=${studentId}&course_id=${courseId}`;
+}
+
+
+renderStudentList();
+</script>
+<script>
+let pollTimer = null;
+
+function syncData() {
+  const btn = document.getElementById('syncBtn');
+  btn.classList.add('syncing');
+  btn.disabled = true;
+  btn.querySelector('.sync-text').textContent = 'Syncing...';
+
+  fetch("/api/sync", { method: "POST" })
+    .then(r => r.json())
+    .then(d => {
+      startPolling();
+      alert(d.message);
+    })
+    .catch(err => {
+      alert("Sync failed: " + err.message);
+      resetButton();
+    });
+}
+
+
+function startPolling() {
+  if (pollTimer) return;
+
+  pollTimer = setInterval(() => {
+    fetch("/api/sync/status")
+      .then(r => r.json())
+      .then(updateStatusUI);
+  }, 1000);
+}
+
+
+function stopPolling() {
+  clearInterval(pollTimer);
+  pollTimer = null;
+}
+
+
+function resetButton() {
+  const btn = document.getElementById("syncBtn");
+  btn.classList.remove("syncing");
+  btn.disabled = false;
+  btn.querySelector(".sync-text").textContent = "Sync Data";
+}
+
+
+function updateStatusUI(d) {
+  const statusBox = document.getElementById("sync-status");
+  const statusValue = statusBox.querySelector(".status-value");
+  const statusIcon = statusBox.querySelector(".status-icon");
+
+  const progressFill = document.getElementById("progressFill");
+  const progressPercent = document.getElementById("progressPercent");
+
+  if (!statusBox || !progressFill || !progressPercent) {
+    console.error("Missing DOM elements");
+    return;
+  }
+
+  const isComplete = d.percent >= 100;
+  const isError = d.percent < 0;
+  const isRunning = d.percent > 0 && d.percent < 100;
+
+  const icon = isComplete ? "✅"
+             : isError ? "❌"
+             : isRunning ? "🔄"
+             : "⏳";
+
+  const text = isComplete ? "Completed"
+            : isError ? "Error"
+            : isRunning ? "Syncing..."
+            : "Waiting...";
+
+  statusIcon.textContent = icon;
+  statusValue.textContent = text;
+
+  const percent = Math.max(0, d.percent);
+  progressFill.style.width = percent + "%";
+  progressPercent.textContent = percent + "%";
+
+  if (isComplete || isError) {
+    resetButton();
+    stopPolling();
+  }
+}
+</script>
+
+</body>
+</html>

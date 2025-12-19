@@ -1,190 +1,290 @@
-# -*- coding: utf-8 -*-
-"""
-LLM + Logic Recommender Merger
-Kết hợp:
-  (1) Gợi ý từ LLM-KG (embedding neo4j)
-  (2) Gợi ý từ Logic (recommendations.csv)
-Output:
-  data/exports/final_recommendations.csv
-"""
-
 import os
-import pandas as pd
-import numpy as np
+import json
+import argparse
+import re
 from pathlib import Path
+
+import pandas as pd
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
+import requests
 
-
-# ============================================================
-# -------- Paths & ENV--------
-# ============================================================
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 ENV_PATH = os.path.join(BASE_DIR, "config", "secrets.env")
 load_dotenv(ENV_PATH)
 
-NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
-NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASS = os.getenv("NEO4J_PASS", "neo4j")
-NEO4J_DB   = os.getenv("NEO4J_DB",  "neo4j")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USER = os.getenv("NEO4J_USER")
+NEO4J_PASS = os.getenv("NEO4J_PASS")
+NEO4J_DB   = os.getenv("NEO4J_DB", "neo4j")
 
 EXPORT_DIR = Path(os.path.join(BASE_DIR, "data", "exports"))
 EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
-LLM_EXPORT = EXPORT_DIR / "final_recommendations.csv"
 LOGIC_EXPORT = EXPORT_DIR / "recommendations.csv"
+FINAL_EXPORT = EXPORT_DIR / "final_recommendations.csv"
 
-
-# ============================================================
-# -------- CONNECT NEO4J --------
-# ============================================================
+OPENAI_KEY = os.getenv("GOOGLE_API_KEY")
 
 def neo4j_session():
-    driver = GraphDatabase.driver(
-        NEO4J_URI,
-        auth=(NEO4J_USER, NEO4J_PASS),
-        encrypted=False
-    )
-    return driver.session(database=NEO4J_DB)
+    return GraphDatabase.driver(
+        NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS), encrypted=False
+    ).session(database=NEO4J_DB)
 
-# ============================================================
-# -------- LẤY DANH SÁCH USER_ID --------
-# ============================================================
+def call_llm(json_payload, model="gpt-4o-mini"):
+    if not OPENAI_KEY:
+        raise Exception("OPENAI_API_KEY missing")
 
-def get_all_students():
-    """
-    Trả về danh sách student.id trong graph
-    """
-    with neo4j_session() as session:
-        rows = session.run("""
-            MATCH (s:Student)
-            RETURN s.id AS id
-            ORDER BY id
-        """)
-        return [r["id"] for r in rows]
+    url = "https://api.openai.com/v1/chat/completions"
 
-# ============================================================
-# -------- 4. GỢI Ý CHO TẤT CẢ STUDENTS --------
-# ============================================================
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_KEY}"
+    }
 
-def recommend_for_all_students(topk=10):
-    students = get_all_students()
+    messages = [
+        {"role": "system", "content": "You only read JSON and output JSON. No natural language."},
+        {"role": "user", "content": json.dumps(json_payload, ensure_ascii=False)}
+    ]
 
-    print(f"\n📌 Found {len(students)} students in Neo4j")
+    payload = {
+        "model": model,
+        "messages": messages,
+        "temperature": 0.0
+    }
 
-    all_results = []
-    for sid in students:
-        print(f"\n🎯 Merging recommendations for {sid}...")
-        rows = final_recommend_one_user(sid, topk=topk, export=False)
-        all_results.extend(rows)
+    response = requests.post(url, json=payload, headers=headers)
+    data = response.json()
 
-    # xuất file cuối
-    df = pd.DataFrame(all_results)
-    df.to_csv(LLM_EXPORT, index=False)
-    print(f"\n💾 Final merged recommendations saved → {LLM_EXPORT}")
+    if "error" in data:
+        raise Exception(f"OpenAI Error: {data['error']}")
 
-    return all_results
+    return data["choices"][0]["message"]["content"]
 
-# ============================================================
-# -------- LẤY 1 USER_ID DUY NHẤT --------
-# ============================================================
+def load_logic_candidates(student_id: str, topk: int = 5):
+    if not LOGIC_EXPORT.exists():
+        return []
 
-def get_one_student(id):
-    """
-    Lấy đúng 1 student.id cố định.
-    Thay đổi student_id tại đây.
-    """
-    userId = "user_"+ str(id)
-    return userId
-
-
-# ============================================================
-# -------- 1. GỢI Ý TỪ ĐỒ THỊ LLM-KG --------
-# ============================================================
-
-def recommend_from_llm_KG(student_id, topk=5):
-
-    with neo4j_session() as session:
-
-        stu = session.run("""
-            MATCH (s:Student {id:$sid})
-            RETURN s.embedding AS emb
-        """, sid=student_id).single()
-
-        if not stu or stu["emb"] is None:
-            print(f"⚠️ Student {student_id} không có embedding trong Neo4j.")
-            return []
-
-        stu_vec = np.array(stu["emb"])
-
-        results = session.run("""
-            MATCH (m:Module)
-            WHERE m.embedding IS NOT NULL
-            RETURN m.id AS module_id, m.embedding AS emb
-        """)
-
-        recs = []
-        for row in results:
-            mod_vec = np.array(row["emb"])
-            sim = float(stu_vec @ mod_vec) / (np.linalg.norm(stu_vec) * np.linalg.norm(mod_vec))
-            recs.append((row["module_id"], sim))
-
-        return sorted(recs, key=lambda x: x[1], reverse=True)[:topk]
-
-
-# ============================================================
-# -------- 2. GỢI Ý LOGIC CSV --------
-# ============================================================
-
-def load_logic_recommendations(student_id):
     df = pd.read_csv(LOGIC_EXPORT)
     df = df[df["student"] == student_id]
-    return [(row.module_id, float(row.similarity)) for _, row in df.iterrows()]
 
+    if df.empty:
+        return []
 
-# ============================================================
-# -------- 3. HỢP NHẤT (INTERSECTION) --------
-# ============================================================
+    df = df.sort_values("similarity", ascending=False).head(topk)
 
-def final_recommend_one_user(student_id, export=True):
+    return [
+        {
+            "module_id": r["module_id"],
+            "title": r.get("module_title", ""),
+            "similarity": float(r["similarity"]),
+        }
+        for _, r in df.iterrows()
+    ]
 
-    topk = 5  # 🔥 chỉ gợi ý 5 môn
+def get_module_competencies(module_ids):
+    if not module_ids:
+        return {}
 
-    llm_rec = recommend_from_llm_KG(student_id, topk)
-    logic_rec = load_logic_recommendations(student_id)
+    cypher = """
+    UNWIND $ids AS mid
+    MATCH (m:Module {id: mid})-[:HAS_COMPETENCY]->(c:Competency)
+    RETURN mid AS module_id,
+           collect(DISTINCT c.id) AS comp_ids,
+           collect(DISTINCT c.domain) AS domains,
+           collect(DISTINCT c.description) AS descriptions
+    """
 
-    llm_modules   = {m for m, _ in llm_rec}
-    logic_modules = {m for m, _ in logic_rec}
+    with neo4j_session() as session:
+        rows = session.run(cypher, ids=module_ids)
+        return {
+            r["module_id"]: {
+                "competency_ids": r["comp_ids"],
+                "domains": r["domains"],
+                "descriptions": r["descriptions"],
+            }
+            for r in rows
+        }
 
-    final = llm_modules.intersection(logic_modules)
+def build_prompt(candidates, comp_map):
 
-    final_rows = [{"student": student_id, "module_id": module} for module in final]
+    modules = []
+    for c in candidates:
+        info = comp_map.get(c["module_id"], {})
+        full_desc = " ".join(info.get("descriptions", []))[:1000]
+        short_desc = [d[:200] for d in info.get("descriptions", [])]
 
-    if export:
-        df = pd.DataFrame(final_rows)
-        df.to_csv(LLM_EXPORT, index=False)
-        print(f"💾 Saved final recommendations → {LLM_EXPORT}")
+        modules.append({
+            "module_id": c["module_id"],
+            "competency_ids": info.get("competency_ids", []),
+            "domains": info.get("domains", []),
+            "descriptions": short_desc,
+            "full_description": full_desc,
+        })
 
-    return final_rows
+    prompt_json = {
+        "task": "validate_modules",
+        "rules": {
+            "only_json": True,
+            "missing_info_equals_unsuitable": True,
+            "output_schema": {
+                "validation": [
+                    {
+                        "module_id": "string",
+                        "suitable": "boolean",
+                        "reason": "string"
+                    }
+                ]
+            }
+        },
+        "candidate_module_ids": [c["module_id"] for c in candidates],
+        "modules_detail": modules,
+        "output_format": {
+            "validation": [
+                {
+                    "module_id": "<id_from_list>",
+                    "suitable": True,
+                    "reason": "<short_reason>"
+                }
+            ]
+        }
+    }
 
+    return prompt_json
 
-# ============================================================
-# -------- 4. MAIN — CHỈ GỌI 1 HÀM --------
-# ============================================================
-def recommend_llm_vs_logic(id):
-    student = get_one_student(id)   # 🔥 Lấy đúng 1 user_id duy nhất từ Neo4j
+def safe_parse(raw):
+    try:
+        stack = []
+        start = None
 
-    if student is None:
-        print("⚠️ Không tìm thấy Student nào trong hệ thống.")
+        for i, ch in enumerate(raw):
+            if ch == "{":
+                if start is None:
+                    start = i
+                stack.append("{")
+            elif ch == "}":
+                if stack:
+                    stack.pop()
+                    if not stack: 
+                        return json.loads(raw[start:i+1])
+        return None
+    except Exception:
+        return None
+
+def choose_final(candidates, validation):
+
+    suitable_ids = [v["module_id"] for v in validation if v.get("suitable") is True]
+
+    if suitable_ids:
+        candidates_sorted = sorted(
+            candidates,
+            key=lambda x: x["similarity"],
+            reverse=True
+        )
+        for c in candidates_sorted:
+            if c["module_id"] in suitable_ids:
+                return c["module_id"], "Suitable by LLM"
     else:
-        print(f"\n🎯 Gợi ý 5 môn học cho user: {student}")
-        result = final_recommend_one_user(student)
+        best = max(candidates, key=lambda x: x["similarity"])
+        return best["module_id"], "Fallback: highest similarity"
 
-        print("\n⭐ Kết quả gợi ý cuối cùng:")
-        for r in result:
-            print(" -", r["module_id"])
+def recommend_binary(student_int_id: int, topk=5, model="gpt-4o-mini"):
 
-    
+    student_id = f"user_{student_int_id}"
+
+    candidates = load_logic_candidates(student_id, topk)
+    if not candidates:
+        return []
+
+    module_ids = [c["module_id"] for c in candidates]
+    comp_map = get_module_competencies(module_ids)
+
+    rule_filtered = []
+    for c in candidates:
+        info = comp_map.get(c["module_id"], {})
+
+        if not info.get("competency_ids"):
+            continue
+
+        module_domains = set(info.get("domains", []))
+        if not module_domains:
+            continue
+
+        desc_list = info.get("descriptions", [])
+        if not desc_list or all(len(d.strip()) < 20 for d in desc_list):
+            continue
+
+        rule_filtered.append(c)
+
+    if not rule_filtered:
+        best = max(candidates, key=lambda x: x["similarity"])
+        return [{
+            "student": student_id,
+            "module_id": best["module_id"],
+            "reason": "Rule-based fallback"
+        }]
+
+    candidates = rule_filtered
+
+    prompt_json = build_prompt(candidates, comp_map)
+
+    raw = call_llm(prompt_json, model=model)
+    print("\n===== RAW LLM OUTPUT =====")
+    print(raw)
+    print("==========================\n")
+
+    resp = safe_parse(raw)
+
+    if not resp or "validation" not in resp:
+        best = max(candidates, key=lambda x: x["similarity"])
+        return [{"module_id": best["module_id"], "reason": "fallback"}]
+
+    validation = resp["validation"]
+
+    seen = set()
+    deduped = []
+    for v in validation:
+        mid = v.get("module_id")
+        if mid not in seen:
+            seen.add(mid)
+            deduped.append(v)
+    validation = deduped
+
+    module_ids = [c["module_id"] for c in candidates]
+    validated_map = {v["module_id"]: v for v in validation if v["module_id"] in module_ids}
+
+    cleaned = []
+    for mid in module_ids:
+        if mid in validated_map:
+            cleaned.append(validated_map[mid])
+        else:
+            cleaned.append({
+                "module_id": mid,
+                "suitable": False,
+                "reason": "LLM did not evaluate this module_id."
+            })
+
+    for v in cleaned:
+        print(f" - {v['module_id']}: suitable={v['suitable']}, reason={v['reason']}")
+
+    final_id, reason = choose_final(candidates, cleaned)
+
+    out = [{
+        "student": student_id,
+        "module_id": final_id,
+        "reason": reason
+    }]
+
+    pd.DataFrame(out).to_csv(FINAL_EXPORT, index=False)
+    print(f"\nSaved → {FINAL_EXPORT}")
+    print("FINAL:", final_id, "-", reason)
+
+    return out
+
 if __name__ == "__main__":
-    recommend_llm_vs_logic(71)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sid", type=int, default=69)
+    parser.add_argument("--topk", type=int, default=5)
+    args = parser.parse_args()
+    recommend_binary(args.sid, topk=args.topk)

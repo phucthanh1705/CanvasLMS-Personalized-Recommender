@@ -1,12 +1,14 @@
-# Chuyển JSON thành cấu trúc học (Course–Module–Item)
 import os, json, shutil
 from pathlib import Path
-from ..utils.io_utils import load_json, save_json, clean_html
+import sys
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(ROOT))
+
+from src.utils.io_utils import load_json, save_json, clean_html
 
 RAW_PATH = Path("data/raw/raw/courses")
 PROCESSED_PATH = Path("data/processed/courses")
 
-# ===== 1️⃣ HÀM LÀM SẠCH CẤP TRƯỜNG DỮ LIỆU =====
 def clean_dict(data: dict, allowed_fields: list):
     """Giữ lại các trường cần thiết"""
     return {k: v for k, v in data.items() if k in allowed_fields and v not in [None, "", []]}
@@ -28,9 +30,6 @@ def process_module(module_dir: Path, out_module_dir: Path):
         "quiz_submissions": []
     }
 
-        # ==============================
-    # 1️⃣ LÀM SẠCH BÀI HỌC (LESSONS)
-    # ==============================
     lessons_src = module_dir / "lessons" / "contents"
     lessons_dst = out_module_dir / "lessons" / "contents"
     if lessons_src.exists():
@@ -40,11 +39,9 @@ def process_module(module_dir: Path, out_module_dir: Path):
         for html_file in lessons_src.glob("*.html"):
             json_file = html_file.with_suffix(".json")
 
-            # Đọc nội dung HTML gốc
             with open(html_file, "r", encoding="utf-8") as f:
                 html_content = f.read().strip()
 
-            # Nếu có file JSON đi kèm → đọc thêm metadata (title, id, updated_at)
             if json_file.exists():
                 lesson_meta = load_json(json_file)
                 title = lesson_meta.get("title") or html_file.stem
@@ -55,7 +52,6 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 updated_at = None
                 lesson_id = html_file.stem
 
-            # Tạo bản ghi bài học có nội dung HTML trong field "body"
             cleaned = {
                 "id": lesson_id,
                 "title": title,
@@ -63,9 +59,7 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 "updated_at": updated_at
             }
 
-            # Ghi file JSON mới sang processed
             save_json(cleaned, lessons_dst / json_file.name)
-            # Copy luôn HTML gốc sang processed (để bạn dùng sau)
             shutil.copy2(html_file, lessons_dst / html_file.name)
 
             module_meta["lessons"].append({
@@ -73,15 +67,9 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 "title": cleaned["title"]
             })
             lesson_count += 1
-
-        print(f"📚 Found {lesson_count} lesson(s) (HTML-based) in {module_dir.name}")
     else:
-        print(f"⚠️ No lessons found in {module_dir.name}")
+        print(f"No lessons found in {module_dir.name}")
 
-
-    # ==============================
-    # 2️⃣ XỬ LÝ QUIZZES & SUBMISSIONS
-    # ==============================
     quizzes_src = module_dir / "quizzes"
     quizzes_dst = out_module_dir / "quizzes"
     if quizzes_src.exists():
@@ -89,9 +77,7 @@ def process_module(module_dir: Path, out_module_dir: Path):
 
         quiz_count, submission_count, total_avg_score = 0, 0, 0.0
 
-        # ---- 2.1. DUYỆT QUIZ CHÍNH ----
         for f in quizzes_src.glob("quiz_*.json"):
-            # Bỏ qua file submissions trong thư mục chính
             if "submissions" in f.name.lower():
                 continue
 
@@ -104,8 +90,6 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 "question_count": 0,
                 "questions": []
             }
-
-            # Tìm danh sách câu hỏi
             question_list = []
             if isinstance(quiz_data, list):
                 question_list = quiz_data
@@ -123,7 +107,6 @@ def process_module(module_dir: Path, out_module_dir: Path):
             quiz_entry["question_count"] = len(quiz_entry["questions"])
             module_meta["quizzes"].append(quiz_entry)
 
-        # ---- 2.2. DUYỆT SUBMISSIONS (quizzes/submissions/) ----
         submissions_src = quizzes_src / "submissions"
         if submissions_src.exists():
             submissions_dst = quizzes_dst / "submissions"
@@ -163,7 +146,6 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 cleaned_submission_path = submissions_dst / f"cleaned_{f.name}"
                 save_json(student_scores, cleaned_submission_path)
 
-                # Chỉ ghi bản cleaned vào processed
                 module_meta["quiz_submissions"].append({
                     "file_cleaned": f"submissions/{cleaned_submission_path.name}",
                     "count": len(subs),
@@ -172,37 +154,27 @@ def process_module(module_dir: Path, out_module_dir: Path):
                 })
 
         avg_total = round(total_avg_score / max(quiz_count, 1), 2)
-        print(f"🧩 Found {quiz_count} quiz(es), {submission_count} submission(s) in {module_dir.name} | Avg Score: {avg_total}")
+        print(f"Found {quiz_count} quiz(es), {submission_count} submission(s) in {module_dir.name} | Avg Score: {avg_total}")
     else:
-        print(f"⚠️ No quizzes found in {module_dir.name}")
+        print(f"No quizzes found in {module_dir.name}")
 
-    # ==============================
-    # 3️⃣ LƯU METADATA CUỐI CÙNG
-    # ==============================
     save_json(module_meta, out_module_dir / f"meta_{module_dir.name}.json")
-    print(f"✅ Processed module {module_dir.name}")
 
-
-
-# ===== 3️⃣ HÀM LÀM SẠCH MỘT COURSE =====
 def process_course(course_dir: Path):
     course_name = course_dir.name
     out_dir = PROCESSED_PATH / course_name
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # --- copy users ---
     users_src = course_dir / "users"
     users_dst = out_dir / "users"
     users_dst.mkdir(parents=True, exist_ok=True)
     for f in users_src.glob("*.json"):
         shutil.copy2(f, users_dst / f.name)
 
-    # --- copy course.json ---
     course_file = course_dir / "courses.json"
     if course_file.exists():
         shutil.copy2(course_file, out_dir / "courses.json")
 
-    # --- process each module ---
     modules_src = course_dir / "modules"
     modules_dst = out_dir / "modules"
     modules_dst.mkdir(parents=True, exist_ok=True)
@@ -216,14 +188,9 @@ def process_course(course_dir: Path):
         meta_summary["modules"].append(module_dir.name)
 
     save_json(meta_summary, out_dir / f"meta_{course_name}.json")
-    print(f"🎓 Finished course {course_name}")
 
-
-# ===== 4️⃣ HÀM CHẠY TỔNG HỢP =====
 def run_parse_pipeline():
-    print(f"🔍 Looking for raw courses in: {RAW_PATH.resolve()}")
     for course_dir in RAW_PATH.glob("course_*"):
-        print(f"📘 Found course: {course_dir.name}")
         process_course(course_dir)
 
 
