@@ -13,14 +13,19 @@ import psycopg2
 import threading
 import time
 import traceback
+from flask import Blueprint
+
 from datetime import datetime
 
 last_sync_time = None
 current_progress = ""
 progress_percent = 0
-from canvas_api_manager import get_assigned_users, assign_user, send_canvas_message
+from services.canvas_api_manager import get_assigned_users, assign_user, send_canvas_message
+recommender_bp = Blueprint(
+    "recommender_bp",
+    __name__
+)
 
-app = Flask(__name__)
 
 CLIENT_ID = "10000000000022"
 CLIENT_SECRET = "MUNu2xHB2Uvc6a9KFQzuKGLELRVtzwrVtYUVaFQE6Lx3cZ9WwEh8tMUeQKeMEMh4"
@@ -38,35 +43,13 @@ sys.path.append(str(SRC_DIR))
 from llm.recommend_llm_vs_logic import recommend_binary
 from llm.recommend_llm_vs_logic import neo4j_session
 from analytics.skill_computation import compute_skill_percentages
-from lti.log_service import (
+from services.log_service import (
     log_lti_launch,
     log_system_error,
     log_lti_event,
     update_platform_last_launch,
 )
 from app.run_full_pipeline import run_pipeline_once
-
-private_key = rsa.generate_private_key(
-    public_exponent=65537,
-    key_size=2048,
-)
-
-public_key = private_key.public_key()
-
-public_numbers = public_key.public_numbers()
-e = public_numbers.e
-n = public_numbers.n
-
-jwk = {
-    "kty": "RSA",
-    "use": "sig",
-    "alg": "RS256",
-    "kid": "mysmart-key",
-    "n": jwt.utils.base64url_encode(n.to_bytes((n.bit_length() + 7) // 8, "big")).decode(),
-    "e": jwt.utils.base64url_encode(e.to_bytes((e.bit_length() + 7) // 8, "big")).decode(),
-}
-
-jwks = {"keys": [jwk]}
 
 def get_module_name(mid: str, course_id: str):
     """
@@ -198,7 +181,7 @@ def render_module_list(title, modules, course_id):
     return f"<h3>{title}</h3><ul>{items}</ul>"
 
 def render_module_template(mode, module_name="", student_id="", items=""):
-    template_path = Path(__file__).resolve().parents[1] / "lti" / "module_result.html"
+    template_path = Path(__file__).resolve().parents[2] / "templates" / "lti" / "module_result.html"
     html = template_path.read_text(encoding="utf-8")
 
     html = html.replace("{module_name}", module_name)
@@ -210,35 +193,8 @@ def render_module_template(mode, module_name="", student_id="", items=""):
 
     return html
 
-@app.route("/.well-known/jwks.json")
-def serve_jwks():
-    return jsonify(jwks)
 
-@app.route("/lti/login", methods=["POST"])
-def lti_login():
-    login_hint = request.form.get("login_hint")
-    lti_message_hint = request.form.get("lti_message_hint")
-
-    state = str(uuid.uuid4())
-    nonce = str(uuid.uuid4())
-
-    redirect_url = (
-        f"{PLATFORM_ISS}/api/lti/authorize_redirect"
-        f"?response_type=id_token"
-        f"&client_id={CLIENT_ID}"
-        f"&redirect_uri={TOOL_REDIRECT_URI}"
-        f"&scope=openid"
-        f"&response_mode=form_post"
-        f"&prompt=none"
-        f"&state={state}"
-        f"&nonce={nonce}"
-        f"&login_hint={login_hint}"
-        f"&lti_message_hint={lti_message_hint}"
-    )
-
-    return redirect(redirect_url)
-
-@app.route("/api/recommend/<student_id>")
+@recommender_bp.route("/api/recommend/<student_id>")
 def api_recommend(student_id):
     try:
         course_id = request.args.get("course_id")
@@ -313,23 +269,20 @@ def api_recommend(student_id):
     except Exception as e:
         return f"<p>❌ Lỗi khi gợi ý môn: {str(e)}</p>"
 
-@app.route("/lti/launch", methods=["POST"])
+@recommender_bp.route("/lti/launch", methods=["POST"])
 def lti_launch():
     id_token = request.form.get("id_token")
     if not id_token:
         return "❌ Không nhận được id_token từ Canvas (Canvas chưa launch đúng)."
 
     try:
-        jwk_client = PyJWKClient(CANVAS_JWKS)
-        signing_key = jwk_client.get_signing_key_from_jwt(id_token).key
-
-        decoded = jwt.decode(
-            id_token,
-            signing_key,
-            algorithms=["RS256"],
-            audience=CLIENT_ID,
-            options={"verify_exp": False},
+        from lti.core.lti_verify import verify_id_token
+        decoded = verify_id_token(
+            id_token=id_token,
+            canvas_jwks_url=CANVAS_JWKS,
+            client_id=CLIENT_ID
         )
+
 
         sub = decoded.get("sub")  
         roles = decoded.get("https://purl.imsglobal.org/spec/lti/claim/roles", [])
@@ -404,7 +357,7 @@ def lti_launch():
 
             skill_data_json = json.dumps(skill_data)
 
-            template_path = Path(__file__).resolve().parents[1] / "lti" / "lti_recommend.html"
+            template_path = Path(__file__).resolve().parents[2] / "templates" / "lti" / "lti_recommend.html"
             with open(template_path, "r", encoding="utf-8") as f:
                 html_template = f.read()
 
@@ -420,9 +373,9 @@ def lti_launch():
             return html
 
         else:
-            from lti.lti_admin_service import get_admin_dashboard_data
+            from services.lti_admin_service import get_admin_dashboard_data
             dashboard_data = get_admin_dashboard_data(course_id)
-            template_path = Path(__file__).resolve().parent / "lti_admin.html"
+            template_path = Path(__file__).resolve().parents[2] / "templates" / "lti" / "lti_admin.html"
             with open(template_path, "r", encoding="utf-8") as f:
                 html_template = f.read()
             html = (
@@ -449,7 +402,7 @@ def lti_launch():
             print("[LogService Error in except lti_launch]", log_err)
         return f"Lỗi verify id_token hoặc xử lý KG: {str(e)}"
 
-@app.route("/lti/student_view")
+@recommender_bp.route("/lti/student_view")
 def student_view():
     student_id = request.args.get("student_id")
     course_id = request.args.get("course_id", "4")
@@ -494,7 +447,7 @@ def student_view():
 
     completed_json = json.dumps(completed_modules, ensure_ascii=False)
 
-    template_path = Path(__file__).resolve().parents[1] / "lti" / "lti_view_users.html"
+    template_path = Path(__file__).resolve().parents[2] / "templates" / "lti" / "lti_view_users.html"
     html = template_path.read_text(encoding="utf-8")
 
     html = (
@@ -551,7 +504,7 @@ def run_pipeline_background():
 
     last_sync_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-@app.route("/api/sync", methods=["POST"])
+@recommender_bp.route("/api/sync", methods=["POST"])
 def api_sync():
     global current_progress
 
@@ -571,7 +524,7 @@ def api_sync():
         "message": "Pipeline started successfully!"
     })
 
-@app.route("/api/sync/status")
+@recommender_bp.route("/api/sync/status")
 def api_sync_status():
     return jsonify({
         "last_sync": last_sync_time,
@@ -592,15 +545,3 @@ def auto_sync_loop():
             print("Skip auto-sync because pipeline is running...")
 
 threading.Thread(target=auto_sync_loop, daemon=True).start()
-
-@app.route("/")
-def index():
-    return "SmartSchool Python LTI Tool is running."
-
-
-def run_server():
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
-
-if __name__ == "__main__":
-    run_server()

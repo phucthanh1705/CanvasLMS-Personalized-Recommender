@@ -34,3 +34,7 @@ pyjwt==2.8.0
 cryptography==41.0.7
 openai
 google-generativeai
+pydantic>=2.6.0
+rank-bm25>=0.2.2
+redis>=5.0.0
+sentence-transformers>=5.2.0

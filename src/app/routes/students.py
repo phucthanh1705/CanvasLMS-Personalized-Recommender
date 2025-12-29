@@ -1,1 +1,0 @@
-# Endpoint lấy lộ trình học cá nhân

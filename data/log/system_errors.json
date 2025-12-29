@@ -2,5 +2,30 @@
   {
     "time": "2025-12-05T15:02:11",
     "message": "JWKS signature mismatch — auto-refresh triggered"
+  },
+  {
+    "time": "2025-12-23T00:54:17.829550",
+    "message": "Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):\nFailed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)",
+    "context": "lti_launch"
+  },
+  {
+    "time": "2025-12-23T15:59:14.999481",
+    "message": "Audience doesn't match",
+    "context": "lti_launch"
+  },
+  {
+    "time": "2025-12-23T16:02:27.546807",
+    "message": "Audience doesn't match",
+    "context": "lti_launch"
+  },
+  {
+    "time": "2025-12-23T16:06:07.972664",
+    "message": "Audience doesn't match",
+    "context": "lti_launch"
+  },
+  {
+    "time": "2025-12-23T16:15:38.776070",
+    "message": "Audience mismatch: ['10000000000024'] != 10000000000022",
+    "context": "lti_launch"
   }
 ]

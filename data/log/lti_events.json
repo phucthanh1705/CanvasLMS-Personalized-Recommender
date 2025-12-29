@@ -8,5 +8,35 @@
     "type": "LTI",
     "message": "New platform registration: Blackboard Learn",
     "time": "Yesterday at 16:30"
+  },
+  {
+    "type": "ERROR",
+    "message": "LTI launch failed",
+    "detail": "Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):\nFailed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)",
+    "time": "2025-12-23 00:54:17"
+  },
+  {
+    "type": "ERROR",
+    "message": "LTI launch failed",
+    "detail": "Audience doesn't match",
+    "time": "2025-12-23 15:59:15"
+  },
+  {
+    "type": "ERROR",
+    "message": "LTI launch failed",
+    "detail": "Audience doesn't match",
+    "time": "2025-12-23 16:02:27"
+  },
+  {
+    "type": "ERROR",
+    "message": "LTI launch failed",
+    "detail": "Audience doesn't match",
+    "time": "2025-12-23 16:06:07"
+  },
+  {
+    "type": "ERROR",
+    "message": "LTI launch failed",
+    "detail": "Audience mismatch: ['10000000000024'] != 10000000000022",
+    "time": "2025-12-23 16:15:38"
   }
 ]

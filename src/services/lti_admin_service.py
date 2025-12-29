@@ -7,7 +7,9 @@ from llm.recommend_llm_vs_logic import neo4j_session
 CANVAS_BASE_URL = "http://localhost:3000"
 COURSE_ID = 4
 ACCESS_TOKEN = "ZZvPyEyhuwcMkGxKXTv6KU3eCyeMaAXKTPcFzuNUTU6322JTumrxf3MBVYDLCZF3c"
-
+BASE_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 
 headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
@@ -25,10 +27,12 @@ def canvas_get(path, params=None):
         return None
 
 def get_total_requests_24h():
-    log_path = "data/log/lti_launch_log.json"
-
+    log_path = os.path.join(
+        BASE_DIR, "CanvasLMS-Personalized-Recommender", "data", "log", "lti_launch_log.json"
+    )
+    print("log_path:", log_path)
     if not os.path.exists(log_path):
-        return 0
+        return -1
 
     now = datetime.datetime.now()
     count = 0
@@ -47,7 +51,7 @@ def get_total_requests_24h():
     return count
 
 def get_lti_launches_today():
-    log_path = "data/log/lti_launch_log.json"  
+    log_path = "../../data/log/lti_launch_log.json"  
 
     if not os.path.exists(log_path):
         return 0
@@ -67,7 +71,7 @@ def get_lti_launches_today():
     return count
 
 def get_last_canvas_sync():
-    sync_path = "data/log/last_canvas_sync.json" 
+    sync_path = "../../data/log/last_canvas_sync.json" 
 
     if not os.path.exists(sync_path):
         return "Never"
@@ -77,7 +81,7 @@ def get_last_canvas_sync():
         return data.get("last_sync", "Unknown")
 
 def get_system_errors_24h():
-    error_path = "data/log/system_errors.json" 
+    error_path = "../../data/log/system_errors.json" 
 
     if not os.path.exists(error_path):
         return 0
@@ -96,7 +100,7 @@ def get_system_errors_24h():
     return count
 
 def get_registered_platforms():
-    path = "data/log/lti_platforms.json"  
+    path = "../../data/log/lti_platforms.json"  
 
     if not os.path.exists(path):
         return []
@@ -105,7 +109,7 @@ def get_registered_platforms():
         return json.load(f)
 
 def get_recent_lti_launches(limit=10):
-    log_path = "data/log/lti_launch_log.json"  
+    log_path = "../../data/log/lti_launch_log.json"  
     if not os.path.exists(log_path):
         return []
 
@@ -116,7 +120,7 @@ def get_recent_lti_launches(limit=10):
     return logs_sorted[:limit]
 
 def get_lti_events():
-    event_path = "data/log/lti_events.json"  
+    event_path = "../../data/log/lti_events.json"  
 
     if not os.path.exists(event_path):
         return []
@@ -139,7 +143,7 @@ def get_admin_dashboard_data(course_id):
     }
 
 def get_launches_by_hour():
-    log_path = "data/log/lti_launch_log.json"
+    log_path = "../../data/log/lti_launch_log.json"
     
     hourly = {h: 0 for h in range(24)}
 
