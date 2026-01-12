@@ -61,10 +61,6 @@ class Neo4jRepo:
                 for r in result
             ]
 
-    # ==================================================
-    # 🎓 COMPETENCY
-    # ==================================================
-
     def get_competencies_of_module(self, module_id: str) -> List[str]:
         """
         Năng lực ĐẦU RA của module (không phụ thuộc student)

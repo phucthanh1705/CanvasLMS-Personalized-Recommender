@@ -7,9 +7,6 @@ PROBLEMS = json.loads(
     Path("src/chatbot/core/supported_problems.json").read_text(encoding="utf-8")
 )
 
-# ===============================
-# 🔒 RULE-BASED LESSON GATE (ƯU TIÊN CAO NHẤT)
-# ===============================
 LESSON_KEYWORDS = [
     "la gi", "khai niem", "giai thich",
     "the ", "html", "css", "java",
@@ -21,23 +18,17 @@ LESSON_KEYWORDS = [
 def detect_problem(message: str) -> dict:
     m = normalize_text(message.lower())
 
-    # ==================================================
-    # 1️⃣ HARD RULE: LESSON QUESTIONS (KHÔNG HỎI LLM)
-    # ==================================================
     if any(k in m for k in LESSON_KEYWORDS):
         return {
             "problem": "lesson_explain",
             "confidence": 0.95
         }
 
-    # ==================================================
-    # 2️⃣ AI CLASSIFICATION (CHO COMPETENCY / ROUTING)
-    # ==================================================
     prompt = f"""
 Bạn KHÔNG trả lời câu hỏi.
 Bạn CHỈ phân loại câu hỏi theo VẤN ĐỀ.
 
-⚠️ QUY TẮC BẮT BUỘC:
+QUY TẮC BẮT BUỘC:
 - Nếu câu hỏi hỏi về KHÁI NIỆM / ĐỊNH NGHĨA / KIẾN THỨC → lesson_explain
 - CHỈ chọn vấn đề năng lực nếu câu hỏi có các từ:
   "năng lực", "kỹ năng", "đạt được", "cần có", "thiếu", "lộ trình"

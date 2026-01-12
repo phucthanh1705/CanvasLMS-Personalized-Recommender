@@ -33,7 +33,7 @@ class OpenAIClient(LLMClient):
 class DummyClient(LLMClient):
     def generate(self, system_prompt: str, user_prompt: str) -> str:
         # For offline testing without API key: just echo.
-        return "⚠️ (Dummy mode) Không có OPENAI_API_KEY nên bot không gọi LLM.\n[SOURCE 1]"
+        return "(Dummy mode) Không có OPENAI_API_KEY nên bot không gọi LLM.\n[SOURCE 1]"
 
 def get_llm_client() -> LLMClient:
     # You can expand this to support local LLM later.

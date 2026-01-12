@@ -1,15 +1,7 @@
-# ==========================================================
-# Derive Student -> Competency mastery
-# Rule: Passed Module (mastery > 0.5) => Passed Competency
-# ==========================================================
-
 import os
 from py2neo import Graph
 from dotenv import load_dotenv
 
-# ===============================
-# LOAD CONFIG
-# ===============================
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 ENV_PATH = os.path.join(BASE_DIR, "config", "secrets.env")
 
@@ -26,17 +18,8 @@ graph = Graph(
     name=NEO4J_DB
 )
 
-print(f"🔗 Connected to Neo4j: {NEO4J_DB}")
-
-# ===============================
-# CONFIG LOGIC
-# ===============================
-# 🔥 CHỈ QUA MÔN KHI MASTERY > 0.5
 MASTERY_THRESHOLD = 0.5
 
-# ===============================
-# MAIN LOGIC
-# ===============================
 def derive_competency_mastery():
     query = f"""
     MATCH (s:Student)-[rm:mastery_on]->(m:Module)
@@ -50,11 +33,8 @@ def derive_competency_mastery():
     result = graph.run(query).data()
     count = result[0]["created_or_updated"] if result else 0
 
-    print(f"✅ Derived competency mastery relationships: {count}")
+    print(f"Derived competency mastery relationships: {count}")
 
-# ===============================
-# MAIN
-# ===============================
 if __name__ == "__main__":
     derive_competency_mastery()
 
@@ -64,4 +44,4 @@ if __name__ == "__main__":
         RETURN count(r) AS competency_mastery_count
     """).data()
 
-    print(f"📊 Total Student→Competency mastery: {stats[0]['competency_mastery_count']}")
+    print(f"Total Student→Competency mastery: {stats[0]['competency_mastery_count']}")

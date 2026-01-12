@@ -19,5 +19,5 @@ def call_llm(system_prompt: str, user_prompt: str, model=None):
         return resp["message"]["content"]
 
     except Exception as e:
-        print("Lỗi Ollama:", e)
+        print("Error Ollama:", e)
         return ""

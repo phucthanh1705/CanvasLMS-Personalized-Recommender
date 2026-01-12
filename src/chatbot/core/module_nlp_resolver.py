@@ -17,7 +17,6 @@ def _normalize(text: str) -> str:
     return text
 
 def _strip_html_fast(html: str) -> str:
-    # nhẹ, tránh thêm bs4 ở runtime
     html = re.sub(r"<script.*?>.*?</script>", " ", html, flags=re.S | re.I)
     html = re.sub(r"<style.*?>.*?</style>", " ", html, flags=re.S | re.I)
     text = re.sub(r"<[^>]+>", " ", html)
@@ -36,19 +35,16 @@ def split_into_blocks(content: str, max_chars: int = 350) -> list[str]:
 
     raw = content.strip()
 
-    # nếu có HTML nhiều, strip nhanh
     if "<" in raw and ">" in raw:
         raw = _strip_html_fast(raw)
 
-    # tách theo câu/đoạn
-    # (đơn giản, đủ tốt cho “khái niệm là gì”)
     parts = re.split(r"(?<=[\.\?\!])\s+|\n{2,}", raw)
 
     blocks: list[str] = []
     buf = ""
     for p in parts:
         p = p.strip()
-        if len(p) < 40:  # bỏ đoạn quá ngắn/nhiễu
+        if len(p) < 40:  
             continue
 
         if not buf:
@@ -62,7 +58,6 @@ def split_into_blocks(content: str, max_chars: int = 350) -> list[str]:
     if buf:
         blocks.append(buf)
 
-    # giới hạn số block để khỏi quá nặng
     return blocks[:60]
 
 
@@ -94,12 +89,10 @@ def resolve_module_by_explicit_subject(
 
         n = _normalize(name)
 
-        # 1) substring match mạnh nhất
         if n and n in q:
             return mid
 
-        # 2) token overlap (tránh các từ quá chung)
-        tokens = [t for t in n.split() if len(t) >= 4]  # bỏ từ quá ngắn
+        tokens = [t for t in n.split() if len(t) >= 4]  
         hit = sum(1 for t in tokens if t in q)
 
         if hit >= min_token_hit and hit > best_score:
@@ -140,7 +133,6 @@ def resolve_module_by_lesson_blocks_topk(
     if not block_texts:
         return None
 
-    # encode blocks + question
     block_emb = _model.encode(
         block_texts,
         convert_to_tensor=True,
@@ -154,7 +146,6 @@ def resolve_module_by_lesson_blocks_topk(
 
     scores = util.cos_sim(q_emb, block_emb)[0]
 
-    # bucket scores by module
     bucket: dict[str, list[float]] = {}
     for idx, sc in enumerate(scores):
         mid = block_module_ids[idx]

@@ -57,14 +57,7 @@ def main():
     for idx, (course_id, module_id, path) in enumerate(all_lessons, start=1):
 
         percent = (idx / total) * 100
-
-        print(f"\n==============================")
-        print(f"▶ [{idx}/{total}] ({percent:.2f}%)  {course_id} / {module_id}")
-        print(f"Đang xử lý: {path}")
-        print("==============================")
-
         start_item = time.time()
-
         data = json.loads(path.read_text(encoding="utf-8"))
         body = clean_html(data.get("body", ""))
 
@@ -128,10 +121,6 @@ Nội dung bài học:
 
 
     end_all = time.time()
-    print(f"\n==============================")
-    print(f"Hoàn thành tất cả bài học!")
-    print(f"Tổng thời gian chạy: {end_all - start_all:.2f} giây")
-    print("==============================\n")
 
     with OUT_FILE.open("w", newline="", encoding="utf-8") as f:
         wr = csv.DictWriter(
@@ -141,9 +130,6 @@ Nội dung bài học:
         )
         wr.writeheader()
         wr.writerows(rows)
-
-    print(f"📌 File competency đã lưu tại: {OUT_FILE}")
-
 
 if __name__ == "__main__":
     main()

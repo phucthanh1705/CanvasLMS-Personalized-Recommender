@@ -7,8 +7,8 @@ def classify_intent_by_problem(problem: str) -> str:
 
     PROBLEM_TO_INTENT = {
         # ===== COMPETENCY =====
-        "competency_achieved_module": "competency_achieved_module",  # ✅ SỬA Ở ĐÂY
-        "competency_status_module": "competency_status_module",      # (nếu có)
+        "competency_achieved_module": "competency_achieved_module",  
+        "competency_status_module": "competency_status_module", 
         "competency_missing": "competency_missing",
         "competency_status": "competency_status",
         "recommend_next": "recommend_next",

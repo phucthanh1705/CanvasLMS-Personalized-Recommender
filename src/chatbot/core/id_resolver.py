@@ -13,9 +13,6 @@ class IDResolver:
             auth=(settings.neo4j_user, settings.neo4j_password),
         )
 
-    # ===============================
-    # 🔧 UTILS
-    # ===============================
     def _normalize_module_id(self, module_id: str) -> str:
         """
         Normalize module id:
@@ -64,9 +61,7 @@ class IDResolver:
             ).single()
             return record["id"] if record else None
 
-    # ===============================
-    # STUDENT
-    # ===============================
+
     def resolve_student(self, student_id: str) -> bool:
         query = """
         MATCH (s:Student {id: $student_id})
@@ -76,9 +71,6 @@ class IDResolver:
         with self.driver.session(database=settings.neo4j_database) as session:
             return session.run(query, student_id=student_id).single() is not None
 
-    # =========================================================
-    # ✅ MODULE AUTO-DETECT (NLP)
-    # =========================================================
     def resolve_module_from_question_nlp(self, course_id: str, question: str) -> str | None:
         module_query = """
         MATCH (c:Course {id: $course_id})-[:includes]->(m:Module)
@@ -102,12 +94,9 @@ class IDResolver:
         mid = resolve_module_by_explicit_subject(question, module_rows)
         if mid:
             mid = self._normalize_module_id(mid)
-            print("🔎 NLP explicit subject →", mid)
+            print("NLP explicit subject →", mid)
             return mid
 
-        # -------------------------------------------------
-        # 2️⃣ FALLBACK: EMBEDDING THEO LESSON CONTENT
-        # -------------------------------------------------
         lesson_query = """
         MATCH (c:Course {id: $course_id})
               -[:HAS_MODULE]->(m:Module)
@@ -128,7 +117,7 @@ class IDResolver:
             ]
 
         if not lesson_rows:
-            print("⚠️ NLP: no lesson content found")
+            print("NLP: no lesson content found")
             return None
 
         mid = resolve_module_by_lesson_blocks_topk(
@@ -142,8 +131,8 @@ class IDResolver:
 
         if mid:
             mid = self._normalize_module_id(mid)
-            print("🔎 NLP embedding →", mid)
+            print("NLP embedding →", mid)
             return mid
 
-        print("❌ NLP failed to resolve module")
+        print("NLP failed to resolve module")
         return None
